@@ -1,0 +1,3706 @@
+[
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8708809000\n🏷️ תיאור: OTHERS\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 2.6 שניות\n• קריאות LLM: 0\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074006.json",
+            "status": "SUCCESS",
+            "message": "shock piston coilovers",
+            "images": [],
+            "current_level": "leaf",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "26467"
+            ],
+            "final_match": "26467",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326804.3670886,
+            "parsing_warnings": [],
+            "classification_summary": {
+                "original_description": "shock piston coilovers",
+                "predicted_hs_code": "8708809000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "milvus_single_leaf",
+                "candidates_source": "milvus",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.04,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [],
+                "total_llm_calls": 0
+            },
+            "classification_source": "milvus_single_leaf",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 100,
+            "milvus_strategies_used": [
+                "CloseDistance"
+            ],
+            "milvus_processing_time": 2.3661837577819824,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node"
+        ],
+        "errors": [],
+        "execution_time": 2.6143016815185547,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": null
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8708301900\n🏷️ תיאור: Others\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 2.8 שניות\n• קריאות LLM: 0\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074007.json",
+            "status": "SUCCESS",
+            "message": "brake pad kit - front",
+            "images": [],
+            "current_level": "leaf",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "17023"
+            ],
+            "final_match": "17023",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326804.3917136,
+            "parsing_warnings": [],
+            "classification_summary": {
+                "original_description": "brake pad kit - front",
+                "predicted_hs_code": "8708301900",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "milvus_single_leaf",
+                "candidates_source": "milvus",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.05,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [],
+                "total_llm_calls": 0
+            },
+            "classification_source": "milvus_single_leaf",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 91,
+            "milvus_strategies_used": [
+                "CloseDistance"
+            ],
+            "milvus_processing_time": 2.4654488563537598,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node"
+        ],
+        "errors": [],
+        "execution_time": 2.7759110927581787,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": null
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8471900000\n🏷️ תיאור:  Other\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 28.3 שניות\n• קריאות LLM: 0\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074035.json",
+            "status": "SUCCESS",
+            "message": "YubiKey, Hardware Token, USB adapter",
+            "images": [],
+            "current_level": "leaf",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "11056"
+            ],
+            "final_match": "11056",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326807.183982,
+            "parsing_warnings": [],
+            "classification_summary": {
+                "original_description": "YubiKey, Hardware Token, USB adapter",
+                "predicted_hs_code": "8471900000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "milvus_single_leaf",
+                "candidates_source": "milvus",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.47,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [],
+                "total_llm_calls": 0
+            },
+            "classification_source": "milvus_single_leaf",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 94,
+            "milvus_strategies_used": [
+                "CloseDistance"
+            ],
+            "milvus_processing_time": 0.47765302658081055,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node"
+        ],
+        "errors": [],
+        "execution_time": 28.53081440925598,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": null
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 2103900000\n🏷️ תיאור:  Other\n\n❓ שאלות הבהרה:\n1. Is the product a pre-blended mixture of citrus and pepper (and potentially other spices), ready for use as a seasoning or condiment, or are the components (e.g., citrus and pepper) packaged separately?\n\n🔍 אפשרויות סיווג:\n• 2103900000 -  Other\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074123.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "tf12 citrus pepper+ ts43",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "2541",
+                    "Title_English": " Other"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is the product a pre-blended mixture of citrus and pepper (and potentially other spices), ready for use as a seasoning or condiment, or are the components (e.g., citrus and pepper) packaged separately?"
+            ],
+            "current_parent_for_clarification": "2541",
+            "start_time": 1769326804.4482255,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "210390"
+            ],
+            "classification_summary": {
+                "original_description": "tf12 citrus pepper+ ts43",
+                "predicted_hs_code": "2103900000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is the product a pre-blended mixture of citrus and pepper (and potentially other spices), ready for use as a seasoning or condiment, or are the components (e.g., citrus and pepper) packaged separately?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.31,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "210390"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "special_rules_applied": [
+                {
+                    "rule_type": "Residual",
+                    "candidate_id": "2541",
+                    "action": "MATCH→INSUFFICIENT",
+                    "reason": "Sibling has INSUFFICIENT"
+                }
+            ],
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 2.6967036724090576,
+            "milvus_enabled": true,
+            "confidence_score": 0.9
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 78.86359643936157,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 7499,
+            "total_output_tokens": 1408,
+            "total_tokens": 19105,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 3130,
+                "input_token_count": 715,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 927,
+                "output_token_count": 214,
+                "total_token_count": 3938
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8708290000\n🏷️ תיאור:  Other\n\n❓ שאלות הבהרה:\n1. What is the primary material of the item?\n2. What is the main intended use or function?\n3. Are there any specific technical specifications?\n\n🔍 אפשרויות סיווג:\n• 8708290000 -  Other\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074123.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "s5 (dn) 70 inch side steps (without bracket)",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "1258",
+                    "Title_English": " Other"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "What is the primary material of the item?",
+                "What is the main intended use or function?",
+                "Are there any specific technical specifications?"
+            ],
+            "current_parent_for_clarification": "1258",
+            "start_time": 1769326804.4817657,
+            "parsing_warnings": [
+                "questions_children: Fallback parsing used: No questions found in output"
+            ],
+            "llm_suggested_codes": [
+                "870829"
+            ],
+            "classification_summary": {
+                "original_description": "s5 (dn) 70 inch side steps (without bracket)",
+                "predicted_hs_code": "8708290000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "What is the primary material of the item?",
+                        "What is the main intended use or function?",
+                        "Are there any specific technical specifications?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.31,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870829"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "special_rules_applied": [
+                {
+                    "rule_type": "Residual",
+                    "candidate_id": "1258",
+                    "action": "MATCH→INSUFFICIENT",
+                    "reason": "Sibling has INSUFFICIENT"
+                }
+            ],
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.9664618968963623,
+            "milvus_enabled": true,
+            "confidence_score": 0.8
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 78.84321069717407,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 9304,
+            "total_output_tokens": 1215,
+            "total_tokens": 20794,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 2808,
+                "input_token_count": 629,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 531,
+                "output_token_count": 156,
+                "total_token_count": 4625
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8708709000\n🏷️ תיאור: OTHERS\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 60%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 86.4 שניות\n• קריאות LLM: 3\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074130.json",
+            "status": "SUCCESS",
+            "message": "steel wheels",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "21949"
+            ],
+            "final_match": "21949",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326804.3470435,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "870870",
+                "871690",
+                "860719"
+            ],
+            "classification_summary": {
+                "original_description": "steel wheels",
+                "predicted_hs_code": "8708709000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 1.44,
+                "initial_candidates_count": 3,
+                "llm_suggested_codes": [
+                    "870870",
+                    "871690",
+                    "860719"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "special_rules_applied": [
+                {
+                    "rule_type": "Residual",
+                    "candidate_id": "21949",
+                    "action": "MATCH→INSUFFICIENT",
+                    "reason": "Sibling has INSUFFICIENT"
+                }
+            ],
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 1.9085760116577148,
+            "milvus_enabled": true,
+            "confidence_score": 0.6
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 86.41586589813232,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 67212,
+            "total_output_tokens": 5351,
+            "total_tokens": 81758,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 52401,
+                "input_token_count": 18850,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 5565,
+                "output_token_count": 1383,
+                "total_token_count": 22009
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8703000000\n🏷️ תיאור: Motor cars and other motor vehicles principally designed for the transport of persons (other than those of heading 87.02), including station wagons and racing cars.\n\n❓ שאלות הבהרה:\n1. Does the vehicle utilize an electric motor in addition to an internal combustion engine for propulsion?\n2. If the vehicle uses an internal combustion engine, is it a spark-ignition type (e.g., gasoline engine) or a compression-ignition type (e.g., diesel or semi-diesel engine)?\n3. If the vehicle utilizes both an internal combustion engine and an electric motor for propulsion, is it capable of being charged by plugging into an external source of electric power?\n\n🔍 אפשרויות סיווג:\n• 8703900000 -  Other\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074130.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "mercedes-benz e 300 e",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "21607",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "9251",
+                    "Title_English": " Other"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Does the vehicle utilize an electric motor in addition to an internal combustion engine for propulsion?",
+                "If the vehicle uses an internal combustion engine, is it a spark-ignition type (e.g., gasoline engine) or a compression-ignition type (e.g., diesel or semi-diesel engine)?",
+                "If the vehicle utilizes both an internal combustion engine and an electric motor for propulsion, is it capable of being charged by plugging into an external source of electric power?"
+            ],
+            "current_parent_for_clarification": "21607",
+            "start_time": 1769326804.371272,
+            "parsing_warnings": [
+                "mixed/subheading/12508: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/8179: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/11643: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29121: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29548: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29264: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29349: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29445: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/9251: Fallback parser used: No valid JSON array found in response"
+            ],
+            "classification_summary": {
+                "original_description": "mercedes-benz e 300 e",
+                "predicted_hs_code": "8703000000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "external_candidates",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Does the vehicle utilize an electric motor in addition to an internal combustion engine for propulsion?",
+                        "If the vehicle uses an internal combustion engine, is it a spark-ignition type (e.g., gasoline engine) or a compression-ignition type (e.g., diesel or semi-diesel engine)?",
+                        "If the vehicle utilizes both an internal combustion engine and an electric motor for propulsion, is it capable of being charged by plugging into an external source of electric power?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.44,
+                "initial_candidates_count": 0,
+                "llm_suggested_codes": [],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [
+                "8703000000"
+            ],
+            "classification_source": "external_candidates",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 100,
+            "milvus_strategies_used": [
+                "CloseDistance"
+            ],
+            "milvus_processing_time": 2.144664764404297,
+            "milvus_enabled": true,
+            "confidence_score": 0.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "route_candidates_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 86.40442490577698,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 33449,
+            "total_output_tokens": 2135,
+            "total_tokens": 47973,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 7817,
+                "input_token_count": 1860,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 1291,
+                "output_token_count": 365,
+                "total_token_count": 5856
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "❌ שגיאה בתהליך הסיווג\n\nלא ניתן היה להשלים את הסיווג עקב שגיאה טכנית.\n\n🔧 פרטי שגיאה:\nלא ידוע\n\n💡 נסה שוב או פנה לתמיכה טכנית.\n\n📁 לוג מלא: results/classifications/classification_UNKNOWN_20260125_074134.json",
+            "status": "ERROR",
+            "message": "2025 cadillac escalade iq sport 2",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326804.3272128,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "870380"
+            ],
+            "last_contradiction_id": "29445",
+            "last_contradiction_reason": "The item description is \"2025 cadillac escalade iq sport 2\". The candidate category is 8703800000, titled \"Other vehicles, with only electric motor for propulsion\", and described as \"Electric motor vehicles, not for snow/golf\".\n\n**STEP 0 - CATEGORY DESCRIPTION CHECK:**\n*   **Category Description:** \"Electric motor vehicles, not for snow/golf\"\n*   **Item:** \"2025 cadillac escalade iq sport 2\"\n*   **Analysis:** Based on \"SPECIFIC MODEL KNOWLEDGE\", \"Cadillac Escalade IQ\" is definitively an Electric Vehicle (EV), as \"IQ\" is Cadillac's designation for its electric models. Therefore, the item is an \"Electric motor vehicle\". There is no information to suggest it is for snow or golf.\n*   **Result:** The item type \"Electric motor vehicle\" matches the category description.\n\n**MANDATORY REQUIREMENT CHECK:**\n\n**Requirement 1:** \"Must be motor cars or other motor vehicles\"\n*   **Does the item meet this requirement?** YES.\n*   **Reasoning:** A Cadillac Escalade IQ is a full-size SUV, which is a type of motor vehicle designed for road use. This is definitive knowledge for this specific model.\n\n**Requirement 2:** \"Must be principally designed for the transport of persons\"\n*   **Does the item meet this requirement?** YES.\n*   **Reasoning:** The Cadillac Escalade IQ is a full-size luxury SUV. As per \"SPECIFIC CLASSIFICATION EMPHASIS FOR THIS HEADING\", SUVs primarily configured for passengers (with rear seats, trim, and windows) are classified under 8703. The Escalade IQ's primary design purpose is passenger transport, with any cargo capacity being secondary and integrated.\n\n**Requirement 3:** \"Must have only electric motor for propulsion\"\n*   **Does the item meet this requirement?** YES.\n*   **Reasoning:** As per \"SPECIFIC MODEL KNOWLEDGE\", the \"Cadillac Escalade IQ\" is an electric vehicle (EV). This means it is propelled solely by an electric motor, without an internal combustion engine. The \"IQ\" designation explicitly confirms its electric nature.\n\n**EXCLUSIONS CHECK:**\n\n**Exclusion 1:** \"Excludes vehicles specially designed for travelling on snow (8703100000)\"\n*   **Does the item meet this exclusion?** NO.\n*   **Reasoning:** The Cadillac Escalade IQ is a standard road-going SUV, not a vehicle specially designed for travelling on snow.\n\n**Exclusion 2:** \"Excludes golf cars and similar vehicles (8703100000)\"\n*   **Does the item meet this exclusion?** NO.\n*   **Reasoning:** The Cadillac Escalade IQ is a full-size luxury SUV, which is not a golf car or similar vehicle.\n\nAll requirements are met, and no exclusions apply.",
+            "classification_summary": {
+                "original_description": "2025 cadillac escalade iq sport 2",
+                "predicted_hs_code": "",
+                "is_leaf": false,
+                "stop_reason": "No suitable candidates found",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {
+                    "deepest_hs_code_reached": "8703800000",
+                    "contradiction_reason": "The item description is \"2025 cadillac escalade iq sport 2\". The candidate category is 8703800000, titled \"Other vehicles, with only electric motor for propulsion\", and described as \"Electric motor ve"
+                },
+                "total_runtime_minutes": 1.51,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870380"
+                ],
+                "total_llm_calls": 2
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 1.2228596210479736,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 90.49284529685974,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 20660,
+            "total_output_tokens": 2635,
+            "total_tokens": 28795,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 24190,
+                "input_token_count": 6802,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 3238,
+                "output_token_count": 840,
+                "total_token_count": 8924
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8414590000\n🏷️ תיאור:  Other\n\n❓ שאלות הבהרה:\n1. Is the fan designed to be a table fan, floor fan, wall fan, window fan, ceiling fan, or roof fan?\n2. If the fan is one of the types listed in Question 1, does it have a self-contained electric motor, and if so, what is the output power of that motor in Watts?\n\n🔍 אפשרויות סיווג:\n• 8414590000 -  Other\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074134.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "gebläse 1069-00-0000 hygiene air g 7 ml",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "10298",
+                    "Title_English": " Other"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is the fan designed to be a table fan, floor fan, wall fan, window fan, ceiling fan, or roof fan?",
+                "If the fan is one of the types listed in Question 1, does it have a self-contained electric motor, and if so, what is the output power of that motor in Watts?"
+            ],
+            "current_parent_for_clarification": "10298",
+            "start_time": 1769326804.411767,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "841459"
+            ],
+            "classification_summary": {
+                "original_description": "gebläse 1069-00-0000 hygiene air g 7 ml",
+                "predicted_hs_code": "8414590000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is the fan designed to be a table fan, floor fan, wall fan, window fan, ceiling fan, or roof fan?",
+                        "If the fan is one of the types listed in Question 1, does it have a self-contained electric motor, and if so, what is the output power of that motor in Watts?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.51,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "841459"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 2.548210382461548,
+            "milvus_enabled": true,
+            "confidence_score": 0.9
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 90.42411136627197,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 8980,
+            "total_output_tokens": 1148,
+            "total_tokens": 21764,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 2861,
+                "input_token_count": 667,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 593,
+                "output_token_count": 157,
+                "total_token_count": 4663
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "❌ שגיאה בתהליך הסיווג\n\nלא ניתן היה להשלים את הסיווג עקב שגיאה טכנית.\n\n🔧 פרטי שגיאה:\nלא ידוע\n\n💡 נסה שוב או פנה לתמיכה טכנית.\n\n📁 לוג מלא: results/classifications/classification_UNKNOWN_20260125_074138.json",
+            "status": "ERROR",
+            "message": "cmk-vw crafter / man tge e6/e6dtemp / e6 ar 2.0l with a/c fwd & 4x4 - kit without idle-up/stop-",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326804.4704313,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "84186900"
+            ],
+            "last_contradiction_id": "10775",
+            "last_contradiction_reason": "The item description is \"cmk-vw crafter / man tge e6/e6dtemp / e6 ar 2.0l with a/c fwd & 4x4 - kit without idle-up/stop-\".\nThe candidate category is 8418690000, which covers \"Other refrigerating or freezing equipment; heat pumps\".\n\nSTEP 0 - CATEGORY DESCRIPTION CHECK:\nThe category description is \"Other refrigerating or freezing equipment; heat pumps\".\nThe item is an \"a/c kit\" for \"vw crafter / man tge\", which are commercial vans/light commercial vehicles. \"A/C\" stands for Air Conditioning. Air conditioning systems perform a refrigerating function to cool air. However, the category itself, and its parent heading 84.18, specifically excludes \"air conditioning machines of heading 84.15\". This suggests that while A/C systems involve refrigeration, they are generally classified elsewhere.\n\nMANDATORY REQUIREMENT CHECK:\n1.  **Requirement 1:** \"Must be refrigerators, freezers or other refrigerating or freezing equipment (electric or other) OR heat pumps\"\n    *   **Reasoning:** An \"a/c kit\" for a vehicle implies components for an air conditioning system. Air conditioning systems operate on a refrigeration cycle to cool, thus performing a refrigerating function. So, conceptually, it might seem to fit \"refrigerating equipment\". However, this must be considered in conjunction with requirement 2.\n\n2.  **Requirement 2:** \"Must not be air conditioning machines of heading 84.15\"\n    *   **Reasoning:** The item is an \"a/c kit\" for \"vw crafter / man tge\". \"VW Crafter\" and \"MAN TGE\" are specific models of motor vehicles. An A/C system in a motor vehicle is an \"air conditioning machine\" as described in heading 84.15 (comprising a motor-driven fan and elements for changing temperature). The classification of a \"kit\" for such a machine would generally follow the classification of the complete machine if it imparts the essential character, or its parts would be classified as parts of the machine. Regardless, the item is directly related to, and intended for, an \"air conditioning machine of heading 84.15\". Therefore, the item falls into the type of equipment that is explicitly *excluded* from heading 84.18. This requirement is **NOT** met.\n\n3.  **Requirement 3:** \"Must be other refrigerating or freezing equipment OR heat pumps (not the specific types listed in other subheadings of 8418)\"\n    *   **Reasoning:** Since Requirement 2 is not met (the item is related to an air conditioning machine of heading 84.15), the item cannot be classified under 84.18, regardless of its specific sub-classification within 84.18.\n\nConclusion: The item is an \"a/c kit\" for motor vehicles. Vehicle air conditioning systems are generally classified under heading 84.15. Heading 84.18 (the parent heading for the candidate category) explicitly excludes air conditioning machines of heading 84.15. Therefore, the item contradicts a fundamental exclusion for this category.",
+            "classification_summary": {
+                "original_description": "cmk-vw crafter / man tge e6/e6dtemp / e6 ar 2.0l with a/c fwd & 4x4 - kit without idle-up/stop-",
+                "predicted_hs_code": "",
+                "is_leaf": false,
+                "stop_reason": "No suitable candidates found",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {
+                    "deepest_hs_code_reached": "8418690000",
+                    "contradiction_reason": "The item description is \"cmk-vw crafter / man tge e6/e6dtemp / e6 ar 2.0l with a/c fwd & 4x4 - kit without idle-up/stop-\".\nThe candidate category is 8418690000, which covers \"Other refrigerating or fr"
+                },
+                "total_runtime_minutes": 1.56,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "84186900"
+                ],
+                "total_llm_calls": 2
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 1.2622911930084229,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 93.58288812637329,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 21805,
+            "total_output_tokens": 2650,
+            "total_tokens": 34123,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 24620,
+                "input_token_count": 7173,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 3196,
+                "output_token_count": 807,
+                "total_token_count": 10006
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 3402900000\n🏷️ תיאור:  Other\n\n❓ שאלות הבהרה:\n1. Is \"omegaclean\" a preparation based on organic surface-active agents?\n2. Does \"omegaclean\" contain soap?\n3. Is \"omegaclean\" an anionic organic surface-active agent?\n4. Is \"omegaclean - 5 gal.\" put up for retail sale to the general public for personal or household use, or is it intended for industrial, commercial, or institutional use, or for further processing/repackaging?\n\n🔍 אפשרויות סיווג:\n• 3402900000 -  Other\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074149.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "omegaclean - 5 gal.",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "15672",
+                    "Title_English": " Other"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is \"omegaclean\" a preparation based on organic surface-active agents?",
+                "Does \"omegaclean\" contain soap?",
+                "Is \"omegaclean\" an anionic organic surface-active agent?",
+                "Is \"omegaclean - 5 gal.\" put up for retail sale to the general public for personal or household use, or is it intended for industrial, commercial, or institutional use, or for further processing/repackaging?"
+            ],
+            "current_parent_for_clarification": "15672",
+            "start_time": 1769326804.3850317,
+            "parsing_warnings": [
+                "mixed/subheading/15672: Fallback parser used: Tag <REASONING> not found"
+            ],
+            "llm_suggested_codes": [
+                "340290"
+            ],
+            "classification_summary": {
+                "original_description": "omegaclean - 5 gal.",
+                "predicted_hs_code": "3402900000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is \"omegaclean\" a preparation based on organic surface-active agents?",
+                        "Does \"omegaclean\" contain soap?",
+                        "Is \"omegaclean\" an anionic organic surface-active agent?",
+                        "Is \"omegaclean - 5 gal.\" put up for retail sale to the general public for personal or household use, or is it intended for industrial, commercial, or institutional use, or for further processing/repackaging?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.74,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "340290"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 2.7627193927764893,
+            "milvus_enabled": true,
+            "confidence_score": 0.8
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 104.66611647605896,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 7839,
+            "total_output_tokens": 1454,
+            "total_tokens": 22910,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 3396,
+                "input_token_count": 769,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 2184,
+                "output_token_count": 569,
+                "total_token_count": 4765
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8708809000\n🏷️ תיאור: OTHERS\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 80%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 105.2 שניות\n• קריאות LLM: 3\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074149.json",
+            "status": "SUCCESS",
+            "message": "rear suspention-arm hinge insert",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "26467"
+            ],
+            "final_match": "26467",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326804.3806834,
+            "parsing_warnings": [
+                "mixed/leaf/15649: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/26467: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "870880"
+            ],
+            "classification_summary": {
+                "original_description": "rear suspention-arm hinge insert",
+                "predicted_hs_code": "8708809000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 1.75,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870880"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 2.360053777694702,
+            "milvus_enabled": true,
+            "confidence_score": 0.8
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 105.15931797027588,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 45682,
+            "total_output_tokens": 2457,
+            "total_tokens": 61357,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 38111,
+                "input_token_count": 12396,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 2242,
+                "output_token_count": 519,
+                "total_token_count": 16392
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8443990000\n🏷️ תיאור:  Other\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 90%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 102.2 שניות\n• קריאות LLM: 2\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074149.json",
+            "status": "SUCCESS",
+            "message": "PRINTHEAD SLOT SAPPHIRE QSBP-256/10",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "25991"
+            ],
+            "final_match": "25991",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326807.34146,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "844399"
+            ],
+            "classification_summary": {
+                "original_description": "PRINTHEAD SLOT SAPPHIRE QSBP-256/10",
+                "predicted_hs_code": "8443990000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 1.7,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "844399"
+                ],
+                "total_llm_calls": 2
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "special_rules_applied": [
+                {
+                    "rule_type": "Residual",
+                    "candidate_id": "25991",
+                    "action": "MATCH→INSUFFICIENT",
+                    "reason": "Sibling has INSUFFICIENT"
+                }
+            ],
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.418165922164917,
+            "milvus_enabled": true,
+            "confidence_score": 0.9
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 102.34953498840332,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 21132,
+            "total_output_tokens": 1767,
+            "total_tokens": 28750,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 24251,
+                "input_token_count": 6959,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 2193,
+                "output_token_count": 533,
+                "total_token_count": 8337
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8409910000\n🏷️ תיאור:  Suitable for use solely or principally with sparkignition internal combustion piston engines\n\n❓ שאלות הבהרה:\n1. Is the item a cylinder liner?\n2. Is the item specifically designed for an outboard engine used on boats?\n3. Does this part differ in its fundamental structure or weight from typical, similar automotive parts, and is it exclusively for engines classified under subheading 84.07.9090 (typically special-purpose or non-standard automotive engines)?\n\n🔍 אפשרויות סיווג:\n• 8409914000 - CYLINDER LINERS CAST TO SHAPE, WHICH HAVE NOT UNDERGONE ADDITIONAL PROCESSING\n• 8409915000 - PARTS SUITABLE FOR USE IN ENGINES OF SUBHEADING 84.07.9090, PROVIDED THAT THEY DIFFER IN STRUCTURE AND WEIGHT FROM SIMILAR AUTOMOTIVE PARTS\n• 8409916000 - PARTS SUITABLE FOR OUTBOARD ENGINES FOR BOATS\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074151.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "new for chevy cruze 1.4 turbo oil feed pipe tube 2011-2018 for 55592600 25198546",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "2910",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "23144",
+                    "Title_English": "CYLINDER LINERS CAST TO SHAPE, WHICH HAVE NOT UNDERGONE ADDITIONAL PROCESSING"
+                },
+                {
+                    "CustomsItemID": "22422",
+                    "Title_English": "PARTS SUITABLE FOR USE IN ENGINES OF SUBHEADING 84.07.9090, PROVIDED THAT THEY DIFFER IN STRUCTURE AND WEIGHT FROM SIMILAR AUTOMOTIVE PARTS"
+                },
+                {
+                    "CustomsItemID": "25045",
+                    "Title_English": "PARTS SUITABLE FOR OUTBOARD ENGINES FOR BOATS"
+                },
+                {
+                    "CustomsItemID": "18693",
+                    "Title_English": "OTHERS"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is the item a cylinder liner?",
+                "Is the item specifically designed for an outboard engine used on boats?",
+                "Does this part differ in its fundamental structure or weight from typical, similar automotive parts, and is it exclusively for engines classified under subheading 84.07.9090 (typically special-purpose or non-standard automotive engines)?"
+            ],
+            "current_parent_for_clarification": "2910",
+            "start_time": 1769326804.339685,
+            "parsing_warnings": [
+                "mixed/leaf/21624: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/26560: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/15463: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/23144: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/22422: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/25045: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/18693: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "84099100"
+            ],
+            "classification_summary": {
+                "original_description": "new for chevy cruze 1.4 turbo oil feed pipe tube 2011-2018 for 55592600 25198546",
+                "predicted_hs_code": "8409910000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is the item a cylinder liner?",
+                        "Is the item specifically designed for an outboard engine used on boats?",
+                        "Does this part differ in its fundamental structure or weight from typical, similar automotive parts, and is it exclusively for engines classified under subheading 84.07.9090 (typically special-purpose or non-standard automotive engines)?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.79,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "84099100"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 1.7349541187286377,
+            "milvus_enabled": true,
+            "confidence_score": 0.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 107.12983560562134,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 32397,
+            "total_output_tokens": 2599,
+            "total_tokens": 48225,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 5962,
+                "input_token_count": 1435,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 1413,
+                "output_token_count": 336,
+                "total_token_count": 4246
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8501520000\n🏷️ תיאור:  Of an output exceeding 750 W but not exceeding 75 kW\n\n❓ שאלות הבהרה:\n1. What is the total weight of the electric motor?\n\n🔍 אפשרויות סיווג:\n• 8501521000 - OF A WEIGHT EXCEEDING 8 TONNES\n• 8501529000 - OTHERS\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074158.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "Electric motor, AC, three-phase, squirrel-cage induction type, rated output 15 kW, voltage 400 V, frequency 50 Hz, speed 1,450 rpm, frame size IEC 160, not equipped with gearbox, not explosion-proof, for industrial machinery use.",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "24212",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "11583",
+                    "Title_English": "OF A WEIGHT EXCEEDING 8 TONNES"
+                },
+                {
+                    "CustomsItemID": "13985",
+                    "Title_English": "OTHERS"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "What is the total weight of the electric motor?"
+            ],
+            "current_parent_for_clarification": "24212",
+            "start_time": 1769326804.4169354,
+            "parsing_warnings": [
+                "mixed/leaf/11583: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/16283: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/13985: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "850152"
+            ],
+            "classification_summary": {
+                "original_description": "Electric motor, AC, three-phase, squirrel-cage induction type, rated output 15 kW, voltage 400 V, frequency 50 Hz, speed 1,450 rpm, frame size IEC 160, not equipped with gearbox, not explosion-proof, for industrial machinery use.",
+                "predicted_hs_code": "8501520000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "What is the total weight of the electric motor?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.91,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "850152"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 2.053077459335327,
+            "milvus_enabled": true,
+            "confidence_score": 0.5
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 114.52925729751587,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 26131,
+            "total_output_tokens": 1638,
+            "total_tokens": 35633,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 3554,
+                "input_token_count": 844,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 410,
+                "output_token_count": 119,
+                "total_token_count": 1915
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8703400000\n🏷️ תיאור:  Other vehicles, with both sparkignition internal combustion piston engine and electric motor as motors for propulsion, other than those capable of being charged by plugging to external source of electric power\n\n❓ שאלות הבהרה:\n1. Is this vehicle a \"cluster vehicle\"?\n2. Is this vehicle outfitted or intended to be outfitted specially for transporting cadavers for burial, is it used as such, and was its importation approved by the Director prior to importation?\n3. Has a vehicle license or a permit to move on roads not been issued for this vehicle by the Licensing Authority, and is it not moving on the roads, and does it meet the conditions stated in rule 7 of Additional (Israeli) rules of Chapter 87?\n4. Is this vehicle a small tractor or a field vehicle?\n5. Does the permissible gross vehicle weight of this vehicle exceed 4500 kg?\n\n🔍 אפשרויות סיווג:\n• 8703402000 - ( Cluster vehicel (conditional\n• 8703403000 -  Vehicle which is outfitted or will be outfitted specially or transporting cadavers for burial and is used as stated, provided its importation was approved by the (Director prior to the importation (conditional\n• 8703404000 -  Ambulances; chassises on which driver's cabs are mounted, used :for assembling ambulances\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074158.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "toyota corolla sedan hybrid 1.8 active hybride",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "29121",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "29535",
+                    "Title_English": "( Cluster vehicel (conditional"
+                },
+                {
+                    "CustomsItemID": "29268",
+                    "Title_English": " Vehicle which is outfitted or will be outfitted specially or transporting cadavers for burial and is used as stated, provided its importation was approved by the (Director prior to the importation (conditional"
+                },
+                {
+                    "CustomsItemID": "29292",
+                    "Title_English": " Ambulances; chassises on which driver's cabs are mounted, used :for assembling ambulances"
+                },
+                {
+                    "CustomsItemID": "29356",
+                    "Title_English": " Motor vehicle which vehicle license or a permit to move on roads has not been issued by the Licensing Authority, and as long as it does not move on the roads provided that conditions stated in rule 7 of Additional (Israeli) rules of Chapter 87 are met"
+                },
+                {
+                    "CustomsItemID": "29474",
+                    "Title_English": " Of a permissible gross vehicle weight exceeding 4500 kg"
+                },
+                {
+                    "CustomsItemID": "29040",
+                    "Title_English": " Others"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is this vehicle a \"cluster vehicle\"?",
+                "Is this vehicle outfitted or intended to be outfitted specially for transporting cadavers for burial, is it used as such, and was its importation approved by the Director prior to importation?",
+                "Has a vehicle license or a permit to move on roads not been issued for this vehicle by the Licensing Authority, and is it not moving on the roads, and does it meet the conditions stated in rule 7 of Additional (Israeli) rules of Chapter 87?",
+                "Is this vehicle a small tractor or a field vehicle?",
+                "Does the permissible gross vehicle weight of this vehicle exceed 4500 kg?",
+                "What is the level of air pollution for this specific vehicle model?"
+            ],
+            "current_parent_for_clarification": "29121",
+            "start_time": 1769326804.46258,
+            "parsing_warnings": [
+                "mixed/leaf/29403: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29535: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29268: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29292: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29356: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29523: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29309: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29474: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29040: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "87034000"
+            ],
+            "classification_summary": {
+                "original_description": "toyota corolla sedan hybrid 1.8 active hybride",
+                "predicted_hs_code": "8703400000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is this vehicle a \"cluster vehicle\"?",
+                        "Is this vehicle outfitted or intended to be outfitted specially for transporting cadavers for burial, is it used as such, and was its importation approved by the Director prior to importation?",
+                        "Has a vehicle license or a permit to move on roads not been issued for this vehicle by the Licensing Authority, and is it not moving on the roads, and does it meet the conditions stated in rule 7 of Additional (Israeli) rules of Chapter 87?",
+                        "Is this vehicle a small tractor or a field vehicle?",
+                        "Does the permissible gross vehicle weight of this vehicle exceed 4500 kg?",
+                        "What is the level of air pollution for this specific vehicle model?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.91,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "87034000"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 1.749969720840454,
+            "milvus_enabled": true,
+            "confidence_score": 0.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 114.5028772354126,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 35295,
+            "total_output_tokens": 2051,
+            "total_tokens": 52260,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 10831,
+                "input_token_count": 2506,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 1779,
+                "output_token_count": 441,
+                "total_token_count": 6502
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8708301900\n🏷️ תיאור: Others\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 8.8 שניות\n• קריאות LLM: 0\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074212.json",
+            "status": "SUCCESS",
+            "message": "brake pad set",
+            "images": [],
+            "current_level": "leaf",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "17023"
+            ],
+            "final_match": "17023",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326923.814602,
+            "parsing_warnings": [],
+            "classification_summary": {
+                "original_description": "brake pad set",
+                "predicted_hs_code": "8708301900",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "milvus_single_leaf",
+                "candidates_source": "milvus",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.15,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [],
+                "total_llm_calls": 0
+            },
+            "classification_source": "milvus_single_leaf",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 97,
+            "milvus_strategies_used": [
+                "CloseDistance"
+            ],
+            "milvus_processing_time": 0.4142186641693115,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node"
+        ],
+        "errors": [],
+        "execution_time": 13.625327825546265,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": null
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8471300000\n🏷️ תיאור:  Portable automatic data processing machines, weighing not more than 10 kg, consisting of at least a central processing unit, a keyboard and a display\n📖 תיאור עברית: מכונות אוטומטיות לעיבוד נתונים מיטלטלות, שמשקלן אינו עולה על 10ק\"ג הכוללים לפחות יחידת עיבוד מרכזית, לוח מקשים וצג\r\n\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 39.5 שניות\n• קריאות LLM: 2\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074214.json",
+            "status": "SUCCESS",
+            "message": "HP Pro x2 612 G2 Tablet Computer",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "14237"
+            ],
+            "final_match": "14237",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326894.819544,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "84713000"
+            ],
+            "classification_summary": {
+                "original_description": "HP Pro x2 612 G2 Tablet Computer",
+                "predicted_hs_code": "8471300000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.66,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "84713000"
+                ],
+                "total_llm_calls": 2
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.45636630058288574,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 43.44227647781372,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 24597,
+            "total_output_tokens": 2691,
+            "total_tokens": 33059,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 27493,
+                "input_token_count": 8115,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 3349,
+                "output_token_count": 840,
+                "total_token_count": 10256
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8422300000\n🏷️ תיאור:  Machinery for filling, closing, sealing, or labelling bottles, cans, boxes, bags or other containers; machinery for capsuling bottles, jars, tubes and similar containers; machinery for aerating beverages\n\n❓ שאלות הבהרה:\n1. Is this machine designed for carbonating beverages?\n2. Does this machine seal bags made from thermoplastic materials?\n3. What is the weight of a single unit of this automatic spice packaging machine?\n\n🔍 אפשרויות סיווג:\n• 8422301000 - MACHINES OR TOOLS FOR CLOSING AND SEALING CONTAINERS, INCLUDING BAGS MADE FROM THERMOPLASTIC MATERIALS, PROVIDED THE WEIGHT OF EACH UNIT DOES NOT EXCEED 250 KG\n• 8422302000 - MACHINES FOR CARBONATING BEVERAGES, PROVIDED THE WEIGHT OF EACH UNIT DOES NOT EXCEED 20 KG\n• 8422309000 - OTHERS\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074214.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "automatic spice packaging machine",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "26875",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "6269",
+                    "Title_English": "MACHINES OR TOOLS FOR CLOSING AND SEALING CONTAINERS, INCLUDING BAGS MADE FROM THERMOPLASTIC MATERIALS, PROVIDED THE WEIGHT OF EACH UNIT DOES NOT EXCEED 250 KG"
+                },
+                {
+                    "CustomsItemID": "25724",
+                    "Title_English": "MACHINES FOR CARBONATING BEVERAGES, PROVIDED THE WEIGHT OF EACH UNIT DOES NOT EXCEED 20 KG"
+                },
+                {
+                    "CustomsItemID": "6533",
+                    "Title_English": "OTHERS"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is this machine designed for carbonating beverages?",
+                "Does this machine seal bags made from thermoplastic materials?",
+                "What is the weight of a single unit of this automatic spice packaging machine?"
+            ],
+            "current_parent_for_clarification": "26875",
+            "start_time": 1769326804.460119,
+            "parsing_warnings": [
+                "mixed/leaf/6269: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/25724: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/6533: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "842230"
+            ],
+            "classification_summary": {
+                "original_description": "automatic spice packaging machine",
+                "predicted_hs_code": "8422300000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is this machine designed for carbonating beverages?",
+                        "Does this machine seal bags made from thermoplastic materials?",
+                        "What is the weight of a single unit of this automatic spice packaging machine?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 2.16,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "842230"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 1.7179625034332275,
+            "milvus_enabled": true,
+            "confidence_score": 0.4
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 129.839262008667,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 23831,
+            "total_output_tokens": 1999,
+            "total_tokens": 35640,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 4667,
+                "input_token_count": 1064,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 1808,
+                "output_token_count": 459,
+                "total_token_count": 3212
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8536500000\n🏷️ תיאור:  Other switches\n\n❓ שאלות הבהרה:\n1. Is the \"left rubber strip with sensor l-1810\" specifically designed for installation in or on a building or other structure, or is it designed for outdoor use?\n\n🔍 אפשרויות סיווג:\n• 8536503000 - DESIGNED FOR INSTALLATION IN A STRUCTURE OR ON IT; INSTRUMENTS DESIGNED FOR OUTDOOR INSTALLATION\n• 8536509000 - :OTHERS\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074217.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "left rubber strip with sensor l-1810",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "1090",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "7261",
+                    "Title_English": "DESIGNED FOR INSTALLATION IN A STRUCTURE OR ON IT; INSTRUMENTS DESIGNED FOR OUTDOOR INSTALLATION"
+                },
+                {
+                    "CustomsItemID": "13605",
+                    "Title_English": ":OTHERS"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is the \"left rubber strip with sensor l-1810\" specifically designed for installation in or on a building or other structure, or is it designed for outdoor use?"
+            ],
+            "current_parent_for_clarification": "13605",
+            "start_time": 1769326804.283146,
+            "parsing_warnings": [
+                "mixed/leaf/12685: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/7261: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/13605: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "853650"
+            ],
+            "classification_summary": {
+                "original_description": "left rubber strip with sensor l-1810",
+                "predicted_hs_code": "8536500000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is the \"left rubber strip with sensor l-1810\" specifically designed for installation in or on a building or other structure, or is it designed for outdoor use?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 2.23,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "853650"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 1.2855188846588135,
+            "milvus_enabled": true,
+            "confidence_score": 0.5
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 133.57318592071533,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 30473,
+            "total_output_tokens": 2368,
+            "total_tokens": 44261,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 3699,
+                "input_token_count": 820,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 685,
+                "output_token_count": 185,
+                "total_token_count": 2542
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8708301900\n🏷️ תיאור: Others\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 0.8 שניות\n• קריאות LLM: 0\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074218.json",
+            "status": "SUCCESS",
+            "message": "brake pad kit - front",
+            "images": [],
+            "current_level": "leaf",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "17023"
+            ],
+            "final_match": "17023",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326937.8451035,
+            "parsing_warnings": [],
+            "classification_summary": {
+                "original_description": "brake pad kit - front",
+                "predicted_hs_code": "8708301900",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "milvus_single_leaf",
+                "candidates_source": "milvus",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.01,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [],
+                "total_llm_calls": 0
+            },
+            "classification_source": "milvus_single_leaf",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 91,
+            "milvus_strategies_used": [
+                "CloseDistance"
+            ],
+            "milvus_processing_time": 0.4426708221435547,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node"
+        ],
+        "errors": [],
+        "execution_time": 6.014477729797363,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": null
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8482100000\n🏷️ תיאור:  Ball bearings\n📖 תיאור עברית: מיסבי כדורים\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 43.4 שניות\n• קריאות LLM: 2\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074219.json",
+            "status": "SUCCESS",
+            "message": "BEARING, BALL, AF CTRL, STANDARD",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "16443"
+            ],
+            "final_match": "16443",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326895.6698062,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "848210"
+            ],
+            "classification_summary": {
+                "original_description": "BEARING, BALL, AF CTRL, STANDARD",
+                "predicted_hs_code": "8482100000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.72,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "848210"
+                ],
+                "total_llm_calls": 2
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.3756580352783203,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 44.20088315010071,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 20820,
+            "total_output_tokens": 871,
+            "total_tokens": 25403,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 23769,
+                "input_token_count": 6857,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 1062,
+                "output_token_count": 244,
+                "total_token_count": 7688
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8708301900\n🏷️ תיאור: Others\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 5.5 שניות\n• קריאות LLM: 0\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074223.json",
+            "status": "SUCCESS",
+            "message": "brake pad set",
+            "images": [],
+            "current_level": "leaf",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "17023"
+            ],
+            "final_match": "17023",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326937.8553908,
+            "parsing_warnings": [],
+            "classification_summary": {
+                "original_description": "brake pad set",
+                "predicted_hs_code": "8708301900",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "milvus_single_leaf",
+                "candidates_source": "milvus",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.09,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [],
+                "total_llm_calls": 0
+            },
+            "classification_source": "milvus_single_leaf",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 97,
+            "milvus_strategies_used": [
+                "CloseDistance"
+            ],
+            "milvus_processing_time": 0.44403553009033203,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node"
+        ],
+        "errors": [],
+        "execution_time": 9.08615231513977,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": null
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8703000000\n🏷️ תיאור: Motor cars and other motor vehicles principally designed for the transport of persons (other than those of heading 87.02), including station wagons and racing cars.\n\n❓ שאלות הבהרה:\n1. Does the vehicle utilize an electric motor for propulsion in addition to an internal combustion engine?\n2. If the vehicle has both an internal combustion engine and an electric motor for propulsion, is it capable of being charged by plugging into an external source of electric power?\n3. What type of internal combustion engine does the vehicle have? Is it a spark-ignition (petrol/gasoline) engine or a compression-ignition (diesel/semi-diesel) engine?\n\n🔍 אפשרויות סיווג:\n• 8703900000 -  Other\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074228.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "mercedes-benz e 300 e",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "21607",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "9251",
+                    "Title_English": " Other"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Does the vehicle utilize an electric motor for propulsion in addition to an internal combustion engine?",
+                "If the vehicle has both an internal combustion engine and an electric motor for propulsion, is it capable of being charged by plugging into an external source of electric power?",
+                "What type of internal combustion engine does the vehicle have? Is it a spark-ignition (petrol/gasoline) engine or a compression-ignition (diesel/semi-diesel) engine?"
+            ],
+            "current_parent_for_clarification": "21607",
+            "start_time": 1769326909.529169,
+            "parsing_warnings": [
+                "mixed/subheading/12508: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/8179: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/11643: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29121: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29548: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29264: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29349: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29445: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/9251: Fallback parser used: No valid JSON array found in response"
+            ],
+            "classification_summary": {
+                "original_description": "mercedes-benz e 300 e",
+                "predicted_hs_code": "8703000000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "external_candidates",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Does the vehicle utilize an electric motor for propulsion in addition to an internal combustion engine?",
+                        "If the vehicle has both an internal combustion engine and an electric motor for propulsion, is it capable of being charged by plugging into an external source of electric power?",
+                        "What type of internal combustion engine does the vehicle have? Is it a spark-ignition (petrol/gasoline) engine or a compression-ignition (diesel/semi-diesel) engine?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 0.66,
+                "initial_candidates_count": 0,
+                "llm_suggested_codes": [],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [
+                "8703000000"
+            ],
+            "classification_source": "external_candidates",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 100,
+            "milvus_strategies_used": [
+                "CloseDistance"
+            ],
+            "milvus_processing_time": 0.4471261501312256,
+            "milvus_enabled": true,
+            "confidence_score": 0.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "route_candidates_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 39.84332799911499,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 33449,
+            "total_output_tokens": 2544,
+            "total_tokens": 44941,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 7817,
+                "input_token_count": 1860,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 2843,
+                "output_token_count": 673,
+                "total_token_count": 4445
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8481800000\n🏷️ תיאור:  Other appliances\n\n❓ שאלות הבהרה:\n1. Is the item a butterfly valve?\n2. Is the item a tap designed for mixing hot and cold water, operated by a single handle?\n3. Is the item a reversing type valve specifically used for cooling/heating reversal in air conditioners?\n4. Is the item a tap specifically designed for air conditioning machines?\n\n🔍 אפשרויות סיווג:\n• 8481802000 - BUTTERFLY VALVES SUITABLE FOR PIPES OF NOMINAL DIAMETER EXCEEDING 12 INCHES BUT NOT EXCEEDING 40 INCHES\n• 8481803000 - TAPS WITH A MECHANISM FOR MIXING HOT AND COLD WATER, OPERATED BY ONE HANDLE\n• 8481804000 - TAPS, VALVES, AND SIMILAR DEVICES, NOT OF SUBHEADING 8010 AND 8020 FOR :WHICH AT LEAST ONE OF THE FOLLOWING CONDITIONS IS MET 1. THE WEIGHT OF EACH EXCEEDS 500 KG 2. THEIR CONTINUOUS WORKING PRESSURE EXCEEDS 99 ATMOSPHERES, EXCEPT FOR BALL VALVES OF A CONTINUOUS WORKING PRESSURE NOT EXCEEDING 250 ATMOSPHERES 3. THEY ARE DESIGNED FOR PIPES WHOSE NOMINAL DIAMETER EXCEEDS 12 INCHES\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074234.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "Progressive distributorVEG 8/8-15/10RV with proximity switch N1-M12x1 right",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "26465",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "12417",
+                    "Title_English": "BUTTERFLY VALVES SUITABLE FOR PIPES OF NOMINAL DIAMETER EXCEEDING 12 INCHES BUT NOT EXCEEDING 40 INCHES"
+                },
+                {
+                    "CustomsItemID": "3103",
+                    "Title_English": "TAPS WITH A MECHANISM FOR MIXING HOT AND COLD WATER, OPERATED BY ONE HANDLE"
+                },
+                {
+                    "CustomsItemID": "12361",
+                    "Title_English": "TAPS, VALVES, AND SIMILAR DEVICES, NOT OF SUBHEADING 8010 AND 8020 FOR :WHICH AT LEAST ONE OF THE FOLLOWING CONDITIONS IS MET 1. THE WEIGHT OF EACH EXCEEDS 500 KG 2. THEIR CONTINUOUS WORKING PRESSURE EXCEEDS 99 ATMOSPHERES, EXCEPT FOR BALL VALVES OF A CONTINUOUS WORKING PRESSURE NOT EXCEEDING 250 ATMOSPHERES 3. THEY ARE DESIGNED FOR PIPES WHOSE NOMINAL DIAMETER EXCEEDS 12 INCHES"
+                },
+                {
+                    "CustomsItemID": "16399",
+                    "Title_English": "REVERSING TYPE VALVES FOR COOLINGHEATING REVERSING IN AIR CONDITIONERS"
+                },
+                {
+                    "CustomsItemID": "20960",
+                    "Title_English": " Taps special for airconditioning machines except for those classified in subheading 8060"
+                },
+                {
+                    "CustomsItemID": "24933",
+                    "Title_English": ":OTHERS"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is the item a butterfly valve?",
+                "Is the item a tap designed for mixing hot and cold water, operated by a single handle?",
+                "Is the item a reversing type valve specifically used for cooling/heating reversal in air conditioners?",
+                "Is the item a tap specifically designed for air conditioning machines?"
+            ],
+            "current_parent_for_clarification": "26465",
+            "start_time": 1769326842.0290725,
+            "parsing_warnings": [
+                "mixed/leaf/21183: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/12417: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/3103: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/12361: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/16399: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/22048: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/20960: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/24933: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "848180"
+            ],
+            "classification_summary": {
+                "original_description": "Progressive distributorVEG 8/8-15/10RV with proximity switch N1-M12x1 right",
+                "predicted_hs_code": "8481800000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is the item a butterfly valve?",
+                        "Is the item a tap designed for mixing hot and cold water, operated by a single handle?",
+                        "Is the item a reversing type valve specifically used for cooling/heating reversal in air conditioners?",
+                        "Is the item a tap specifically designed for air conditioning machines?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.87,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "848180"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.4089927673339844,
+            "milvus_enabled": true,
+            "confidence_score": 0.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 118.77291011810303,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 34431,
+            "total_output_tokens": 1713,
+            "total_tokens": 52309,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 8338,
+                "input_token_count": 2163,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 611,
+                "output_token_count": 155,
+                "total_token_count": 6159
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8414100000\n🏷️ תיאור:  Vacuum pumps\n\n❓ שאלות הבהרה:\n1. What is the minimum absolute pressure, in mm/Hg, that this \"Vacuum turbine two stage TYP 2000\" is capable of achieving?\n2. Is this vacuum turbine designed or primarily used as a component in motor vehicles?\n\n🔍 אפשרויות סיווג:\n• 8414101000 - FOR ACHIEVING A VACUUM PRESSURE LESS THAN 8 MM/HG OF ABSOLUTE PRESSURE\n• 8414109000 - :OTHER\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074237.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "Vacuum turbine two stage TYP 2000",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "24916",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "11420",
+                    "Title_English": "FOR ACHIEVING A VACUUM PRESSURE LESS THAN 8 MM/HG OF ABSOLUTE PRESSURE"
+                },
+                {
+                    "CustomsItemID": "3271",
+                    "Title_English": ":OTHER"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "What is the minimum absolute pressure, in mm/Hg, that this \"Vacuum turbine two stage TYP 2000\" is capable of achieving?",
+                "Is this vacuum turbine designed or primarily used as a component in motor vehicles?"
+            ],
+            "current_parent_for_clarification": "24916",
+            "start_time": 1769326884.3511934,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "84141000"
+            ],
+            "classification_summary": {
+                "original_description": "Vacuum turbine two stage TYP 2000",
+                "predicted_hs_code": "8414100000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "What is the minimum absolute pressure, in mm/Hg, that this \"Vacuum turbine two stage TYP 2000\" is capable of achieving?",
+                        "Is this vacuum turbine designed or primarily used as a component in motor vehicles?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.22,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "84141000"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.3832974433898926,
+            "milvus_enabled": true,
+            "confidence_score": 0.6
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 74.27977681159973,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 23453,
+            "total_output_tokens": 2759,
+            "total_tokens": 33033,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 3639,
+                "input_token_count": 833,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 731,
+                "output_token_count": 207,
+                "total_token_count": 1829
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8473300000\n🏷️ תיאור:  Parts and accessories of the machines of heading 84.71\n📖 תיאור עברית: חלקים ואבזרים של המכונות שבפרט 84.71\n\n📊 פרטים:\n• רמת ביטחון: 100%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 64.8 שניות\n• קריאות LLM: 2\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074239.json",
+            "status": "SUCCESS",
+            "message": "PCIE GEN.4 ADAPTER BOARD",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "24001"
+            ],
+            "final_match": "24001",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326894.8208864,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "847330"
+            ],
+            "classification_summary": {
+                "original_description": "PCIE GEN.4 ADAPTER BOARD",
+                "predicted_hs_code": "8473300000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 1.08,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "847330"
+                ],
+                "total_llm_calls": 2
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.38139820098876953,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 68.74318838119507,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 22328,
+            "total_output_tokens": 2548,
+            "total_tokens": 32777,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 25014,
+                "input_token_count": 7360,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 3201,
+                "output_token_count": 796,
+                "total_token_count": 9511
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8708500000\n🏷️ תיאור:  Driveaxles with differential, whether or not provided with other transmission components, and nondriving axles; parts thereof\n\n❓ שאלות הבהרה:\n1. Is the item a complete rear axle specifically referred to as a \"third axle\"?\n2. Is the final drive unit designed specifically for use in agricultural or earth-moving tractors?\n3. Is this final drive unit special for tractors that are exempted from tax?\n4. Is the final drive unit different in structure or weight from similar parts and accessories designed for other types of motor vehicles (i.e., not agricultural or earth-moving tractors)?\n\n🔍 אפשרויות סיווג:\n• 8708503000 - \"\"Rear axle called a \"\"third axle\n• 8708509000 - OTHERS\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074246.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "AFTERMARKET FINAL DRIVE UNIT TURA E DIFF 2.93 (SILENT)",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "6455",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "13013",
+                    "Title_English": "\"\"Rear axle called a \"\"third axle"
+                },
+                {
+                    "CustomsItemID": "25403",
+                    "Title_English": "OTHERS"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is the item a complete rear axle specifically referred to as a \"third axle\"?",
+                "Is the final drive unit designed specifically for use in agricultural or earth-moving tractors?",
+                "Is this final drive unit special for tractors that are exempted from tax?",
+                "Is the final drive unit different in structure or weight from similar parts and accessories designed for other types of motor vehicles (i.e., not agricultural or earth-moving tractors)?"
+            ],
+            "current_parent_for_clarification": "6455",
+            "start_time": 1769326908.5418646,
+            "parsing_warnings": [
+                "mixed/leaf/14192: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/1336: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/13013: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/25403: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "870850"
+            ],
+            "classification_summary": {
+                "original_description": "AFTERMARKET FINAL DRIVE UNIT TURA E DIFF 2.93 (SILENT)",
+                "predicted_hs_code": "8708500000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is the item a complete rear axle specifically referred to as a \"third axle\"?",
+                        "Is the final drive unit designed specifically for use in agricultural or earth-moving tractors?",
+                        "Is this final drive unit special for tractors that are exempted from tax?",
+                        "Is the final drive unit different in structure or weight from similar parts and accessories designed for other types of motor vehicles (i.e., not agricultural or earth-moving tractors)?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 0.97,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870850"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.4003937244415283,
+            "milvus_enabled": true,
+            "confidence_score": 0.2
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 68.60002660751343,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 27841,
+            "total_output_tokens": 3211,
+            "total_tokens": 41283,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 5536,
+                "input_token_count": 1294,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 2757,
+                "output_token_count": 781,
+                "total_token_count": 4192
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8708809000\n🏷️ תיאור: OTHERS\n📖 תיאור עברית: אחרים\n\n📊 פרטים:\n• רמת ביטחון: 80%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 57.8 שניות\n• קריאות LLM: 3\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074249.json",
+            "status": "SUCCESS",
+            "message": "rear suspention-arm hinge insert",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "26467"
+            ],
+            "final_match": "26467",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326911.4571884,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "870880"
+            ],
+            "classification_summary": {
+                "original_description": "rear suspention-arm hinge insert",
+                "predicted_hs_code": "8708809000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.96,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870880"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.37112855911254883,
+            "milvus_enabled": true,
+            "confidence_score": 0.8
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 59.64897108078003,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 45682,
+            "total_output_tokens": 3514,
+            "total_tokens": 58419,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 38111,
+                "input_token_count": 12396,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 3471,
+                "output_token_count": 848,
+                "total_token_count": 15277
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "❌ שגיאה בתהליך הסיווג\n\nלא ניתן היה להשלים את הסיווג עקב שגיאה טכנית.\n\n🔧 פרטי שגיאה:\nלא ידוע\n\n💡 נסה שוב או פנה לתמיכה טכנית.\n\n📁 לוג מלא: results/classifications/classification_UNKNOWN_20260125_074258.json",
+            "status": "ERROR",
+            "message": "automotive turbocharger ",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326895.670861,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "8409"
+            ],
+            "last_contradiction_id": "26094",
+            "last_contradiction_reason": "The item to classify is \"automotive turbocharger\".\nThe candidate category is 8409000000, which is for \"Parts suitable for use solely or principally with the engines of heading 84.07 or 84.08.\"\n\nSTEP 0 - CATEGORY DESCRIPTION CHECK:\nThe category description is \"Parts for engines of heading 84.07 or 84.08\". An automotive turbocharger is a part used with automotive engines (which typically fall under 84.07 or 84.08). So, at a high level, it seems like the *type* of item could fit here.\n\nMANDATORY REQUIREMENT CHECK:\n1.  Requirement 1: \"Must be parts suitable for use solely or principally with the engines of heading 84.07 or 84.08\"\n    *   Reasoning: An automotive turbocharger is designed to be used solely or principally with internal combustion engines (84.07 or 84.08) to boost their performance. This requirement appears to be met based on the primary function of a turbocharger.\n\nHowever, I must consult the \"SPECIFIC CLASSIFICATION EMPHASIS FOR THIS HEADING\" as it has the highest priority.\n\nSPECIFIC CLASSIFICATION EMPHASIS FOR THIS HEADING:\nUnder the \"TRAPS\" section, it explicitly states: \"If it’s a TURBOCHARGER -> often 8414 family (not 8409).\"\n\nThis instruction is a critical exclusion for this heading. It indicates that despite being a part of an engine, a turbocharger has a more specific classification elsewhere (specifically heading 8414, which includes \"Turbochargers and superchargers\" under 8414.80.10).\n\nAccording to the \"PARTS CLASSIFICATION HIERARCHY\" (Step 1 - CHECK FOR EXPLICIT HEADING):\n\"Does the item have its OWN dedicated HS heading based on what it IS?\n...\nIF item has its own heading → classify there, NOT as \"parts of machinery\"\"\n\nSince \"automotive turbocharger\" is a turbocharger, and turbochargers have a dedicated heading (8414.80.10), it should be classified under 8414, not 8409. The \"TRAPS\" section in the specific classification emphasis for 8409 reinforces this. Therefore, the item contradicts the implicit rule that it should not have a more specific heading elsewhere.\n\nConclusion: The item, being a turbocharger, is explicitly identified in the \"TRAPS\" section as belonging to the 8414 family, not 8409. This makes it unsuitable for classification under 8409.",
+            "classification_summary": {
+                "original_description": "automotive turbocharger ",
+                "predicted_hs_code": "",
+                "is_leaf": false,
+                "stop_reason": "No suitable candidates found",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {
+                    "deepest_hs_code_reached": "8409000000",
+                    "contradiction_reason": "The item to classify is \"automotive turbocharger\".\nThe candidate category is 8409000000, which is for \"Parts suitable for use solely or principally with the engines of heading 84.07 or 84.08.\"\n\nSTEP 0"
+                },
+                "total_runtime_minutes": 1.38,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "8409"
+                ],
+                "total_llm_calls": 2
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.39226341247558594,
+            "milvus_enabled": true,
+            "confidence_score": 1.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 83.87439298629761,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 21889,
+            "total_output_tokens": 2332,
+            "total_tokens": 28980,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 24785,
+                "input_token_count": 7215,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 2548,
+                "output_token_count": 711,
+                "total_token_count": 8788
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8708290000\n🏷️ תיאור:  Other\n\n❓ שאלות הבהרה:\n1. Are these side steps designed exclusively for installation on motor vehicles classified under headings 87.01 to 87.05 (e.g., passenger cars, trucks, or buses)?\n\n🔍 אפשרויות סיווג:\n• 8708290000 -  Other\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074259.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "s5 (dn) 70 inch side steps (without bracket)",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "1258",
+                    "Title_English": " Other"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Are these side steps designed exclusively for installation on motor vehicles classified under headings 87.01 to 87.05 (e.g., passenger cars, trucks, or buses)?"
+            ],
+            "current_parent_for_clarification": "1258",
+            "start_time": 1769326937.856616,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "870829"
+            ],
+            "classification_summary": {
+                "original_description": "s5 (dn) 70 inch side steps (without bracket)",
+                "predicted_hs_code": "8708290000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Are these side steps designed exclusively for installation on motor vehicles classified under headings 87.01 to 87.05 (e.g., passenger cars, trucks, or buses)?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 0.69,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870829"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "special_rules_applied": [
+                {
+                    "rule_type": "Residual",
+                    "candidate_id": "1258",
+                    "action": "MATCH→INSUFFICIENT",
+                    "reason": "Sibling has INSUFFICIENT"
+                }
+            ],
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.39196228981018066,
+            "milvus_enabled": true,
+            "confidence_score": 0.9
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 45.02947783470154,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 9304,
+            "total_output_tokens": 1405,
+            "total_tokens": 18023,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 2808,
+                "input_token_count": 629,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 863,
+                "output_token_count": 205,
+                "total_token_count": 3057
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8704600000\n🏷️ תיאור:  Other with only electric motor for propulsion\n\n❓ שאלות הבהרה:\n1. What is the Gross Vehicle Weight Rating (GVWR) of the 2025 GMC Sierra EV?\n\n🔍 אפשרויות סיווג:\n• 8704608000 - WHICH TOTAL WEIGHT EXCEEDS 4,500KG\n• 8704609000 - With electrical motor only that serves for vehicle propulsion\r\n\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074304.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "2025 gmc sierra ev",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "30774",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "30775",
+                    "Title_English": "WHICH TOTAL WEIGHT EXCEEDS 4,500KG"
+                },
+                {
+                    "CustomsItemID": "30776",
+                    "Title_English": "With electrical motor only that serves for vehicle propulsion\r\n"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "What is the Gross Vehicle Weight Rating (GVWR) of the 2025 GMC Sierra EV?"
+            ],
+            "current_parent_for_clarification": "30774",
+            "start_time": 1769326911.4567847,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "87046000"
+            ],
+            "classification_summary": {
+                "original_description": "2025 gmc sierra ev",
+                "predicted_hs_code": "8704600000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "What is the Gross Vehicle Weight Rating (GVWR) of the 2025 GMC Sierra EV?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.21,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "87046000"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.38971757888793945,
+            "milvus_enabled": true,
+            "confidence_score": 0.8
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 74.4246768951416,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 18937,
+            "total_output_tokens": 2363,
+            "total_tokens": 29182,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 3934,
+                "input_token_count": 870,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 755,
+                "output_token_count": 239,
+                "total_token_count": 2300
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "✅ סיווג מכס הושלם בהצלחה\n\n📋 קוד HS: 8703808000\n🏷️ תיאור:  Of a permissible gross vehicle weight exceeding 4500 kg\n📖 תיאור עברית: שמשקלם הכולל המותר עולה על 4500 ק\"ג\n\n📊 פרטים:\n• רמת ביטחון: 40%\n• רמה: Heading (סעיף)\n• זמן עיבוד: 50.5 שניות\n• קריאות LLM: 3\n\n📁 הסיווג המלא נשמר בקובץ: results/classifications/classification_UNKNOWN_20260125_074309.json",
+            "status": "SUCCESS",
+            "message": "2025 cadillac escalade iq sport 2",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [
+                "29140"
+            ],
+            "final_match": "29140",
+            "had_conflict": false,
+            "needs_clarification": false,
+            "start_time": 1769326938.6306894,
+            "parsing_warnings": [
+                "mixed/leaf/30207: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29350: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29131: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29140: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/29321: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "870380"
+            ],
+            "classification_summary": {
+                "original_description": "2025 cadillac escalade iq sport 2",
+                "predicted_hs_code": "8703808000",
+                "is_leaf": true,
+                "stop_reason": "",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {},
+                "contradiction": {},
+                "total_runtime_minutes": 0.84,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870380"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.40145444869995117,
+            "milvus_enabled": true,
+            "confidence_score": 0.4
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 51.21054553985596,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 52824,
+            "total_output_tokens": 4205,
+            "total_tokens": 69236,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 47516,
+                "input_token_count": 15256,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 4566,
+                "output_token_count": 1110,
+                "total_token_count": 19252
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8704210000\n🏷️ תיאור:  g.v.w. not exceeding 5 tonnes\n\n❓ שאלות הבהרה:\n1. What is the specific body configuration of this Isuzu D-Max (e.g., single cab, extended cab, double cab)? Please provide details on its features that indicate its primary design purpose for the transport of goods rather than passengers (e.g., cargo bed dimensions, type of seating, interior finishes, luxury accessories).\n\n🔍 אפשרויות סיווג:\n• 8704210000 -  g.v.w. not exceeding 5 tonnes\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074328.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "isuzu d-max, py 2024 nr. vin: mpatfs872rt007978",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "6419",
+                    "Title_English": " g.v.w. not exceeding 5 tonnes"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "What is the specific body configuration of this Isuzu D-Max (e.g., single cab, extended cab, double cab)? Please provide details on its features that indicate its primary design purpose for the transport of goods rather than passengers (e.g., cargo bed dimensions, type of seating, interior finishes, luxury accessories)."
+            ],
+            "current_parent_for_clarification": "6419",
+            "start_time": 1769326939.047139,
+            "parsing_warnings": [],
+            "llm_suggested_codes": [
+                "870421"
+            ],
+            "classification_summary": {
+                "original_description": "isuzu d-max, py 2024 nr. vin: mpatfs872rt007978",
+                "predicted_hs_code": "8704210000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "What is the specific body configuration of this Isuzu D-Max (e.g., single cab, extended cab, double cab)? Please provide details on its features that indicate its primary design purpose for the transport of goods rather than passengers (e.g., cargo bed dimensions, type of seating, interior finishes, luxury accessories)."
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.16,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870421"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.39881134033203125,
+            "milvus_enabled": true,
+            "confidence_score": 0.9
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 69.78354835510254,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 8249,
+            "total_output_tokens": 1285,
+            "total_tokens": 20754,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 2903,
+                "input_token_count": 690,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 968,
+                "output_token_count": 212,
+                "total_token_count": 4267
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8703000000\n🏷️ תיאור: Motor cars and other motor vehicles principally designed for the transport of persons (other than those of heading 87.02), including station wagons and racing cars.\n\n❓ שאלות הבהרה:\n1. Does the Porsche have an electric motor for propulsion in addition to an internal combustion piston engine (i.e., is it a hybrid vehicle)?\n2. If the Porsche has an electric motor, is it capable of being charged by plugging it into an external source of electric power (i.e., is it a plug-in hybrid)?\n3. What type of internal combustion piston engine does the Porsche have? Is it a spark-ignition (e.g., gasoline) engine or a compression-ignition (e.g., diesel or semi-diesel) engine?\n\n🔍 אפשרויות סיווג:\n• 8703900000 -  Other\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074330.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "porsche",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "21607",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "9251",
+                    "Title_English": " Other"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Does the Porsche have an electric motor for propulsion in addition to an internal combustion piston engine (i.e., is it a hybrid vehicle)?",
+                "If the Porsche has an electric motor, is it capable of being charged by plugging it into an external source of electric power (i.e., is it a plug-in hybrid)?",
+                "What type of internal combustion piston engine does the Porsche have? Is it a spark-ignition (e.g., gasoline) engine or a compression-ignition (e.g., diesel or semi-diesel) engine?"
+            ],
+            "current_parent_for_clarification": "21607",
+            "start_time": 1769326943.7962534,
+            "parsing_warnings": [
+                "mixed/subheading/12508: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/8179: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/11643: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29121: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29548: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29264: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29349: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/29445: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/9251: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "8703"
+            ],
+            "classification_summary": {
+                "original_description": "porsche",
+                "predicted_hs_code": "8703000000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Does the Porsche have an electric motor for propulsion in addition to an internal combustion piston engine (i.e., is it a hybrid vehicle)?",
+                        "If the Porsche has an electric motor, is it capable of being charged by plugging it into an external source of electric power (i.e., is it a plug-in hybrid)?",
+                        "What type of internal combustion piston engine does the Porsche have? Is it a spark-ignition (e.g., gasoline) engine or a compression-ignition (e.g., diesel or semi-diesel) engine?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.11,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "8703"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.45111942291259766,
+            "milvus_enabled": true,
+            "confidence_score": 0.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 71.59487867355347,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 33661,
+            "total_output_tokens": 3296,
+            "total_tokens": 46505,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 7803,
+                "input_token_count": 1852,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 1988,
+                "output_token_count": 496,
+                "total_token_count": 4508
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8482000000\n🏷️ תיאור: Ball or roller bearings.\n\n❓ שאלות הבהרה:\n1. Does the bearing contain only rollers, or does it contain both balls and rollers?\n2. If the bearing contains only rollers, what is the specific shape of these rollers (e.g., tapered/conical, spherical/barrel-shaped, needle-shaped, or cylindrical)?\n\n🔍 אפשרויות סיווג:\n• 8482200000 -  Tapered roller bearings, including cone and tapered roller assemblies\n• 8482300000 -  Spherical roller bearings\n• 8482400000 -  Needle roller bearings, including cage and needle roller assemblies\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074351.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "KR61802-501 ROULEMENT KR61802-501",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "11377",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "7764",
+                    "Title_English": " Tapered roller bearings, including cone and tapered roller assemblies"
+                },
+                {
+                    "CustomsItemID": "12903",
+                    "Title_English": " Spherical roller bearings"
+                },
+                {
+                    "CustomsItemID": "19173",
+                    "Title_English": " Needle roller bearings, including cage and needle roller assemblies"
+                },
+                {
+                    "CustomsItemID": "11909",
+                    "Title_English": ":PARTS"
+                },
+                {
+                    "CustomsItemID": "6588",
+                    "Title_English": " Other, including combined ball/roller bearings"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Does the bearing contain only rollers, or does it contain both balls and rollers?",
+                "If the bearing contains only rollers, what is the specific shape of these rollers (e.g., tapered/conical, spherical/barrel-shaped, needle-shaped, or cylindrical)?"
+            ],
+            "current_parent_for_clarification": "11377",
+            "start_time": 1769326884.350195,
+            "parsing_warnings": [
+                "mixed/subheading/16443: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/7764: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/12903: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/19173: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/4598: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/6588: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/11909: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "8482"
+            ],
+            "classification_summary": {
+                "original_description": "KR61802-501 ROULEMENT KR61802-501",
+                "predicted_hs_code": "8482000000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Does the bearing contain only rollers, or does it contain both balls and rollers?",
+                        "If the bearing contains only rollers, what is the specific shape of these rollers (e.g., tapered/conical, spherical/barrel-shaped, needle-shaped, or cylindrical)?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 2.44,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "8482"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.3727233409881592,
+            "milvus_enabled": true,
+            "confidence_score": 0.0
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 147.6775619983673,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 29265,
+            "total_output_tokens": 873,
+            "total_tokens": 43172,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 5782,
+                "input_token_count": 1389,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 628,
+                "output_token_count": 159,
+                "total_token_count": 5385
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8537100000\n🏷️ תיאור:  For a voltage not exceeding 1,000 V\n\n❓ שאלות הבהרה:\n1. Is this controller designed specifically for use with video game consoles or machines?\n2. Is this controller an entire electrical control or distribution board, panel, console, desk, or cabinet, which is equipped with two or more electrical apparatus of heading 85.35 or 85.36, and designed for a voltage not exceeding 1,000 V?\n3. Does this controller operate automatically to regulate or control a specific variable (e.g., temperature, pressure, flow, level, etc.), and is it not hydraulic or pneumatic?\n\n🔍 אפשרויות סיווג:\n• 8537100000 -  For a voltage not exceeding 1,000 V\n• 9032890000 -  Other\n• 9504500000 -  Video game consoles and machines, other than those of subheading 9504.30\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074359.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "sample of controller",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "5904",
+                    "Title_English": " For a voltage not exceeding 1,000 V"
+                },
+                {
+                    "CustomsItemID": "18578",
+                    "Title_English": " Other"
+                },
+                {
+                    "CustomsItemID": "18521",
+                    "Title_English": " Video game consoles and machines, other than those of subheading 9504.30"
+                },
+                {
+                    "CustomsItemID": "13400",
+                    "Title_English": " Other machines and apparatus"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is this controller designed specifically for use with video game consoles or machines?",
+                "Is this controller an entire electrical control or distribution board, panel, console, desk, or cabinet, which is equipped with two or more electrical apparatus of heading 85.35 or 85.36, and designed for a voltage not exceeding 1,000 V?",
+                "Does this controller operate automatically to regulate or control a specific variable (e.g., temperature, pressure, flow, level, etc.), and is it not hydraulic or pneumatic?"
+            ],
+            "current_parent_for_clarification": "5904",
+            "start_time": 1769326923.8134606,
+            "parsing_warnings": [
+                "mixed/subheading/5904: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/18578: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/18521: Fallback parser used: No valid JSON array found in response",
+                "mixed/subheading/13400: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "853710",
+                "903289",
+                "950450",
+                "854370"
+            ],
+            "classification_summary": {
+                "original_description": "sample of controller",
+                "predicted_hs_code": "8537100000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is this controller designed specifically for use with video game consoles or machines?",
+                        "Is this controller an entire electrical control or distribution board, panel, console, desk, or cabinet, which is equipped with two or more electrical apparatus of heading 85.35 or 85.36, and designed for a voltage not exceeding 1,000 V?",
+                        "Does this controller operate automatically to regulate or control a specific variable (e.g., temperature, pressure, flow, level, etc.), and is it not hydraulic or pneumatic?"
+                    ],
+                    "tax_difference_between_children": "Yes",
+                    "legal_requirements_difference_between_children": "Yes"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 1.93,
+                "initial_candidates_count": 4,
+                "llm_suggested_codes": [
+                    "853710",
+                    "903289",
+                    "950450",
+                    "854370"
+                ],
+                "total_llm_calls": 3
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.4197518825531006,
+            "milvus_enabled": true,
+            "confidence_score": 0.2
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 120.54677939414978,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 17558,
+            "total_output_tokens": 2456,
+            "total_tokens": 30587,
+            "calls_count": 4,
+            "last_call_metadata": {
+                "input_character_count": 5150,
+                "input_token_count": 1263,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 2561,
+                "output_token_count": 634,
+                "total_token_count": 4293
+            }
+        }
+    },
+    {
+        "success": true,
+        "result": {
+            "response": "⚠️ נדרשת הבהרה לסיווג מדויק\n\n📋 קוד HS משוער: 8708700000\n🏷️ תיאור:  Road wheels and parts and accessories thereof\n\n❓ שאלות הבהרה:\n1. Is the item a device for wheel protection, such as a run-flat system?\n2. Is the steel wheel designed for use on agriculture or earth-moving tractors?\n3. Is the tractor for which the wheel is intended exempted from tax?\n4. Does the steel wheel differ significantly in structure or weight from similar wheels used on other motor vehicles (e.g., cars, trucks, buses)?\n\n🔍 אפשרויות סיווג:\n• 8708703000 - (Devices for wheel protection (runflat\n• 8708709000 - OTHERS\n\n📁 פירוט מלא: results/classifications/classification_UNKNOWN_20260125_074403.json",
+            "status": "NEEDS_CLARIFICATION",
+            "message": "steel wheels",
+            "images": [],
+            "current_level": "done",
+            "current_candidates": [],
+            "matched_chapters": [],
+            "matched_headings": [],
+            "matched_subheadings": [],
+            "matched_leaves": [],
+            "final_match": "18756",
+            "alternative_matches": [
+                {
+                    "CustomsItemID": "17198",
+                    "Title_English": "(Devices for wheel protection (runflat"
+                },
+                {
+                    "CustomsItemID": "21949",
+                    "Title_English": "OTHERS"
+                }
+            ],
+            "had_conflict": false,
+            "needs_clarification": true,
+            "clarifying_questions": [
+                "Is the item a device for wheel protection, such as a run-flat system?",
+                "Is the steel wheel designed for use on agriculture or earth-moving tractors?",
+                "Is the tractor for which the wheel is intended exempted from tax?",
+                "Does the steel wheel differ significantly in structure or weight from similar wheels used on other motor vehicles (e.g., cars, trucks, buses)?"
+            ],
+            "current_parent_for_clarification": "18756",
+            "start_time": 1769326913.1104424,
+            "parsing_warnings": [
+                "mixed/leaf/463: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/13561: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/17198: Fallback parser used: No valid JSON array found in response",
+                "mixed/leaf/21949: Fallback parser used: No valid JSON array found in response"
+            ],
+            "llm_suggested_codes": [
+                "870870"
+            ],
+            "classification_summary": {
+                "original_description": "steel wheels",
+                "predicted_hs_code": "8708700000",
+                "is_leaf": false,
+                "stop_reason": "Insufficient information",
+                "classification_source": "llm_fallback_no_milvus",
+                "candidates_source": "llm_direct",
+                "insufficient_information": {
+                    "missing_information": [
+                        "Is the item a device for wheel protection, such as a run-flat system?",
+                        "Is the steel wheel designed for use on agriculture or earth-moving tractors?",
+                        "Is the tractor for which the wheel is intended exempted from tax?",
+                        "Does the steel wheel differ significantly in structure or weight from similar wheels used on other motor vehicles (e.g., cars, trucks, buses)?"
+                    ],
+                    "tax_difference_between_children": "No",
+                    "legal_requirements_difference_between_children": "No"
+                },
+                "contradiction": {},
+                "total_runtime_minutes": 2.17,
+                "initial_candidates_count": 1,
+                "llm_suggested_codes": [
+                    "870870"
+                ],
+                "total_llm_calls": 4
+            },
+            "external_candidates": [],
+            "classification_source": "llm_fallback_no_milvus",
+            "metadata_counts": {
+                "emphasis_loaded": 264,
+                "guidelines_loaded": 225,
+                "customs_items": 12844
+            },
+            "milvus_best_score": 0.0,
+            "milvus_strategies_used": [],
+            "milvus_processing_time": 0.4354288578033447,
+            "milvus_enabled": true,
+            "confidence_score": 0.2
+        },
+        "completed_steps": [
+            "load_context_node",
+            "milvus_search_node",
+            "llm_direct_classify_node",
+            "evaluate_candidates_node",
+            "evaluate_candidates_node",
+            "handle_insufficient_node"
+        ],
+        "errors": [],
+        "execution_time": 131.55234932899475,
+        "agent_name": "hsCode_classifier",
+        "execution_mode": "background",
+        "session_id": null,
+        "username": "dev-user",
+        "conversation_id": "temp_session",
+        "redis_saved": false,
+        "token_usage": {
+            "total_input_tokens": 29691,
+            "total_output_tokens": 2308,
+            "total_tokens": 44030,
+            "calls_count": 5,
+            "last_call_metadata": {
+                "input_character_count": 5187,
+                "input_token_count": 1203,
+                "model_name": "gemini-2.5-flash",
+                "number_of_images": 0,
+                "history_messages_count": 0,
+                "output_character_count": 2731,
+                "output_token_count": 778,
+                "total_token_count": 4525
+            }
+        }
+    }
+]

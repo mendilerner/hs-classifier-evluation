@@ -1,0 +1,15 @@
+FROM harbor.mehes.gov.il/ds_projects/me-west1-docker.pkg.dev/dev-env-374908/python/sql-driver17-pyodbc4.0.34-streamlit1.36.0:v1.0
+
+COPY gunicorn-20.1.0-py3-none-any.whl .
+RUN pip install gunicorn-20.1.0-py3-none-any.whl -i http://nexus.mehes.gov.il:8081/repository/python-hosted-repo/simple --trusted-host nexus.mehes.gov.il
+
+COPY pyarrow-12.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl .
+RUN pip install pyarrow-12.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl -i http://nexus.mehes.gov.il:8081/repository/python-hosted-repo/simple --trusted-host nexus.mehes.gov.il
+
+COPY urllib3-1.26.9-py3-none-any.whl .
+RUN pip install urllib3-1.26.9-py3-none-any.whl -i http://nexus.mehes.gov.il:8081/repository/python-hosted-repo/simple --trusted-host nexus.mehes.gov.il
+
+COPY mlflow-2.4.1-py3-none-any.whl .
+RUN pip install mlflow-2.4.1-py3-none-any.whl -i http://nexus.mehes.gov.il:8081/repository/python-hosted-repo/simple --trusted-host nexus.mehes.gov.il
+
+COPY git /bin/git
