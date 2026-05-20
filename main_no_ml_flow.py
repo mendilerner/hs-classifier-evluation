@@ -218,6 +218,10 @@ def main():
         **_build_comparison_metrics(results_df, okay_responses_filter),
     }
 
+    results_df.to_csv('classification-results.csv')
+
+    pd.DataFrame([metrics]).to_csv('metrics.csv', index=False)
+
     for key, value in metrics.items():
         print(f'{key}: {value}')
 
