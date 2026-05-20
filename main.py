@@ -7,6 +7,8 @@ import urllib3
 from urllib3.exceptions import InsecureRequestWarning
 import dotenv
 import os
+import hs_code_comparison
+from hs_code_comparison import compare_hs_codes, load_customs_book
 
 dotenv.load_dotenv()
 
@@ -96,6 +98,8 @@ def identify_product(product):
 
     predicted_hs_code = results['result']['classification_summary']['predicted_hs_code']
 
+    code_comparison = compare_hs_codes(predicted_hs_code, product['expected_code'])
+
     return {
         'description': description,
         'did_server_responded': True,
@@ -114,6 +118,39 @@ def identify_product(product):
         'total_input_tokens': results['token_usage']['total_input_tokens'] if results['token_usage'] else 0,
         'total_output_tokens': results['token_usage']['total_output_tokens'] if results['token_usage'] else 0,
         'full_result': json.dumps(results),
+        'mas_knia_mismatch': code_comparison['mas_knia_mismatch'],
+        'general_customs_mismatch': code_comparison['general_customs_mismatch'],
+        'requirements_mismatch': code_comparison['requirements_mismatch'],
+        'any_leaf_full_match': code_comparison['any_leaf_full_match'],
+    }
+
+
+def _build_comparison_metrics(results_df, okay_responses_filter):
+    """Build tax and legal-requirements comparison metrics from results_df.
+
+    Only rows that passed okay_responses_filter AND have non-null comparison
+    values are included in each rate calculation.
+    """
+    comparison_ok = (
+        okay_responses_filter
+        & results_df['mas_knia_mismatch'].notna()
+        & results_df['general_customs_mismatch'].notna()
+        & results_df['requirements_mismatch'].notna()
+        & results_df['any_leaf_full_match'].notna()
+    )
+    subset = results_df[comparison_ok]
+    if len(subset) == 0:
+        return {
+            '34_mas_knia_mismatch_rate': float('nan'),
+            '35_general_customs_mismatch_rate': float('nan'),
+            '36_requirements_mismatch_rate': float('nan'),
+            '37_no_tax_or_requirements_mismatch_rate': float('nan'),
+        }
+    return {
+        '34_mas_knia_mismatch_rate': subset['mas_knia_mismatch'].astype(float).mean(),
+        '35_general_customs_mismatch_rate': subset['general_customs_mismatch'].astype(float).mean(),
+        '36_requirements_mismatch_rate': subset['requirements_mismatch'].astype(float).mean(),
+        '37_no_tax_or_requirements_mismatch_rate': subset['any_leaf_full_match'].astype(float).mean(),
     }
 
 
@@ -125,7 +162,7 @@ def main():
                 experiment_description=experiment_description,
                 run_name=run_name,
                 run_description=run_description,
-                files_lst=[__file__])
+                files_lst=[__file__, hs_code_comparison.__file__])
 
     with open('./classified-data-input.csv') as f:
         test_data = pd.read_csv(f,
@@ -136,6 +173,9 @@ def main():
     mlflow_log_data(test_data, 'classified-data')
 
     mlflow_log_params(test_params)
+
+    print('Loading customs book index...')
+    load_customs_book()
 
     with ThreadPoolExecutor(max_workers=test_params['threads_number']) as p:
         result_set = p.map(
@@ -191,6 +231,8 @@ def main():
         '31_average_llm_calls_count_for_successful_responses': results_df[okay_responses_filter]['llm_calls_count'].mean(),
         '32_average_total_input_tokens_for_successful_responses': results_df[okay_responses_filter]['total_input_tokens'].mean(),
         '33_average_total_output_tokens_for_successful_responses': results_df[okay_responses_filter]['total_output_tokens'].mean(),
+
+        **_build_comparison_metrics(results_df, okay_responses_filter),
     }
 
     mlflow_log_metric(metrics)
