@@ -144,6 +144,12 @@ def compare_hs_codes(predicted_code, actual_code):
             'requirements_mismatch'    – bool, or None if either code is unknown
             'any_leaf_full_match'      – bool, or None if either code is unknown
     """
+    # Normalize both codes to 10 digits (pad with trailing zeros)
+    if predicted_code and len(predicted_code) < 10:
+        predicted_code = predicted_code.ljust(10, '0')
+    if actual_code and len(actual_code) < 10:
+        actual_code = actual_code.ljust(10, '0')
+
     cached = load_customs_book()
     fc_index = cached['fc_index']
     customs_book_index = cached['customs_book_index']
@@ -164,6 +170,15 @@ def compare_hs_codes(predicted_code, actual_code):
     act_item = fc_index.get(actual_code)
     pred_id = str(pred_item.get('CustomsItemID', ''))
     act_id = str(act_item.get('CustomsItemID', ''))
+
+    # Same code → always a match regardless of branch diversity
+    if pred_id == act_id:
+        return {
+            'mas_knia_mismatch': False,
+            'general_customs_mismatch': False,
+            'requirements_mismatch': False,
+            'any_leaf_full_match': True,
+        }
 
     pred_is_ancestor = _is_item_ancestor(pred_id, act_id, parent_index)
 
