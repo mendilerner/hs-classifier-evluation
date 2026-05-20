@@ -11,8 +11,9 @@ from hs_code_comparison import compare_hs_codes, load_customs_book
 
 dotenv.load_dotenv()
 
-
 urllib3.disable_warnings(InsecureRequestWarning)
+
+RESULTS_JSON = 'agent-results.json'
 
 
 username_for_agent = os.getenv("USERNAME_FOR_AGENT", "dev-user")
@@ -159,14 +160,22 @@ def main():
                                 dtype=str
                                 )
 
-    print('Loading customs book index...')
-    load_customs_book()
+    if os.path.exists(RESULTS_JSON):
+        print(f'Loading existing results from {RESULTS_JSON}, skipping agent run...')
+        with open(RESULTS_JSON) as f:
+            result_list = json.load(f)
+    else:
+        print('Loading customs book index...')
+        load_customs_book()
 
-    with ThreadPoolExecutor(max_workers=test_params['threads_number']) as p:
-        result_set = p.map(
-            identify_product, test_data.to_dict(orient='records'))
+        with ThreadPoolExecutor(max_workers=test_params['threads_number']) as p:
+            result_list = list(p.map(identify_product, test_data.to_dict(orient='records')))
 
-    results_df = pd.DataFrame(result_set)
+        with open(RESULTS_JSON, 'w', encoding='utf-8') as f:
+            json.dump(result_list, f, indent=2, default=lambda x: None)
+        print(f'Agent results saved to {RESULTS_JSON}')
+
+    results_df = pd.DataFrame(result_list)
 
     okay_responses_filter = (results_df['did_server_responded'] == True) & (
         results_df['success'] == True) & (results_df['status'] != 'ERROR')
