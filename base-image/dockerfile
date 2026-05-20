@@ -1,5 +1,6 @@
 FROM harbor.mehes.gov.il/ds_projects/me-west1-docker.pkg.dev/dev-env-374908/python/sql-driver17-pyodbc4.0.34-streamlit1.36.0:v1.0
 
+# ! the order matters !
 COPY gunicorn-20.1.0-py3-none-any.whl .
 RUN pip install gunicorn-20.1.0-py3-none-any.whl -i http://nexus.mehes.gov.il:8081/repository/python-hosted-repo/simple --trusted-host nexus.mehes.gov.il
 

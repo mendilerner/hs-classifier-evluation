@@ -50,9 +50,7 @@ def query_agent(product_description):
     print('sending request. product description:', product_description)
     response = requests.post(
         test_params['agent_url'],
-        data=json.dumps
-        (
-            {
+        json={
                 "agent_name": test_params['agent_name'],
                 "input_data": {
                     "message": product_description
@@ -60,7 +58,8 @@ def query_agent(product_description):
                 "username": username_for_agent,
                 "mode": "background"
             }
-        ),
+        ,
+
         verify=False,
         timeout=test_params['request_timeout_seconds'],
     )
