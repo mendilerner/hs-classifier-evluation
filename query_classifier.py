@@ -4,14 +4,15 @@ import requests
 def get_hs_code_from_description(description):
     response = requests.post(
         "http://localhost:8000/api/v1/agents/run",
+        # "https://langraph-infrastructure.mdev.mehes.gov.il/api/v1/agents/run",
         json={
             "agent_name": "hsCode_classifier",
             "input_data": {"message": description},
             "username": "custom-moshed3",
-            "mode": "background"
+            "mode": "background",
         },
         verify=False,
-        timeout=600
+        timeout=600,
     )
     response.raise_for_status()
     result = response.json()
@@ -21,6 +22,6 @@ def get_hs_code_from_description(description):
 
 
 if __name__ == "__main__":
-    description = 'alovera juice 100% pure'
+    description = "alovera juice"
     hs_code = get_hs_code_from_description(description)
     print(f"HS Code for '{description}': {hs_code}")
