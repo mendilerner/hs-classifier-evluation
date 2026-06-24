@@ -109,6 +109,7 @@ def identify_product(product):
         'correct_until': get_correct_until_level(predicted_hs_code, product['expected_code']),
         'candidates_source': 'milvus' if results['result']['classification_summary']['candidates_source'] == 'milvus' else 'llm',
         'classification_source': 'milvus' if results['result']['classification_source'] == 'milvus_single_leaf' else 'llm',
+        'was_correct_code_in_candidates': (any(product['expected_code'].startswith(code) for code in results['result']['classification_summary']['llm_suggested_codes']) if results['result']['classification_summary']['candidates_source'] == 'llm_direct' else None),
         'server_run_time_minutes': results['result']['classification_summary']['total_runtime_minutes'],
         'llm_calls_count': results['result']['classification_summary']['total_llm_calls'],
         'total_input_tokens': results['token_usage']['total_input_tokens'] if results['token_usage'] else 0,
@@ -223,6 +224,8 @@ def main():
         '31_average_llm_calls_count_for_successful_responses': results_df[okay_responses_filter]['llm_calls_count'].mean(),
         '32_average_total_input_tokens_for_successful_responses': results_df[okay_responses_filter]['total_input_tokens'].mean(),
         '33_average_total_output_tokens_for_successful_responses': results_df[okay_responses_filter]['total_output_tokens'].mean(),
+
+        '38_was_correct_code_in_candidates_rate_when_candidates_from_llm_direct': results_df[results_df['was_correct_code_in_candidates'].notna()]['was_correct_code_in_candidates'].astype(float).mean(),
 
         **_build_comparison_metrics(results_df, okay_responses_filter),
     }

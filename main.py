@@ -145,6 +145,17 @@ def identify_product(product):
             if results["result"]["classification_source"] == "milvus_single_leaf"
             else "llm"
         ),
+        "was_correct_code_in_candidates": (
+            any(
+                product["expected_code"].startswith(code)
+                for code in results["result"]["classification_summary"][
+                    "llm_suggested_codes"
+                ]
+            )
+            if results["result"]["classification_summary"]["candidates_source"]
+            == "llm_direct"
+            else None
+        ),
         "server_run_time_minutes": results["result"]["classification_summary"][
             "total_runtime_minutes"
         ],
@@ -341,6 +352,13 @@ def main():
         "33_average_total_output_tokens_for_successful_responses": results_df[
             okay_responses_filter
         ]["total_output_tokens"].mean(),
+        "38_was_correct_code_in_candidates_rate_when_candidates_from_llm_direct": results_df[
+            results_df["was_correct_code_in_candidates"].notna()
+        ][
+            "was_correct_code_in_candidates"
+        ].astype(
+            float
+        ).mean(),
         **_build_comparison_metrics(results_df, okay_responses_filter),
     }
 
