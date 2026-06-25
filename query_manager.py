@@ -9,9 +9,11 @@ def get_hs_code_from_description(description):
         json={
             "agent_name": "hscode_manager",
             # "input_data": {"declaration_id": 585326319},
-            "input_data": {"lead_document_title": "26014632221711"},
+            # "input_data": {"lead_document_title": "26014632221711"},
             # "input_data": {"lead_document_title": "26044618816716"},
+            # "input_data": {"lead_document_title": "26014632221711"},
             # "input_data": {"lead_document_title": "26044620076739"},
+            "input_data": {"message": "2025 gmc sierra ev"},
             "username": "custom-moshed3",
             "mode": "background",
         },
