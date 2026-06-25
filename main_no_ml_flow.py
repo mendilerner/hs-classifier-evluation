@@ -70,6 +70,23 @@ def query_agent(product_description):
     return result
 
 
+def extract_classification(results):
+    """Return (classification_summary, status) from either the hscode_manager
+    response shape (result.classification_results[]) or the direct
+    hsCode_classifier shape (flat result.classification_summary).
+
+    Returns (None, None) when the manager extracted no products.
+    """
+    result = results['result']
+    if 'classification_results' in result:
+        classification_results = result.get('classification_results') or []
+        if not classification_results:
+            return None, None
+        first = classification_results[0]
+        return first['classification_summary'], first['classification_status']
+    return result['classification_summary'], result['status']
+
+
 def identify_product(product):
     description = product['description']
     try:
@@ -92,8 +109,8 @@ def identify_product(product):
             'full_result': results,
         }
 
-    classification_results = results['result'].get('classification_results') or []
-    if not classification_results:
+    summary, status = extract_classification(results)
+    if summary is None:
         print('Manager returned no classification results for product:',
               product, 'Result:', results)
         return {
@@ -104,8 +121,6 @@ def identify_product(product):
             'full_result': json.dumps(results),
         }
 
-    classification_result = classification_results[0]
-    summary = classification_result['classification_summary']
     predicted_hs_code = summary['predicted_hs_code']
 
     code_comparison = compare_hs_codes(predicted_hs_code, product['expected_code'])
@@ -117,7 +132,7 @@ def identify_product(product):
         'predicted_code': predicted_hs_code,
         'actual_code': product['expected_code'],
         'did_found_leaf': summary['is_leaf'],
-        'status': classification_result['classification_status'],
+        'status': status,
         'length_of_predicted_code': len(remove_even_trailing_zeros(predicted_hs_code)) if not summary['is_leaf'] else 10,
         'are_given_digits_correct': predicted_hs_code[:len(remove_even_trailing_zeros(predicted_hs_code))] == product['expected_code'][:len(remove_even_trailing_zeros(predicted_hs_code))],
         'correct_until': get_correct_until_level(predicted_hs_code, product['expected_code']),
@@ -240,6 +255,8 @@ def main():
         '33_average_total_output_tokens_for_successful_responses': results_df[okay_responses_filter]['total_output_tokens'].mean(),
 
         '38_was_correct_code_in_candidates_rate_when_candidates_from_llm_direct': results_df[results_df['was_correct_code_in_candidates'].notna()]['was_correct_code_in_candidates'].astype(float).mean(),
+
+        '39_correct_response_rate_overall': results_df['are_given_digits_correct'].mean(),
 
         **_build_comparison_metrics(results_df, okay_responses_filter),
     }
