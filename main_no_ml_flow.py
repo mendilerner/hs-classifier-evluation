@@ -180,38 +180,40 @@ def _build_comparison_metrics(results_df, okay_responses_filter):
     }
 
 
-def main():
-    print('Starting classifier test with url:', test_params['agent_url'], 'using agent:',
-          test_params['agent_name'], 'with', test_params['threads_number'], 'threads and', test_params['request_timeout_seconds'], 'seconds timeout per request.')
+NUM_RUNS = 3
 
-    with open('./classified-data-input.csv') as f:
-        test_data = pd.read_csv(f,
-                                index_col='Unnamed: 0',
-                                dtype=str
-                                )
 
-    if os.path.exists(RESULTS_JSON):
-        print(f'Loading existing results from {RESULTS_JSON}, skipping agent run...')
-        with open(RESULTS_JSON) as f:
+def run_once(test_data, run_index):
+    """Query the agent for every product once and return the results DataFrame.
+
+    Results are cached per run so a rerun can reuse a completed run.
+    """
+    results_json = RESULTS_JSON.replace('.json', f'-run{run_index}.json')
+
+    if os.path.exists(results_json):
+        print(f'Loading existing results from {results_json}, skipping agent run...')
+        with open(results_json) as f:
             result_list = json.load(f)
     else:
-        print('Loading customs book index...')
-        load_customs_book()
-
+        print(f'Run {run_index}/{NUM_RUNS}: querying agent for all products...')
         with ThreadPoolExecutor(max_workers=test_params['threads_number']) as p:
             result_list = list(p.map(identify_product, test_data.to_dict(orient='records')))
 
-        with open(RESULTS_JSON, 'w', encoding='utf-8') as f:
+        with open(results_json, 'w', encoding='utf-8') as f:
             json.dump(result_list, f, indent=2, default=lambda x: None)
-        print(f'Agent results saved to {RESULTS_JSON}')
+        print(f'Agent results saved to {results_json}')
 
     results_df = pd.DataFrame(result_list)
+    results_df.to_csv(f'classification-results-run{run_index}.csv')
+    return results_df
 
+
+def compute_metrics(results_df):
     okay_responses_filter = (results_df['did_server_responded'] == True) & (
         results_df['success'] == True) & (results_df['status'] != 'ERROR')
     len_okay_responses = len(results_df[okay_responses_filter])
 
-    metrics = {
+    return {
         '01_total_tests_count': len(results_df),
 
         '02_okay_responses_rate': len_okay_responses / len(results_df),
@@ -261,14 +263,35 @@ def main():
         **_build_comparison_metrics(results_df, okay_responses_filter),
     }
 
-    results_df.to_csv('classification-results.csv')
 
-    pd.DataFrame([metrics]).to_csv('metrics.csv', index=False)
+def main():
+    print('Starting classifier test with url:', test_params['agent_url'], 'using agent:',
+          test_params['agent_name'], 'with', test_params['threads_number'], 'threads and', test_params['request_timeout_seconds'], 'seconds timeout per request.')
+    print(f'Running the test {NUM_RUNS} times and averaging the metrics.')
 
-    for key, value in metrics.items():
+    with open('./classified-data-input.csv') as f:
+        test_data = pd.read_csv(f,
+                                index_col='Unnamed: 0',
+                                dtype=str
+                                )
+
+    print('Loading customs book index...')
+    load_customs_book()
+
+    per_run_metrics = []
+    for run_index in range(1, NUM_RUNS + 1):
+        results_df = run_once(test_data, run_index)
+        per_run_metrics.append(compute_metrics(results_df))
+
+    per_run_df = pd.DataFrame(per_run_metrics, index=[f'run{i}' for i in range(1, NUM_RUNS + 1)])
+    per_run_df.to_csv('metrics-per-run.csv')
+
+    avg_metrics = per_run_df.mean(numeric_only=True).to_dict()
+    pd.DataFrame([avg_metrics]).to_csv('metrics.csv', index=False)
+
+    print(f'\nAveraged metrics over {NUM_RUNS} runs:')
+    for key, value in avg_metrics.items():
         print(f'{key}: {value}')
-
-    print(results_df)
 
 
 if __name__ == '__main__':
