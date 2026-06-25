@@ -21,7 +21,7 @@ username_for_agent = os.getenv("USERNAME_FOR_AGENT", "dev-user")
 test_params = {
     'agent_url': os.getenv('AGENT_URL',
                            "https://langraph-infrastructure.mdev.mehes.gov.il/api/v1/agents/run"),
-    'agent_name': os.getenv('AGENT_NAME', 'hsCode_classifier'),
+    'agent_name': os.getenv('AGENT_NAME', 'hscode_manager'),
     'threads_number': int(os.getenv('THREADS_NUMBER', '16')),
     'request_timeout_seconds': int(os.getenv('REQUEST_TIMEOUT_SECONDS', '600')),
     'model_used_for_candidates_generation': os.environ['MODEL_USED_FOR_CANDIDATES_GENERATION'],
@@ -92,7 +92,21 @@ def identify_product(product):
             'full_result': results,
         }
 
-    predicted_hs_code = results['result']['classification_summary']['predicted_hs_code']
+    classification_results = results['result'].get('classification_results') or []
+    if not classification_results:
+        print('Manager returned no classification results for product:',
+              product, 'Result:', results)
+        return {
+            'description': description,
+            'did_server_responded': True,
+            'success': False,
+            'actual_code': product['expected_code'],
+            'full_result': json.dumps(results),
+        }
+
+    classification_result = classification_results[0]
+    summary = classification_result['classification_summary']
+    predicted_hs_code = summary['predicted_hs_code']
 
     code_comparison = compare_hs_codes(predicted_hs_code, product['expected_code'])
 
@@ -102,16 +116,16 @@ def identify_product(product):
         'success': True,
         'predicted_code': predicted_hs_code,
         'actual_code': product['expected_code'],
-        'did_found_leaf': results['result']['classification_summary']['is_leaf'],
-        'status': results['result']['status'],
-        'length_of_predicted_code': len(remove_even_trailing_zeros(predicted_hs_code)) if not results['result']['classification_summary']['is_leaf'] else 10,
+        'did_found_leaf': summary['is_leaf'],
+        'status': classification_result['classification_status'],
+        'length_of_predicted_code': len(remove_even_trailing_zeros(predicted_hs_code)) if not summary['is_leaf'] else 10,
         'are_given_digits_correct': predicted_hs_code[:len(remove_even_trailing_zeros(predicted_hs_code))] == product['expected_code'][:len(remove_even_trailing_zeros(predicted_hs_code))],
         'correct_until': get_correct_until_level(predicted_hs_code, product['expected_code']),
-        'candidates_source': 'milvus' if results['result']['classification_summary']['candidates_source'] == 'milvus' else 'llm',
-        'classification_source': 'milvus' if results['result']['classification_source'] == 'milvus_single_leaf' else 'llm',
-        'was_correct_code_in_candidates': (any(product['expected_code'].startswith(code) for code in results['result']['classification_summary']['llm_suggested_codes']) if results['result']['classification_summary']['candidates_source'] == 'llm_direct' else None),
-        'server_run_time_minutes': results['result']['classification_summary']['total_runtime_minutes'],
-        'llm_calls_count': results['result']['classification_summary']['total_llm_calls'],
+        'candidates_source': 'milvus' if summary['candidates_source'] == 'milvus' else 'llm',
+        'classification_source': 'milvus' if summary['classification_source'] == 'milvus_single_leaf' else 'llm',
+        'was_correct_code_in_candidates': (any(product['expected_code'].startswith(code) for code in summary['llm_suggested_codes']) if summary['candidates_source'] == 'llm_direct' else None),
+        'server_run_time_minutes': summary['total_runtime_minutes'],
+        'llm_calls_count': summary['total_llm_calls'],
         'total_input_tokens': results['token_usage']['total_input_tokens'] if results['token_usage'] else 0,
         'total_output_tokens': results['token_usage']['total_output_tokens'] if results['token_usage'] else 0,
         'full_result': json.dumps(results),
