@@ -110,8 +110,8 @@ def identify_product(product):
         }
 
     summary, status = extract_classification(results)
-    if summary is None:
-        print('Manager returned no classification results for product:',
+    if not summary or not summary.get('predicted_hs_code'):
+        print('Manager returned no usable classification for product:',
               product, 'Result:', results)
         return {
             'description': description,
