@@ -39,6 +39,11 @@ DIFF_FIELDS = [
     'requirements_mismatch',
     'any_leaf_full_match',
     # --- extracted from the nested full_result blob ---
+    # product-extraction stage (runs before web enrichment)
+    'extracted_brand',
+    'extracted_model',
+    'extracted_general_product',
+    'extracted_purpose',
     'initial_candidates_count',
     'milvus_candidate_codes',
     'llm_candidate_codes',
@@ -94,6 +99,14 @@ def extract_details(row):
         return {}
 
     result = fr.get('result') or {}
+
+    # product-extraction stage: the fields the agent parses out of the raw
+    # description before any enrichment or candidate retrieval.
+    prods = (result.get('response') or {}).get(
+        'products_extracted_from_invoice'
+    ) or []
+    prod = prods[0] if prods else {}
+
     cr = result.get('classification_results')
     entry = cr[0] if cr else None
     if entry is not None:  # hscode_manager response shape
@@ -120,6 +133,10 @@ def extract_details(row):
     )
 
     return {
+        'extracted_brand': prod.get('brand'),
+        'extracted_model': prod.get('model'),
+        'extracted_general_product': prod.get('general_product'),
+        'extracted_purpose': prod.get('purpose'),
         'initial_candidates_count': summary.get(
             'initial_candidates_count', meta.get('initial_candidates_count')
         ),
@@ -168,6 +185,22 @@ def diagnose_root_cause(a, b):
         factors.append('server_response_availability_changed')
     if a.get('success') != b.get('success'):
         factors.append('success_flag_changed')
+
+    # --- product extraction: the earliest stage, the agent parses brand /
+    # model / general_product / purpose out of the raw description before web
+    # enrichment, so a change here is the most upstream cause. ---
+    extraction_changed = [
+        name for name, field in (
+            ('brand', 'extracted_brand'),
+            ('model', 'extracted_model'),
+            ('general_product', 'extracted_general_product'),
+            ('purpose', 'extracted_purpose'),
+        ) if a.get(field) != b.get(field)
+    ]
+    if extraction_changed:
+        factors.append(
+            'product_extraction_changed (' + ', '.join(extraction_changed) + ')'
+        )
 
     # --- web enrichment: the first classification step, it enriches the
     # description before any candidate retrieval, so a change here is upstream
