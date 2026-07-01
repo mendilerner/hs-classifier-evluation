@@ -17,8 +17,9 @@ from hs_code_comparison import compare_hs_codes, load_customs_book
 
 dotenv.load_dotenv()
 
-
 urllib3.disable_warnings(InsecureRequestWarning)
+
+RESULTS_JSON = "agent-results.json"
 
 
 username_for_agent = os.getenv("USERNAME_FOR_AGENT", "dev-user")
@@ -26,7 +27,6 @@ experiment_name = os.environ["EXPERIMENT_NAME"]
 experiment_description = os.getenv("EXPERIMENT_DESCRIPTION", "")
 run_name = os.environ["RUN_NAME"]
 run_description = os.getenv("RUN_DESCRIPTION", "")
-
 
 test_params = {
     "agent_url": os.getenv(
@@ -40,7 +40,6 @@ test_params = {
         "MODEL_USED_FOR_CANDIDATES_GENERATION"
     ],
     "model_used_for_process": os.environ["MODEL_USED_FOR_PROCESS"],
-    "max_token_on_prem": os.environ["MAX_TOKEN_ON_PREM"],
 }
 
 
@@ -126,9 +125,9 @@ def identify_product(product):
         }
 
     summary, status = extract_classification(results)
-    if summary is None:
+    if not summary or not summary.get("predicted_hs_code"):
         print(
-            "Manager returned no classification results for product:",
+            "Manager returned no usable classification for product:",
             product,
             "Result:",
             results,
@@ -168,9 +167,7 @@ def identify_product(product):
             predicted_hs_code, product["expected_code"]
         ),
         "candidates_source": (
-            "milvus"
-            if summary["candidates_source"] == "milvus"
-            else "llm"
+            "milvus" if summary["candidates_source"] == "milvus" else "llm"
         ),
         "classification_source": (
             "milvus"
@@ -240,44 +237,37 @@ def _build_comparison_metrics(results_df, okay_responses_filter):
     }
 
 
-def main():
-    print(
-        "Starting classifier test with url:",
-        test_params["agent_url"],
-        "using agent:",
-        test_params["agent_name"],
-        "with",
-        test_params["threads_number"],
-        "threads and",
-        test_params["request_timeout_seconds"],
-        "seconds timeout per request.",
-    )
+NUM_RUNS = 3
 
-    mlflow_init(
-        experiment_name=experiment_name,
-        experiment_description=experiment_description,
-        run_name=run_name,
-        run_description=run_description,
-        files_lst=[__file__, hs_code_comparison.__file__],
-    )
 
-    with open("./classified-data-input.csv") as f:
-        test_data = pd.read_csv(f, index_col="Unnamed: 0", dtype=str)
+def run_once(test_data, run_index):
+    """Query the agent for every product once and return the results DataFrame.
 
-    mlflow_log_data(test_data, "classified-data")
+    Results are cached per run so a rerun can reuse a completed run.
+    """
+    results_json = RESULTS_JSON.replace(".json", f"-run{run_index}.json")
 
-    mlflow_log_params(test_params)
+    if os.path.exists(results_json):
+        print(f"Loading existing results from {results_json}, skipping agent run...")
+        with open(results_json) as f:
+            result_list = json.load(f)
+    else:
+        print(f"Run {run_index}/{NUM_RUNS}: querying agent for all products...")
+        with ThreadPoolExecutor(max_workers=test_params["threads_number"]) as p:
+            result_list = list(
+                p.map(identify_product, test_data.to_dict(orient="records"))
+            )
 
-    print("Loading customs book index...")
-    load_customs_book()
+        with open(results_json, "w", encoding="utf-8") as f:
+            json.dump(result_list, f, indent=2, default=lambda x: None)
+        print(f"Agent results saved to {results_json}")
 
-    with ThreadPoolExecutor(max_workers=test_params["threads_number"]) as p:
-        result_set = p.map(identify_product, test_data.to_dict(orient="records"))
+    results_df = pd.DataFrame(result_list)
+    results_df.to_csv(f"classification-results-run{run_index}.csv")
+    return results_df
 
-    results_df = pd.DataFrame(result_set)
 
-    mlflow_log_data(results_df, "classification-results")
-
+def compute_metrics(results_df):
     okay_responses_filter = (
         (results_df["did_server_responded"] == True)
         & (results_df["success"] == True)
@@ -285,7 +275,7 @@ def main():
     )
     len_okay_responses = len(results_df[okay_responses_filter])
 
-    metrics = {
+    return {
         "01_total_tests_count": len(results_df),
         "02_okay_responses_rate": len_okay_responses / len(results_df),
         "03_error_rate": (len(results_df) - len_okay_responses) / len(results_df),
@@ -381,18 +371,68 @@ def main():
             results_df["was_correct_code_in_candidates"].notna()
         ][
             "was_correct_code_in_candidates"
-        ].astype(
-            float
-        ).mean(),
+        ]
+        .astype(float)
+        .mean(),
         "39_correct_response_rate_overall": results_df[
             "are_given_digits_correct"
         ].mean(),
         **_build_comparison_metrics(results_df, okay_responses_filter),
     }
 
-    mlflow_log_metric(metrics)
 
-    print(results_df)
+def main():
+    print(
+        "Starting classifier test with url:",
+        test_params["agent_url"],
+        "using agent:",
+        test_params["agent_name"],
+        "with",
+        test_params["threads_number"],
+        "threads and",
+        test_params["request_timeout_seconds"],
+        "seconds timeout per request.",
+    )
+    print(f"Running the test {NUM_RUNS} times and averaging the metrics.")
+
+    mlflow_init(
+        experiment_name=experiment_name,
+        experiment_description=experiment_description,
+        run_name=run_name,
+        run_description=run_description,
+        files_lst=[__file__, hs_code_comparison.__file__],
+    )
+
+    with open("./classified-data-input.csv") as f:
+        test_data = pd.read_csv(f, index_col="Unnamed: 0", dtype=str)
+
+    mlflow_log_data(test_data, "classified-data")
+
+    mlflow_log_params(test_params)
+
+    print("Loading customs book index...")
+    load_customs_book()
+
+    per_run_metrics = []
+    for run_index in range(1, NUM_RUNS + 1):
+        results_df = run_once(test_data, run_index)
+        mlflow_log_data(results_df, f"classification-results-run{run_index}")
+        per_run_metrics.append(compute_metrics(results_df))
+
+    per_run_df = pd.DataFrame(
+        per_run_metrics, index=[f"run{i}" for i in range(1, NUM_RUNS + 1)]
+    )
+    per_run_df.to_csv("metrics-per-run.csv")
+    mlflow_log_data(per_run_df.reset_index(names="run"), "metrics-per-run")
+
+    avg_metrics = per_run_df.mean(numeric_only=True).to_dict()
+    pd.DataFrame([avg_metrics]).to_csv("metrics.csv", index=False)
+
+    mlflow_log_metric(avg_metrics)
+
+    print(f"\nAveraged metrics over {NUM_RUNS} runs:")
+    for key, value in avg_metrics.items():
+        print(f"{key}: {value}")
 
 
 if __name__ == "__main__":
