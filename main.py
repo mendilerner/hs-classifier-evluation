@@ -123,11 +123,14 @@ def extract_candidate_info(results):
         if isinstance(c, dict) and c.get("code")
     ]
     llm = list(meta.get("llm_suggested_codes") or summary.get("llm_suggested_codes") or [])
+    raw_candidates_source = summary.get("candidates_source") or meta.get(
+        "candidates_source"
+    )
     raw_classification_source = summary.get("classification_source") or meta.get(
         "classification_source"
     )
     llm_stage_ran = raw_classification_source != "milvus_single_leaf"
-    return milvus, llm, llm_stage_ran
+    return milvus, llm, llm_stage_ran, raw_candidates_source, raw_classification_source
 
 
 def _code_covers(candidate, expected):
@@ -151,10 +154,24 @@ def candidate_fields(results, expected_code):
     since candidate generation runs regardless of the final classification.
     Evaluated over the whole dataset — no candidates / errors count as misses.
     """
-    milvus, llm, llm_stage_ran = extract_candidate_info(results)
+    milvus, llm, llm_stage_ran, raw_candidates_source, raw_classification_source = (
+        extract_candidate_info(results)
+    )
     correct_in_milvus = correct_in_candidates(milvus, expected_code)
     correct_in_llm = correct_in_candidates(llm, expected_code)
     return {
+        # routing / distribution — populated for every row (candidate
+        # generation runs regardless of the final outcome)
+        "candidates_source": (
+            ("milvus" if raw_candidates_source == "milvus" else "llm")
+            if raw_candidates_source
+            else None
+        ),
+        "classification_source": (
+            ("milvus" if raw_classification_source == "milvus_single_leaf" else "llm")
+            if raw_classification_source
+            else None
+        ),
         "correct_in_milvus_candidates": correct_in_milvus,
         "correct_in_llm_candidates": correct_in_llm,
         "correct_in_any_candidate": (correct_in_milvus is True)
@@ -238,14 +255,6 @@ def identify_product(product):
         ],
         "correct_until": get_correct_until_level(
             predicted_hs_code, product["expected_code"]
-        ),
-        "candidates_source": (
-            "milvus" if summary["candidates_source"] == "milvus" else "llm"
-        ),
-        "classification_source": (
-            "milvus"
-            if summary["classification_source"] == "milvus_single_leaf"
-            else "llm"
         ),
         **candidate_fields(results, expected_code),
         "server_run_time_minutes": summary["total_runtime_minutes"],
@@ -345,8 +354,10 @@ def compute_metrics(results_df):
         "02_success_rate": n_success / n_total,
         "03_failure_rate": (n_total - n_success) / n_total,
         "25_failure_count": n_total - n_success,
+        # length-distribution rates over ALL products; correctness within each
+        # bucket (05/06/...) over the success subset
         "04_response_with_2_digits_rate": (
-            success_df["length_of_predicted_code"] == 2
+            results_df["length_of_predicted_code"] == 2
         ).mean(),
         "05_correct_when_return_2_rate": success_df[
             (success_df["length_of_predicted_code"] == 2)
@@ -355,7 +366,7 @@ def compute_metrics(results_df):
             success_df["length_of_predicted_code"] == 2
         ]["correct_until"].mean(),
         "07_response_with_4_digits_rate": (
-            success_df["length_of_predicted_code"] == 4
+            results_df["length_of_predicted_code"] == 4
         ).mean(),
         "08_correct_when_return_4_rate": success_df[
             (success_df["length_of_predicted_code"] == 4)
@@ -364,7 +375,7 @@ def compute_metrics(results_df):
             success_df["length_of_predicted_code"] == 4
         ]["correct_until"].mean(),
         "10_response_with_6_digits_rate": (
-            success_df["length_of_predicted_code"] == 6
+            results_df["length_of_predicted_code"] == 6
         ).mean(),
         "11_correct_when_return_6_rate": success_df[
             success_df["length_of_predicted_code"] == 6
@@ -373,7 +384,7 @@ def compute_metrics(results_df):
             success_df["length_of_predicted_code"] == 6
         ]["correct_until"].mean(),
         "13_response_with_8_digits_rate": (
-            success_df["length_of_predicted_code"] == 8
+            results_df["length_of_predicted_code"] == 8
         ).mean(),
         "14_correct_when_return_8_rate": success_df[
             success_df["length_of_predicted_code"] == 8
@@ -382,7 +393,7 @@ def compute_metrics(results_df):
             success_df["length_of_predicted_code"] == 8
         ]["correct_until"].mean(),
         "16_response_with_10_digits_rate": (
-            success_df["length_of_predicted_code"] == 10
+            results_df["length_of_predicted_code"] == 10
         ).mean(),
         "17_correct_when_return_10_rate": success_df[
             success_df["length_of_predicted_code"] == 10
@@ -390,19 +401,20 @@ def compute_metrics(results_df):
         "18_average_correct_digits_when_return_10": success_df[
             success_df["length_of_predicted_code"] == 10
         ]["correct_until"].mean(),
+        # candidate-source / classification-source routing over ALL products
         "19_candidates_from_milvus_rate": (
-            success_df["candidates_source"] == "milvus"
+            results_df["candidates_source"] == "milvus"
         ).mean(),
-        "20_candidate_from_llm_rate": (success_df["candidates_source"] == "llm").mean(),
+        "20_candidate_from_llm_rate": (results_df["candidates_source"] == "llm").mean(),
         "21_classification_from_milvus_rate": (
-            success_df["classification_source"] == "milvus"
+            results_df["classification_source"] == "milvus"
         ).mean(),
         "22_classification_from_llm_rate": (
-            success_df["classification_source"] == "llm"
+            results_df["classification_source"] == "llm"
         ).mean(),
         "23_candidate_from_milvus_and_classification_from_llm_rate": (
-            (success_df["candidates_source"] == "milvus")
-            & (success_df["classification_source"] == "llm")
+            (results_df["candidates_source"] == "milvus")
+            & (results_df["classification_source"] == "llm")
         ).mean(),
         "27_correct_response_rate_when_classification_from_milvus": success_df[
             success_df["classification_source"] == "milvus"
