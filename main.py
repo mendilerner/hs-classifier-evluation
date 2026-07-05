@@ -87,16 +87,21 @@ def extract_classification(results):
     response shape (result.classification_results[]) or the direct
     hsCode_classifier shape (flat result.classification_summary).
 
-    Returns (None, None) when the manager extracted no products.
+    Returns (None, None) when no parseable classification is present (no
+    products extracted, an unsuccessful/error response, or an unexpected
+    shape), so the caller records it as a failed product instead of the
+    whole run crashing on a KeyError.
     """
-    result = results["result"]
+    result = results.get("result") or {}
+    if not isinstance(result, dict):
+        return None, None
     if "classification_results" in result:
         classification_results = result.get("classification_results") or []
         if not classification_results:
             return None, None
-        first = classification_results[0]
-        return first["classification_summary"], first["classification_status"]
-    return result["classification_summary"], result["status"]
+        first = classification_results[0] or {}
+        return first.get("classification_summary"), first.get("classification_status")
+    return result.get("classification_summary"), result.get("status")
 
 
 def extract_candidate_info(results):
