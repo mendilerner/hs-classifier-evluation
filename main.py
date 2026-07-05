@@ -99,16 +99,86 @@ def extract_classification(results):
     return result["classification_summary"], result["status"]
 
 
+def extract_candidate_info(results):
+    """Return (milvus_codes, llm_codes, llm_stage_ran) from metadata (the fuller
+    source; summary.llm_suggested_codes is often empty while metadata has it).
+
+    Candidate generation runs server-side regardless of the final outcome, so
+    this works for failed responses too. ``llm_stage_ran`` is False only when
+    milvus short-circuited with a single leaf (classification_source ==
+    'milvus_single_leaf'), i.e. the LLM never got to generate candidates — those
+    rows must be excluded from LLM candidate recall.
+    """
+    result = results.get("result") or {}
+    if "classification_results" in result:
+        crs = result.get("classification_results") or []
+        entry = crs[0] if crs else {}
+    else:
+        entry = result
+    summary = entry.get("classification_summary") or {}
+    meta = (entry.get("classification_json") or {}).get("metadata") or {}
+    milvus = [
+        c.get("code")
+        for c in (meta.get("milvus_suggested_codes") or [])
+        if isinstance(c, dict) and c.get("code")
+    ]
+    llm = list(meta.get("llm_suggested_codes") or summary.get("llm_suggested_codes") or [])
+    raw_classification_source = summary.get("classification_source") or meta.get(
+        "classification_source"
+    )
+    llm_stage_ran = raw_classification_source != "milvus_single_leaf"
+    return milvus, llm, llm_stage_ran
+
+
+def _code_covers(candidate, expected):
+    """A candidate covers the correct code when either is a prefix of the other
+    (expected codes aren't always padded to 10 digits)."""
+    return bool(candidate) and bool(expected) and (
+        expected.startswith(candidate) or candidate.startswith(expected)
+    )
+
+
+def correct_in_candidates(codes, expected):
+    """True/False if any candidate covers expected; None when the generator
+    produced no candidates."""
+    if not codes:
+        return None
+    return any(_code_covers(c, expected) for c in codes)
+
+
+def candidate_fields(results, expected_code):
+    """Candidate-recall fields, computed for every row (success or failure)
+    since candidate generation runs regardless of the final classification.
+    Evaluated over the whole dataset — no candidates / errors count as misses.
+    """
+    milvus, llm, llm_stage_ran = extract_candidate_info(results)
+    correct_in_milvus = correct_in_candidates(milvus, expected_code)
+    correct_in_llm = correct_in_candidates(llm, expected_code)
+    return {
+        "correct_in_milvus_candidates": correct_in_milvus,
+        "correct_in_llm_candidates": correct_in_llm,
+        "correct_in_any_candidate": (correct_in_milvus is True)
+        or (correct_in_llm is True),
+        "llm_candidate_stage_ran": llm_stage_ran,
+    }
+
+
 def identify_product(product):
     description = product["description"]
+    expected_code = product["expected_code"]
     try:
         results = query_agent(description)
     except Exception as e:
         print("Error querying agent for product:", product, "Error:", str(e))
+        # Server never answered: no candidates at all -> counts as a miss.
         return {
             "description": description,
             "did_server_responded": False,
-            "actual_code": product["expected_code"],
+            "actual_code": expected_code,
+            "correct_in_milvus_candidates": None,
+            "correct_in_llm_candidates": None,
+            "correct_in_any_candidate": False,
+            "llm_candidate_stage_ran": True,
         }
     if results["success"] == False:
         print(
@@ -121,8 +191,9 @@ def identify_product(product):
             "description": description,
             "did_server_responded": True,
             "success": False,
-            "actual_code": product["expected_code"],
+            "actual_code": expected_code,
             "full_result": results,
+            **candidate_fields(results, expected_code),
         }
 
     summary, status = extract_classification(results)
@@ -137,8 +208,9 @@ def identify_product(product):
             "description": description,
             "did_server_responded": True,
             "success": False,
-            "actual_code": product["expected_code"],
+            "actual_code": expected_code,
             "full_result": json.dumps(results),
+            **candidate_fields(results, expected_code),
         }
 
     predicted_hs_code = summary["predicted_hs_code"]
@@ -175,14 +247,7 @@ def identify_product(product):
             if summary["classification_source"] == "milvus_single_leaf"
             else "llm"
         ),
-        "was_correct_code_in_candidates": (
-            any(
-                product["expected_code"].startswith(code)
-                for code in summary["llm_suggested_codes"]
-            )
-            if summary["candidates_source"] == "llm_direct"
-            else None
-        ),
+        **candidate_fields(results, expected_code),
         "server_run_time_minutes": summary["total_runtime_minutes"],
         "llm_calls_count": summary["total_llm_calls"],
         "total_input_tokens": (
@@ -203,20 +268,18 @@ def identify_product(product):
     }
 
 
-def _build_comparison_metrics(results_df, okay_responses_filter):
-    """Build tax and legal-requirements comparison metrics from results_df.
-
-    Only rows that passed okay_responses_filter AND have non-null comparison
-    values are included in each rate calculation.
+def _build_comparison_metrics(success_df):
+    """Build tax and legal-requirements comparison metrics over the success
+    subset (rows that produced a final HS code), for rows with non-null
+    comparison values.
     """
     comparison_ok = (
-        okay_responses_filter
-        & results_df["mas_knia_mismatch"].notna()
-        & results_df["general_customs_mismatch"].notna()
-        & results_df["requirements_mismatch"].notna()
-        & results_df["any_leaf_full_match"].notna()
+        success_df["mas_knia_mismatch"].notna()
+        & success_df["general_customs_mismatch"].notna()
+        & success_df["requirements_mismatch"].notna()
+        & success_df["any_leaf_full_match"].notna()
     )
-    subset = results_df[comparison_ok]
+    subset = success_df[comparison_ok]
     if len(subset) == 0:
         return {
             "34_mas_knia_mismatch_rate": float("nan"),
@@ -269,116 +332,124 @@ def run_once(test_data, run_index):
 
 
 def compute_metrics(results_df):
-    okay_responses_filter = (
-        (results_df["did_server_responded"] == True)
-        & (results_df["success"] == True)
-        & (results_df["status"] != "ERROR")
-    )
-    len_okay_responses = len(results_df[okay_responses_filter])
+    # success = a final HS code was produced. identify_product sets success=True
+    # only when predicted_hs_code exists (NEEDS_CLARIFICATION rows carry a code
+    # and count as success). Every correctness / distribution metric below is
+    # computed over this success subset only.
+    success_df = results_df[results_df["success"] == True]
+    n_total = len(results_df)
+    n_success = len(success_df)
 
     return {
-        "01_total_tests_count": len(results_df),
-        "02_okay_responses_rate": len_okay_responses / len(results_df),
-        "03_error_rate": (len(results_df) - len_okay_responses) / len(results_df),
+        "01_total_tests_count": n_total,
+        "02_success_rate": n_success / n_total,
+        "03_failure_rate": (n_total - n_success) / n_total,
+        "25_failure_count": n_total - n_success,
         "04_response_with_2_digits_rate": (
-            results_df["length_of_predicted_code"] == 2
+            success_df["length_of_predicted_code"] == 2
         ).mean(),
-        "05_correct_when_return_2_rate": results_df[
-            (results_df["length_of_predicted_code"] == 2)
+        "05_correct_when_return_2_rate": success_df[
+            (success_df["length_of_predicted_code"] == 2)
         ]["are_given_digits_correct"].mean(),
-        "06_average_correct_digits_when_return_2": results_df[
-            results_df["length_of_predicted_code"] == 2
+        "06_average_correct_digits_when_return_2": success_df[
+            success_df["length_of_predicted_code"] == 2
         ]["correct_until"].mean(),
         "07_response_with_4_digits_rate": (
-            results_df["length_of_predicted_code"] == 4
+            success_df["length_of_predicted_code"] == 4
         ).mean(),
-        "08_correct_when_return_4_rate": results_df[
-            (results_df["length_of_predicted_code"] == 4)
+        "08_correct_when_return_4_rate": success_df[
+            (success_df["length_of_predicted_code"] == 4)
         ]["are_given_digits_correct"].mean(),
-        "09_average_correct_digits_when_return_4": results_df[
-            results_df["length_of_predicted_code"] == 4
+        "09_average_correct_digits_when_return_4": success_df[
+            success_df["length_of_predicted_code"] == 4
         ]["correct_until"].mean(),
         "10_response_with_6_digits_rate": (
-            results_df["length_of_predicted_code"] == 6
+            success_df["length_of_predicted_code"] == 6
         ).mean(),
-        "11_correct_when_return_6_rate": results_df[
-            results_df["length_of_predicted_code"] == 6
+        "11_correct_when_return_6_rate": success_df[
+            success_df["length_of_predicted_code"] == 6
         ]["are_given_digits_correct"].mean(),
-        "12_average_correct_digits_when_return_6": results_df[
-            results_df["length_of_predicted_code"] == 6
+        "12_average_correct_digits_when_return_6": success_df[
+            success_df["length_of_predicted_code"] == 6
         ]["correct_until"].mean(),
         "13_response_with_8_digits_rate": (
-            results_df["length_of_predicted_code"] == 8
+            success_df["length_of_predicted_code"] == 8
         ).mean(),
-        "14_correct_when_return_8_rate": results_df[
-            results_df["length_of_predicted_code"] == 8
+        "14_correct_when_return_8_rate": success_df[
+            success_df["length_of_predicted_code"] == 8
         ]["are_given_digits_correct"].mean(),
-        "15_average_correct_digits_when_return_8": results_df[
-            results_df["length_of_predicted_code"] == 8
+        "15_average_correct_digits_when_return_8": success_df[
+            success_df["length_of_predicted_code"] == 8
         ]["correct_until"].mean(),
         "16_response_with_10_digits_rate": (
-            results_df["length_of_predicted_code"] == 10
+            success_df["length_of_predicted_code"] == 10
         ).mean(),
-        "17_correct_when_return_10_rate": results_df[
-            results_df["length_of_predicted_code"] == 10
+        "17_correct_when_return_10_rate": success_df[
+            success_df["length_of_predicted_code"] == 10
         ]["are_given_digits_correct"].mean(),
-        "18_average_correct_digits_when_return_10": results_df[
-            results_df["length_of_predicted_code"] == 10
+        "18_average_correct_digits_when_return_10": success_df[
+            success_df["length_of_predicted_code"] == 10
         ]["correct_until"].mean(),
         "19_candidates_from_milvus_rate": (
-            results_df["candidates_source"] == "milvus"
+            success_df["candidates_source"] == "milvus"
         ).mean(),
-        "20_candidate_from_llm_rate": (results_df["candidates_source"] == "llm").mean(),
+        "20_candidate_from_llm_rate": (success_df["candidates_source"] == "llm").mean(),
         "21_classification_from_milvus_rate": (
-            results_df["classification_source"] == "milvus"
+            success_df["classification_source"] == "milvus"
         ).mean(),
         "22_classification_from_llm_rate": (
-            results_df["classification_source"] == "llm"
+            success_df["classification_source"] == "llm"
         ).mean(),
         "23_candidate_from_milvus_and_classification_from_llm_rate": (
-            (results_df["candidates_source"] == "milvus")
-            & (results_df["classification_source"] == "llm")
+            (success_df["candidates_source"] == "milvus")
+            & (success_df["classification_source"] == "llm")
         ).mean(),
-        "24_no_response_from_server_count": (
-            results_df["did_server_responded"] == False
-        ).sum(),
-        "25_response_with_success_false_count": (results_df["success"] == False).sum(),
-        "26_response_with_error_status_count": (results_df["status"] == "ERROR").sum(),
-        "27_correct_response_rate_when_classification_from_milvus": results_df[
-            results_df["classification_source"] == "milvus"
+        "27_correct_response_rate_when_classification_from_milvus": success_df[
+            success_df["classification_source"] == "milvus"
         ]["are_given_digits_correct"].mean(),
-        "28_correct_response_rate_when_classification_from_llm": results_df[
-            results_df["classification_source"] == "llm"
+        "28_correct_response_rate_when_classification_from_llm": success_df[
+            success_df["classification_source"] == "llm"
         ]["are_given_digits_correct"].mean(),
-        "29_correct_response_rate_when_candidates_from_milvus_and_classification_from_llm": results_df[
-            (results_df["candidates_source"] == "milvus")
-            & (results_df["classification_source"] == "llm")
+        "29_correct_response_rate_when_candidates_from_milvus_and_classification_from_llm": success_df[
+            (success_df["candidates_source"] == "milvus")
+            & (success_df["classification_source"] == "llm")
         ][
             "are_given_digits_correct"
         ].mean(),
-        "30_average_server_run_time_minutes_for_successful_responses": results_df[
-            okay_responses_filter
-        ]["server_run_time_minutes"].mean(),
-        "31_average_llm_calls_count_for_successful_responses": results_df[
-            okay_responses_filter
-        ]["llm_calls_count"].mean(),
-        "32_average_total_input_tokens_for_successful_responses": results_df[
-            okay_responses_filter
-        ]["total_input_tokens"].mean(),
-        "33_average_total_output_tokens_for_successful_responses": results_df[
-            okay_responses_filter
-        ]["total_output_tokens"].mean(),
-        "38_was_correct_code_in_candidates_rate_when_candidates_from_llm_direct": results_df[
-            results_df["was_correct_code_in_candidates"].notna()
-        ][
-            "was_correct_code_in_candidates"
-        ]
-        .astype(float)
-        .mean(),
-        "39_correct_response_rate_overall": results_df[
+        "30_average_server_run_time_minutes_for_successful_responses": success_df[
+            "server_run_time_minutes"
+        ].mean(),
+        "31_average_llm_calls_count_for_successful_responses": success_df[
+            "llm_calls_count"
+        ].mean(),
+        "32_average_total_input_tokens_for_successful_responses": success_df[
+            "total_input_tokens"
+        ].mean(),
+        "33_average_total_output_tokens_for_successful_responses": success_df[
+            "total_output_tokens"
+        ].mean(),
+        "39_correct_response_rate_overall": success_df[
             "are_given_digits_correct"
         ].mean(),
-        **_build_comparison_metrics(results_df, okay_responses_filter),
+        # --- candidate-generation recall: measured over the WHOLE dataset
+        # (failed / errored / no-candidate rows are misses), since candidate
+        # generation runs regardless of the final classification outcome. ---
+        "38_correct_in_any_candidate_rate": (
+            results_df["correct_in_any_candidate"] == True
+        ).mean(),
+        # milvus always runs, so its recall is over every row
+        "40_correct_in_milvus_candidates_rate": (
+            results_df["correct_in_milvus_candidates"] == True
+        ).mean(),
+        # the LLM only generates candidates when milvus did not short-circuit
+        # with a single leaf; exclude those rows from LLM recall
+        "41_correct_in_llm_candidates_rate": (
+            results_df[results_df["llm_candidate_stage_ran"] == True][
+                "correct_in_llm_candidates"
+            ]
+            == True
+        ).mean(),
+        **_build_comparison_metrics(success_df),
     }
 
 
