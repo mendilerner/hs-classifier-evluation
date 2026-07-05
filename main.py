@@ -312,9 +312,11 @@ def _build_comparison_metrics(success_df):
 NUM_RUNS = 3
 
 
-def run_once(test_data, run_index):
+def run_once(test_data, run_index, executor):
     """Query the agent for every product once and return the results DataFrame.
 
+    Uses the shared executor so concurrency persists across iterations; the
+    map call blocks until this iteration's last response before returning.
     Results are cached per run so a rerun can reuse a completed run.
     """
     results_json = RESULTS_JSON.replace(".json", f"-run{run_index}.json")
@@ -325,10 +327,9 @@ def run_once(test_data, run_index):
             result_list = json.load(f)
     else:
         print(f"Run {run_index}/{NUM_RUNS}: querying agent for all products...")
-        with ThreadPoolExecutor(max_workers=test_params["threads_number"]) as p:
-            result_list = list(
-                p.map(identify_product, test_data.to_dict(orient="records"))
-            )
+        result_list = list(
+            executor.map(identify_product, test_data.to_dict(orient="records"))
+        )
 
         with open(results_json, "w", encoding="utf-8") as f:
             json.dump(result_list, f, indent=2, default=lambda x: None)
@@ -497,10 +498,13 @@ def main():
     load_customs_book()
 
     per_run_metrics = []
-    for run_index in range(1, NUM_RUNS + 1):
-        results_df = run_once(test_data, run_index)
-        mlflow_log_data(results_df, f"classification-results-run{run_index}")
-        per_run_metrics.append(compute_metrics(results_df))
+    # One shared executor across all iterations so its threads persist between
+    # runs; each iteration still blocks until its last response.
+    with ThreadPoolExecutor(max_workers=test_params["threads_number"]) as executor:
+        for run_index in range(1, NUM_RUNS + 1):
+            results_df = run_once(test_data, run_index, executor)
+            mlflow_log_data(results_df, f"classification-results-run{run_index}")
+            per_run_metrics.append(compute_metrics(results_df))
 
     per_run_df = pd.DataFrame(
         per_run_metrics, index=[f"run{i}" for i in range(1, NUM_RUNS + 1)]
