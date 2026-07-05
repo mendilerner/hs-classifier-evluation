@@ -40,6 +40,7 @@ test_params = {
         "MODEL_USED_FOR_CANDIDATES_GENERATION"
     ],
     "model_used_for_process": os.environ["MODEL_USED_FOR_PROCESS"],
+    "llm_direct_prompt": os.environ["LLM_DIRECT_PROMPT"],
 }
 
 
