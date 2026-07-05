@@ -1,0 +1,23 @@
+product: mercedes-benz e 300 e response.status_code: 200
+Traceback (most recent call last):
+  File "/mnt/c/Users/MosheD3/Desktop/classifier-ml-flow/main.py", line 527, in <module>
+    main()
+  File "/mnt/c/Users/MosheD3/Desktop/classifier-ml-flow/main.py", line 506, in main
+    results_df = run_once(test_data, run_index, executor)
+  File "/mnt/c/Users/MosheD3/Desktop/classifier-ml-flow/main.py", line 331, in run_once
+    result_list = list(
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mnt/c/Users/MosheD3/Desktop/classifier-ml-flow/main.py", line 216, in identify_product
+    summary, status = extract_classification(results)
+  File "/mnt/c/Users/MosheD3/Desktop/classifier-ml-flow/main.py", line 99, in extract_classification
+    return result["classification_summary"], result["status"]
+KeyError: 'classification_summary'
