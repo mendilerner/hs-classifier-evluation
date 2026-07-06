@@ -65,7 +65,7 @@ def query_agent(product_description):
         test_params["agent_url"],
         json={
             "agent_name": test_params["agent_name"],
-            "input_data": {"message": product_description},
+            "input_data": {"message": f'The following is the product to classify. its a singele product. take all the description. ---beggining of product description---{product_description}---end of product descirption---'},
             "username": username_for_agent,
             "mode": "background",
         },
