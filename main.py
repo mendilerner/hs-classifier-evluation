@@ -5,7 +5,7 @@ from mlflowfunctions import (
     mlflow_log_metric,
 )
 import pandas as pd
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, Future
 import json
 import requests
 import urllib3
@@ -318,28 +318,44 @@ def _build_comparison_metrics(success_df):
 NUM_RUNS = 3
 
 
-def run_once(test_data, run_index, executor):
-    """Query the agent for every product once and return the results DataFrame.
+def submit_run(test_data, run_index, executor):
+    """Submit every product query for one run to the shared executor WITHOUT
+    blocking, so all runs' requests can be in flight in a single pool at once.
 
-    Uses the shared executor so concurrency persists across iterations; the
-    map call blocks until this iteration's last response before returning.
-    Results are cached per run so a rerun can reuse a completed run.
+    Returns a list of Futures for a fresh run, or the cached result_list (a
+    list of dicts) when the run is already on disk. Results are cached per run
+    so a rerun can reuse a completed run.
     """
     results_json = RESULTS_JSON.replace(".json", f"-run{run_index}.json")
 
     if os.path.exists(results_json):
         print(f"Loading existing results from {results_json}, skipping agent run...")
         with open(results_json) as f:
-            result_list = json.load(f)
-    else:
-        print(f"Run {run_index}/{NUM_RUNS}: querying agent for all products...")
-        result_list = list(
-            executor.map(identify_product, test_data.to_dict(orient="records"))
-        )
+            return json.load(f)
 
+    print(f"Run {run_index}/{NUM_RUNS}: submitting agent queries for all products...")
+    return [
+        executor.submit(identify_product, record)
+        for record in test_data.to_dict(orient="records")
+    ]
+
+
+def collect_run(submitted, run_index):
+    """Materialize a run's results (waiting on its Futures if it was a fresh
+    run), persist the JSON/CSV, and return the results DataFrame.
+
+    Because every run was submitted up front, waiting on this run's Futures
+    still lets the other runs' requests keep executing in the shared pool.
+    """
+    results_json = RESULTS_JSON.replace(".json", f"-run{run_index}.json")
+
+    if submitted and isinstance(submitted[0], Future):
+        result_list = [f.result() for f in submitted]
         with open(results_json, "w", encoding="utf-8") as f:
             json.dump(result_list, f, indent=2, default=lambda x: None)
         print(f"Agent results saved to {results_json}")
+    else:
+        result_list = submitted
 
     results_df = pd.DataFrame(result_list)
     results_df.to_csv(f"classification-results-run{run_index}.csv")
@@ -504,11 +520,16 @@ def main():
     load_customs_book()
 
     per_run_metrics = []
-    # One shared executor across all iterations so its threads persist between
-    # runs; each iteration still blocks until its last response.
+    # One shared executor for ALL runs. Every run is submitted up front so the
+    # runs overlap in a single pool (up to threads_number requests in flight
+    # across all runs at once), instead of one run blocking the next.
     with ThreadPoolExecutor(max_workers=test_params["threads_number"]) as executor:
-        for run_index in range(1, NUM_RUNS + 1):
-            results_df = run_once(test_data, run_index, executor)
+        submitted = [
+            submit_run(test_data, run_index, executor)
+            for run_index in range(1, NUM_RUNS + 1)
+        ]
+        for run_index, run_submitted in zip(range(1, NUM_RUNS + 1), submitted):
+            results_df = collect_run(run_submitted, run_index)
             mlflow_log_data(results_df, f"classification-results-run{run_index}")
             per_run_metrics.append(compute_metrics(results_df))
 
