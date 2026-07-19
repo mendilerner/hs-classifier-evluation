@@ -21,6 +21,9 @@ urllib3.disable_warnings(InsecureRequestWarning)
 
 RESULTS_JSON = "agent-results.json"
 
+# Set INPUT_DATASET=./classified-data-input.csv to run against the old dataset.
+INPUT_DATASET = os.getenv("INPUT_DATASET", "./verified-classification-input.csv")
+
 
 username_for_agent = os.getenv("USERNAME_FOR_AGENT", "dev-user")
 experiment_name = os.environ["EXPERIMENT_NAME"]
@@ -34,6 +37,7 @@ test_params = {
         "https://langraph-infrastructure.mdev.mehes.gov.il/api/v1/agents/run",
     ),
     "agent_name": os.getenv("AGENT_NAME", "hscode_manager"),
+    "input_dataset": INPUT_DATASET,
     "threads_number": int(os.getenv("THREADS_NUMBER", "16")),
     "request_timeout_seconds": int(os.getenv("REQUEST_TIMEOUT_SECONDS", "600")),
     "model_used_for_candidates_generation": os.environ[
@@ -59,13 +63,31 @@ def remove_even_trailing_zeros(code):
     return zeros_removed + "0" if len(zeros_removed) % 2 != 0 else zeros_removed
 
 
-def query_agent(product_description):
-    print("sending request. product description:", product_description)
+AGENT_INPUT_FIELDS = ["description", "general_product", "purpose", "brand", "model"]
+
+
+def build_agent_input(product):
+    """Serialize the product as a JSON string for the agent.
+
+    Fields absent from the dataset are sent explicitly as null rather than
+    omitted, so the agent can tell "unknown" from "not applicable". The
+    expected code is never included — that would leak the answer.
+    """
+    payload = {
+        field: (None if pd.isna(value) else value)
+        for field in AGENT_INPUT_FIELDS
+        for value in [product.get(field)]
+    }
+    return json.dumps(payload, ensure_ascii=False)
+
+
+def query_agent(product_payload):
+    print("sending request. product payload:", product_payload)
     response = requests.post(
         test_params["agent_url"],
         json={
             "agent_name": test_params["agent_name"],
-            "input_data": {"message": f'The following is the product to classify. its a singele product. take all the description. ---beggining of product description---{product_description}---end of product descirption---'},
+            "input_data": {"message": f'The following is the product to classify. its a singele product. take all the description. the product is given as a JSON object; null means the field is unknown. ---beggining of product description---{product_payload}---end of product descirption---'},
             "username": username_for_agent,
             "mode": "background",
         },
@@ -73,7 +95,7 @@ def query_agent(product_description):
         timeout=test_params["request_timeout_seconds"],
     )
     print(
-        "product:", product_description, "response.status_code:", response.status_code
+        "product:", product_payload, "response.status_code:", response.status_code
     )
     with open("run-debug.jsonl", "a") as f:
         f.write(response.text + "\n")
@@ -189,7 +211,7 @@ def identify_product(product):
     description = product["description"]
     expected_code = product["expected_code"]
     try:
-        results = query_agent(description)
+        results = query_agent(build_agent_input(product))
     except Exception as e:
         print("Error querying agent for product:", product, "Error:", str(e))
         # Server never answered: no candidates at all -> counts as a miss.
@@ -509,7 +531,7 @@ def main():
         files_lst=[__file__, hs_code_comparison.__file__],
     )
 
-    with open("./classified-data-input.csv") as f:
+    with open(INPUT_DATASET) as f:
         test_data = pd.read_csv(f, index_col="Unnamed: 0", dtype=str)
 
     mlflow_log_data(test_data, "classified-data")
