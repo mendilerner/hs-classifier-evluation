@@ -7,6 +7,7 @@ from mlflowfunctions import (
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, Future
 import json
+import time
 import requests
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
@@ -23,10 +24,50 @@ RESULTS_JSON = "agent-results.json"
 
 
 username_for_agent = os.getenv("USERNAME_FOR_AGENT", "dev-user")
+USE_TOKEN_AUTH = os.getenv("USE_TOKEN_AUTH", "false").lower() == "true"
 experiment_name = os.environ["EXPERIMENT_NAME"]
 experiment_description = os.getenv("EXPERIMENT_DESCRIPTION", "")
 run_name = os.environ["RUN_NAME"]
 run_description = os.getenv("RUN_DESCRIPTION", "")
+
+# ── Service token authentication (client_credentials grant) ────────────────
+if USE_TOKEN_AUTH:
+    _KEYCLOAK_BASE = {
+        "dev": "https://authentik.mdev.mehes.gov.il",
+        "prod": "https://authentik.prod.mehes.gov.il",
+    }.get(os.environ.get("CURA_AUTH_ENV", "dev"), "https://authentik.mdev.mehes.gov.il")
+    _REALM = os.environ.get("KEYCLOAK_REALM", "entic")
+    _TOKEN_ENDPOINT = f"{_KEYCLOAK_BASE}/realms/{_REALM}/protocol/openid-connect/token"
+
+    _svc_token = None
+    _svc_token_expires = 0.0
+
+    def get_service_token() -> str:
+        """Return a cached client_credentials access token, refreshing as needed."""
+        global _svc_token, _svc_token_expires
+        if _svc_token and time.time() < _svc_token_expires - 30:
+            return _svc_token
+        r = requests.post(
+            _TOKEN_ENDPOINT,
+            data={
+                "grant_type": "client_credentials",
+                "client_id": os.environ["KEYCLOAK_CLIENT_ID"],
+                "client_secret": os.environ["KEYCLOAK_CLIENT_SECRET"],
+            },
+            verify=False,
+            timeout=15,
+        )
+        r.raise_for_status()
+        data = r.json()
+        _svc_token = data["access_token"]
+        _svc_token_expires = time.time() + data.get("expires_in", 300)
+        return _svc_token
+
+    def authed_request(method: str, url: str, **kwargs):
+        """HTTP request with the service Bearer token."""
+        headers = dict(kwargs.pop("headers", {}) or {})
+        headers["Authorization"] = f"Bearer {get_service_token()}"
+        return requests.request(method, url, headers=headers, **kwargs)
 
 test_params = {
     "agent_url": os.getenv(
@@ -61,17 +102,17 @@ def remove_even_trailing_zeros(code):
 
 def query_agent(product_description):
     print("sending request. product description:", product_description)
-    response = requests.post(
-        test_params["agent_url"],
-        json={
-            "agent_name": test_params["agent_name"],
-            "input_data": {"message": f'The following is the product to classify. its a singele product. take all the description. ---beggining of product description---{product_description}---end of product descirption---'},
-            "username": username_for_agent,
-            "mode": "background",
-        },
-        verify=False,
-        timeout=test_params["request_timeout_seconds"],
-    )
+    payload = {
+        "agent_name": test_params["agent_name"],
+        "input_data": {"message": (f'The following is the product to classify. its a singele product. take all the description. ---beggining of product description---{product_description}---end of product descirption---' if os.environ['AGENT_NAME']=='hscode_manager' else product_description) },
+        "mode": "background",
+    }
+    if not USE_TOKEN_AUTH:
+        payload["username"] = username_for_agent
+    if USE_TOKEN_AUTH:
+        response = authed_request("POST", test_params["agent_url"], json=payload, verify=False, timeout=test_params["request_timeout_seconds"])
+    else:
+        response = requests.post(test_params["agent_url"], json=payload, verify=False, timeout=test_params["request_timeout_seconds"])
     print(
         "product:", product_description, "response.status_code:", response.status_code
     )
@@ -196,19 +237,30 @@ def identify_product(product):
         return {
             "description": description,
             "did_server_responded": False,
+            "success": False,
             "actual_code": expected_code,
             "correct_in_milvus_candidates": None,
             "correct_in_llm_candidates": None,
             "correct_in_any_candidate": False,
             "llm_candidate_stage_ran": True,
         }
-    if results["success"] == False:
-        print(
-            "Agent returned unsuccessful result for product:",
-            product,
-            "Result:",
-            results,
-        )
+    if not results.get("success"):
+        if "success" not in results:
+            with open("missing-success-key.log", "a", encoding="utf-8") as f:
+                f.write(json.dumps({"description": description, "full_result": results}, default=str) + "\n")
+            print(
+                "Agent response missing 'success' key for product:",
+                product,
+                "Result:",
+                results,
+            )
+        else:
+            print(
+                "Agent returned unsuccessful result for product:",
+                product,
+                "Result:",
+                results,
+            )
         return {
             "description": description,
             "did_server_responded": True,
@@ -315,7 +367,7 @@ def _build_comparison_metrics(success_df):
     }
 
 
-NUM_RUNS = 3
+NUM_RUNS = int(os.environ["NUM_RUNS"])
 
 
 def submit_run(test_data, run_index, executor):
@@ -367,6 +419,8 @@ def compute_metrics(results_df):
     # only when predicted_hs_code exists (NEEDS_CLARIFICATION rows carry a code
     # and count as success). Every correctness / distribution metric below is
     # computed over this success subset only.
+    if "success" not in results_df.columns:
+        results_df["success"] = False
     success_df = results_df[results_df["success"] == True]
     n_total = len(results_df)
     n_success = len(success_df)
@@ -506,7 +560,7 @@ def main():
         experiment_description=experiment_description,
         run_name=run_name,
         run_description=run_description,
-        files_lst=[__file__, hs_code_comparison.__file__],
+        files_lst=[__file__, hs_code_comparison.__file__, 'evaluate_batch.yaml'],
     )
 
     with open("./classified-data-input.csv") as f:
