@@ -1,429 +1,281 @@
 {
-    "success": true,
-    "result": {
-        "response": {
-            "products_extracted_from_invoice": [
-                {
-                    "description": "GMC Sierra EV pickup truck — GMC Sierra EV",
-                    "source": "text",
-                    "table_extraction_id": null,
-                    "quantity": null,
-                    "amount": null,
-                    "row_num": null,
-                    "doc_id": null,
-                    "brand": "GMC",
-                    "model": "Sierra EV",
-                    "general_product": "Pickup Truck",
-                    "purpose": "Transportation vehicle",
-                    "classification": {
-                        "hs_code": "8704609000",
-                        "hs_description_he": "אחרים",
-                        "classification_status": "SUCCESS",
-                        "confidence_score": 0.9,
-                        "had_conflict": false,
-                        "is_leaf": true,
-                        "classification_source": "llm_fallback_no_milvus",
-                        "web_enrichment": {
-                            "parameters": {
-                                "product_type": "Truck",
-                                "weight_kg": "3700.5 kg (8157 lbs) - 3910 kg (8620 lbs)",
-                                "dimensions": "Length: 233.4 in, Width: 83.8 in (without mirrors), Height: 78.0-78.7 in, Wheelbase: 145.7-146.0 in",
-                                "voltage": "800V (DC fast charging)",
-                                "power_watts": "481 kW - 567 kW (645 hp - 760 hp)",
-                                "capacity_liters": "311.5 liters (11.0 cu ft) (frunk), 1627.9 liters (57.5 cubic feet) (cargo bed)",
-                                "load_capacity_kg": "612.3 kg (1350 lbs) - 771.1 kg (1700 lbs)",
-                                "intended_use": "Transportation, Towing, Hauling, Off-roading (AT4 trim), Mobile power source",
-                                "primary_function": "Electric Vehicle",
-                                "secondary_function": "Pickup Truck",
-                                "industry_sector": "Automotive",
-                                "country_of_origin": "United States",
-                                "country_of_manufacture": "United States",
-                                "certification_standards": "EPA",
-                                "fuel_type": "Electric",
-                                "motor_type": "Permanent-magnet synchronous AC (front motor), 2-motor e4WD",
-                                "connectivity": "Google built-in compatibility, OnStar",
-                                "display_type": "Infotainment System",
-                                "display_size_inches": "16.8",
-                                "battery_type": "Li-Ion (Ultium platform)",
-                                "port_types": "CCS Type 1 (charging)"
-                            }
-                        },
-                        "missing_information": null,
-                        "deepest_hs_code_reached": null,
-                        "contradiction_reason": null,
-                        "classification_errors": []
-                    },
-                    "linked_goods_items": []
-                }
-            ],
-            "total_extracted_products": 1,
-            "extraction_errors": []
-        },
-        "message": "2025 gmc sierra ev",
-        "images": [],
-        "username": "custom-moshed3",
-        "input_analysis": {
-            "has_text_description": true,
-            "has_images": false,
-            "has_documents": false,
-            "has_declaration_reference": false,
-            "text_summary": "User mentions '2025 GMC Sierra EV', likely referring to a specific vehicle model.",
-            "parsers_to_activate": [
-                "text_parser"
-            ]
-        },
-        "active_parsers": [
-            "text_parser"
-        ],
-        "extraction_errors": [],
-        "classification_results": [
-            {
-                "product": {
-                    "description": "GMC Sierra EV pickup truck",
-                    "metadata": {
-                        "brand": "GMC",
-                        "model": "Sierra EV",
-                        "general_product": "Pickup Truck",
-                        "purpose": "Transportation vehicle"
-                    },
-                    "source": "text"
-                },
-                "hs_code": "8704609000",
-                "classification_status": "SUCCESS",
-                "confidence_score": 0.9,
-                "needs_clarification": false,
-                "had_conflict": false,
-                "classification_summary": {
-                    "original_description": "GMC Sierra EV pickup truck",
-                    "predicted_hs_code": "8704609000",
-                    "is_leaf": true,
-                    "stop_reason": "",
-                    "classification_source": "llm_fallback_no_milvus",
-                    "candidates_source": "llm_direct",
-                    "insufficient_information": {},
-                    "contradiction": {},
-                    "total_runtime_minutes": 2.24,
-                    "initial_candidates_count": 2,
-                    "llm_suggested_codes": [
-                        "8704",
-                        "2022"
-                    ],
-                    "total_llm_calls": 4
-                },
-                "errors": [],
-                "classification_json": {
-                    "classification_result": {
-                        "status": "SUCCESS",
-                        "matched_item": {
-                            "hs_code": "8704609000",
-                            "description": "Electric motor-powered goods vehicles",
-                            "hebrew_description": "אחרים",
-                            "customs_duty": "7%",
-                            "purchase_tax": "35%",
-                            "is_leaf": true,
-                            "legal_requirements": [
-                                {
-                                    "authority": "משרד התחבורה",
-                                    "confirmation_type": "אישור אגף הרכב ושרותי תחזוקה (0201)",
-                                    "confirmation_code": ""
-                                },
-                                {
-                                    "authority": "משרד התחבורה",
-                                    "confirmation_type": "רשיון אגף הרכב ושרותי תחזוקה (0210)",
-                                    "confirmation_code": ""
-                                },
-                                {
-                                    "authority": "משרד התחבורה",
-                                    "confirmation_type": "רשיון אוטונומיה (0215)",
-                                    "confirmation_code": ""
-                                }
-                            ]
-                        },
-                        "confidence_score": 0.9,
-                        "alternative_matches": []
-                    },
-                    "reasoning_chain": {
-                        "chapter_evaluation": {
-                            "evaluated": [],
-                            "matched": [],
-                            "evaluations": {}
-                        },
-                        "heading_evaluation": {
-                            "evaluated": [
-                                "21053"
-                            ],
-                            "matched": [],
-                            "evaluations": {
-                                "21053": {
-                                    "hs_code": "8704000000",
-                                    "description": "Motor vehicles for transporting goods",
-                                    "status": "MATCH",
-                                    "reasoning": "**Step 0 – Category Description Check**  \n- **Category Description:** “Motor vehicles for the transport of goods.”  \n- The item is a **GMC Sierra EV**, explicitly described as a *“pickup truck”* whose primary purpose is *transportation*, with intended uses that include *hauling* and *towing*. Pickup trucks possess an open cargo bed designed for moving goods.  \n- Therefore, the item **is the type of thing** described in the category. → Proceed to requirement check.\n\n**Mandatory Requirement Verification**\n\n| # | Requirement Text | Meets Requirement? | Reasoning |\n|---|------------------|--------------------|-----------|\n| 1 | Must be motor vehicles for the transport of goods | **YES** | The Sierra EV is a motor‑driven vehicle (electric drivetrain) and, as a pickup truck, is expressly built to carry cargo/goods in its bed. This satisfies the sole requirement. |\n\n**Exclusions** – No exclusions are listed for this candidate category, so none apply.\n\nSince the item fulfills the category description and all listed requirements without contradiction, the classification is appropriate."
-                                }
-                            }
-                        },
-                        "subheading_evaluation": {
-                            "evaluated": [
-                                "1714",
-                                "9684",
-                                "6633",
-                                "30757",
-                                "30765",
-                                "30774",
-                                "8468"
-                            ],
-                            "matched": [],
-                            "evaluations": {
-                                "1714": {
-                                    "hs_code": "8704100000",
-                                    "description": "Dumpers designed for off-highway use",
-                                    "status": "CONTRADICTION",
-                                    "summary": "Failed requirement: Must be motor vehicles for the transport of goods"
-                                },
-                                "9684": {
-                                    "hs_code": "8704200000",
-                                    "description": "Other goods transport vehicles with diesel/semi-diesel engines, not dumpers",
-                                    "status": "CONTRADICTION",
-                                    "summary": "Failed requirement: Must be motor vehicles for the transport of goods"
-                                },
-                                "6633": {
-                                    "hs_code": "8704300000",
-                                    "description": "Other goods transport vehicles with spark-ignition piston engine, not dumpers",
-                                    "status": "CONTRADICTION",
-                                    "summary": "Failed requirement: Must be motor vehicles for the transport of goods"
-                                },
-                                "30757": {
-                                    "hs_code": "8704400000",
-                                    "description": "Other motor vehicles for transporting goods, not dumpers for off-highway use",
-                                    "status": "CONTRADICTION",
-                                    "summary": "Failed requirement: Must be motor vehicles for the transport of goods"
-                                },
-                                "30765": {
-                                    "hs_code": "8704500000",
-                                    "description": "Other motor vehicles for transporting goods, not dumpers for off-highway use",
-                                    "status": "CONTRADICTION",
-                                    "summary": "Failed requirement: Must be motor vehicles for the transport of goods"
-                                },
-                                "30774": {
-                                    "hs_code": "8704600000",
-                                    "description": "Other goods transport vehicles with only electric motor for propulsion, not dumpers",
-                                    "status": "MATCH",
-                                    "reasoning": "All three requirements are fulfilled and the exclusion does not apply, resulting in a perfect fit for this electric‑only goods‑vehicle subclass."
-                                },
-                                "8468": {
-                                    "hs_code": "8704900000",
-                                    "description": "Other motor vehicles for transporting goods, not dumpers for off-highway use",
-                                    "status": "CONTRADICTION",
-                                    "summary": "Failed requirement: Must be motor vehicles for the transport of goods"
-                                }
-                            }
-                        },
-                        "leaf_evaluation": {
-                            "evaluated": [
-                                "32797",
-                                "30775",
-                                "30776"
-                            ],
-                            "matched": [
-                                "30776"
-                            ],
-                            "evaluations": {
-                                "32797": {
-                                    "hs_code": "8704604000",
-                                    "description": "Cargo tractor with electric motor only",
-                                    "status": "CONTRADICTION",
-                                    "summary": "Failed requirement: Must be a motor vehicle for the transport of goods"
-                                },
-                                "30775": {
-                                    "hs_code": "8704608000",
-                                    "description": "Electric motor vehicles over 4,500kg for transporting goods",
-                                    "status": "CONTRADICTION",
-                                    "summary": "Failed requirement: Must be motor vehicles for the transport of goods"
-                                },
-                                "30776": {
-                                    "hs_code": "8704609000",
-                                    "description": "Electric motor-powered goods vehicles",
-                                    "status": "MATCH",
-                                    "reasoning": "All three mandatory requirements are unequivocally satisfied, and both listed exclusions are irrelevant to this vehicle. Hence the item matches this classification."
-                                }
-                            }
-                        }
-                    },
-                    "data_sources": {
-                        "web_enrichment": {
-                            "status": "full",
-                            "confidence": 95,
-                            "parameters": {
-                                "product_type": "Truck",
-                                "weight_kg": "3700.5 kg (8157 lbs) - 3910 kg (8620 lbs)",
-                                "dimensions": "Length: 233.4 in, Width: 83.8 in (without mirrors), Height: 78.0-78.7 in, Wheelbase: 145.7-146.0 in",
-                                "voltage": "800V (DC fast charging)",
-                                "power_watts": "481 kW - 567 kW (645 hp - 760 hp)",
-                                "capacity_liters": "311.5 liters (11.0 cu ft) (frunk), 1627.9 liters (57.5 cubic feet) (cargo bed)",
-                                "load_capacity_kg": "612.3 kg (1350 lbs) - 771.1 kg (1700 lbs)",
-                                "intended_use": "Transportation, Towing, Hauling, Off-roading (AT4 trim), Mobile power source",
-                                "primary_function": "Electric Vehicle",
-                                "secondary_function": "Pickup Truck",
-                                "industry_sector": "Automotive",
-                                "country_of_origin": "United States",
-                                "country_of_manufacture": "United States",
-                                "certification_standards": "EPA",
-                                "fuel_type": "Electric",
-                                "motor_type": "Permanent-magnet synchronous AC (front motor), 2-motor e4WD",
-                                "connectivity": "Google built-in compatibility, OnStar",
-                                "display_type": "Infotainment System",
-                                "display_size_inches": "16.8",
-                                "battery_type": "Li-Ion (Ultium platform)",
-                                "port_types": "CCS Type 1 (charging)"
-                            },
-                            "duration_seconds": 5.56
-                        },
-                        "rules": [
-                            {
-                                "rule_text": "This part does not include: Composite bars for railway or tramway (heading/subheading 86.08) or other items in Chapter XVII (Vehicles, Aircraft, Vessels and Associated Transport Equipment). [References: chapter XVII – Section XVII: VEHICLES, AIRCRAFT, VESSELS AND ASSOCIATED TRANSPORT EQUIPMENT]",
-                                "rule_type": {
-                                    "id": 1,
-                                    "name": "section notes"
-                                },
-                                "scope": {
-                                    "code": "XV",
-                                    "id": 14704
-                                },
-                                "score": 0.703301191329956
-                            },
-                            {
-                                "rule_text": "Rules for Section XVI: This Section does not include: Items in Part XVII; [References: section XVII – Section XVII: VEHICLES, AIRCRAFT, VESSELS AND ASSOCIATED TRANSPORT EQUIPMENT]",
-                                "rule_type": {
-                                    "id": 1,
-                                    "name": "section notes"
-                                },
-                                "scope": {
-                                    "code": "XVI",
-                                    "id": 16194
-                                },
-                                "score": 0.703301191329956
-                            }
-                        ],
-                        "guidelines": [
-                            {
-                                "guideline_number": "025/94",
-                                "title": "87.08 Bodies (including cabs) for trucks and/or pickup trucks",
-                                "text": "Bodies for trucks or pickup trucks are the coachwork of those vehicles. Therefore, the classification of said bodies is under subheading 87.07.9090. Parts of such bodies are classified under subheading 87.08.2000, subject to the classification rules in the tariff. File 87.08 025/94",
-                                "score": 0.8505905866622925,
-                                "matched_product": "pickup truck cab"
-                            },
-                            {
-                                "guideline_number": "009/19",
-                                "title": "Recovery and rescue vehicle under subheading 87.05.9050",
-                                "text": "On July 29, 2007, Customs Tariff Update number 1506 was published, adding Section 9050 to Heading 87.05. This section classifies motor vehicles that have been or will be adapted as specialized for rescue and recovery, provided they are used by the Fire and Rescue Services. The release of such vehicles is subject to the following conditions: 1. Prior approval from the Chief Fire Inspector or an authorized representative on Customs Form 381. 2. Approval from the Director, provided that all rescue ",
-                                "score": 0.7528818845748901,
-                                "matched_product": "tow truck"
-                            }
-                        ]
-                    },
-                    "metadata": {
-                        "item_id": "UNKNOWN",
-                        "item_description": "GMC Sierra EV pickup truck",
-                        "classification_source": "llm_fallback_no_milvus",
-                        "candidates_source": "llm_direct",
-                        "initial_candidates_count": 2,
-                        "start_time": 1782374683.2174342,
-                        "end_time": 1782374817.7767837,
-                        "duration_seconds": 134.55934953689575,
-                        "duration_minutes": 2.2426558256149294,
-                        "llm_suggested_codes": [
-                            "8704",
-                            "2022"
-                        ],
-                        "milvus_suggested_codes": [],
-                        "total_llm_calls": 4,
-                        "total_evaluation_time_seconds": 134.58,
-                        "model_used": "unknown (direct) + unknown (eval)",
-                        "timestamp": "2026-06-25T11:06:57.795755",
-                        "parsing_warnings": [
-                            "llm_direct_classify: No CODE tags found, used digit-sequence fallback"
-                        ],
-                        "parsing_warnings_count": 1,
-                        "pipeline_version": "1.2.0",
-                        "milvus_integration": {
-                            "enabled": true,
-                            "best_score": 0.0,
-                            "strategies_used": [],
-                            "processing_time_seconds": 0.2860567569732666,
-                            "timeout": false,
-                            "error": null,
-                            "candidates_count": 0
-                        }
-                    }
-                },
-                "web_enrichment": {
-                    "status": "full",
-                    "confidence": 95,
-                    "task": "Technical specifications search for GMC Sierra EV",
-                    "parameters": {
-                        "product_type": "Truck",
-                        "weight_kg": "3700.5 kg (8157 lbs) - 3910 kg (8620 lbs)",
-                        "dimensions": "Length: 233.4 in, Width: 83.8 in (without mirrors), Height: 78.0-78.7 in, Wheelbase: 145.7-146.0 in",
-                        "voltage": "800V (DC fast charging)",
-                        "power_watts": "481 kW - 567 kW (645 hp - 760 hp)",
-                        "capacity_liters": "311.5 liters (11.0 cu ft) (frunk), 1627.9 liters (57.5 cubic feet) (cargo bed)",
-                        "load_capacity_kg": "612.3 kg (1350 lbs) - 771.1 kg (1700 lbs)",
-                        "intended_use": "Transportation, Towing, Hauling, Off-roading (AT4 trim), Mobile power source",
-                        "primary_function": "Electric Vehicle",
-                        "secondary_function": "Pickup Truck",
-                        "industry_sector": "Automotive",
-                        "country_of_origin": "United States",
-                        "country_of_manufacture": "United States",
-                        "certification_standards": "EPA",
-                        "fuel_type": "Electric",
-                        "motor_type": "Permanent-magnet synchronous AC (front motor), 2-motor e4WD",
-                        "connectivity": "Google built-in compatibility, OnStar",
-                        "display_type": "Infotainment System",
-                        "display_size_inches": "16.8",
-                        "battery_type": "Li-Ion (Ultium platform)",
-                        "port_types": "CCS Type 1 (charging)"
-                    },
-                    "raw_result": null,
-                    "error": null,
-                    "duration_seconds": 5.56
-                },
-                "hebrew_description": "אחרים"
-            }
-        ],
-        "_has_valid_input": true,
-        "_user_locale": "English"
-    },
-    "completed_steps": [
-        "analyze_input_node",
-        "extract_products_node",
-        "classify_products_node",
-        "compare_declaration_node",
-        "format_output_node"
-    ],
-    "errors": [],
-    "execution_time": 143.30966758728027,
-    "agent_name": "hscode_manager",
-    "execution_mode": "background",
-    "session_id": null,
-    "username": "custom-moshed3",
-    "conversation_id": "temp_session",
-    "redis_saved": false,
-    "token_usage": {
-        "total_input_tokens": 32920,
-        "total_output_tokens": 6177,
-        "total_thoughts_tokens": 0,
-        "total_tokens": 39097,
-        "calls_count": 8,
-        "last_call_metadata": {
-            "input_character_count": 38254,
-            "input_token_count": 9563,
-            "model_name": "gpt-oss-120b",
-            "number_of_images": 0,
-            "history_messages_count": 0,
-            "output_character_count": 3738,
-            "output_token_count": 1970,
-            "thoughts_token_count": 0,
-            "total_token_count": 11533
+  "success": true,
+  "result": {
+    "response": {
+      "products_extracted_from_invoice": [
+        {
+          "description": "Refrigerator",
+          "source": "text",
+          "table_extraction_id": null,
+          "quantity": null,
+          "amount": null,
+          "row_num": null,
+          "doc_id": null,
+          "brand": null,
+          "model": null,
+          "general_product": null,
+          "purpose": null,
+          "classification": {
+            "hs_code": "8418000000",
+            "hs_description_he": "מקררים, מקפיאים וציוד אחר לקירור או להקפאה, חשמלי או לא; משאבות\rחום, חוץ ממכונות למיזוג אויר שבפרט 84.15 -",
+            "classification_status": "NEEDS_CLARIFICATION",
+            "confidence_score": 0.9,
+            "had_conflict": false,
+            "is_leaf": false,
+            "classification_source": "external_candidates",
+            "web_enrichment": null,
+            "missing_information": null,
+            "deepest_hs_code_reached": null,
+            "contradiction_reason": null,
+            "classification_errors": []
+          },
+          "linked_goods_items": []
         }
+      ],
+      "total_extracted_products": 1,
+      "extraction_errors": []
+    },
+    "message": "מקרר",
+    "images": [],
+    "username": "dev-user",
+    "input_analysis": {
+      "has_text_description": true,
+      "has_images": false,
+      "has_documents": false,
+      "has_declaration_reference": false,
+      "text_summary": "User mentioned 'מקרר' which means 'refrigerator'",
+      "parsers_to_activate": [
+        "text_parser"
+      ]
+    },
+    "active_parsers": [
+      "text_parser"
+    ],
+    "extraction_errors": [],
+    "classification_results": [
+      {
+        "product": {
+          "description": "Refrigerator",
+          "source": "text"
+        },
+        "hs_code": "8418000000",
+        "classification_status": "NEEDS_CLARIFICATION",
+        "confidence_score": 0.9,
+        "needs_clarification": true,
+        "had_conflict": false,
+        "classification_summary": {
+          "original_description": "Refrigerator",
+          "predicted_hs_code": "8418000000",
+          "is_leaf": false,
+          "stop_reason": "Insufficient information",
+          "classification_source": "external_candidates",
+          "candidates_source": "llm_direct",
+          "insufficient_information": {
+            "missing_information": [],
+            "questions_and_answers": [],
+            "undecided_candidates": [
+              {
+                "hs_code": "8418000000",
+                "description": "Refrigerators, freezers, refrigerating equipment, and heat pumps"
+              }
+            ],
+            "tax_difference_between_children": "No",
+            "legal_requirements_difference_between_children": "No"
+          },
+          "contradiction": {},
+          "total_runtime_minutes": 0.24,
+          "initial_candidates_count": 0,
+          "llm_suggested_codes": [],
+          "total_llm_calls": 1
+        },
+        "errors": [],
+        "classification_json": {
+          "classification_result": {
+            "status": "NEEDS_CLARIFICATION",
+            "matched_item": {
+              "hs_code": "8418000000",
+              "description": "Refrigerators, freezers, refrigerating equipment, and heat pumps",
+              "hebrew_description": "מקררים, מקפיאים וציוד אחר לקירור או להקפאה, חשמלי או לא; משאבות\rחום, חוץ ממכונות למיזוג אויר שבפרט 84.15 -",
+              "customs_duty": null,
+              "purchase_tax": null,
+              "is_leaf": false,
+              "legal_requirements": [
+                {
+                  "authority": "משרד התחבורה",
+                  "confirmation_type": "אישור אגף הרכב ושרותי תחזוקה (0201)",
+                  "confirmation_code": ""
+                },
+                {
+                  "authority": "משרד החקלאות",
+                  "confirmation_type": "אישור מיכון וטכנולוגיה (0104)",
+                  "confirmation_code": ""
+                },
+                {
+                  "authority": "משרד התחבורה",
+                  "confirmation_type": "אישור אגף הרכב ושירותי תחזוקה - גף צמ\"ה (0219)",
+                  "confirmation_code": ""
+                },
+                {
+                  "authority": "משרד הכלכלה",
+                  "confirmation_type": "רישיון מינהל סביבה ופיתוח בר קיימא (0311)",
+                  "confirmation_code": ""
+                },
+                {
+                  "authority": "משרד הכלכלה",
+                  "confirmation_type": "רישיון מינהל תעשיות (0308)",
+                  "confirmation_code": ""
+                }
+              ]
+            },
+            "confidence_score": 0.9,
+            "alternative_matches": [
+              {
+                "hs_code": "8418000000",
+                "description": "Refrigerators, freezers, refrigerating equipment, and heat pumps",
+                "customs_duty": null,
+                "purchase_tax": null
+              }
+            ],
+            "clarifying_questions": []
+          },
+          "reasoning_chain": {
+            "chapter_evaluation": {
+              "evaluated": [],
+              "matched": [],
+              "evaluations": {}
+            },
+            "heading_evaluation": {
+              "evaluated": [
+                "8649"
+              ],
+              "matched": [],
+              "evaluations": {
+                "8649": {
+                  "hs_code": "8418000000",
+                  "description": "Refrigerators, freezers, refrigerating equipment, and heat pumps",
+                  "status": "INSUFFICIENT_INFORMATION",
+                  "reasoning": "1. The item is explicitly described as a 'Refrigerator'.\n2. The candidate category covers 'Refrigerators, freezers and other refrigerating or freezing equipment'.\n3. The item fits the primary description of the category.\n4. All 41 listed exclusions are for machinery or equipment unrelated to a standard refrigerator (e.g., nuclear reactors, internal combustion engines, industrial furnaces, metal-working machine tools).\n5. As a 'Refrigerator', the item does not meet any of the exclusion criteria.\n6. The requirements for the category (being a refrigerator, freezer, or refrigerating equipment) are definitely met by the provided description.\n[Conditional Rule: This item requires special approval (מותנה)]"
+                }
+              }
+            },
+            "subheading_evaluation": {
+              "evaluated": [],
+              "matched": [],
+              "evaluations": {}
+            },
+            "leaf_evaluation": {
+              "evaluated": [],
+              "matched": [],
+              "evaluations": {}
+            }
+          },
+          "data_sources": {
+            "web_enrichment": null,
+            "rules": [],
+            "guidelines": [
+              {
+                "guideline_id": 53,
+                "guideline_number": "005/11",
+                "title": "84.18 Machine for preparing beverages",
+                "text": "A machine for the preparation and dispensing of cold water, hot water, or soda water, which includes: a water cooling unit (compressor, condenser, and evaporator), a water heating unit (heating element), and a carbonation unit (based on a replaceable carbon dioxide gas cylinder), is classified according to its primary function under customs heading 84.18 in Section 6930. 005/11",
+                "score": 0.6647617220878601,
+                "matched_product": "water cooler"
+              }
+            ]
+          },
+          "metadata": {
+            "item_id": "UNKNOWN",
+            "item_description": "Refrigerator",
+            "classification_source": "external_candidates",
+            "candidates_source": "llm_direct",
+            "initial_candidates_count": 0,
+            "start_time": 1786447910.6185946,
+            "end_time": 1786447925.1814206,
+            "duration_seconds": 14.562825918197632,
+            "duration_minutes": 0.24271376530329386,
+            "llm_suggested_codes": [],
+            "milvus_suggested_codes": [
+              {
+                "code": "8418",
+                "score": 100,
+                "search_type": "CloseDistance"
+              },
+              {
+                "code": "841810",
+                "score": 78,
+                "search_type": "CloseDistance"
+              },
+              {
+                "code": "8418101900",
+                "score": 69,
+                "search_type": "CloseDistance"
+              }
+            ],
+            "total_llm_calls": 1,
+            "total_evaluation_time_seconds": 14.57,
+            "model_used": "unknown (direct) + unknown (eval)",
+            "timestamp": "2026-08-11T14:32:05.193143",
+            "parsing_warnings": [],
+            "parsing_warnings_count": 0,
+            "pipeline_version": "1.2.0",
+            "milvus_integration": {
+              "enabled": true,
+              "best_score": 100,
+              "strategies_used": [
+                "CloseDistance"
+              ],
+              "processing_time_seconds": 0.5709211826324463,
+              "timeout": false,
+              "error": null,
+              "candidates_count": 0
+            }
+          },
+          "clarifying_questions": [],
+          "questions_and_answers": []
+        },
+        "web_enrichment": null,
+        "hebrew_description": "מקררים, מקפיאים וציוד אחר לקירור או להקפאה, חשמלי או לא; משאבות\rחום, חוץ ממכונות למיזוג אויר שבפרט 84.15 -"
+      }
+    ],
+    "_has_valid_input": true,
+    "_user_locale": "Hebrew"
+  },
+  "completed_steps": [
+    "analyze_input_node",
+    "extract_products_node",
+    "classify_products_node",
+    "compare_declaration_node",
+    "format_output_node"
+  ],
+  "errors": [],
+  "execution_time": 16.760753870010376,
+  "agent_name": "hscode_manager",
+  "execution_mode": "background",
+  "session_id": null,
+  "username": "dev-user",
+  "conversation_id": "temp_session",
+  "redis_saved": false,
+  "token_usage": {
+    "total_input_tokens": 9027,
+    "total_output_tokens": 2500,
+    "total_thoughts_tokens": 0,
+    "total_tokens": 11527,
+    "calls_count": 4,
+    "last_call_metadata": {
+      "input_character_count": 30875,
+      "input_token_count": 7973,
+      "model_name": "gemini-3.1-flash-lite",
+      "number_of_images": 0,
+      "history_messages_count": 0,
+      "output_character_count": 9479,
+      "output_token_count": 2406,
+      "thoughts_token_count": 0,
+      "total_token_count": 10379,
+      "agent_input_token_count": null,
+      "agent_output_token_count": null,
+      "agent_thoughts_token_count": null,
+      "agent_total_token_count": null,
+      "agent_llm_calls": null
     }
+  }
 }
