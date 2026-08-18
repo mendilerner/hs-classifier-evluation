@@ -8,7 +8,6 @@ import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, Future
 import json
 import time
-import re
 import requests
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
@@ -22,9 +21,6 @@ dotenv.load_dotenv()
 urllib3.disable_warnings(InsecureRequestWarning)
 
 RESULTS_JSON = "agent-results.json"
-
-# Set INPUT_DATASET=./classified-data-input.csv to run against the old dataset.
-INPUT_DATASET = os.getenv("INPUT_DATASET", "./verified-classification-input.csv")
 
 
 username_for_agent = os.getenv("USERNAME_FOR_AGENT", "dev-user")
@@ -73,13 +69,13 @@ if USE_TOKEN_AUTH:
         headers["Authorization"] = f"Bearer {get_service_token()}"
         return requests.request(method, url, headers=headers, **kwargs)
 
+
 test_params = {
     "agent_url": os.getenv(
         "AGENT_URL",
         "https://langraph-infrastructure.mdev.mehes.gov.il/api/v1/agents/run",
     ),
     "agent_name": os.getenv("AGENT_NAME", "hscode_manager"),
-    "input_dataset": INPUT_DATASET,
     "threads_number": int(os.getenv("THREADS_NUMBER", "16")),
     "request_timeout_seconds": int(os.getenv("REQUEST_TIMEOUT_SECONDS", "600")),
     "model_used_for_candidates_generation": os.environ[
@@ -105,54 +101,38 @@ def remove_even_trailing_zeros(code):
     return zeros_removed + "0" if len(zeros_removed) % 2 != 0 else zeros_removed
 
 
-AGENT_INPUT_FIELDS = ["description", "general_product", "purpose", "brand", "model"]
-
-
-def build_agent_input(product):
-    """Build the product item for the agent's ``products`` array.
-
-    Fields absent from the dataset are sent explicitly as null rather than
-    omitted, so the agent can tell "unknown" from "not applicable". The
-    expected code is never included — that would leak the answer.
-    """
-    return {
-        field: (None if pd.isna(value) else value)
-        for field in AGENT_INPUT_FIELDS
-        for value in [product.get(field)]
-    }
-
-
-def normalize_hs_code(code):
-    """Digits-only, right-padded to 10.
-
-    The products API returns codes in dotted, truncated form ("8471.30")
-    whereas every metric here assumes a 10-digit string. Padding reproduces
-    the old representation exactly: "8471.30" -> "8471300000", which
-    remove_even_trailing_zeros() then reads back as 6 significant digits.
-    """
-    digits = re.sub(r"\D", "", str(code or ""))
-    return digits.ljust(10, "0")[:10] if digits else ""
-
-
-def query_agent(product_payload):
-    print("sending request. product payload:", product_payload)
-
+def query_agent(product_description):
+    print("sending request. product description:", product_description)
     payload = {
         "agent_name": test_params["agent_name"],
-            "input_data": {
-                "mode": "background",
-                "products": [product_payload],
-            },        "mode": "background",
+        "input_data": {
+            "message": (
+                f"The following is the product to classify. its a singele product. take all the description. ---beggining of product description---{product_description}---end of product descirption---"
+                if os.environ["AGENT_NAME"] == "hscode_manager"
+                else product_description
+            )
+        },
+        "mode": "background",
     }
     if not USE_TOKEN_AUTH:
         payload["username"] = username_for_agent
     if USE_TOKEN_AUTH:
-        response = authed_request("POST", test_params["agent_url"], json=payload, verify=False, timeout=test_params["request_timeout_seconds"])
+        response = authed_request(
+            "POST",
+            test_params["agent_url"],
+            json=payload,
+            verify=False,
+            timeout=test_params["request_timeout_seconds"],
+        )
     else:
-        response = requests.post(test_params["agent_url"], json=payload, verify=False, timeout=test_params["request_timeout_seconds"])
-
+        response = requests.post(
+            test_params["agent_url"],
+            json=payload,
+            verify=False,
+            timeout=test_params["request_timeout_seconds"],
+        )
     print(
-        "product:", product_payload, "response.status_code:", response.status_code
+        "product:", product_description, "response.status_code:", response.status_code
     )
     with open("run-debug.jsonl", "a") as f:
         f.write(response.text + "\n")
@@ -162,9 +142,8 @@ def query_agent(product_payload):
 
 
 def extract_classification(results):
-    """Return (classification_summary, status) from any of the response shapes:
-    the products API (result.products_extracted_from_invoice[].classification),
-    the hscode_manager shape (result.classification_results[]), or the direct
+    """Return (classification_summary, status) from either the hscode_manager
+    response shape (result.classification_results[]) or the direct
     hsCode_classifier shape (flat result.classification_summary).
 
     Returns (None, None) when no parseable classification is present (no
@@ -175,28 +154,6 @@ def extract_classification(results):
     result = results.get("result") or {}
     if not isinstance(result, dict):
         return None, None
-    if "products_extracted_from_invoice" in result:
-        products = result.get("products_extracted_from_invoice") or []
-        if not products:
-            return None, None
-        classification = (products[0] or {}).get("classification") or {}
-        raw_code = classification.get("hs_code")
-        code = normalize_hs_code(raw_code)
-        if not code:
-            return None, None
-        return (
-            {
-                "predicted_hs_code": code,
-                # No is_leaf in this shape: a full 10-digit code is a leaf,
-                # anything shorter stopped above leaf level.
-                "is_leaf": len(re.sub(r"\D", "", str(raw_code))) >= 10,
-                # Not reported by this API — recorded as missing, not zero, so
-                # the averages don't silently read as "instant, no LLM calls".
-                "total_runtime_minutes": None,
-                "total_llm_calls": None,
-            },
-            classification.get("classification_status"),
-        )
     if "classification_results" in result:
         classification_results = result.get("classification_results") or []
         if not classification_results:
@@ -217,13 +174,6 @@ def extract_candidate_info(results):
     rows must be excluded from LLM candidate recall.
     """
     result = results.get("result") or {}
-    if not isinstance(result, dict):
-        return [], [], False, None, None
-    if "products_extracted_from_invoice" in result:
-        # The products API exposes no candidate metadata. Report the stage as
-        # not-run so candidate recall excludes these rows entirely instead of
-        # scoring absent data as a miss and reading as 0% recall.
-        return [], [], False, None, None
     if "classification_results" in result:
         crs = result.get("classification_results") or []
         entry = crs[0] if crs else {}
@@ -236,7 +186,9 @@ def extract_candidate_info(results):
         for c in (meta.get("milvus_suggested_codes") or [])
         if isinstance(c, dict) and c.get("code")
     ]
-    llm = list(meta.get("llm_suggested_codes") or summary.get("llm_suggested_codes") or [])
+    llm = list(
+        meta.get("llm_suggested_codes") or summary.get("llm_suggested_codes") or []
+    )
     raw_candidates_source = summary.get("candidates_source") or meta.get(
         "candidates_source"
     )
@@ -250,8 +202,10 @@ def extract_candidate_info(results):
 def _code_covers(candidate, expected):
     """A candidate covers the correct code when either is a prefix of the other
     (expected codes aren't always padded to 10 digits)."""
-    return bool(candidate) and bool(expected) and (
-        expected.startswith(candidate) or candidate.startswith(expected)
+    return (
+        bool(candidate)
+        and bool(expected)
+        and (expected.startswith(candidate) or candidate.startswith(expected))
     )
 
 
@@ -298,7 +252,7 @@ def identify_product(product):
     description = product["description"]
     expected_code = product["expected_code"]
     try:
-        results = query_agent(build_agent_input(product))
+        results = query_agent(description)
     except Exception as e:
         print("Error querying agent for product:", product, "Error:", str(e))
         # Server never answered: no candidates at all -> counts as a miss.
@@ -315,12 +269,17 @@ def identify_product(product):
     if not results.get("success"):
         if "success" not in results:
             with open("missing-success-key.log", "a", encoding="utf-8") as f:
-                f.write(json.dumps({"description": description, "full_result": results}, default=str) + "\n")
+                f.write(
+                    json.dumps(
+                        {"description": description, "full_result": results},
+                        default=str,
+                    )
+                    + "\n"
+                )
             print(
-                "Agent response missing 'success' key for product:",
+                "----> Agent response missing 'success' key for product:",
                 product,
-                "Result:",
-                results,
+                
             )
         else:
             print(
@@ -341,10 +300,8 @@ def identify_product(product):
     summary, status = extract_classification(results)
     if not summary or not summary.get("predicted_hs_code"):
         print(
-            "Manager returned no usable classification for product:",
+            "----> Manager returned no usable classification for product:",
             product,
-            "Result:",
-            results,
         )
         return {
             "description": description,
@@ -355,7 +312,7 @@ def identify_product(product):
             **candidate_fields(results, expected_code),
         }
 
-    predicted_hs_code = normalize_hs_code(summary["predicted_hs_code"])
+    predicted_hs_code = summary["predicted_hs_code"]
 
     code_comparison = compare_hs_codes(predicted_hs_code, product["expected_code"])
 
@@ -365,11 +322,11 @@ def identify_product(product):
         "success": True,
         "predicted_code": predicted_hs_code,
         "actual_code": product["expected_code"],
-        "did_found_leaf": summary.get("is_leaf"),
+        "did_found_leaf": summary["is_leaf"],
         "status": status,
         "length_of_predicted_code": (
             len(remove_even_trailing_zeros(predicted_hs_code))
-            if not summary.get("is_leaf")
+            if not summary["is_leaf"]
             else 10
         ),
         "are_given_digits_correct": predicted_hs_code[
@@ -382,19 +339,24 @@ def identify_product(product):
             predicted_hs_code, product["expected_code"]
         ),
         **candidate_fields(results, expected_code),
-        "server_run_time_minutes": summary.get("total_runtime_minutes"),
-        "llm_calls_count": summary.get("total_llm_calls"),
-        "total_input_tokens": (results.get("token_usage") or {}).get(
-            "total_input_tokens"
+        "server_run_time_minutes": summary["total_runtime_minutes"],
+        "llm_calls_count": summary["total_llm_calls"],
+        "total_input_tokens": (
+            results["token_usage"]["total_input_tokens"]
+            if results["token_usage"]
+            else 0
         ),
-        "total_output_tokens": (results.get("token_usage") or {}).get(
-            "total_output_tokens"
+        "total_output_tokens": (
+            results["token_usage"]["total_output_tokens"]
+            if results["token_usage"]
+            else 0
         ),
         "full_result": json.dumps(results),
         "mas_knia_mismatch": code_comparison["mas_knia_mismatch"],
         "general_customs_mismatch": code_comparison["general_customs_mismatch"],
         "requirements_mismatch": code_comparison["requirements_mismatch"],
         "any_leaf_full_match": code_comparison["any_leaf_full_match"],
+        "no_leaf_matching_both_incl_alternatives": results.get("result", {}).get("response", {}).get("no_leaf_matching_both_incl_alternatives"),
     }
 
 
@@ -416,7 +378,9 @@ def _build_comparison_metrics(success_df):
             "35_general_customs_mismatch_rate": float("nan"),
             "36_requirements_mismatch_rate": float("nan"),
             "37_no_tax_or_requirements_mismatch_rate": float("nan"),
+            "37b_leaf_matching_both_incl_alternatives_rate": float("nan"),
         }
+
     return {
         "34_mas_knia_mismatch_rate": subset["mas_knia_mismatch"].astype(float).mean(),
         "35_general_customs_mismatch_rate": subset["general_customs_mismatch"]
@@ -426,6 +390,11 @@ def _build_comparison_metrics(success_df):
         .astype(float)
         .mean(),
         "37_no_tax_or_requirements_mismatch_rate": subset["any_leaf_full_match"]
+        .astype(float)
+        .mean(),
+        "37b_leaf_matching_both_incl_alternatives_rate": (
+            ~subset["no_leaf_matching_both_incl_alternatives"].astype(bool)
+        )
         .astype(float)
         .mean(),
     }
@@ -624,10 +593,10 @@ def main():
         experiment_description=experiment_description,
         run_name=run_name,
         run_description=run_description,
-        files_lst=[__file__, hs_code_comparison.__file__, 'evaluate_batch.yaml'],
+        files_lst=[__file__, hs_code_comparison.__file__, "evaluate_batch.yaml"],
     )
 
-    with open(INPUT_DATASET) as f:
+    with open("./classified-data-input.csv") as f:
         test_data = pd.read_csv(f, index_col="Unnamed: 0", dtype=str)
 
     mlflow_log_data(test_data, "classified-data")
