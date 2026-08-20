@@ -143,6 +143,7 @@ def compare_hs_codes(predicted_code, actual_code):
             'general_customs_mismatch' – bool, or None if either code is unknown
             'requirements_mismatch'    – bool, or None if either code is unknown
             'any_leaf_full_match'      – bool, or None if either code is unknown
+            'is_correct_hierarchy'     - bool, or None if either code is unknown
     """
     # Normalize both codes to 10 digits (pad with trailing zeros)
     if predicted_code and len(predicted_code) < 10:
@@ -155,7 +156,9 @@ def compare_hs_codes(predicted_code, actual_code):
     customs_book_index = cached['customs_book_index']
     parent_index = cached['parent_index']
 
-    predicted_profiles = _get_leaf_profiles(predicted_code, fc_index, customs_book_index)
+    predicted_profiles = _get_leaf_profiles(
+        predicted_code, fc_index, customs_book_index
+    )
     actual_profiles = _get_leaf_profiles(actual_code, fc_index, customs_book_index)
 
     if predicted_profiles is None or actual_profiles is None:
@@ -164,6 +167,7 @@ def compare_hs_codes(predicted_code, actual_code):
             'general_customs_mismatch': None,
             'requirements_mismatch': None,
             'any_leaf_full_match': None,
+            'is_correct_hierarchy': None,
         }
 
     pred_item = fc_index.get(predicted_code)
@@ -178,6 +182,7 @@ def compare_hs_codes(predicted_code, actual_code):
             'general_customs_mismatch': False,
             'requirements_mismatch': False,
             'any_leaf_full_match': True,
+            'is_correct_hierarchy': True,
         }
 
     pred_is_ancestor = _is_item_ancestor(pred_id, act_id, parent_index)
@@ -196,6 +201,7 @@ def compare_hs_codes(predicted_code, actual_code):
             'general_customs_mismatch': False,
             'requirements_mismatch': False,
             'any_leaf_full_match': True,
+            'is_correct_hierarchy': True,
         }
 
     # Cases 2, 3 & 4: actual ancestor of predicted, both leaves, or different branches
@@ -203,8 +209,12 @@ def compare_hs_codes(predicted_code, actual_code):
     # AND that value is identical on both sides. If either side has multiple possible
     # values (branch with diverse leaves), there is a risk of fiscal mismatch.
     return {
-        'mas_knia_mismatch': not (len(act_mas_knia) == 1 and act_mas_knia == pred_mas_knia),
+        'mas_knia_mismatch': not (
+            len(act_mas_knia) == 1 and act_mas_knia == pred_mas_knia
+        ),
         'general_customs_mismatch': not (len(act_gc) == 1 and act_gc == pred_gc),
         'requirements_mismatch': not (len(act_reqs) == 1 and act_reqs == pred_reqs),
-        'any_leaf_full_match': len(actual_profiles) == 1 and actual_profiles == predicted_profiles,
+        'any_leaf_full_match': len(actual_profiles) == 1
+        and actual_profiles == predicted_profiles,
+        'is_correct_hierarchy': False,
     }
