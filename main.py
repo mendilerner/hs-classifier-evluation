@@ -265,6 +265,7 @@ def identify_product(product):
             "correct_in_llm_candidates": None,
             "correct_in_any_candidate": False,
             "llm_candidate_stage_ran": True,
+            "any_leaf_full_match_incl_alternatives": None,
         }
     if not results.get("success"):
         if "success" not in results:
@@ -295,6 +296,7 @@ def identify_product(product):
             "actual_code": expected_code,
             "full_result": results,
             **candidate_fields(results, expected_code),
+            "any_leaf_full_match_incl_alternatives": None,
         }
 
     summary, status = extract_classification(results)
@@ -310,11 +312,29 @@ def identify_product(product):
             "actual_code": expected_code,
             "full_result": json.dumps(results),
             **candidate_fields(results, expected_code),
+            "any_leaf_full_match_incl_alternatives": None,
         }
 
     predicted_hs_code = summary["predicted_hs_code"]
 
     code_comparison = compare_hs_codes(predicted_hs_code, product["expected_code"])
+    any_leaf_full_match_incl_alt = code_comparison["any_leaf_full_match"]
+
+    # Extract alternative HS codes to evaluate them as well
+    alt_codes = []
+    crs = results.get("result", {}).get("classification_results", [])
+    if crs:
+        class_result = crs[0].get("classification_json", {}).get("classification_result", {})
+        alt_matches = class_result.get("alternative_matches", [])
+        alt_codes = [m.get("hs_code") for m in alt_matches if m.get("hs_code")]
+
+    # If the main code didn't have a full match, check the alternatives
+    if not any_leaf_full_match_incl_alt and alt_codes:
+        for alt_code in alt_codes:
+            alt_comp = compare_hs_codes(alt_code, product["expected_code"])
+            if alt_comp["any_leaf_full_match"]:
+                any_leaf_full_match_incl_alt = True
+                break
 
     return {
         "description": description,
@@ -356,7 +376,7 @@ def identify_product(product):
         "general_customs_mismatch": code_comparison["general_customs_mismatch"],
         "requirements_mismatch": code_comparison["requirements_mismatch"],
         "any_leaf_full_match": code_comparison["any_leaf_full_match"],
-        "no_leaf_matching_both_incl_alternatives": results.get("result", {}).get("response", {}).get("no_leaf_matching_both_incl_alternatives"),
+        "any_leaf_full_match_incl_alternatives": any_leaf_full_match_incl_alt,
     }
 
 
@@ -370,6 +390,7 @@ def _build_comparison_metrics(success_df):
         & success_df["general_customs_mismatch"].notna()
         & success_df["requirements_mismatch"].notna()
         & success_df["any_leaf_full_match"].notna()
+        & success_df["any_leaf_full_match_incl_alternatives"].notna()
     )
     subset = success_df[comparison_ok]
     if len(subset) == 0:
@@ -378,9 +399,8 @@ def _build_comparison_metrics(success_df):
             "35_general_customs_mismatch_rate": float("nan"),
             "36_requirements_mismatch_rate": float("nan"),
             "37_no_tax_or_requirements_mismatch_rate": float("nan"),
-            "37b_leaf_matching_both_incl_alternatives_rate": float("nan"),
+            "37b_no_tax_or_req_mismatch_incl_alternatives_rate": float("nan"),
         }
-
     return {
         "34_mas_knia_mismatch_rate": subset["mas_knia_mismatch"].astype(float).mean(),
         "35_general_customs_mismatch_rate": subset["general_customs_mismatch"]
@@ -392,9 +412,7 @@ def _build_comparison_metrics(success_df):
         "37_no_tax_or_requirements_mismatch_rate": subset["any_leaf_full_match"]
         .astype(float)
         .mean(),
-        "37b_leaf_matching_both_incl_alternatives_rate": (
-            ~subset["no_leaf_matching_both_incl_alternatives"].astype(bool)
-        )
+        "37b_no_tax_or_req_mismatch_incl_alternatives_rate": subset["any_leaf_full_match_incl_alternatives"]
         .astype(float)
         .mean(),
     }
