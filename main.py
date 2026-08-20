@@ -280,7 +280,6 @@ def identify_product(product):
             print(
                 "----> Agent response missing 'success' key for product:",
                 product,
-                
             )
         else:
             print(
@@ -324,7 +323,9 @@ def identify_product(product):
     alt_codes = []
     crs = results.get("result", {}).get("classification_results", [])
     if crs:
-        class_result = crs[0].get("classification_json", {}).get("classification_result", {})
+        class_result = (
+            crs[0].get("classification_json", {}).get("classification_result", {})
+        )
         alt_matches = class_result.get("alternative_matches", [])
         alt_codes = [m.get("hs_code") for m in alt_matches if m.get("hs_code")]
 
@@ -349,12 +350,7 @@ def identify_product(product):
             if not summary["is_leaf"]
             else 10
         ),
-        "are_given_digits_correct": predicted_hs_code[
-            : len(remove_even_trailing_zeros(predicted_hs_code))
-        ]
-        == product["expected_code"][
-            : len(remove_even_trailing_zeros(predicted_hs_code))
-        ],
+        "are_given_digits_correct": code_comparison.get("is_correct_hierarchy", False),
         "correct_until": get_correct_until_level(
             predicted_hs_code, product["expected_code"]
         ),
@@ -412,7 +408,9 @@ def _build_comparison_metrics(success_df):
         "37_no_tax_or_requirements_mismatch_rate": subset["any_leaf_full_match"]
         .astype(float)
         .mean(),
-        "37b_no_tax_or_req_mismatch_incl_alternatives_rate": subset["any_leaf_full_match_incl_alternatives"]
+        "37b_no_tax_or_req_mismatch_incl_alternatives_rate": subset[
+            "any_leaf_full_match_incl_alternatives"
+        ]
         .astype(float)
         .mean(),
     }
