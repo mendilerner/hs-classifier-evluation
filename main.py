@@ -267,6 +267,14 @@ def identify_product(product):
             "llm_candidate_stage_ran": True,
             "any_leaf_full_match_incl_alternatives": None,
         }
+    return rate_agent_result(product, results)
+
+
+def rate_agent_result(product, results):
+    """Score an agent response (whose result.classification_results[0] is the
+    product to evaluate) against product["expected_code"]."""
+    description = product["description"]
+    expected_code = product["expected_code"]
     if not results.get("success"):
         if "success" not in results:
             with open("missing-success-key.log", "a", encoding="utf-8") as f:
