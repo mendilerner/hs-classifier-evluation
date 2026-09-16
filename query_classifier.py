@@ -22,6 +22,8 @@ def get_hs_code_from_description(description):
 
 
 if __name__ == "__main__":
-    description = "alovera juice"
+    # description = "isuzu d-max, py 2024 nr. vin: mpatfs872rt007978"
+    # description = "2025 gmc sierra ev"
+    description = "brake pad kit - front"
     hs_code = get_hs_code_from_description(description)
     print(f"HS Code for '{description}': {hs_code}")

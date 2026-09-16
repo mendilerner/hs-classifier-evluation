@@ -19,20 +19,35 @@ import requests
 from service_token import (
     get_service_token,
 )  # client_credentials token (see service_token.py)
-
+import time
+s=time.time()
 resp = requests.post(
-    "https://langraph-infrastructure.mdev.mehes.gov.il/api/v1/agents/run",
+    # "https://langraph-infrastructure.prod.mehes.gov.il/api/v1/agents/run",
+    # "https://langraph-infrastructure.mdev.mehes.gov.il/api/v1/agents/run",
     # or this URL if you want to test with your local development:
-    # "http://localhost:8000/api/v1/agents/run",
-    headers={"Authorization": f"Bearer {get_service_token()}"},
+    "http://localhost:8000/api/v1/agents/run",
+    # headers={"Authorization": f"Bearer {get_service_token()}"},
     json={
+        # "agent_name": "hsCode_classifier",
         "agent_name": "hscode_manager",
-        "input_data": {"lead_document_title": "26014632221711"},
+        "input_data": {
+            # "message": "produt description: 'iphone 17'",
+            # "enable_web_search":False,
+            # "message": "Progressive distributorVEG 8/8-15/10RV with proximity switch N1-M12x1 right",
+            #     # "message": 'The following is the product to classify. its a singele product. take all the description. ---beggining of product description---"Progressive distributorVEG 8/8-15/10RV with proximity switch N1-M12x1 right"---end of product descirption---'
+            # "lead_document_title": "26044677970800"
+            # "description": "BASIN",
+            # "brand": "MAIDE IMPORT AND EXPORT TRADING CO., LIMITED",
+            # "general_product": "Household basin",
+            # "purpose": "for washing or holding liquids",
+            "declaration_id": 593391658
+        },
+        # "input_data": {},
         "mode": "background",
     },
     verify=False,
 )
-
+print('took:', time.time()-s)
 print(f"Status: {resp.status_code}")
 r = resp.json()
 import json

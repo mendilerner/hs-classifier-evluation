@@ -280,6 +280,7 @@ def identify_product(product):
             print(
                 "----> Agent response missing 'success' key for product:",
                 product,
+                
             )
         else:
             print(
@@ -323,9 +324,7 @@ def identify_product(product):
     alt_codes = []
     crs = results.get("result", {}).get("classification_results", [])
     if crs:
-        class_result = (
-            crs[0].get("classification_json", {}).get("classification_result", {})
-        )
+        class_result = crs[0].get("classification_json", {}).get("classification_result", {})
         alt_matches = class_result.get("alternative_matches", [])
         alt_codes = [m.get("hs_code") for m in alt_matches if m.get("hs_code")]
 

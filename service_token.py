@@ -38,9 +38,12 @@ def _load_dotenv() -> None:
                 os.environ.setdefault(key.strip(), val.strip().strip('"').strip("'"))
             return
 
-
 _load_dotenv()
 
+_KEYCLOAK_BASE = {
+    "dev": "https://authentik.mdev.mehes.gov.il",
+    "prod": "https://authentik.prod.mehes.gov.il",
+}.get(os.environ.get("CURA_AUTH_ENV", "dev"), "https://authentik.mdev.mehes.gov.il")
 _KEYCLOAK_BASE = {
     "dev": "https://authentik.mdev.mehes.gov.il",
     "prod": "https://authentik.prod.mehes.gov.il",
