@@ -1,0 +1,3980 @@
+[
+  {
+    "table_extraction_id": 365821545,
+    "hs_code": "8517790000",
+    "description": "MIND EMBEDDED MODULE FOR ALL-IN-ONE CARD READER",
+    "brand": "CHENGDU MIND IOT TECHNOLOGY CO.,LTD",
+    "model": null,
+    "general_product": "Embedded module",
+    "purpose": "for all-in-one card reader"
+  },
+  {
+    "table_extraction_id": 365821546,
+    "hs_code": "8523529000",
+    "description": "RFID KEY FOBS",
+    "brand": "CHENGDU MIND IOT TECHNOLOGY CO.,LTD",
+    "model": null,
+    "general_product": "Key fobs",
+    "purpose": "for RFID applications"
+  },
+  {
+    "table_extraction_id": 361282012,
+    "hs_code": "8504409900",
+    "description": "1.8KW Generator",
+    "brand": null,
+    "model": null,
+    "general_product": null,
+    "purpose": null
+  },
+  {
+    "table_extraction_id": 365440239,
+    "hs_code": "8536699000",
+    "description": "connector",
+    "brand": "Wenzhou Yumao Electricity Technology Co., Ltd",
+    "model": null,
+    "general_product": "Electronic connector",
+    "purpose": "for connecting electronic components"
+  },
+  {
+    "table_extraction_id": 366622149,
+    "hs_code": "8471700000",
+    "description": "SSD HS Code 8471701100 Solid State Drive",
+    "brand": "OSCOO",
+    "model": "ON1000T",
+    "general_product": "Solid State Drive",
+    "purpose": "for data storage"
+  },
+  {
+    "table_extraction_id": 368804166,
+    "hs_code": "9031809000",
+    "description": "EC sensor",
+    "brand": "ShanghaiLanchangAutomation Technology Co.,Ltd",
+    "model": null,
+    "general_product": "Sensor",
+    "purpose": "for measuring electrical conductivity"
+  },
+  {
+    "table_extraction_id": 368804168,
+    "hs_code": "9027894000",
+    "description": "PH sensor",
+    "brand": "ShanghaiLanchangAutomation Technology Co.,Ltd",
+    "model": null,
+    "general_product": "Sensor",
+    "purpose": "for measuring pH levels"
+  },
+  {
+    "table_extraction_id": 368804169,
+    "hs_code": "9027899000",
+    "description": "Chlorine sensor",
+    "brand": "ShanghaiLanchangAutomation Technology Co.,Ltd",
+    "model": null,
+    "general_product": "Sensor",
+    "purpose": "for measuring chlorine levels"
+  },
+  {
+    "table_extraction_id": 368694538,
+    "hs_code": "8471500000",
+    "description": "ICO320-83C-N3350-4LAN-COM-CAN-WT-DC//(Type:SYS,Brand:Axiomtek, Software:Yes)",
+    "brand": "Axiomtek",
+    "model": "ICO320-83C-N3350-4LAN-COM-CAN-WT-DC",
+    "general_product": "Industrial Computer",
+    "purpose": "for industrial control and communication"
+  },
+  {
+    "table_extraction_id": 368694539,
+    "hs_code": "8414592000",
+    "description": "TS008-CEM500//CEM500 High Profile Heatsink w/fan(Type:Heatsink,Brand:Axiomtek, Softwa re:No)",
+    "brand": "Axiomtek",
+    "model": "TS008-CEM500//CEM500",
+    "general_product": "Heatsink with fan",
+    "purpose": "for cooling electronic components"
+  },
+  {
+    "table_extraction_id": 368694542,
+    "hs_code": "8473300000",
+    "description": "Rail Kit",
+    "brand": "AXIOMTEK",
+    "model": null,
+    "general_product": "Rail Kit",
+    "purpose": "for mounting equipment in racks"
+  },
+  {
+    "table_extraction_id": 371060037,
+    "hs_code": "8544423000",
+    "description": "8LU#CBLK00001 r. A00",
+    "brand": "Cable Maestro International Inc.",
+    "model": "8LU#CBLK00001 r. A00",
+    "general_product": "Cable assembly for electronic devices",
+    "purpose": "for connecting electronic components"
+  },
+  {
+    "table_extraction_id": 369667341,
+    "hs_code": "2402109000",
+    "description": "Horacio XL (15)",
+    "brand": "Horacio Distribution SA",
+    "model": "XL (15)",
+    "general_product": "Cigars",
+    "purpose": "for smoking"
+  },
+  {
+    "table_extraction_id": 374580583,
+    "hs_code": "8481809900",
+    "description": "Regulator Valve With Pneumatic Actuators",
+    "brand": "mks",
+    "model": "145-0025K-220V/50-60",
+    "general_product": "Regulator Valve",
+    "purpose": "for regulating flow"
+  },
+  {
+    "table_extraction_id": 372819374,
+    "hs_code": "8486900000",
+    "description": "Your PO No.: CI 12429: 10 ESC NG S/N: 367, 368 Coating, Testing for Hardness",
+    "brand": "CeWOTec",
+    "model": "ESC NG",
+    "general_product": "Coating",
+    "purpose": "for testing hardness"
+  },
+  {
+    "table_extraction_id": 376630292,
+    "hs_code": "8518301000",
+    "description": "HELMET HEADSET RS",
+    "brand": "WUXIANG IMPORT AND EXPORT TRADING CO LTD",
+    "model": "RS",
+    "general_product": "Headset for communication",
+    "purpose": "for communication while wearing a helmet"
+  },
+  {
+    "table_extraction_id": 379739029,
+    "hs_code": "9032891200",
+    "description": "MODULE, ELECTRONIC CONTROL",
+    "brand": "Cummins",
+    "model": "0222NC",
+    "general_product": "Electronic Control Module",
+    "purpose": "for controlling electronic systems"
+  },
+  {
+    "table_extraction_id": 386751181,
+    "hs_code": "8524129000",
+    "description": "glass panel, Material: glass, use for repair, HS Code:85241100",
+    "brand": "SHENZHEN HUIXIANG TECHNOLOGIE CO LTD",
+    "model": "glass panel",
+    "general_product": "glass panel",
+    "purpose": "for repair"
+  },
+  {
+    "table_extraction_id": 388515659,
+    "hs_code": "8517629000",
+    "description": "UC-BRKT-260-P-Z-ASSY UNI COMM, BRKT,UC-ENGINE-P-Z,HD-CONV-USB-2",
+    "brand": "CRESTRON",
+    "model": "UC-BRKT-260-P-Z",
+    "general_product": "Mounting Bracket for Electronics",
+    "purpose": "for mounting and connecting electronic equipment"
+  },
+  {
+    "table_extraction_id": 389006782,
+    "hs_code": "8443990000",
+    "description": "ICA1536A20-1W01 RC1536 M-version Print head WB Our item ID: 26-100113 Customs tariff no. 84439990000 Country of origin: 732 Japan",
+    "brand": "Seiko",
+    "model": "RC1536 M-version",
+    "general_product": "Print head",
+    "purpose": "for printers"
+  },
+  {
+    "table_extraction_id": 393131845,
+    "hs_code": "8517629000",
+    "description": "C-2642-MX-Z145-Rev.A",
+    "brand": "HUBER+SUHNER",
+    "model": "C-2642-MX-Z145-Rev.A",
+    "general_product": "Communication equipment",
+    "purpose": "for wired communication"
+  },
+  {
+    "table_extraction_id": 395427164,
+    "hs_code": "8479500000",
+    "description": "robot dog",
+    "brand": "WISEMATE TECHNOLOGY TRADING FZE",
+    "model": "robot dog",
+    "general_product": "toy dog",
+    "purpose": "for entertainment"
+  },
+  {
+    "table_extraction_id": 398889183,
+    "hs_code": "8517629000",
+    "description": "SR1.2(BIDI) transceiver",
+    "brand": "GUANGZHOU XITENG COMMUNICATION TECH CO LTD",
+    "model": "SR1.2(BIDI)",
+    "general_product": "transceiver",
+    "purpose": "for network communication"
+  },
+  {
+    "table_extraction_id": 399434783,
+    "hs_code": "8517629000",
+    "description": "ECCN 5A992.c RF Receivers",
+    "brand": "MASTER ELECTRONICS",
+    "model": "5A992.c",
+    "general_product": "RF Receivers",
+    "purpose": "for wireless communication"
+  },
+  {
+    "table_extraction_id": 410103672,
+    "hs_code": "9021109000",
+    "description": "MEDICAL DEVICES",
+    "brand": "TRIMED",
+    "model": null,
+    "general_product": "Medical Devices",
+    "purpose": "for medical use"
+  },
+  {
+    "table_extraction_id": 411210341,
+    "hs_code": "8537107900",
+    "description": "Control UM122 Lots:51699561",
+    "brand": "Radwell International",
+    "model": "UM122",
+    "general_product": "Control",
+    "purpose": "for control systems"
+  },
+  {
+    "table_extraction_id": 411213831,
+    "hs_code": "9019200000",
+    "description": "replacement kit sensor NO for NO-A therapy unit",
+    "brand": "EKU ELEKTRONIK",
+    "model": "NO-A",
+    "general_product": "Replacement kit",
+    "purpose": "for therapy unit"
+  },
+  {
+    "table_extraction_id": 414447521,
+    "hs_code": "8537109000",
+    "description": "Novastar TB30 controller",
+    "brand": "Novastar",
+    "model": "TB30",
+    "general_product": "controller",
+    "purpose": "for LED display control"
+  },
+  {
+    "table_extraction_id": 414447524,
+    "hs_code": "8517629000",
+    "description": "Novstar 4G module for TB",
+    "brand": "Novstar",
+    "model": "4G module for TB",
+    "general_product": "module",
+    "purpose": "for LED display control"
+  },
+  {
+    "table_extraction_id": 417170884,
+    "hs_code": "8481209000",
+    "description": "SOLENOID-OPERATED VALVE CD12-3/2NC-SR-024DC-I-G012-G012-EN175301",
+    "brand": "AVENTICS",
+    "model": "CD12-3/2NC-SR-024DC-I-G012-G012-EN175301",
+    "general_product": "valve",
+    "purpose": "for industrial automation"
+  },
+  {
+    "table_extraction_id": 417170885,
+    "hs_code": "8481209000",
+    "description": "PNEUMATICALLY OPERATED VALVE CD12-5/2XX-DO-G012-G012-G018-S",
+    "brand": "AVENTICS",
+    "model": "CD12-5/2XX-DO-G012-G012-G018-S",
+    "general_product": "valve",
+    "purpose": "for industrial automation"
+  },
+  {
+    "table_extraction_id": 455544355,
+    "hs_code": "8516109000",
+    "description": "62197-001-001 WATER BOILER Serial #: 09-02-2817",
+    "brand": "KILLICK AEROSPACE",
+    "model": "62197-001-001",
+    "general_product": "Boiler",
+    "purpose": "for water heating"
+  },
+  {
+    "table_extraction_id": 432293298,
+    "hs_code": "9018909000",
+    "description": "Applicator for hair removal devices CAST 3WL 10b",
+    "brand": "monocrom",
+    "model": "CAST 3WL 10b",
+    "general_product": "Applicator",
+    "purpose": "for hair removal devices"
+  },
+  {
+    "table_extraction_id": 433428807,
+    "hs_code": "8537107300",
+    "description": "Saturn EN 2*22kW AC EVSE A12380001 DH-AC0220XG58-D",
+    "brand": "Star Charge",
+    "model": "DH-AC0220XG58-D",
+    "general_product": "EVSE",
+    "purpose": "for electric vehicle charging"
+  },
+  {
+    "table_extraction_id": 434580133,
+    "hs_code": "8536509900",
+    "description": "External push button panel for 2 stops type: RT42, connecting cable 2,2m st. steel 1.4301 Cover plate w= 90 mm, h= 375 mm Please bear in mind: these are 3 sets of push button panels for 3 lifts, each having 2 stops! (each set consisting of 2 panels)",
+    "brand": "BKG",
+    "model": "RT42",
+    "general_product": "push button panel",
+    "purpose": "for elevator control"
+  },
+  {
+    "table_extraction_id": 434580134,
+    "hs_code": "7326901900",
+    "description": "Plate without print for push button panel type RT42 Imprint available at extra cost",
+    "brand": "BKG",
+    "model": "RT42",
+    "general_product": "plate",
+    "purpose": "for push button panel"
+  },
+  {
+    "table_extraction_id": 434580135,
+    "hs_code": "8537109000",
+    "description": "Control board PL640",
+    "brand": "BKG",
+    "model": "PL640",
+    "general_product": "control board",
+    "purpose": "for elevator control"
+  },
+  {
+    "table_extraction_id": 434580136,
+    "hs_code": "8536909100",
+    "description": "Terminal strip 9-pole for connector X36 for PL630V/PL640, (plug connector type: 8142/9) with labelling 1, 2, 3, 4, 5, 6, 7, 8, 9 with connecting wires when used for PL630T according to no. 3-82501-0002",
+    "brand": "BKG",
+    "model": "X36",
+    "general_product": "terminal strip",
+    "purpose": "for connector"
+  },
+  {
+    "table_extraction_id": 437376505,
+    "hs_code": "9405420000",
+    "description": "PVC 222nm UVC LED Light For disinfection",
+    "brand": "OGI Systems Ltd.",
+    "model": "222nm",
+    "general_product": "LED Light",
+    "purpose": "for disinfection"
+  },
+  {
+    "table_extraction_id": 438845800,
+    "hs_code": "8517710000",
+    "description": "High Precision GNSS L1/L2/L5 Vehicle Antenna",
+    "brand": "BENELEC",
+    "model": "L1/L2/L5",
+    "general_product": "Antenna",
+    "purpose": "for vehicle navigation"
+  },
+  {
+    "table_extraction_id": 444783614,
+    "hs_code": "8481909000",
+    "description": "Bumper",
+    "brand": "Aljac",
+    "model": null,
+    "general_product": "Automotive Part",
+    "purpose": "for vehicles"
+  },
+  {
+    "table_extraction_id": 444783846,
+    "hs_code": "8481909000",
+    "description": "Handle Grip",
+    "brand": "Aljac",
+    "model": null,
+    "general_product": "Handle Grip",
+    "purpose": "for vehicles"
+  },
+  {
+    "table_extraction_id": 444783849,
+    "hs_code": "8481909000",
+    "description": "Back up",
+    "brand": "Aljac",
+    "model": null,
+    "general_product": "Backup",
+    "purpose": "for mechanical systems"
+  },
+  {
+    "table_extraction_id": 444783853,
+    "hs_code": "8481909000",
+    "description": "QUAD Ring",
+    "brand": "Aljac",
+    "model": null,
+    "general_product": "Quad Ring",
+    "purpose": "for sealing"
+  },
+  {
+    "table_extraction_id": 444783855,
+    "hs_code": "8481909000",
+    "description": "Retainer",
+    "brand": "Aljac",
+    "model": null,
+    "general_product": "Retainer",
+    "purpose": "for mechanical assembly"
+  },
+  {
+    "table_extraction_id": 444783847,
+    "hs_code": "8484909000",
+    "description": "Seal",
+    "brand": "Aljac",
+    "model": null,
+    "general_product": "Seal",
+    "purpose": "for industrial equipment"
+  },
+  {
+    "table_extraction_id": 444783848,
+    "hs_code": "4016939900",
+    "description": "O-Ring",
+    "brand": "Aljac",
+    "model": null,
+    "general_product": "O-Ring",
+    "purpose": "for sealing applications"
+  },
+  {
+    "table_extraction_id": 444783854,
+    "hs_code": "7318150000",
+    "description": "Screw",
+    "brand": "Aljac",
+    "model": null,
+    "general_product": "Screw",
+    "purpose": "for fastening"
+  },
+  {
+    "table_extraction_id": 444783852,
+    "hs_code": "8481109000",
+    "description": "Remote Pilot for use with option Y on 60554",
+    "brand": "Aljac",
+    "model": "Y on 60554",
+    "general_product": "Remote Pilot",
+    "purpose": "for control systems"
+  },
+  {
+    "table_extraction_id": 447120847,
+    "hs_code": "8501319100",
+    "description": "Wearable breast pump ABS, PP, silicone Sucking breast milk",
+    "brand": "BIAMBA SMART BABY CARE",
+    "model": "Wearable",
+    "general_product": "Breast pump",
+    "purpose": "for sucking breast milk"
+  },
+  {
+    "table_extraction_id": 454537568,
+    "hs_code": "8501319100",
+    "description": "biamba(logo) 1pcs soft host",
+    "brand": "Biamba",
+    "model": "biamba(logo)",
+    "general_product": "baby care product",
+    "purpose": "for baby care"
+  },
+  {
+    "table_extraction_id": 450773065,
+    "hs_code": "8712000000",
+    "description": "Spectral CF 7 Complete Bike MTB",
+    "brand": "CANYON",
+    "model": "Spectral CF 7",
+    "general_product": "Bicycle",
+    "purpose": "for cycling"
+  },
+  {
+    "table_extraction_id": 450773066,
+    "hs_code": "8204110000",
+    "description": "Canyon FIX 6+1 Minitoolholder Workshop",
+    "brand": "CANYON",
+    "model": "FIX 6+1",
+    "general_product": "Tool kit",
+    "purpose": "for bicycle maintenance"
+  },
+  {
+    "table_extraction_id": 462813635,
+    "hs_code": "9031802000",
+    "description": "Force Sensor",
+    "brand": "CHANGZHOU RIGHT MEASUREMENT & SYSTEM CO., LTD",
+    "model": "T304",
+    "general_product": "Force sensor",
+    "purpose": "for measuring force"
+  },
+  {
+    "table_extraction_id": 457457032,
+    "hs_code": "8512209000",
+    "description": "LED TAIL LIGHT New | Genuine Bentley Part | Country of origin: GB | HS Code: 8512200090",
+    "brand": "Bentley",
+    "model": "LED",
+    "general_product": "Tail Light",
+    "purpose": "for lighting"
+  },
+  {
+    "table_extraction_id": 457457033,
+    "hs_code": "8708109000",
+    "description": "BUMPER COVER PRIMED New | Genuine Bentley Part | Country of origin: GB | HS Code: 8708109090",
+    "brand": "Bentley",
+    "model": null,
+    "general_product": "Bumper Cover",
+    "purpose": "for car body"
+  },
+  {
+    "table_extraction_id": 457457034,
+    "hs_code": "8302301900",
+    "description": "BRACKET FOR WHEEL HOUSING New | Genuine Bentley Part | Country of origin: GB | HS Code: 8302300090",
+    "brand": "Bentley",
+    "model": "Wheel Housing",
+    "general_product": "Bracket",
+    "purpose": "for wheel housing"
+  },
+  {
+    "table_extraction_id": 457457035,
+    "hs_code": "8708299000",
+    "description": "GUIDE PIECE New | Genuine Bentley Part | Country of origin: GB | HS Code: 8708299000",
+    "brand": "Bentley",
+    "model": null,
+    "general_product": "Guide Piece",
+    "purpose": "for guidance"
+  },
+  {
+    "table_extraction_id": 457457036,
+    "hs_code": "8512901000",
+    "description": "SENSOR PRIMED New | Genuine Bentley Part | Country of origin: GB | HS Code: 9031808000",
+    "brand": "Bentley",
+    "model": null,
+    "general_product": "Sensor",
+    "purpose": "for sensing"
+  },
+  {
+    "table_extraction_id": 457457037,
+    "hs_code": "4016939100",
+    "description": "SEAL RING SATIN BLACK New | Genuine Bentley Part | Country of origin: GB | HS Code: 4016930090",
+    "brand": "Bentley",
+    "model": "Satin Black",
+    "general_product": "Seal Ring",
+    "purpose": "for sealing"
+  },
+  {
+    "table_extraction_id": 457457038,
+    "hs_code": "8708109000",
+    "description": "TRIM STRIP FOR BUMPER New | Genuine Bentley Part | Country of origin: GB | HS Code: 8708109090",
+    "brand": "Bentley",
+    "model": null,
+    "general_product": "Trim Strip",
+    "purpose": "for bumper"
+  },
+  {
+    "table_extraction_id": 461193482,
+    "hs_code": "9019101900",
+    "description": "Portable massager machine 901/998/999",
+    "brand": "ANTTREE TRADING CO., LIMITED",
+    "model": "901/998/999",
+    "general_product": "Massager",
+    "purpose": "for personal health"
+  },
+  {
+    "table_extraction_id": 462050007,
+    "hs_code": "7113119000",
+    "description": "18K YELLOW GOLD BRACELET",
+    "brand": "Harrods Ltd",
+    "model": "18K YELLOW GOLD",
+    "general_product": "Bracelet",
+    "purpose": "for jewelry"
+  },
+  {
+    "table_extraction_id": 472076498,
+    "hs_code": "7307219000",
+    "description": "615/915 flange locktec",
+    "brand": "KUKA",
+    "model": "615/915",
+    "general_product": "Flange",
+    "purpose": "for connecting or securing mechanical components"
+  },
+  {
+    "table_extraction_id": 472076499,
+    "hs_code": "8544429000",
+    "description": "Cable 5m BUS-smartPAD",
+    "brand": "KUKA",
+    "model": "BUS-smartPAD",
+    "general_product": "Electrical cable",
+    "purpose": "for connecting industrial control devices"
+  },
+  {
+    "table_extraction_id": 475753500,
+    "hs_code": "7507120000",
+    "description": "Nitinol tubing OD 4.57 x WT 0.22",
+    "brand": "Vascotube GmbH",
+    "model": "OD 4.57 x WT 0.22",
+    "general_product": "Medical grade metal tubing",
+    "purpose": "for manufacturing medical stents or catheters"
+  },
+  {
+    "table_extraction_id": 480110429,
+    "hs_code": "4016992900",
+    "description": "Radiator lower rubber support / mounting",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive rubber mount",
+    "purpose": "for supporting the radiator"
+  },
+  {
+    "table_extraction_id": 480110430,
+    "hs_code": "8409999000",
+    "description": "Bearing sleeve for radiator rubber support / mounting",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive bushing",
+    "purpose": "for mounting the radiator"
+  },
+  {
+    "table_extraction_id": 480110431,
+    "hs_code": "3926908900",
+    "description": "Water cooler / radiator fastening clamp",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive fastening clamp",
+    "purpose": "for fastening the radiator"
+  },
+  {
+    "table_extraction_id": 480110432,
+    "hs_code": "8708919000",
+    "description": "A/C Evaporator / Condenser / radiator, Air condition / Refrigerant",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive heat exchanger",
+    "purpose": "for air conditioning and cooling system"
+  },
+  {
+    "table_extraction_id": 480110433,
+    "hs_code": "8708919000",
+    "description": "Intercooler",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive intercooler",
+    "purpose": "for cooling intake air"
+  },
+  {
+    "table_extraction_id": 480110434,
+    "hs_code": "8421310000",
+    "description": "Air cleaner",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive air filter",
+    "purpose": "for filtering intake air"
+  },
+  {
+    "table_extraction_id": 480110435,
+    "hs_code": "8708109000",
+    "description": "Retaining strip, L/Listwa mocująca, L",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive body trim/bracket",
+    "purpose": "for retaining body components"
+  },
+  {
+    "table_extraction_id": 480110437,
+    "hs_code": "8708919000",
+    "description": "Air guide/Prowadnica powietrza",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive air duct",
+    "purpose": "for directing airflow"
+  },
+  {
+    "table_extraction_id": 480110438,
+    "hs_code": "8708299000",
+    "description": "Träger/Träger",
+    "brand": "TEILE.COM",
+    "model": null,
+    "general_product": "Automotive structural support",
+    "purpose": "for structural support"
+  },
+  {
+    "table_extraction_id": 480110439,
+    "hs_code": "8708109000",
+    "description": "Plastic foam strip, Pedestrian protection, 2.9L 243/324kW / 3.0L 243kW / 4.0L 310kW",
+    "brand": "TEILE.COM",
+    "model": "2.9L / 3.0L / 4.0L",
+    "general_product": "Automotive bumper energy absorber",
+    "purpose": "for pedestrian safety protection"
+  },
+  {
+    "table_extraction_id": 482180549,
+    "hs_code": "8421310000",
+    "description": "AFE156: AFE Momentum GT Cold Air Intakes",
+    "brand": "aFe Power",
+    "model": "AFE156",
+    "general_product": "Automotive cold air intake system",
+    "purpose": "for increasing engine air intake efficiency and horsepower"
+  },
+  {
+    "table_extraction_id": 482180546,
+    "hs_code": "8708939000",
+    "description": "ACT027: ACT XT/Perf Street Clutch Kits",
+    "brand": "ACT",
+    "model": "ACT027",
+    "general_product": "Automotive performance clutch kit",
+    "purpose": "for upgrading vehicle transmission and clutch performance"
+  },
+  {
+    "table_extraction_id": 482180547,
+    "hs_code": "8708809000",
+    "description": "SPR024: SPR Control Arms - Front",
+    "brand": "SPR",
+    "model": "SPR024",
+    "general_product": "Automotive suspension control arm",
+    "purpose": "for improving vehicle suspension handling and geometry"
+  },
+  {
+    "table_extraction_id": 482180548,
+    "hs_code": "8708809000",
+    "description": "EIB021: EIB F&R Anti-Roll Bar Kits",
+    "brand": "Eibach",
+    "model": "EIB021",
+    "general_product": "Automotive suspension anti-roll/sway bar kit",
+    "purpose": "for reducing vehicle body roll during cornering"
+  },
+  {
+    "table_extraction_id": 482180550,
+    "hs_code": "9032109100",
+    "description": "MM071: MM Thermostats",
+    "brand": "Mishimoto",
+    "model": "MM071",
+    "general_product": "Automotive engine cooling system thermostat",
+    "purpose": "for regulating engine operating temperature"
+  },
+  {
+    "table_extraction_id": 477893510,
+    "hs_code": "8708999000",
+    "description": "CMK ST - VW Crafter / MAN TGE - RWD 2.0L Euro VI-e (+/-AC)",
+    "brand": "Techni",
+    "model": "CMK ST - VW Crafter / MAN TGE",
+    "general_product": "Air conditioning compressor mounting kit",
+    "purpose": "for mounting an auxiliary compressor to the vehicle engine"
+  },
+  {
+    "table_extraction_id": 483449579,
+    "hs_code": "8471900000",
+    "description": "DS3678-DP RUGG VIBR STD CRADLE USB KIT SHIELD CABLE NO A/C CORD",
+    "brand": "INGRAM MICRO",
+    "model": "DS3678-DP",
+    "general_product": "barcode scanner",
+    "purpose": "for reading and scanning barcodes"
+  },
+  {
+    "table_extraction_id": 483527824,
+    "hs_code": "8441109000",
+    "description": "plastic Cutting plotter for Cutting label",
+    "brand": "SOFTHANDS LTD",
+    "model": null,
+    "general_product": "Cutting plotter",
+    "purpose": "for cutting labels"
+  },
+  {
+    "table_extraction_id": 483527825,
+    "hs_code": "8441909000",
+    "description": "plastic Cutting plotter parts for Cutting label",
+    "brand": "SOFTHANDS LTD",
+    "model": null,
+    "general_product": "Cutting plotter parts",
+    "purpose": "for cutting labels"
+  },
+  {
+    "table_extraction_id": 482876604,
+    "hs_code": "8471800000",
+    "description": "PK2000IA0000E-2002-1BA-SBB Swissbit iShield Key Pro in Box with USB-A and NFC, Featureset: FIDO2 / OTP / PIV, -20°C to 85°C",
+    "brand": "Swissbit",
+    "model": "PK2000IA0000E-2002-1BA-SBB",
+    "general_product": "Hardware security key for multi-factor authentication",
+    "purpose": "for secure user authentication and identity protection"
+  },
+  {
+    "table_extraction_id": 488066093,
+    "hs_code": "9102990000",
+    "description": "HOUR METER",
+    "brand": "NINGBO JIANGBEI RUN LEADER ELECTRONICS CO.,LTD",
+    "model": "CR2050",
+    "general_product": "Hour meter / Tachometer gauge",
+    "purpose": "for tracking operating hours of equipment or machinery"
+  },
+  {
+    "table_extraction_id": 324189187,
+    "hs_code": "4818100000",
+    "description": "SELPAK 32LI TOILET PAPER",
+    "brand": null,
+    "model": null,
+    "general_product": null,
+    "purpose": null
+  },
+  {
+    "table_extraction_id": 365000721,
+    "hs_code": "1806909900",
+    "description": "Hazelnut cream with cocoa 350g x 12",
+    "brand": "EMEK",
+    "model": "350g x 12",
+    "general_product": "Hazelnut cream",
+    "purpose": "for consumption"
+  },
+  {
+    "table_extraction_id": 365007319,
+    "hs_code": "2710197400",
+    "description": "1 WAG MOTOROIL 5W30 SN/C3 5L",
+    "brand": "METSAY",
+    "model": "5W30 SN/C3",
+    "general_product": "Motor oil for automotive",
+    "purpose": "for lubricating internal combustion engines"
+  },
+  {
+    "table_extraction_id": 365008885,
+    "hs_code": "2008191000",
+    "description": "Pistachio Filling (London Chocolate)",
+    "brand": "Mr.Cake Chef",
+    "model": "London Chocolate",
+    "general_product": "Pistachio Filling",
+    "purpose": "for filling pastries and confections"
+  },
+  {
+    "table_extraction_id": 365008886,
+    "hs_code": "1806200000",
+    "description": "White Hazelnut Filling (Mr.Cake Chef) 4 Pail",
+    "brand": "Mr.Cake Chef",
+    "model": "4 Pail",
+    "general_product": "White Hazelnut Filling",
+    "purpose": "for filling pastries and confections"
+  },
+  {
+    "table_extraction_id": 365008887,
+    "hs_code": "1806200000",
+    "description": "Dark Chocolate 2 bags x 5kg*CTN 58%",
+    "brand": "CLM-Mr.Cake Chef",
+    "model": "2 bags x 5kg*CTN 58%",
+    "general_product": "Dark Chocolate",
+    "purpose": "for baking and confectionery"
+  },
+  {
+    "table_extraction_id": 365015344,
+    "hs_code": "3307909000",
+    "description": "FILMWAX 400g white chocolate - STALWAX Lotto: 260326",
+    "brand": "ItalWax",
+    "model": "400g",
+    "general_product": "Wax for depilation",
+    "purpose": "for depilation"
+  },
+  {
+    "table_extraction_id": 368650311,
+    "hs_code": "2203009000",
+    "description": "CORO EXTR OW 4X6 0,355 ISRAEL",
+    "brand": "ABInBev",
+    "model": "OW 4X6",
+    "general_product": "Beer",
+    "purpose": "for drinking"
+  },
+  {
+    "table_extraction_id": 365378197,
+    "hs_code": "1206009000",
+    "description": "обелени семки цели/hulled sunflower kernels, bakery",
+    "brand": "Euroconsult ltd.",
+    "model": null,
+    "general_product": "Sunflower kernels for bakery",
+    "purpose": "for baking"
+  },
+  {
+    "table_extraction_id": 365669587,
+    "hs_code": "0204410000",
+    "description": "FROZEN BONE IN OVINE RACKS",
+    "brand": "NATURE'S CHOICE EXPORTS PTY LTD.",
+    "model": null,
+    "general_product": "Frozen meat product",
+    "purpose": "for consumption"
+  },
+  {
+    "table_extraction_id": 365669588,
+    "hs_code": "0206900000",
+    "description": "FROZEN LAMB BRAIN",
+    "brand": "NATURE'S CHOICE EXPORTS PTY LTD.",
+    "model": null,
+    "general_product": "Frozen meat product",
+    "purpose": "for consumption"
+  },
+  {
+    "table_extraction_id": 368806307,
+    "hs_code": "0901210000",
+    "description": "NESCAFE DOLCE GUSTO ARDENZA 16CAP",
+    "brand": "NESCAFE DOLCE GUSTO",
+    "model": "ARDENZA 16CAP",
+    "general_product": "Coffee capsules",
+    "purpose": "for making coffee"
+  },
+  {
+    "table_extraction_id": 368806308,
+    "hs_code": "2101120000",
+    "description": "NESCAFE DOLCE GUSTO CAFE AU LAIT 3 X 16 CAP",
+    "brand": "NESCAFE DOLCE GUSTO",
+    "model": "CAFE AU LAIT 3 X 16 CAP",
+    "general_product": "Coffee capsules",
+    "purpose": "for making coffee"
+  },
+  {
+    "table_extraction_id": 368806311,
+    "hs_code": "1806100000",
+    "description": "NESCAFE DOLCE GUSTO CHOCOCINO 16 CAPS",
+    "brand": "NESCAFE DOLCE GUSTO",
+    "model": "CHOCOCINO 16 CAPS",
+    "general_product": "Chocolate drink capsules",
+    "purpose": "for making chocolate drinks"
+  },
+  {
+    "table_extraction_id": 368446371,
+    "hs_code": "0901110000",
+    "description": "1X20FT(19.25MT) 550BAGS X 35KG COLOMBIAN ARABICA GREEN COFFEE BEANS SUPREMO 17/18",
+    "brand": "ALSHARQ INTERNATIONAL TRADE DMCC",
+    "model": "SUPREMO 17/18",
+    "general_product": "Coffee Beans",
+    "purpose": "for brewing coffee"
+  },
+  {
+    "table_extraction_id": 376858291,
+    "hs_code": "3906909000",
+    "description": "Primer Universal (verpakt per 10kg)",
+    "brand": "Quartzline",
+    "model": "Universal",
+    "general_product": "Primer",
+    "purpose": "for preparing surfaces"
+  },
+  {
+    "table_extraction_id": 376858293,
+    "hs_code": "3906909000",
+    "description": "Cementitious Micro Base (set à 6,8kg) RAL 7035",
+    "brand": "Quartzline",
+    "model": "RAL 7035",
+    "general_product": "Cementitious Micro Base",
+    "purpose": "for creating a base layer"
+  },
+  {
+    "table_extraction_id": 376858296,
+    "hs_code": "3909500000",
+    "description": "Coating CMT (verpakt per 10kg)",
+    "brand": "Quartzline",
+    "model": "CMT",
+    "general_product": "Coating",
+    "purpose": "for coating surfaces"
+  },
+  {
+    "table_extraction_id": 376858297,
+    "hs_code": "3909500000",
+    "description": "Coating PU MG matt (set à 5kg)",
+    "brand": "Quartzline",
+    "model": "PU MG matt",
+    "general_product": "Coating",
+    "purpose": "for matte finish coating"
+  },
+  {
+    "table_extraction_id": 376858665,
+    "hs_code": "3208909000",
+    "description": "Plex 1120, verpakt per 180kg",
+    "brand": "Quartzline",
+    "model": "1120",
+    "general_product": "Plex",
+    "purpose": "for material"
+  },
+  {
+    "table_extraction_id": 376858668,
+    "hs_code": "3824990000",
+    "description": "Mortel, MIX 0.4-0.8 (verpakt per 25kg) QMI22 / Mix 842 0,",
+    "brand": "Quartzline",
+    "model": "MIX 0.4-0.8 QMI22 / Mix 842 0",
+    "general_product": "Mortar Mix",
+    "purpose": "for construction"
+  },
+  {
+    "table_extraction_id": 391265638,
+    "hs_code": "1704909000",
+    "description": "MARSHMALLOW 13G*30PCS*20BOXES/CTN",
+    "brand": "GUANGDONG SHUANGHUI FOOD CO., LTD",
+    "model": "13G*30PCS*20BOXES/CTN",
+    "general_product": "Marshmallows",
+    "purpose": "for confectionery"
+  },
+  {
+    "table_extraction_id": 369332380,
+    "hs_code": "2104100000",
+    "description": "CHICKEN BULLUION SEASONING",
+    "brand": "ARESA",
+    "model": null,
+    "general_product": "Seasoning",
+    "purpose": "for flavoring food"
+  },
+  {
+    "table_extraction_id": 369332381,
+    "hs_code": "2103909000",
+    "description": "CHEDDAR CHEESE SEASONING",
+    "brand": "ARESA",
+    "model": null,
+    "general_product": "Seasoning",
+    "purpose": "for flavoring food"
+  },
+  {
+    "table_extraction_id": 370114545,
+    "hs_code": "3307490000",
+    "description": "Air freshener Alfa Odor Eliminator 600ML",
+    "brand": "Alfa",
+    "model": "Odor Eliminator 600ML",
+    "general_product": "Air freshener",
+    "purpose": "for eliminating odors in the air"
+  },
+  {
+    "table_extraction_id": 370193940,
+    "hs_code": "3805900000",
+    "description": "PINE OIL (Double Distilled)",
+    "brand": "Swati Menthol and Allied Chemicals Ltd",
+    "model": "Double Distilled",
+    "general_product": "Pine Oil",
+    "purpose": "for industrial or cleaning applications"
+  },
+  {
+    "table_extraction_id": 375324276,
+    "hs_code": "2924190000",
+    "description": "שעווה מלאכותית EBS BEAD",
+    "brand": "TOSAF COMPOUNDS LTD",
+    "model": "EBS BEAD",
+    "general_product": "Artificial wax",
+    "purpose": "for various industrial applications"
+  },
+  {
+    "table_extraction_id": 376065031,
+    "hs_code": "3304999000",
+    "description": "FACE CLEANSER",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "370955500016",
+    "general_product": "Face Cleanser for skincare",
+    "purpose": "for cleansing the face"
+  },
+  {
+    "table_extraction_id": 376065032,
+    "hs_code": "3304999000",
+    "description": "FACE CREAM",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Face Cream for skincare",
+    "purpose": "for moisturizing the face"
+  },
+  {
+    "table_extraction_id": 376065034,
+    "hs_code": "3304999000",
+    "description": "FACE MASK",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Face Mask for skincare",
+    "purpose": "for facial treatment"
+  },
+  {
+    "table_extraction_id": 376065035,
+    "hs_code": "3304999000",
+    "description": "FACE SERUM",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Face Serum for skincare",
+    "purpose": "for facial treatment"
+  },
+  {
+    "table_extraction_id": 376065037,
+    "hs_code": "3304999000",
+    "description": "FACE PADS",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Face Pads for skincare",
+    "purpose": "for facial cleansing or application"
+  },
+  {
+    "table_extraction_id": 376065038,
+    "hs_code": "3304999000",
+    "description": "MAKEUP FIXER",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Makeup Fixer for cosmetics",
+    "purpose": "for setting makeup"
+  },
+  {
+    "table_extraction_id": 376065039,
+    "hs_code": "3304999000",
+    "description": "FACE TONER",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Face Toner for skincare",
+    "purpose": "for toning the face"
+  },
+  {
+    "table_extraction_id": 376065041,
+    "hs_code": "3304999000",
+    "description": "FOUNDATION",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Foundation for cosmetics",
+    "purpose": "for makeup application"
+  },
+  {
+    "table_extraction_id": 376065045,
+    "hs_code": "3304999000",
+    "description": "BODY SCRUB",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Body Scrub for personal care",
+    "purpose": "for exfoliating the body"
+  },
+  {
+    "table_extraction_id": 376065046,
+    "hs_code": "3304999000",
+    "description": "BODY OIL",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Body Oil for personal care",
+    "purpose": "for moisturizing the body"
+  },
+  {
+    "table_extraction_id": 376065051,
+    "hs_code": "3304999000",
+    "description": "SUN CREAM",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Sun Cream for skincare",
+    "purpose": "for sun protection"
+  },
+  {
+    "table_extraction_id": 376065053,
+    "hs_code": "3304999000",
+    "description": "SKINCARE SET",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Skincare Set for skincare",
+    "purpose": "for comprehensive skincare"
+  },
+  {
+    "table_extraction_id": 376065054,
+    "hs_code": "3304200000",
+    "description": "EYE CREAM",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "7304200000/1",
+    "general_product": "Eye Cream for skincare",
+    "purpose": "for moisturizing the eye area"
+  },
+  {
+    "table_extraction_id": 376065056,
+    "hs_code": "3304200000",
+    "description": "EYE MASK",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Eye Mask for skincare",
+    "purpose": "for eye treatment"
+  },
+  {
+    "table_extraction_id": 376065057,
+    "hs_code": "3305900000",
+    "description": "HAIR CONDITIONER",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "3305500000/1",
+    "general_product": "Hair Conditioner for hair care",
+    "purpose": "for conditioning hair"
+  },
+  {
+    "table_extraction_id": 376065058,
+    "hs_code": "3305900000",
+    "description": "HAIR CREAM",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Hair Cream for hair care",
+    "purpose": "for styling and treating hair"
+  },
+  {
+    "table_extraction_id": 376065059,
+    "hs_code": "3305900000",
+    "description": "HAIR OIL",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "3305100000/1",
+    "general_product": "Hair Oil for hair care",
+    "purpose": "for nourishing hair"
+  },
+  {
+    "table_extraction_id": 376065060,
+    "hs_code": "3305900000",
+    "description": "HAIR GEL",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Hair Gel for hair care",
+    "purpose": "for styling hair"
+  },
+  {
+    "table_extraction_id": 376065062,
+    "hs_code": "3305100000",
+    "description": "SHAMPOO",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "3305100000/9",
+    "general_product": "Shampoo for hair care",
+    "purpose": "for washing hair"
+  },
+  {
+    "table_extraction_id": 376065063,
+    "hs_code": "3304100000",
+    "description": "LIP BALM",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "3304100030/2",
+    "general_product": "Lip Balm for personal care",
+    "purpose": "for moisturizing lips"
+  },
+  {
+    "table_extraction_id": 376065064,
+    "hs_code": "3304100000",
+    "description": "LIP OIL",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Lip Oil for personal care",
+    "purpose": "for moisturizing lips"
+  },
+  {
+    "table_extraction_id": 376065065,
+    "hs_code": "3401300000",
+    "description": "SHOWER GEL",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "shul jwowoln",
+    "general_product": "Shower Gel for personal care",
+    "purpose": "for showering"
+  },
+  {
+    "table_extraction_id": 376065066,
+    "hs_code": "3307909000",
+    "description": "HAIR REMOVAL CREAM",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "77307503000/8",
+    "general_product": "Hair Removal Cream for personal care",
+    "purpose": "for hair removal"
+  },
+  {
+    "table_extraction_id": 376065068,
+    "hs_code": "3307200000",
+    "description": "DEO ROLL",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "33072020001",
+    "general_product": "Deodorant Roll-on for personal care",
+    "purpose": "for body odor protection"
+  },
+  {
+    "table_extraction_id": 376065070,
+    "hs_code": "3307100000",
+    "description": "SHAVE CREAM",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "J3307100000/5",
+    "general_product": "Shave Cream for personal care",
+    "purpose": "for shaving"
+  },
+  {
+    "table_extraction_id": 376065072,
+    "hs_code": "3306109000",
+    "description": "TOOTHPASTE",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "73306109000/8",
+    "general_product": "Toothpaste for oral hygiene",
+    "purpose": "for cleaning teeth"
+  },
+  {
+    "table_extraction_id": 376065073,
+    "hs_code": "3306109000",
+    "description": "TEETH WHITENING",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": null,
+    "general_product": "Teeth Whitening product for oral hygiene",
+    "purpose": "for whitening teeth"
+  },
+  {
+    "table_extraction_id": 376065074,
+    "hs_code": "3306909000",
+    "description": "MOUTHWASH",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "01113306909000/0",
+    "general_product": "Mouthwash for oral hygiene",
+    "purpose": "for oral rinse"
+  },
+  {
+    "table_extraction_id": 376065075,
+    "hs_code": "3401110000",
+    "description": "SOAP",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "340113000",
+    "general_product": "Soap for personal care",
+    "purpose": "for washing"
+  },
+  {
+    "table_extraction_id": 376065076,
+    "hs_code": "3303000000",
+    "description": "PERFUME",
+    "brand": "ZHAOQING KEYU TRADING CO., LTD",
+    "model": "3703000000/5",
+    "general_product": "Perfume for personal fragrance",
+    "purpose": "for fragrance"
+  },
+  {
+    "table_extraction_id": 385306954,
+    "hs_code": "1001999000",
+    "description": "RUSSIAN MILLING WHEAT (PRO 12.5%) IN BULK, H.S CODE 1001",
+    "brand": "Olam Agri",
+    "model": null,
+    "general_product": "Wheat",
+    "purpose": "for milling"
+  },
+  {
+    "table_extraction_id": 438361043,
+    "hs_code": "0202300000",
+    "description": "FROZEN BONELESS BEEF TENDERLOIN CHAIN OFF 4/5 AND 5UP",
+    "brand": "Iguatemi foods",
+    "model": "Chain off 4/5 and 5up",
+    "general_product": "Beef Tenderloin",
+    "purpose": "for food"
+  },
+  {
+    "table_extraction_id": 438361046,
+    "hs_code": "0206210000",
+    "description": "FROZEN BONELESS BEEF TONGUE",
+    "brand": "Iguatemi foods",
+    "model": null,
+    "general_product": "Beef Tongue",
+    "purpose": "for food"
+  },
+  {
+    "table_extraction_id": 382991570,
+    "hs_code": "2106909200",
+    "description": "IL Rescue Remedy Dropper Kosher 10ml Batch 0000147986 Expiry Date Jan 31, 2031",
+    "brand": "nelsons",
+    "model": "10ml",
+    "general_product": "Homeopathic Remedy Dropper",
+    "purpose": "for homeopathic treatment"
+  },
+  {
+    "table_extraction_id": 382991572,
+    "hs_code": "2106909990",
+    "description": "GB Rescue Plus Lozenge O&E CDU Batch 290827 Expiry Date Aug 29, 2027",
+    "brand": "Nelson & Russell Holdings Ltd",
+    "model": "Rescue Plus",
+    "general_product": "Lozenge",
+    "purpose": "for throat and chest relief"
+  },
+  {
+    "table_extraction_id": 393634226,
+    "hs_code": "1509201000",
+    "description": "EXTRA VIRGIN OLIVE OIL",
+    "brand": "Leziza",
+    "model": null,
+    "general_product": "Olive Oil",
+    "purpose": "for cooking and food preparation"
+  },
+  {
+    "table_extraction_id": 386943167,
+    "hs_code": "2710194900",
+    "description": "ESCAID 110,159 LTR BBL",
+    "brand": "HALLIBURTON",
+    "model": null,
+    "general_product": "Industrial Solvent",
+    "purpose": "for industrial cleaning"
+  },
+  {
+    "table_extraction_id": 386943168,
+    "hs_code": "2511100000",
+    "description": "BARITE - TΤΟΝ",
+    "brand": "HALLIBURTON",
+    "model": null,
+    "general_product": "Barite Powder",
+    "purpose": "for drilling fluids"
+  },
+  {
+    "table_extraction_id": 386943169,
+    "hs_code": "2827510000",
+    "description": "SOD BROMIDE BRINE 12.5 PPG, 1500 KG IBC",
+    "brand": "HALLIBURTON",
+    "model": null,
+    "general_product": "Sodium Bromide Brine",
+    "purpose": "for oil and gas drilling"
+  },
+  {
+    "table_extraction_id": 386943170,
+    "hs_code": "2501000000",
+    "description": "SODIUM CHLORIDE 99% COARSE, 1250 KG BAG",
+    "brand": "HALLIBURTON",
+    "model": null,
+    "general_product": "Sodium Chloride",
+    "purpose": "for industrial use"
+  },
+  {
+    "table_extraction_id": 390151539,
+    "hs_code": "3004900000",
+    "description": "CLARINASE Repetabs BLI 2x7 IL",
+    "brand": "CLARINASE",
+    "model": "BLI 2x7",
+    "general_product": "Tablets",
+    "purpose": "for allergy relief"
+  },
+  {
+    "table_extraction_id": 391095109,
+    "hs_code": "3402420000",
+    "description": "MITAINE CA(S) MO CODE # MO-1701 NET WT:200KG LOT NO MADE IN KOREA MIWON COMMERCIAL CO., LTD. PO NO # 3260286",
+    "brand": "MIWON COMMERCIAL CO., LTD.",
+    "model": "MO-1701",
+    "general_product": "Caustic Soda",
+    "purpose": "for industrial use"
+  },
+  {
+    "table_extraction_id": 391095110,
+    "hs_code": "3402909900",
+    "description": "MITAINE L MO CODE # MO-2123 NET WT:200KG LOT NO MADE IN KOREA MIWON COMMERCIAL CO., LTD. PO NO # 3260286",
+    "brand": "MIWON COMMERCIAL CO., LTD.",
+    "model": "MO-2123",
+    "general_product": "Caustic Soda",
+    "purpose": "for industrial use"
+  },
+  {
+    "table_extraction_id": 392059505,
+    "hs_code": "3901300000",
+    "description": "APPEELTM 11D554 Peelable Resin 600 KG Octabin",
+    "brand": "Dow",
+    "model": "APPEELTM 11D554",
+    "general_product": "Peelable Resin",
+    "purpose": "for packaging applications"
+  },
+  {
+    "table_extraction_id": 392341567,
+    "hs_code": "1905320000",
+    "description": "ISABELA WAFER.20*100GR",
+    "brand": "ISABELA",
+    "model": "20*100GR",
+    "general_product": "Wafer",
+    "purpose": "for snacks"
+  },
+  {
+    "table_extraction_id": 393113636,
+    "hs_code": "1207400000",
+    "description": "76 MT ETHIOPIAN ORIGIN WHITISH SESAME SEED HUMERA TYPE CROP YEAR 2025/2026 IN NEW P.P BAGS OF 50KGS NET WEIGHT EACH, TOTAL BAGS 1,520",
+    "brand": "Gish Mar Business",
+    "model": "Humera Type",
+    "general_product": "Sesame Seeds",
+    "purpose": "for agricultural use"
+  },
+  {
+    "table_extraction_id": 393403235,
+    "hs_code": "0204420000",
+    "description": "בשר כבש קפוא",
+    "brand": "OOLU",
+    "model": null,
+    "general_product": "Frozen bone-in lamb meat",
+    "purpose": "for food consumption"
+  },
+  {
+    "table_extraction_id": 393489916,
+    "hs_code": "3820000000",
+    "description": "ROYAL SUPER ANTI FREEZE RADIATOR COOLANT-33%-4X4L (GREEN COLOR)",
+    "brand": "ROYAL SUPER",
+    "model": "33%",
+    "general_product": "Antifreeze Radiator Coolant",
+    "purpose": "for radiator coolant"
+  },
+  {
+    "table_extraction_id": 393489918,
+    "hs_code": "3819009000",
+    "description": "ROYAL SUPER BRAKE FLUID DOT-3 24X500 ML",
+    "brand": "ROYAL SUPER",
+    "model": "DOT-3",
+    "general_product": "Brake Fluid",
+    "purpose": "for brake fluid"
+  },
+  {
+    "table_extraction_id": 393489920,
+    "hs_code": "2710197900",
+    "description": "ROYAL SUPER DIESEL SAE 15W40 CI-4/SL 4X5L",
+    "brand": "ROYAL SUPER",
+    "model": "SAE 15W40 CI-4/SL",
+    "general_product": "Diesel Engine Oil",
+    "purpose": "for diesel engine"
+  },
+  {
+    "table_extraction_id": 393489923,
+    "hs_code": "2710197900",
+    "description": "ROYAL SUPER HYDRAULIC ISO 68 20L",
+    "brand": "ROYAL SUPER",
+    "model": "ISO 68",
+    "general_product": "Hydraulic Oil",
+    "purpose": "for hydraulic system"
+  },
+  {
+    "table_extraction_id": 396680928,
+    "hs_code": "6203490000",
+    "description": "MEN T-SHIRT TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "T-shirt",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680929,
+    "hs_code": "6203490000",
+    "description": "MEN TROUSERS TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Trousers",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680930,
+    "hs_code": "6203490000",
+    "description": "MEN SUIT TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Suit",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680931,
+    "hs_code": "6217101000",
+    "description": "MEN SOCKS TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Socks",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680932,
+    "hs_code": "6203490000",
+    "description": "MEN SHORT TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Shorts",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680933,
+    "hs_code": "6203490000",
+    "description": "MEN SHIRT TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Shirt",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680934,
+    "hs_code": "6203490000",
+    "description": "MEN PAJAMAS TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Pajamas",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680935,
+    "hs_code": "6203490000",
+    "description": "MEN JACKET TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Jacket",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680936,
+    "hs_code": "6203490000",
+    "description": "MEN BOXER TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Boxer",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680937,
+    "hs_code": "6203490000",
+    "description": "MEN ATHELETE TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Athletic wear",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 396680938,
+    "hs_code": "4202290000",
+    "description": "WOMEN BAG TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Bag",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 396680939,
+    "hs_code": "6203490000",
+    "description": "WOMEN BLOUSE TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Blouse",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 396680940,
+    "hs_code": "6203490000",
+    "description": "WOMEN DRESS TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Dress",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 396680944,
+    "hs_code": "6402990000",
+    "description": "WOMEN SHOES TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Shoes",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 396680945,
+    "hs_code": "6203490000",
+    "description": "WOMEN SKIRT TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Skirt",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 396680949,
+    "hs_code": "6207190000",
+    "description": "WOMEN UNDERWEAR TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Underwear",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 396680957,
+    "hs_code": "6302390000",
+    "description": "BEDCOVER TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Bedcover",
+    "purpose": "for bedding"
+  },
+  {
+    "table_extraction_id": 396680958,
+    "hs_code": "6217102000",
+    "description": "BELT TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Belt",
+    "purpose": "for clothing"
+  },
+  {
+    "table_extraction_id": 396680959,
+    "hs_code": "6301900000",
+    "description": "BLANKET TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Blanket",
+    "purpose": "for warmth"
+  },
+  {
+    "table_extraction_id": 396680960,
+    "hs_code": "8302490000",
+    "description": "CURTAINS BEADS ACCESSORIES TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Curtain accessories",
+    "purpose": "for curtains"
+  },
+  {
+    "table_extraction_id": 396680961,
+    "hs_code": "3921900000",
+    "description": "DECORATIVE WALL PANEL TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Wall panel",
+    "purpose": "for decoration"
+  },
+  {
+    "table_extraction_id": 396680962,
+    "hs_code": "6006909000",
+    "description": "FABRIC TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Fabric",
+    "purpose": "for making clothes"
+  },
+  {
+    "table_extraction_id": 396680963,
+    "hs_code": "7013990000",
+    "description": "GLASS BOX TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Glass box",
+    "purpose": "for packaging"
+  },
+  {
+    "table_extraction_id": 396680964,
+    "hs_code": "4823909000",
+    "description": "LABLE CARD TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Label card",
+    "purpose": "for labeling"
+  },
+  {
+    "table_extraction_id": 396680965,
+    "hs_code": "9618009000",
+    "description": "MANNEQUINN TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Mannequin",
+    "purpose": "for display"
+  },
+  {
+    "table_extraction_id": 396680966,
+    "hs_code": "3406000000",
+    "description": "CANDLES TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Candles",
+    "purpose": "for lighting"
+  },
+  {
+    "table_extraction_id": 396680967,
+    "hs_code": "3923219000",
+    "description": "NYLON BAGS TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Nylon bags",
+    "purpose": "for packaging"
+  },
+  {
+    "table_extraction_id": 396680968,
+    "hs_code": "6406900000",
+    "description": "SHOE SOLE TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Shoe sole",
+    "purpose": "for shoes"
+  },
+  {
+    "table_extraction_id": 396680969,
+    "hs_code": "4823906000",
+    "description": "STICKER TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Sticker",
+    "purpose": "for labeling"
+  },
+  {
+    "table_extraction_id": 396680970,
+    "hs_code": "5401209000",
+    "description": "THREADS TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Threads",
+    "purpose": "for sewing"
+  },
+  {
+    "table_extraction_id": 396680971,
+    "hs_code": "6302600000",
+    "description": "TOWELS TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Towels",
+    "purpose": "for drying"
+  },
+  {
+    "table_extraction_id": 396680972,
+    "hs_code": "4909000000",
+    "description": "VISIT CARD TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Visit card",
+    "purpose": "for business"
+  },
+  {
+    "table_extraction_id": 396680973,
+    "hs_code": "3921900000",
+    "description": "WALL MOUNTED DECORATION TOTAL",
+    "brand": "ALFA KARGO DIS TICARET LIMITED",
+    "model": null,
+    "general_product": "Wall decoration",
+    "purpose": "for decoration"
+  },
+  {
+    "table_extraction_id": 397266204,
+    "hs_code": "3907500000",
+    "description": "MEGALKYD SP360",
+    "brand": "MEGARA RESINS",
+    "model": "SP360",
+    "general_product": "Resin",
+    "purpose": "for coatings"
+  },
+  {
+    "table_extraction_id": 397329055,
+    "hs_code": "3402420000",
+    "description": "NEODOL 91-8 Bulk",
+    "brand": "Shell Chemicals",
+    "model": "91-8",
+    "general_product": "Surfactant",
+    "purpose": "for industrial cleaning agents"
+  },
+  {
+    "table_extraction_id": 397972904,
+    "hs_code": "0713200000",
+    "description": "Chickpeas 6+ contract 18/03/26",
+    "brand": "M.L.D.E.K. LTD",
+    "model": "6+",
+    "general_product": "Chickpeas",
+    "purpose": "for food"
+  },
+  {
+    "table_extraction_id": 406033545,
+    "hs_code": "1704909000",
+    "description": "Butterscotch Caramel 12x1000gr",
+    "brand": "CONFISERIE NAPOLEON",
+    "model": "12x1000gr",
+    "general_product": "Caramel candy",
+    "purpose": "for confectionery"
+  },
+  {
+    "table_extraction_id": 419152513,
+    "hs_code": "3304999000",
+    "description": "BODY MIST",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": null,
+    "general_product": "Mist",
+    "purpose": "for body refreshing"
+  },
+  {
+    "table_extraction_id": 419152531,
+    "hs_code": "8214200000",
+    "description": "CUTICLE NIPPERS STAINLESS STEEL",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": "STAINLESS STEEL",
+    "general_product": "Nippers",
+    "purpose": "for cuticle trimming"
+  },
+  {
+    "table_extraction_id": 419152532,
+    "hs_code": "8212100000",
+    "description": "EYEBROR RAZOR",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": null,
+    "general_product": "Razor",
+    "purpose": "for eyebrow grooming"
+  },
+  {
+    "table_extraction_id": 419152533,
+    "hs_code": "8214200000",
+    "description": "EYELASH CURLER STAINLESS STEEL",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": "STAINLESS STEEL",
+    "general_product": "Eyelash Curler",
+    "purpose": "for curling eyelashes"
+  },
+  {
+    "table_extraction_id": 419152535,
+    "hs_code": "8214200000",
+    "description": "EYELASH TWEEZER STAINLESS STEEL",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": "STAINLESS STEEL",
+    "general_product": "Tweezer",
+    "purpose": "for eyelash grooming"
+  },
+  {
+    "table_extraction_id": 419152536,
+    "hs_code": "9603300000",
+    "description": "FACE BRUSH SET",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": null,
+    "general_product": "Brush Set",
+    "purpose": "for face cleansing"
+  },
+  {
+    "table_extraction_id": 419152537,
+    "hs_code": "9019101900",
+    "description": "FACE MASSAGE ROLLER SET",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": null,
+    "general_product": "Massage Roller Set",
+    "purpose": "for face massage"
+  },
+  {
+    "table_extraction_id": 419152539,
+    "hs_code": "9615110000",
+    "description": "HAIR CLIP SET",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": null,
+    "general_product": "Hair Clip Set",
+    "purpose": "for hair styling"
+  },
+  {
+    "table_extraction_id": 419152541,
+    "hs_code": "9616200000",
+    "description": "MAKEUP SPONGE SET",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": null,
+    "general_product": "Sponge Set",
+    "purpose": "for makeup application"
+  },
+  {
+    "table_extraction_id": 419152542,
+    "hs_code": "8214200000",
+    "description": "NAIL CLIPPER SET",
+    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+    "model": null,
+    "general_product": "Nail Clipper Set",
+    "purpose": "for nail grooming"
+  },
+  {
+    "table_extraction_id": 421635890,
+    "hs_code": "6107990000",
+    "description": "MAN BOXER",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "A-1",
+    "general_product": "Boxer briefs",
+    "purpose": "for men's underwear"
+  },
+  {
+    "table_extraction_id": 421635892,
+    "hs_code": "6109909000",
+    "description": "WOMAN VEST",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "V-1",
+    "general_product": "Vest",
+    "purpose": "for women's underwear"
+  },
+  {
+    "table_extraction_id": 421635894,
+    "hs_code": "6108990000",
+    "description": "WOMAN UNDERWEAR",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "2026C",
+    "general_product": "Underwear",
+    "purpose": "for women's underwear"
+  },
+  {
+    "table_extraction_id": 421635896,
+    "hs_code": "6212109000",
+    "description": "BRA",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "501",
+    "general_product": "Bra",
+    "purpose": "for women's support"
+  },
+  {
+    "table_extraction_id": 421635898,
+    "hs_code": "6115999000",
+    "description": "WOMAN SOCKS",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "S-29",
+    "general_product": "Socks",
+    "purpose": "for women's feet"
+  },
+  {
+    "table_extraction_id": 421635900,
+    "hs_code": "9615110000",
+    "description": "SCARF CLIP",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "E-19",
+    "general_product": "Clip",
+    "purpose": "for scarfs"
+  },
+  {
+    "table_extraction_id": 421635901,
+    "hs_code": "7323990000",
+    "description": "COFFEE POT",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "BQ-11 BQ-21",
+    "general_product": "Coffee pot",
+    "purpose": "for brewing coffee"
+  },
+  {
+    "table_extraction_id": 421635904,
+    "hs_code": "8210000000",
+    "description": "KITCHEN TUBE",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "KN-1",
+    "general_product": "Tube",
+    "purpose": "for kitchen use"
+  },
+  {
+    "table_extraction_id": 421635905,
+    "hs_code": "8211911000",
+    "description": "FRUIT KNIFE",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "KN-2",
+    "general_product": "Knife",
+    "purpose": "for cutting fruit"
+  },
+  {
+    "table_extraction_id": 421635906,
+    "hs_code": "8414200000",
+    "description": "HAND PUMP",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "KN-3",
+    "general_product": "Pump",
+    "purpose": "for pumping liquids"
+  },
+  {
+    "table_extraction_id": 421635907,
+    "hs_code": "3926909000",
+    "description": "HAND FAN",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "X-11",
+    "general_product": "Fan",
+    "purpose": "for cooling"
+  },
+  {
+    "table_extraction_id": 421635908,
+    "hs_code": "9029109900",
+    "description": "NUMDER ACCOUNT",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "8017",
+    "general_product": "Account",
+    "purpose": "for accounting"
+  },
+  {
+    "table_extraction_id": 421635909,
+    "hs_code": "3926909000",
+    "description": "CRAFT BEAD",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "PR-1 PR-27",
+    "general_product": "Bead",
+    "purpose": "for crafting"
+  },
+  {
+    "table_extraction_id": 421635912,
+    "hs_code": "6104490000",
+    "description": "WOMAN DRESS",
+    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
+    "model": "D-4",
+    "general_product": "Dress",
+    "purpose": "for women's attire"
+  },
+  {
+    "table_extraction_id": 422753339,
+    "hs_code": "2002100000",
+    "description": "DICED TOMATO 2025 CROP 48.48MTS(240 DRUMS) 3X20'GP",
+    "brand": "SINO TOMATO",
+    "model": "2025 CROP",
+    "general_product": "Tomatoes",
+    "purpose": "for food processing"
+  },
+  {
+    "table_extraction_id": 430719262,
+    "hs_code": "0201300000",
+    "description": "AGUJA SIN DENVER J - CHUCK WITHOUT DENVER J",
+    "brand": "Saint Andrew's Beef LP",
+    "model": "DENVER J",
+    "general_product": "Beef Chuck",
+    "purpose": "for beef cuts"
+  },
+  {
+    "table_extraction_id": 433285029,
+    "hs_code": "0407110000",
+    "description": "Broiler hatching eggs Rossi Huevos de gallina para Incubación Ro (310 boxes/cajas) Breakages up to 3% are non-refundable.",
+    "brand": "MIQUEL avícola",
+    "model": "Rossi",
+    "general_product": "hatching eggs",
+    "purpose": "for incubation"
+  },
+  {
+    "table_extraction_id": 436195931,
+    "hs_code": "3924909000",
+    "description": "Shower pouf",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Shower pouf",
+    "purpose": "for shower"
+  },
+  {
+    "table_extraction_id": 436195936,
+    "hs_code": "6204690000",
+    "description": "Women's pants",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Pants",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 436195937,
+    "hs_code": "6211491000",
+    "description": "Vest",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Vest",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 436195939,
+    "hs_code": "6204490000",
+    "description": "Dress",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Dress",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 436195940,
+    "hs_code": "6206900000",
+    "description": "Blouse",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Blouse",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 436195946,
+    "hs_code": "6211499000",
+    "description": "Lady clothes",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Clothing",
+    "purpose": "for ladies"
+  },
+  {
+    "table_extraction_id": 436195950,
+    "hs_code": "6108290000",
+    "description": "Sexy underwear",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Underwear",
+    "purpose": "for sexy wear"
+  },
+  {
+    "table_extraction_id": 436195956,
+    "hs_code": "6208290000",
+    "description": "Women's pajama set",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Pajama set",
+    "purpose": "for women"
+  },
+  {
+    "table_extraction_id": 436195957,
+    "hs_code": "6403990000",
+    "description": "Men's slippers",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Slippers",
+    "purpose": "for men"
+  },
+  {
+    "table_extraction_id": 436195961,
+    "hs_code": "7013490000",
+    "description": "Storage glass set",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Glass set",
+    "purpose": "for storage"
+  },
+  {
+    "table_extraction_id": 436195964,
+    "hs_code": "9105299000",
+    "description": "Clock",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Clock",
+    "purpose": "for timekeeping"
+  },
+  {
+    "table_extraction_id": 436195965,
+    "hs_code": "9404900000",
+    "description": "Pillow",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Pillow",
+    "purpose": "for sleeping"
+  },
+  {
+    "table_extraction_id": 436195967,
+    "hs_code": "6203490000",
+    "description": "Shorts suit",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Suit",
+    "purpose": "for casual wear"
+  },
+  {
+    "table_extraction_id": 436195968,
+    "hs_code": "6211491000",
+    "description": "Bib",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Bib",
+    "purpose": "for babies"
+  },
+  {
+    "table_extraction_id": 436195969,
+    "hs_code": "6505009000",
+    "description": "Hat set",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Hat set",
+    "purpose": "for headwear"
+  },
+  {
+    "table_extraction_id": 436195970,
+    "hs_code": "6209909000",
+    "description": "Nappy",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Nappy",
+    "purpose": "for babies"
+  },
+  {
+    "table_extraction_id": 436195971,
+    "hs_code": "6211399000",
+    "description": "Children's pants",
+    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
+    "model": null,
+    "general_product": "Pants",
+    "purpose": "for children"
+  },
+  {
+    "table_extraction_id": 436834851,
+    "hs_code": "2522200000",
+    "description": "IN 25 KG KRAFT PAPER PACKAGES CL 80-S HYDRATED LIME",
+    "brand": "MUHIT",
+    "model": null,
+    "general_product": "Lime",
+    "purpose": "for construction"
+  },
+  {
+    "table_extraction_id": 458022683,
+    "hs_code": "2106909990",
+    "description": "Vitafarm Prenavital (30 Caplets) (LOT# 26C099-1)",
+    "brand": "Vitafarm",
+    "model": "26C099-1",
+    "general_product": "Prenatal Vitamins",
+    "purpose": "for prenatal nutrition"
+  },
+  {
+    "table_extraction_id": 443059803,
+    "hs_code": "2009113000",
+    "description": "Frozen Orange Juice (NFC) Packed in 405 steel drums Total Net Weight 72.90 MT",
+    "brand": "Segev",
+    "model": null,
+    "general_product": "Orange Juice",
+    "purpose": "for food and beverage"
+  },
+  {
+    "table_extraction_id": 459355611,
+    "hs_code": "3304999000",
+    "description": "SHIFEI ACNE PATCH 24 PCS",
+    "brand": "SHIFEI",
+    "model": "EV2207",
+    "general_product": "acne patch",
+    "purpose": "for acne treatment"
+  },
+  {
+    "table_extraction_id": 459355629,
+    "hs_code": "3304999000",
+    "description": "SHIFEI DEEP CLEANSING NOSE STRIPS (THAYERS EXTRACT)/6 STRIPS",
+    "brand": "SHIFEI",
+    "model": "SKU8031",
+    "general_product": "deep cleansing nose strips",
+    "purpose": "for deep cleansing nose"
+  },
+  {
+    "table_extraction_id": 459355630,
+    "hs_code": "3304999000",
+    "description": "SHIFEI NATURAL EXFOLAITION FOOT MASK WITHIN 7 DAYS 1 pair/pouch (36G), 1 pouch/box",
+    "brand": "SHIFEI",
+    "model": "SF1115",
+    "general_product": "exfoliation foot mask",
+    "purpose": "for foot exfoliation"
+  },
+  {
+    "table_extraction_id": 468392620,
+    "hs_code": "3004900000",
+    "description": "DEEP FREEZE GEL 35G EXPORT 144 UNITS PER CASE BATCH NO.44302 MFG: 11/03/26",
+    "brand": "Mentholatum",
+    "model": "MF318",
+    "general_product": "Gel",
+    "purpose": "for deep freeze"
+  },
+  {
+    "table_extraction_id": 468392623,
+    "hs_code": "3004900000",
+    "description": "ROHTO DRY AID 10ML ME 300 UNITS PER CASE BATCH NO.5D1 MFG: 30/04/25",
+    "brand": "Mentholatum",
+    "model": "ME12",
+    "general_product": "Aid",
+    "purpose": "for dry aid"
+  },
+  {
+    "table_extraction_id": 468392630,
+    "hs_code": "3005103000",
+    "description": "DEEP FREEZE PATCH 1 PK ME 480/CA ME0000022382SFDAA00001 BATCH NO.MC25024 MFG: 17/07/25",
+    "brand": "Mentholatum",
+    "model": "MP1022",
+    "general_product": "Patch",
+    "purpose": "for deep freeze"
+  },
+  {
+    "table_extraction_id": 462812629,
+    "hs_code": "3912900000",
+    "description": "Avicel®RC 591 Cellulose Gel/Cellulose Gum FCC ZB60 EA4 20 Kg Bag (paper) H.S. No.: 3912909000 Packing description: 4 PAL(100 Bag (paper) Gross weight: KG 2.138 Country of origin US Batch 2174846170 2.000 KG (2.000 KG)",
+    "brand": "Avicel",
+    "model": "RC 591",
+    "general_product": "Cellulose Gum",
+    "purpose": "for food and pharmaceutical applications"
+  },
+  {
+    "table_extraction_id": 462812575,
+    "hs_code": "1302390000",
+    "description": "Gelcarin®FF 03 Carrageenan 25 Kg Bag (paper)",
+    "brand": "iff",
+    "model": "FF 03",
+    "general_product": "Carrageenan",
+    "purpose": "for Food industry"
+  },
+  {
+    "table_extraction_id": 465432101,
+    "hs_code": "0405103200",
+    "description": "Badatz Blockbutter 25 kg Badatz Butter Süßrahm 25 kg Block 800 Block EW batches: Menge.766 von Charge 391193-260611 proddate: 14.07.2026",
+    "brand": "Badatz",
+    "model": "Block EW",
+    "general_product": "Butter",
+    "purpose": "for food"
+  },
+  {
+    "table_extraction_id": 466281721,
+    "hs_code": "3215110000",
+    "description": "KAPPAFLEX BLACK 65-0003",
+    "brand": "FAMPRO TISSUE ISRAEL LTD",
+    "model": "65-0003",
+    "general_product": "Ink",
+    "purpose": "for printing"
+  },
+  {
+    "table_extraction_id": 470120449,
+    "hs_code": "3924109000",
+    "description": "Launch box plastic",
+    "brand": "ZHEJIANG RIFESHOW COSMETICS CO.,LTD",
+    "model": null,
+    "general_product": "Food container/Lunch box",
+    "purpose": "for storing food"
+  },
+  {
+    "table_extraction_id": 470120450,
+    "hs_code": "7615100000",
+    "description": "Launch box aluminum",
+    "brand": "ZHEJIANG RIFESHOW COSMETICS CO.,LTD",
+    "model": null,
+    "general_product": "Food container/Lunch box",
+    "purpose": "for storing food"
+  },
+  {
+    "table_extraction_id": 470842674,
+    "hs_code": "3304999000",
+    "description": "HIGHLIGHTER",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Highlighter makeup",
+    "purpose": "for brightening skin features"
+  },
+  {
+    "table_extraction_id": 470842677,
+    "hs_code": "3304999000",
+    "description": "MAKEUP SET",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Cosmetic kit",
+    "purpose": "for makeup application"
+  },
+  {
+    "table_extraction_id": 470842679,
+    "hs_code": "3304910000",
+    "description": "BLUSHER",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Blush makeup",
+    "purpose": "for adding color to cheeks"
+  },
+  {
+    "table_extraction_id": 470842681,
+    "hs_code": "3304200000",
+    "description": "EYELINER",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Eyeliner",
+    "purpose": "for defining the eyes"
+  },
+  {
+    "table_extraction_id": 470842682,
+    "hs_code": "3304200000",
+    "description": "EYESHADOW",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Eyeshadow makeup",
+    "purpose": "for coloring eyelids"
+  },
+  {
+    "table_extraction_id": 470842683,
+    "hs_code": "3304200000",
+    "description": "MASCARA",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Mascara",
+    "purpose": "for darkening eyelashes"
+  },
+  {
+    "table_extraction_id": 470842684,
+    "hs_code": "3304100000",
+    "description": "LIP GLOSS",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Lip gloss",
+    "purpose": "for shining lips"
+  },
+  {
+    "table_extraction_id": 470842687,
+    "hs_code": "3304100000",
+    "description": "LIPSTICK",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Lipstick",
+    "purpose": "for coloring lips"
+  },
+  {
+    "table_extraction_id": 470842688,
+    "hs_code": "3304300000",
+    "description": "NAIL POLISH",
+    "brand": "NINGBO ADTED MACHINERY AND HARDWARE CO.,LTD",
+    "model": null,
+    "general_product": "Nail polish",
+    "purpose": "for coloring nails"
+  },
+  {
+    "table_extraction_id": 470957831,
+    "hs_code": "2208600000",
+    "description": "FINLANDIA VODKA - 500ML 500NRG X12 FINLANDIA VDKA 40P NR IL GWS",
+    "brand": "FINLANDIA",
+    "model": "500ML 500NRG X12",
+    "general_product": "Vodka",
+    "purpose": "for alcoholic beverage consumption"
+  },
+  {
+    "table_extraction_id": 470990944,
+    "hs_code": "8477800000",
+    "description": "MFH-PE75 HIGH-SPEED ENERGY-SAVING TWO LAYER PIPE EXTRUSION LINE WITH SPARE PARTS",
+    "brand": "JWELL",
+    "model": "MFH-PE75",
+    "general_product": "Pipe extrusion line",
+    "purpose": "for manufacturing two-layer plastic pipes"
+  },
+  {
+    "table_extraction_id": 470990945,
+    "hs_code": "3901100000",
+    "description": "TEST RUNNING MATERIAL",
+    "brand": "JWELL",
+    "model": null,
+    "general_product": "Raw materials for machine testing",
+    "purpose": "for testing the extrusion line"
+  },
+  {
+    "table_extraction_id": 470990947,
+    "hs_code": "8477900000",
+    "description": "SPARE SCREW FOR 60/42 EXTRUDER",
+    "brand": "JWELL",
+    "model": "60/42",
+    "general_product": "Extruder screw",
+    "purpose": "for use in an industrial extruder"
+  },
+  {
+    "table_extraction_id": 471001281,
+    "hs_code": "8516802000",
+    "description": "Heating element for mold",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Heating element for industrial machinery",
+    "purpose": "for heating molds"
+  },
+  {
+    "table_extraction_id": 471001282,
+    "hs_code": "8477900000",
+    "description": "Calibrator",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": "40mm, 50mm, 63mm, 75mm",
+    "general_product": "Pipe calibrator for extrusion lines",
+    "purpose": "for sizing pipes"
+  },
+  {
+    "table_extraction_id": 471001283,
+    "hs_code": "8414109900",
+    "description": "Vacuum pump",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Vacuum pump",
+    "purpose": "for creating vacuum pressure"
+  },
+  {
+    "table_extraction_id": 471001284,
+    "hs_code": "8413709900",
+    "description": "Water pump",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Water pump",
+    "purpose": "for circulating water"
+  },
+  {
+    "table_extraction_id": 471001285,
+    "hs_code": "8477900000",
+    "description": "Encoder + wheel",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Rotary encoder and wheel assembly",
+    "purpose": "for measuring speed/position"
+  },
+  {
+    "table_extraction_id": 471001286,
+    "hs_code": "4010390000",
+    "description": "Belt on haul-off",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Conveyor belt for haul-off machine",
+    "purpose": "for hauling off extruded products"
+  },
+  {
+    "table_extraction_id": 471001288,
+    "hs_code": "8424909000",
+    "description": "Spray nozzles",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Industrial spray nozzles",
+    "purpose": "for spraying water"
+  },
+  {
+    "table_extraction_id": 471001289,
+    "hs_code": "8477900000",
+    "description": "PTFE white conduit",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "PTFE tubing/conduit",
+    "purpose": "for protective routing"
+  },
+  {
+    "table_extraction_id": 471001290,
+    "hs_code": "8424909000",
+    "description": "Mandrel connecting plate and screws",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Machine connecting parts",
+    "purpose": "for connecting mandrel components"
+  },
+  {
+    "table_extraction_id": 471001291,
+    "hs_code": "8424909000",
+    "description": "3KW, Vacuum loader (PE granules)",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": "3KW",
+    "general_product": "Vacuum loader for plastic pellets",
+    "purpose": "for loading plastic granules"
+  },
+  {
+    "table_extraction_id": 471001292,
+    "hs_code": "8424909000",
+    "description": "Material conveying pipe",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": "40mm",
+    "general_product": "Conveying pipe",
+    "purpose": "for transporting material"
+  },
+  {
+    "table_extraction_id": 471001293,
+    "hs_code": "8424909000",
+    "description": "Silicone sheet",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Silicone rubber sheet",
+    "purpose": "for sealing or gaskets"
+  },
+  {
+    "table_extraction_id": 471001294,
+    "hs_code": "8424909000",
+    "description": "Nylon rollers on coiler",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Nylon rollers",
+    "purpose": "for guiding coils"
+  },
+  {
+    "table_extraction_id": 471001295,
+    "hs_code": "8424909000",
+    "description": "Stainless steel pipe, inside vacuum tank",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": null,
+    "general_product": "Stainless steel pipe",
+    "purpose": "for vacuum tank internal plumbing"
+  },
+  {
+    "table_extraction_id": 471001296,
+    "hs_code": "8424909000",
+    "description": "Screen changer for big extruder",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": "104mm",
+    "general_product": "Screen changer for extrusion machinery",
+    "purpose": "for filtering plastic melt"
+  },
+  {
+    "table_extraction_id": 471001297,
+    "hs_code": "8477900000",
+    "description": "Screen mesh",
+    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
+    "model": "80, 60, 50, 40 mesh",
+    "general_product": "Industrial wire mesh screens",
+    "purpose": "for filtration"
+  },
+  {
+    "table_extraction_id": 470991138,
+    "hs_code": "8514190000",
+    "description": "烘箱 Oven XCB-300A",
+    "brand": "JWELL",
+    "model": "XCB-300A",
+    "general_product": "Laboratory Oven",
+    "purpose": "for heating and drying in a laboratory environment."
+  },
+  {
+    "table_extraction_id": 470991139,
+    "hs_code": "8514190000",
+    "description": "碳黑含量测定仪 Carbon Content Furnace DZ3500A",
+    "brand": "JWELL",
+    "model": "DZ3500A",
+    "general_product": "Carbon Content Furnace",
+    "purpose": "for determining carbon content in samples."
+  },
+  {
+    "table_extraction_id": 470991140,
+    "hs_code": "9024809000",
+    "description": "管材静液压爆破试验机 Pipe hydrostatic burst testing machine XGY-16-V",
+    "brand": "JWELL",
+    "model": "XGY-16-V",
+    "general_product": "Hydrostatic pressure testing machine",
+    "purpose": "for testing the hydrostatic pressure resistance and burst strength of pipes."
+  },
+  {
+    "table_extraction_id": 470991141,
+    "hs_code": "8418699900",
+    "description": "介质恒温箱 110-III (制冷) Medium constant temperature chamber (cooling)",
+    "brand": "JWELL",
+    "model": "110-III",
+    "general_product": "Constant temperature chamber",
+    "purpose": "for providing a controlled cooling environment for testing."
+  },
+  {
+    "table_extraction_id": 470991143,
+    "hs_code": "7326909900",
+    "description": "夹具 A型 Fixture Type A",
+    "brand": "JWELL",
+    "model": "Type A",
+    "general_product": "Testing fixture",
+    "purpose": "for securing samples during testing."
+  },
+  {
+    "table_extraction_id": 470991145,
+    "hs_code": "9024809000",
+    "description": "熔体流动速率测定仪 Melt flow rate tester XNR-450D",
+    "brand": "JWELL",
+    "model": "XNR-450D",
+    "general_product": "Melt flow indexer",
+    "purpose": "for measuring the melt flow rate of plastics."
+  },
+  {
+    "table_extraction_id": 470991146,
+    "hs_code": "9016001000",
+    "description": "密度天平 Density balance FA1204N",
+    "brand": "JWELL",
+    "model": "FA1204N",
+    "general_product": "Analytical balance",
+    "purpose": "for measuring sample density."
+  },
+  {
+    "table_extraction_id": 470991147,
+    "hs_code": "8465205900",
+    "description": "哑铃型制样机 Dumbbell-shaped sample preparation machine XYZ-45",
+    "brand": "JWELL",
+    "model": "XYZ-45",
+    "general_product": "Sample preparation machine",
+    "purpose": "for preparing dumbbell-shaped test samples."
+  },
+  {
+    "table_extraction_id": 470991148,
+    "hs_code": "8418300000",
+    "description": "低温冷冻箱 Low temperature freezer XKW-25",
+    "brand": "JWELL",
+    "model": "XKW-25",
+    "general_product": "Laboratory freezer",
+    "purpose": "for low-temperature storage or testing."
+  },
+  {
+    "table_extraction_id": 470991149,
+    "hs_code": "9024809000",
+    "description": "电子万能试验机 WDW-5 Electronic universal testing machine",
+    "brand": "JWELL",
+    "model": "WDW-5",
+    "general_product": "Universal testing machine",
+    "purpose": "for testing mechanical properties of materials."
+  },
+  {
+    "table_extraction_id": 470991150,
+    "hs_code": "9024909000",
+    "description": "动态摩擦系数测试用圆 Drum for dynamic friction coefficient testing",
+    "brand": "JWELL",
+    "model": null,
+    "general_product": "Friction testing accessory",
+    "purpose": "for dynamic friction coefficient testing."
+  },
+  {
+    "table_extraction_id": 470991151,
+    "hs_code": "9024809000",
+    "description": "冷弯曲半径试验机 Cold bending testing machine",
+    "brand": "JWELL",
+    "model": null,
+    "general_product": "Cold bending testing machine",
+    "purpose": "for testing the cold bending properties of materials."
+  },
+  {
+    "table_extraction_id": 470991152,
+    "hs_code": "9024809000",
+    "description": "落锤冲击试验机 Drop hammer impact testing machine",
+    "brand": "JWELL",
+    "model": null,
+    "general_product": "Impact testing machine",
+    "purpose": "for testing impact resistance of pipes."
+  },
+  {
+    "table_extraction_id": 473946515,
+    "hs_code": "1902190000",
+    "description": "FILIZ SPAGHETTI 24X400 G OPP CASE 1427379",
+    "brand": "Barilla",
+    "model": "24X400 G",
+    "general_product": "Spaghetti",
+    "purpose": "for pasta dishes"
+  },
+  {
+    "table_extraction_id": 471477890,
+    "hs_code": "9405420000",
+    "description": "lamp with usb",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Table lamp",
+    "purpose": "for providing illumination"
+  },
+  {
+    "table_extraction_id": 471477903,
+    "hs_code": "9102190000",
+    "description": "Watches",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Wristwatch",
+    "purpose": "for telling time"
+  },
+  {
+    "table_extraction_id": 471477917,
+    "hs_code": "9403600000",
+    "description": "Shoe cabinet",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Furniture",
+    "purpose": "for storing shoes"
+  },
+  {
+    "table_extraction_id": 471477920,
+    "hs_code": "8414510000",
+    "description": "Solar energy storage folding fan with usb",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Fan",
+    "purpose": "for cooling air"
+  },
+  {
+    "table_extraction_id": 471477921,
+    "hs_code": "8517699000",
+    "description": "Door Bell",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Doorbell",
+    "purpose": "for signaling visitors"
+  },
+  {
+    "table_extraction_id": 471477922,
+    "hs_code": "9615110000",
+    "description": "BATHBomb Gift",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Bath bomb",
+    "purpose": "for bathing"
+  },
+  {
+    "table_extraction_id": 471477923,
+    "hs_code": "9405420000",
+    "description": "Solar lamp",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Lamp",
+    "purpose": "for illumination"
+  },
+  {
+    "table_extraction_id": 471477924,
+    "hs_code": "8517699000",
+    "description": "Bluetooth remote control",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": "Bluetooth",
+    "general_product": "Remote control",
+    "purpose": "for controlling devices"
+  },
+  {
+    "table_extraction_id": 471477925,
+    "hs_code": "9401800000",
+    "description": "chair",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Furniture",
+    "purpose": "for sitting"
+  },
+  {
+    "table_extraction_id": 471477927,
+    "hs_code": "9403200000",
+    "description": "Dustproof Coat Rack",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Furniture",
+    "purpose": "for hanging coats"
+  },
+  {
+    "table_extraction_id": 471477929,
+    "hs_code": "9403600000",
+    "description": "Square hole 5-layer shoe and hat rack",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": "5-layer",
+    "general_product": "Furniture",
+    "purpose": "for storing shoes and hats"
+  },
+  {
+    "table_extraction_id": 471477931,
+    "hs_code": "8513100000",
+    "description": "light with battery",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Light",
+    "purpose": "for illumination"
+  },
+  {
+    "table_extraction_id": 471477936,
+    "hs_code": "8470100000",
+    "description": "calculator",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Calculator",
+    "purpose": "for calculation"
+  },
+  {
+    "table_extraction_id": 471477937,
+    "hs_code": "8412100000",
+    "description": "Sewing machine with usb",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Sewing machine",
+    "purpose": "for sewing"
+  },
+  {
+    "table_extraction_id": 471477938,
+    "hs_code": "8424201100",
+    "description": "Nebulizer with usb",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Nebulizer",
+    "purpose": "for medical treatment"
+  },
+  {
+    "table_extraction_id": 471477939,
+    "hs_code": "3925909000",
+    "description": "WPC PANEL",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Building material",
+    "purpose": "for construction"
+  },
+  {
+    "table_extraction_id": 471477940,
+    "hs_code": "9403990000",
+    "description": "Column",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Building material",
+    "purpose": "for construction"
+  },
+  {
+    "table_extraction_id": 471477944,
+    "hs_code": "6106900000",
+    "description": "Scarves",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Apparel",
+    "purpose": "for wearing"
+  },
+  {
+    "table_extraction_id": 471477959,
+    "hs_code": "8433190000",
+    "description": "Sweeper with gasoline",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Cleaning equipment",
+    "purpose": "for cleaning"
+  },
+  {
+    "table_extraction_id": 471477960,
+    "hs_code": "3926909000",
+    "description": "140*140 PVC tablecloth",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": "140*140",
+    "general_product": "Tablecloth",
+    "purpose": "for covering table"
+  },
+  {
+    "table_extraction_id": 471477962,
+    "hs_code": "6302590000",
+    "description": "clear table cover",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Table cover",
+    "purpose": "for covering table"
+  },
+  {
+    "table_extraction_id": 471477964,
+    "hs_code": "4202920000",
+    "description": "Luggage",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Travel bag",
+    "purpose": "for carrying luggage"
+  },
+  {
+    "table_extraction_id": 471477967,
+    "hs_code": "9615110000",
+    "description": "Comb",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Hair care",
+    "purpose": "for grooming hair"
+  },
+  {
+    "table_extraction_id": 471477969,
+    "hs_code": "9403990000",
+    "description": "Shelf",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Furniture",
+    "purpose": "for storing items"
+  },
+  {
+    "table_extraction_id": 471477970,
+    "hs_code": "8211929000",
+    "description": "Knife",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Kitchen tool",
+    "purpose": "for cutting"
+  },
+  {
+    "table_extraction_id": 471477973,
+    "hs_code": "3926909000",
+    "description": "Watch display stand",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Display stand",
+    "purpose": "for displaying watches"
+  },
+  {
+    "table_extraction_id": 471477974,
+    "hs_code": "3923109000",
+    "description": "Storage box",
+    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
+    "model": null,
+    "general_product": "Storage container",
+    "purpose": "for storing items"
+  },
+  {
+    "table_extraction_id": 471448231,
+    "hs_code": "3903900000",
+    "description": "ORGAL ORGAWHITE 2000",
+    "brand": "ORGANIK KIMYA",
+    "model": "ORGAWHITE 2000",
+    "general_product": "Polymer emulsion for paints and coatings",
+    "purpose": "for use in paint and coating formulations"
+  },
+  {
+    "table_extraction_id": 477386918,
+    "hs_code": "1905909900",
+    "description": "MIX BAKLAVA with pıstachıo vear 1000 GR",
+    "brand": "ABBASOĞLU",
+    "model": "1000 GR",
+    "general_product": "Baklava",
+    "purpose": "for consumption as a sweet dessert"
+  },
+  {
+    "table_extraction_id": 477386926,
+    "hs_code": "1905909900",
+    "description": "PISTACHIO VERA PRODUCT 1000 GR",
+    "brand": "ABBASOĞLU",
+    "model": "1000 GR",
+    "general_product": "Baklava",
+    "purpose": "for consumption as a sweet dessert"
+  },
+  {
+    "table_extraction_id": 475830723,
+    "hs_code": "7903900000",
+    "description": "ZINC GRANULAS,PK/500G 7903 4000/9",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "7903 4000/9",
+    "general_product": "Zinc granules",
+    "purpose": "for chemical experiments"
+  },
+  {
+    "table_extraction_id": 475830710,
+    "hs_code": "7205290000",
+    "description": "IRON FILLING 100G",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": null,
+    "general_product": "Iron filings",
+    "purpose": "for demonstrating magnetic fields"
+  },
+  {
+    "table_extraction_id": 475830731,
+    "hs_code": "8414102900",
+    "description": "VACUUM PUMP RS-1 8414 1029/3",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "8414 1029/3",
+    "general_product": "Vacuum pump",
+    "purpose": "for generating vacuum"
+  },
+  {
+    "table_extraction_id": 475830713,
+    "hs_code": "8414609000",
+    "description": "PORTABLE FUME HOOD FH700",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "FH700",
+    "general_product": "Portable fume hood",
+    "purpose": "for laboratory ventilation and safety"
+  },
+  {
+    "table_extraction_id": 475830726,
+    "hs_code": "8536909900",
+    "description": "HOUSING FOR AA BATTERIES 2 PLACES WITH WIRES",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": null,
+    "general_product": "AA battery holder",
+    "purpose": "for powering electrical circuits"
+  },
+  {
+    "table_extraction_id": 475830714,
+    "hs_code": "8539520000",
+    "description": "BULB 3.8V",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "3.8V",
+    "general_product": "Light bulb",
+    "purpose": "for electrical circuit experiments"
+  },
+  {
+    "table_extraction_id": 475830719,
+    "hs_code": "9011900000",
+    "description": "FT MICROSCOPE LCD DISPLAY 9311 9003/9",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "9311 9003/9",
+    "general_product": "Digital microscope with LCD display",
+    "purpose": "for microscopic observation"
+  },
+  {
+    "table_extraction_id": 475830712,
+    "hs_code": "9023000000",
+    "description": "CENTRIPETAL FORCE MODEL 9023-0000/3",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "9023-0000/3",
+    "general_product": "Centripetal force apparatus",
+    "purpose": "for demonstrating centripetal force"
+  },
+  {
+    "table_extraction_id": 475830715,
+    "hs_code": "9023000000",
+    "description": "CARDBOARD TELESCOPE 9023-0000/3",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "9023-0000/3",
+    "general_product": "Cardboard telescope",
+    "purpose": "for optical observation"
+  },
+  {
+    "table_extraction_id": 475830729,
+    "hs_code": "9023000000",
+    "description": "LIFE SIZE KNEE JOINT MODEL",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": null,
+    "general_product": "Anatomical knee joint model",
+    "purpose": "for anatomical study"
+  },
+  {
+    "table_extraction_id": 475830720,
+    "hs_code": "0902400000",
+    "description": "TEA 1KG 0902 4000/3",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "0902 4000/3",
+    "general_product": "Tea",
+    "purpose": "for consumption"
+  },
+  {
+    "table_extraction_id": 475830724,
+    "hs_code": "9027501900",
+    "description": "LUXMETER 200000LUX 9027 5019/9",
+    "brand": "NINGBO FREE TRADE ZONE YONG JING INTERNATIONAL TRADE CO., LTD.",
+    "model": "9027 5019/9",
+    "general_product": "Lux meter",
+    "purpose": "for measuring light intensity"
+  },
+  {
+    "table_extraction_id": 479591699,
+    "hs_code": "3924109000",
+    "description": "PP PLASTIC",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "6655-2-5",
+    "general_product": "Plastic household items",
+    "purpose": "for general storage or household use"
+  },
+  {
+    "table_extraction_id": 479591709,
+    "hs_code": "9603291900",
+    "description": "HAIR BRUSH",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "7079-1",
+    "general_product": "Hair grooming tool",
+    "purpose": "for brushing and styling hair"
+  },
+  {
+    "table_extraction_id": 479591742,
+    "hs_code": "9603291900",
+    "description": "EYELASH CURLER",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "27020-5",
+    "general_product": "Cosmetic tool",
+    "purpose": "for curling eyelashes"
+  },
+  {
+    "table_extraction_id": 479591713,
+    "hs_code": "6307100000",
+    "description": "SPOONGE",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "26053-1",
+    "general_product": "Cleaning sponge",
+    "purpose": "for cleaning and scrubbing"
+  },
+  {
+    "table_extraction_id": 479591720,
+    "hs_code": "9105999000",
+    "description": "O'CLOCK",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "18362-1-2",
+    "general_product": "Clock",
+    "purpose": "for telling time"
+  },
+  {
+    "table_extraction_id": 479591748,
+    "hs_code": "3926909000",
+    "description": "PIGGY BANK",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "7235-1-6",
+    "general_product": "Piggy bank",
+    "purpose": "for saving coins"
+  },
+  {
+    "table_extraction_id": 479591768,
+    "hs_code": "3926909000",
+    "description": "HUMIDIFER",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "7727-1-3",
+    "general_product": "Humidifier",
+    "purpose": "for increasing humidity"
+  },
+  {
+    "table_extraction_id": 479591770,
+    "hs_code": "3926909000",
+    "description": "GIFT BOX",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "12781-1-5",
+    "general_product": "Gift box",
+    "purpose": "for packaging gifts"
+  },
+  {
+    "table_extraction_id": 479591771,
+    "hs_code": "3926909000",
+    "description": "ROLL PAPER",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "12879-1-8",
+    "general_product": "Paper roll",
+    "purpose": "for general use"
+  },
+  {
+    "table_extraction_id": 479591728,
+    "hs_code": "9405509000",
+    "description": "STAND FOR CANDLE",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "7204-3",
+    "general_product": "Candle holder",
+    "purpose": "for holding candles"
+  },
+  {
+    "table_extraction_id": 479591732,
+    "hs_code": "4202390000",
+    "description": "WALLET",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "2386-1-3",
+    "general_product": "Wallet",
+    "purpose": "for carrying money"
+  },
+  {
+    "table_extraction_id": 479591735,
+    "hs_code": "7009920000",
+    "description": "MIRROR",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "7493-1-10",
+    "general_product": "Mirror",
+    "purpose": "for viewing reflection"
+  },
+  {
+    "table_extraction_id": 479591772,
+    "hs_code": "4016999000",
+    "description": "RIBBON",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "12879-10",
+    "general_product": "Ribbon",
+    "purpose": "for decoration or gift wrapping"
+  },
+  {
+    "table_extraction_id": 479591774,
+    "hs_code": "4802690000",
+    "description": "ROLL PAPER",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "12879-13-14",
+    "general_product": "Paper roll",
+    "purpose": "for general use"
+  },
+  {
+    "table_extraction_id": 479591744,
+    "hs_code": "4819100000",
+    "description": "GIFT BOX",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "2261-1-7",
+    "general_product": "Gift box",
+    "purpose": "for packaging gifts"
+  },
+  {
+    "table_extraction_id": 479591738,
+    "hs_code": "8213000000",
+    "description": "SCISSORS SET",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "27020-1",
+    "general_product": "Scissors",
+    "purpose": "for cutting"
+  },
+  {
+    "table_extraction_id": 479591718,
+    "hs_code": "9603300000",
+    "description": "EYELASH CURLER",
+    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
+    "model": "26053-7",
+    "general_product": "Cosmetic tool",
+    "purpose": "for curling eyelashes"
+  },
+  {
+    "table_extraction_id": 475232343,
+    "hs_code": "2106909990",
+    "description": "1883 BLACKBERRY 100 CL",
+    "brand": "1883",
+    "model": "100 CL",
+    "general_product": "Syrup",
+    "purpose": "for flavoring drinks and desserts"
+  },
+  {
+    "table_extraction_id": 475232363,
+    "hs_code": "2106909990",
+    "description": "1883 SAUCE CARAMEL 500ML",
+    "brand": "1883",
+    "model": "500 ML",
+    "general_product": "Sauce",
+    "purpose": "for topping desserts"
+  },
+  {
+    "table_extraction_id": 475232374,
+    "hs_code": "8413200000",
+    "description": "SYRUP PUMP 8ML NOTICE",
+    "brand": "1883",
+    "model": "8ML",
+    "general_product": "Syrup pump",
+    "purpose": "for dispensing syrup"
+  },
+  {
+    "table_extraction_id": 475232375,
+    "hs_code": "7326909900",
+    "description": "DISPLAYS 1883 1L 6 BOTTLES",
+    "brand": "1883",
+    "model": "1L 6 BOTTLES",
+    "general_product": "Display stand",
+    "purpose": "for displaying bottles"
+  },
+  {
+    "table_extraction_id": 475232354,
+    "hs_code": "2008999000",
+    "description": "1883 CREATION FRUITS WATERMELON 1L",
+    "brand": "1883",
+    "model": "1L",
+    "general_product": "Fruit puree",
+    "purpose": "for flavoring drinks and desserts"
+  },
+  {
+    "table_extraction_id": 475232360,
+    "hs_code": "2008209000",
+    "description": "1883 CREATION FRUITS PINEAPPLE 1L (P)",
+    "brand": "1883",
+    "model": "1L",
+    "general_product": "Fruit puree",
+    "purpose": "for flavoring drinks and desserts"
+  },
+  {
+    "table_extraction_id": 477339676,
+    "hs_code": "0407210000",
+    "description": "Яйце куряче біле CO 810 коробів в контейнері 1x40 FT ref container FRESH HEN EGGS WHITE LARGE 810 card boxes per container 1x40 FT ref container",
+    "brand": "YASENCVIT",
+    "model": "CO / WHITE LARGE",
+    "general_product": "Chicken Eggs",
+    "purpose": "for human consumption"
+  },
+  {
+    "table_extraction_id": 477547654,
+    "hs_code": "2204210000",
+    "description": "NEGROAMARO",
+    "brand": "TransWorld",
+    "model": null,
+    "general_product": "Red wine",
+    "purpose": "for drinking"
+  },
+  {
+    "table_extraction_id": 479224550,
+    "hs_code": "0801320000",
+    "description": "250 CARTONS OF GRADE WW160 CHINHESE 2",
+    "brand": "HAI VIET LIMITED COMPANY",
+    "model": "WW160",
+    "general_product": "Cashew kernels",
+    "purpose": "for food consumption"
+  },
+  {
+    "table_extraction_id": 481481886,
+    "hs_code": "0401500000",
+    "description": "Inex cream 40% 1L edge cfeu",
+    "brand": "Inex NV",
+    "model": "40% 1L",
+    "general_product": "Heavy cream for culinary use",
+    "purpose": "for cooking and food preparation"
+  },
+  {
+    "table_extraction_id": 481576147,
+    "hs_code": "3906909000",
+    "description": "AC-EAGLE(TP-60T60)60%",
+    "brand": "EAGLE CHEMICALS",
+    "model": "TP-60T60",
+    "general_product": "Synthetic resin / Polymer",
+    "purpose": "for industrial chemical manufacturing"
+  },
+  {
+    "table_extraction_id": 482185498,
+    "hs_code": "3402509000",
+    "description": "ABC LIQUID LAUNDRY DETERGENT - 1.5 L",
+    "brand": "ABC",
+    "model": "1.5 L",
+    "general_product": "Liquid laundry detergent",
+    "purpose": "for washing clothes"
+  },
+  {
+    "table_extraction_id": 482185499,
+    "hs_code": "3402509000",
+    "description": "ABC DISHWASHING LIQUID 750ML*20",
+    "brand": "ABC",
+    "model": "750ML",
+    "general_product": "Dishwashing liquid",
+    "purpose": "for washing dishes"
+  },
+  {
+    "table_extraction_id": 482270175,
+    "hs_code": "2202100000",
+    "description": "Non Stop Original",
+    "brand": "Non Stop",
+    "model": "Original",
+    "general_product": "Energy drink",
+    "purpose": "for energy replenishment"
+  },
+  {
+    "table_extraction_id": 482883115,
+    "hs_code": "1101002000",
+    "description": "DURUM WHEAT FLOUR in 25kg bags",
+    "brand": "MITSIDES PUBLIC COMPANY LTD",
+    "model": "25kg bags",
+    "general_product": "Durum Wheat Flour",
+    "purpose": "for food production"
+  },
+  {
+    "table_extraction_id": 482883116,
+    "hs_code": "1101002000",
+    "description": "DURUM SEMOLINA in 25kg bags",
+    "brand": "MITSIDES PUBLIC COMPANY LTD",
+    "model": "25kg bags",
+    "general_product": "Durum Semolina",
+    "purpose": "for food production"
+  },
+  {
+    "table_extraction_id": 485262008,
+    "hs_code": "0802129000",
+    "description": "ALMOND KERNELS - NONPAREIL SSR - HS CODE: 0802.12 UNPASTEURIZED FOR FURTHER PROCESSING",
+    "brand": "T.M. DUCHE NUT CO., INC.",
+    "model": "NONPAREIL SSR",
+    "general_product": "Almond kernels",
+    "purpose": "for further processing"
+  },
+  {
+    "table_extraction_id": 485262009,
+    "hs_code": "1106300000",
+    "description": "ALMOND FLOUR - HS CODE 1106.3000 PASTEURIZED",
+    "brand": "T.M. DUCHE NUT CO., INC.",
+    "model": null,
+    "general_product": "Almond flour",
+    "purpose": "for consumption or food production"
+  },
+  {
+    "table_extraction_id": 486271050,
+    "hs_code": "2202100000",
+    "description": "TMAX TUTTI FRUTTI 250 ML / 24 PCS",
+    "brand": "TMAX",
+    "model": "Tutti Frutti",
+    "general_product": "Fruit flavored carbonated drink",
+    "purpose": "for consumption as a beverage"
+  },
+  {
+    "table_extraction_id": 486273650,
+    "hs_code": "0409009000",
+    "description": "Flower honey 450gr glass jar",
+    "brand": "REGINA",
+    "model": "450gr glass jar",
+    "general_product": "Honey",
+    "purpose": "for food consumption"
+  },
+  {
+    "table_extraction_id": 486928939,
+    "hs_code": "3824990000",
+    "description": "CHEM EMUL P",
+    "brand": "H2Oil Wall Services SRL",
+    "model": "CHEM EMUL P",
+    "general_product": "Chemical emulsion",
+    "purpose": "for oil and gas drilling operations"
+  },
+  {
+    "table_extraction_id": 486928944,
+    "hs_code": "3802900000",
+    "description": "BENTONITE",
+    "brand": "H2Oil Wall Services SRL",
+    "model": "BENTONITE",
+    "general_product": "Bentonite clay",
+    "purpose": "for oil and gas drilling operations"
+  },
+  {
+    "table_extraction_id": 486928997,
+    "hs_code": "2517410000",
+    "description": "CALCIUM CARBONATE - OMYADRILL 10",
+    "brand": "H2OIL",
+    "model": "OMYADRILL 10",
+    "general_product": "Calcium carbonate for drilling fluids",
+    "purpose": "for oil and gas drilling operations"
+  },
+  {
+    "table_extraction_id": 489499423,
+    "hs_code": "2202999000",
+    "description": "BLACK BRUIN MANGO ENERGY DRINK 250ML*24CAN",
+    "brand": "BLACK BRUIN",
+    "model": "250ML",
+    "general_product": "Energy Drink",
+    "purpose": "for energy boost"
+  },
+  {
+    "table_extraction_id": 489499425,
+    "hs_code": "8418509000",
+    "description": "REFRIGERATOR",
+    "brand": "OGUZ GIDA",
+    "model": null,
+    "general_product": "Refrigerator",
+    "purpose": "for cooling and storage"
+  },
+  {
+    "table_extraction_id": 485250828,
+    "hs_code": "0703209000",
+    "description": "FRESH GARLIC SIZE:5.5CM AND UP PACKING:4P/BAG,10KG/CTN",
+    "brand": "SHANDONG JOY AG INTERNATIONAL TRADE CO.,LTD.",
+    "model": "5.5CM AND UP",
+    "general_product": "Fresh Garlic",
+    "purpose": "for consumption as a food ingredient"
+  },
+  {
+    "table_extraction_id": 489502507,
+    "hs_code": "3402420000",
+    "description": "NONYL PHENOL ETHOXYLATED 9 (DRUMS)",
+    "brand": "Gadot Chemical Terminals(1985)LTD.",
+    "model": null,
+    "general_product": "Nonionic surfactant / Chemical industrial raw material",
+    "purpose": "for industrial manufacturing and chemical processing"
+  },
+  {
+    "table_extraction_id": 489525996,
+    "hs_code": "2309102000",
+    "description": "Drools Cat Ocean Fish 20kg",
+    "brand": "Drools",
+    "model": "20kg",
+    "general_product": "Cat food",
+    "purpose": "for feeding cats"
+  },
+  {
+    "table_extraction_id": 489525998,
+    "hs_code": "2309102000",
+    "description": "Drools Chicken and Egg Biscuit 800g",
+    "brand": "Drools",
+    "model": "800g",
+    "general_product": "Pet biscuits",
+    "purpose": "for feeding pets"
+  },
+  {
+    "table_extraction_id": 489525999,
+    "hs_code": "2309102000",
+    "description": "Drools Dog Salmon Oil Syrup 150ml",
+    "brand": "Drools",
+    "model": "150ml",
+    "general_product": "Pet supplement",
+    "purpose": "for dog health supplement"
+  },
+  {
+    "table_extraction_id": 489526009,
+    "hs_code": "2309102000",
+    "description": "Signature Salmon Mousse Cat 80gm",
+    "brand": "Drools",
+    "model": "80gm",
+    "general_product": "Cat food",
+    "purpose": "for feeding cats"
+  },
+  {
+    "table_extraction_id": 489959946,
+    "hs_code": "3905219000",
+    "description": "ORGAL P 8820",
+    "brand": "zetagi",
+    "model": "P 8820",
+    "general_product": "Chemical polymer emulsion",
+    "purpose": "for use as a binder in industrial applications"
+  },
+  {
+    "table_extraction_id": 436724477,
+    "hs_code": "4402900000",
+    "description": "NIGERIA HARD WOOD CHARCOAL (6X40FT)",
+    "brand": "OMNI IMPACT INTERNATIONAL LIMITED",
+    "model": null,
+    "general_product": "Hardwood Charcoal",
+    "purpose": "for fuel"
+  },
+  {
+    "table_extraction_id": 395581252,
+    "hs_code": "2505900000",
+    "description": "25kg sand bags in polypropylene sacks",
+    "brand": "PIPESHIELD",
+    "model": "polypropylene sacks",
+    "general_product": "sand bags",
+    "purpose": "for packaging sand"
+  },
+  {
+    "table_extraction_id": 394280258,
+    "hs_code": "3923509000",
+    "description": "Lid K24.058.023, black, 1%",
+    "brand": "AO Protey",
+    "model": "K24.058.023",
+    "general_product": "Lid",
+    "purpose": "for container"
+  },
+  {
+    "table_extraction_id": 394280259,
+    "hs_code": "3923900000",
+    "description": "Separator, d 58, clear",
+    "brand": "AO Protey",
+    "model": "d 58",
+    "general_product": "Separator",
+    "purpose": "for container"
+  },
+  {
+    "table_extraction_id": 394280260,
+    "hs_code": "3923309000",
+    "description": "Jar No. 450 M, 0.100 L, d58, P14.8, clear",
+    "brand": "AO Protey",
+    "model": "No. 450 M, 0.100 L, d58, P14.8",
+    "general_product": "Jar",
+    "purpose": "for food storage"
+  },
+  {
+    "table_extraction_id": 394280264,
+    "hs_code": "3302900000",
+    "description": "Geyer ingredients Food Flavoring Grapefruit 170018",
+    "brand": "Geyer ingredients",
+    "model": "170018",
+    "general_product": "Food Flavoring",
+    "purpose": "for food and beverage"
+  },
+  {
+    "table_extraction_id": 406335958,
+    "hs_code": "9608200000",
+    "description": "Marker Pen",
+    "brand": "Flora Sun",
+    "model": "Marker Pen",
+    "general_product": "Marker Pen",
+    "purpose": "for writing or drawing"
+  },
+  {
+    "table_extraction_id": 406335959,
+    "hs_code": "3919109000",
+    "description": "Rhinestone stickers",
+    "brand": "hanbiao cao",
+    "model": "Rhinestone stickers",
+    "general_product": "Stickers",
+    "purpose": "for decoration"
+  },
+  {
+    "table_extraction_id": 406335960,
+    "hs_code": "7612909000",
+    "description": "Aluminum Box",
+    "brand": "Wang Tong",
+    "model": "Aluminum Box",
+    "general_product": "Box",
+    "purpose": "for storage or packaging"
+  },
+  {
+    "table_extraction_id": 406335961,
+    "hs_code": "3404900000",
+    "description": "Beeswax Sheets",
+    "brand": "Hugo Du",
+    "model": "Beeswax Sheets",
+    "general_product": "Sheets",
+    "purpose": "for crafts or cosmetic use"
+  },
+  {
+    "table_extraction_id": 406335962,
+    "hs_code": "4823909000",
+    "description": "Self-adhesive paper",
+    "brand": "Tanya",
+    "model": "Self-adhesive paper",
+    "general_product": "Paper",
+    "purpose": "for labeling or decoration"
+  },
+  {
+    "table_extraction_id": 406335963,
+    "hs_code": "4202390000",
+    "description": "Pencil case",
+    "brand": "Iris",
+    "model": "Pencil case",
+    "general_product": "Pencil Case",
+    "purpose": "for holding pencils"
+  },
+  {
+    "table_extraction_id": 406335965,
+    "hs_code": "9209990000",
+    "description": "Drumsticks",
+    "brand": "daniel",
+    "model": "Drumsticks",
+    "general_product": "Drumsticks",
+    "purpose": "for playing drums"
+  },
+  {
+    "table_extraction_id": 406335967,
+    "hs_code": "9506990000",
+    "description": "Flying Plate",
+    "brand": "Yongjun Shen",
+    "model": "Flying Plate",
+    "general_product": "Flying Plate",
+    "purpose": "for playing"
+  },
+  {
+    "table_extraction_id": 406335969,
+    "hs_code": "4421990000",
+    "description": "Wooden piggy bank",
+    "brand": "Cheryl Huang",
+    "model": "Wooden piggy bank",
+    "general_product": "Piggy Bank",
+    "purpose": "for saving money"
+  },
+  {
+    "table_extraction_id": 406335970,
+    "hs_code": "9609109000",
+    "description": "Pencils",
+    "brand": "Leo-Y",
+    "model": "Pencils",
+    "general_product": "Pencils",
+    "purpose": "for writing or drawing"
+  },
+  {
+    "table_extraction_id": 406335972,
+    "hs_code": "4811490000",
+    "description": "Stickers",
+    "brand": "leo liu",
+    "model": "Stickers",
+    "general_product": "Stickers",
+    "purpose": "for decoration"
+  },
+  {
+    "table_extraction_id": 406335973,
+    "hs_code": "5511300000",
+    "description": "cocoon of wool",
+    "brand": "sen zhang",
+    "model": "cocoon of wool",
+    "general_product": "Wool",
+    "purpose": "for textile production"
+  },
+  {
+    "table_extraction_id": 406335975,
+    "hs_code": "9603300000",
+    "description": "brushes",
+    "brand": "sini liu",
+    "model": "brushes",
+    "general_product": "Brushes",
+    "purpose": "for cleaning or painting"
+  },
+  {
+    "table_extraction_id": 406335977,
+    "hs_code": "4811900000",
+    "description": "Stickers",
+    "brand": "tom Dymo",
+    "model": "Stickers",
+    "general_product": "Stickers",
+    "purpose": "for decoration"
+  },
+  {
+    "table_extraction_id": 406335978,
+    "hs_code": "4419900000",
+    "description": "Painting frames",
+    "brand": "HX Roy",
+    "model": "Painting frames",
+    "general_product": "Frames",
+    "purpose": "for displaying paintings"
+  },
+  {
+    "table_extraction_id": 406335979,
+    "hs_code": "4421990000",
+    "description": "Wood slices",
+    "brand": "lily yan",
+    "model": "Wood slices",
+    "general_product": "Wood Slices",
+    "purpose": "for crafts or decoration"
+  },
+  {
+    "table_extraction_id": 406335980,
+    "hs_code": "3926209000",
+    "description": "Apron",
+    "brand": "Leo Lynn",
+    "model": "Apron",
+    "general_product": "Apron",
+    "purpose": "for protection while working"
+  },
+  {
+    "table_extraction_id": 406335982,
+    "hs_code": "4909000000",
+    "description": "Sand Art Painting Card",
+    "brand": "leanne lin",
+    "model": "Sand Art Painting Card",
+    "general_product": "Painting Card",
+    "purpose": "for sand art creation"
+  },
+  {
+    "table_extraction_id": 406335985,
+    "hs_code": "3407009000",
+    "description": "Playdough Clay",
+    "brand": "Sandy ZHANG",
+    "model": "Playdough Clay",
+    "general_product": "Clay",
+    "purpose": "for sculpting and playing"
+  },
+  {
+    "table_extraction_id": 406335986,
+    "hs_code": "4202120000",
+    "description": "Bags",
+    "brand": "daisy geng",
+    "model": "Bags",
+    "general_product": "Bags",
+    "purpose": "for carrying items"
+  },
+  {
+    "table_extraction_id": 406335987,
+    "hs_code": "4909000000",
+    "description": "Greeting cards",
+    "brand": "Pusan Lu",
+    "model": "Greeting cards",
+    "general_product": "Cards",
+    "purpose": "for sending greetings"
+  },
+  {
+    "table_extraction_id": 406335988,
+    "hs_code": "3926909000",
+    "description": "Keychain",
+    "brand": "Chenlili",
+    "model": "Keychain",
+    "general_product": "Keychain",
+    "purpose": "for holding keys"
+  },
+  {
+    "table_extraction_id": 406335989,
+    "hs_code": "3926100000",
+    "description": "Drawing Stencil",
+    "brand": "Susan lin",
+    "model": "Drawing Stencil",
+    "general_product": "Stencil",
+    "purpose": "for drawing or tracing"
+  },
+  {
+    "table_extraction_id": 406335951,
+    "hs_code": "9503000000",
+    "description": "DIY Craft Bottle",
+    "brand": "Fifi Chen",
+    "model": "DIY Craft Bottle",
+    "general_product": "Craft Bottle",
+    "purpose": "for crafting"
+  },
+  {
+    "table_extraction_id": 406335952,
+    "hs_code": "9503000000",
+    "description": "Plastic stick building blocks",
+    "brand": "Fifi Chen",
+    "model": "Plastic stick building blocks",
+    "general_product": "Building Blocks",
+    "purpose": "for children's play"
+  },
+  {
+    "table_extraction_id": 406335953,
+    "hs_code": "9503000000",
+    "description": "Hula Hoop",
+    "brand": "Fifi Chen",
+    "model": "Hula Hoop",
+    "general_product": "Hula Hoop",
+    "purpose": "for exercise"
+  },
+  {
+    "table_extraction_id": 406335954,
+    "hs_code": "9503000000",
+    "description": "Bowling toys",
+    "brand": "Fifi Chen",
+    "model": "Bowling toys",
+    "general_product": "Bowling Toys",
+    "purpose": "for playing"
+  },
+  {
+    "table_extraction_id": 406335955,
+    "hs_code": "9503000000",
+    "description": "Plastic fruit toys",
+    "brand": "Fifi Chen",
+    "model": "Plastic fruit toys",
+    "general_product": "Toys",
+    "purpose": "for children's play"
+  },
+  {
+    "table_extraction_id": 406335956,
+    "hs_code": "9503000000",
+    "description": "Plastic cone roadblocks",
+    "brand": "Fifi Chen",
+    "model": "Plastic cone roadblocks",
+    "general_product": "Roadblocks",
+    "purpose": "for traffic simulation"
+  },
+  {
+    "table_extraction_id": 406335957,
+    "hs_code": "9503000000",
+    "description": "plastic ring",
+    "brand": "Fifi Chen",
+    "model": "plastic ring",
+    "general_product": "Ring",
+    "purpose": "for crafts or toys"
+  },
+  {
+    "table_extraction_id": 406335964,
+    "hs_code": "9503000000",
+    "description": "Bubble toys",
+    "brand": "Sandy Shen",
+    "model": "Bubble toys",
+    "general_product": "Toys",
+    "purpose": "for playing"
+  },
+  {
+    "table_extraction_id": 406335966,
+    "hs_code": "9503000000",
+    "description": "Small Rubber Ball",
+    "brand": "Wang Anne",
+    "model": "Small Rubber Ball",
+    "general_product": "Ball",
+    "purpose": "for playing"
+  },
+  {
+    "table_extraction_id": 406335968,
+    "hs_code": "9503000000",
+    "description": "Sun Hat",
+    "brand": "Mandy Zhu",
+    "model": "Sun Hat",
+    "general_product": "Hat",
+    "purpose": "for sun protection"
+  },
+  {
+    "table_extraction_id": 406335974,
+    "hs_code": "9503000000",
+    "description": "balloons",
+    "brand": "aaron wu",
+    "model": "balloons",
+    "general_product": "Balloons",
+    "purpose": "for decoration or party"
+  },
+  {
+    "table_extraction_id": 406335983,
+    "hs_code": "9503000000",
+    "description": "Water spray toys",
+    "brand": "kelly li",
+    "model": "Water spray toys",
+    "general_product": "Toys",
+    "purpose": "for playing with water"
+  },
+  {
+    "table_extraction_id": 406335984,
+    "hs_code": "9503000000",
+    "description": "Styrofoam balls",
+    "brand": "Oliver zhang",
+    "model": "Styrofoam balls",
+    "general_product": "Balls",
+    "purpose": "for crafts or packing"
+  },
+  {
+    "table_extraction_id": 370167851,
+    "hs_code": "0902300000",
+    "description": "BLACK TEA 2GX100",
+    "brand": "SEDNY TRADE",
+    "model": "2GX100",
+    "general_product": "Black tea",
+    "purpose": "for drinking"
+  },
+  {
+    "table_extraction_id": 370167857,
+    "hs_code": "1806310000",
+    "description": "CHOCOLATE GIFT BOX (GALAXY JEWELS) 400",
+    "brand": "GALAXY",
+    "model": "400",
+    "general_product": "Chocolate gift box",
+    "purpose": "for gifting"
+  },
+  {
+    "table_extraction_id": 370167864,
+    "hs_code": "2005709000",
+    "description": "BLACK OLIVES 400GR",
+    "brand": "SEDNY TRADE",
+    "model": "400GR",
+    "general_product": "Black olives",
+    "purpose": "for eating"
+  },
+  {
+    "table_extraction_id": 370167865,
+    "hs_code": "9619001000",
+    "description": "LADY PADS ALWAYS LONG 16x16",
+    "brand": "ALWAYS",
+    "model": "LONG 16x16",
+    "general_product": "Sanitary pads",
+    "purpose": "for feminine hygiene"
+  },
+  {
+    "table_extraction_id": 479328027,
+    "hs_code": "2208300000",
+    "description": "GLENFIDDICH 12YO 12X700ML 40%",
+    "brand": "GLENFIDDICH",
+    "model": "12YO",
+    "general_product": "Single Malt Scotch Whisky",
+    "purpose": "for consumption as an alcoholic beverage"
+  }
+]
