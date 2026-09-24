@@ -45,15 +45,6 @@
     "purpose": "for data storage"
   },
   {
-    "table_extraction_id": 368804166,
-    "hs_code": "9031809000",
-    "description": "EC sensor",
-    "brand": "ShanghaiLanchangAutomation Technology Co.,Ltd",
-    "model": null,
-    "general_product": "Sensor",
-    "purpose": "for measuring electrical conductivity"
-  },
-  {
     "table_extraction_id": 368804168,
     "hs_code": "9027894000",
     "description": "PH sensor",
@@ -189,15 +180,6 @@
     "purpose": "for wired communication"
   },
   {
-    "table_extraction_id": 395427164,
-    "hs_code": "8479500000",
-    "description": "robot dog",
-    "brand": "WISEMATE TECHNOLOGY TRADING FZE",
-    "model": "robot dog",
-    "general_product": "toy dog",
-    "purpose": "for entertainment"
-  },
-  {
     "table_extraction_id": 398889183,
     "hs_code": "8517629000",
     "description": "SR1.2(BIDI) transceiver",
@@ -244,7 +226,7 @@
   },
   {
     "table_extraction_id": 414447521,
-    "hs_code": "8537109000",
+    "hs_code": "8537107900",
     "description": "Novastar TB30 controller",
     "brand": "Novastar",
     "model": "TB30",
@@ -365,8 +347,8 @@
     "description": "Bumper",
     "brand": "Aljac",
     "model": null,
-    "general_product": "Automotive Part",
-    "purpose": "for vehicles"
+    "general_product": null,
+    "purpose": null
   },
   {
     "table_extraction_id": 444783846,
@@ -374,8 +356,8 @@
     "description": "Handle Grip",
     "brand": "Aljac",
     "model": null,
-    "general_product": "Handle Grip",
-    "purpose": "for vehicles"
+    "general_product": null,
+    "purpose": null
   },
   {
     "table_extraction_id": 444783849,
@@ -383,8 +365,8 @@
     "description": "Back up",
     "brand": "Aljac",
     "model": null,
-    "general_product": "Backup",
-    "purpose": "for mechanical systems"
+    "general_product": null,
+    "purpose": null
   },
   {
     "table_extraction_id": 444783853,
@@ -392,8 +374,8 @@
     "description": "QUAD Ring",
     "brand": "Aljac",
     "model": null,
-    "general_product": "Quad Ring",
-    "purpose": "for sealing"
+    "general_product": null,
+    "purpose": null
   },
   {
     "table_extraction_id": 444783855,
@@ -401,8 +383,8 @@
     "description": "Retainer",
     "brand": "Aljac",
     "model": null,
-    "general_product": "Retainer",
-    "purpose": "for mechanical assembly"
+    "general_product": null,
+    "purpose": null
   },
   {
     "table_extraction_id": 444783847,
@@ -439,24 +421,6 @@
     "model": "Y on 60554",
     "general_product": "Remote Pilot",
     "purpose": "for control systems"
-  },
-  {
-    "table_extraction_id": 447120847,
-    "hs_code": "8501319100",
-    "description": "Wearable breast pump ABS, PP, silicone Sucking breast milk",
-    "brand": "BIAMBA SMART BABY CARE",
-    "model": "Wearable",
-    "general_product": "Breast pump",
-    "purpose": "for sucking breast milk"
-  },
-  {
-    "table_extraction_id": 454537568,
-    "hs_code": "8501319100",
-    "description": "biamba(logo) 1pcs soft host",
-    "brand": "Biamba",
-    "model": "biamba(logo)",
-    "general_product": "baby care product",
-    "purpose": "for baby care"
   },
   {
     "table_extraction_id": 450773065,
@@ -603,15 +567,6 @@
     "purpose": "for supporting the radiator"
   },
   {
-    "table_extraction_id": 480110430,
-    "hs_code": "8409999000",
-    "description": "Bearing sleeve for radiator rubber support / mounting",
-    "brand": "TEILE.COM",
-    "model": null,
-    "general_product": "Automotive bushing",
-    "purpose": "for mounting the radiator"
-  },
-  {
     "table_extraction_id": 480110431,
     "hs_code": "3926908900",
     "description": "Water cooler / radiator fastening clamp",
@@ -619,15 +574,6 @@
     "model": null,
     "general_product": "Automotive fastening clamp",
     "purpose": "for fastening the radiator"
-  },
-  {
-    "table_extraction_id": 480110432,
-    "hs_code": "8708919000",
-    "description": "A/C Evaporator / Condenser / radiator, Air condition / Refrigerant",
-    "brand": "TEILE.COM",
-    "model": null,
-    "general_product": "Automotive heat exchanger",
-    "purpose": "for air conditioning and cooling system"
   },
   {
     "table_extraction_id": 480110433,
@@ -775,12 +721,12 @@
   },
   {
     "table_extraction_id": 488066093,
-    "hs_code": "9102990000",
+    "hs_code": "9029102000",
     "description": "HOUR METER",
     "brand": "NINGBO JIANGBEI RUN LEADER ELECTRONICS CO.,LTD",
     "model": "CR2050",
     "general_product": "Hour meter / Tachometer gauge",
-    "purpose": "for tracking operating hours of equipment or machinery"
+    "purpose": null
   },
   {
     "table_extraction_id": 324189187,
@@ -963,15 +909,6 @@
     "purpose": "for material"
   },
   {
-    "table_extraction_id": 376858668,
-    "hs_code": "3824990000",
-    "description": "Mortel, MIX 0.4-0.8 (verpakt per 25kg) QMI22 / Mix 842 0,",
-    "brand": "Quartzline",
-    "model": "MIX 0.4-0.8 QMI22 / Mix 842 0",
-    "general_product": "Mortar Mix",
-    "purpose": "for construction"
-  },
-  {
     "table_extraction_id": 391265638,
     "hs_code": "1704909000",
     "description": "MARSHMALLOW 13G*30PCS*20BOXES/CTN",
@@ -1132,24 +1069,6 @@
     "model": null,
     "general_product": "Skincare Set for skincare",
     "purpose": "for comprehensive skincare"
-  },
-  {
-    "table_extraction_id": 376065054,
-    "hs_code": "3304200000",
-    "description": "EYE CREAM",
-    "brand": "ZHAOQING KEYU TRADING CO., LTD",
-    "model": "7304200000/1",
-    "general_product": "Eye Cream for skincare",
-    "purpose": "for moisturizing the eye area"
-  },
-  {
-    "table_extraction_id": 376065056,
-    "hs_code": "3304200000",
-    "description": "EYE MASK",
-    "brand": "ZHAOQING KEYU TRADING CO., LTD",
-    "model": null,
-    "general_product": "Eye Mask for skincare",
-    "purpose": "for eye treatment"
   },
   {
     "table_extraction_id": 376065057,
@@ -1485,30 +1404,12 @@
     "purpose": "for hydraulic system"
   },
   {
-    "table_extraction_id": 396680928,
-    "hs_code": "6203490000",
-    "description": "MEN T-SHIRT TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "T-shirt",
-    "purpose": "for men"
-  },
-  {
     "table_extraction_id": 396680929,
     "hs_code": "6203490000",
     "description": "MEN TROUSERS TOTAL",
     "brand": "ALFA KARGO DIS TICARET LIMITED",
     "model": null,
     "general_product": "Trousers",
-    "purpose": "for men"
-  },
-  {
-    "table_extraction_id": 396680930,
-    "hs_code": "6203490000",
-    "description": "MEN SUIT TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Suit",
     "purpose": "for men"
   },
   {
@@ -1530,51 +1431,6 @@
     "purpose": "for men"
   },
   {
-    "table_extraction_id": 396680933,
-    "hs_code": "6203490000",
-    "description": "MEN SHIRT TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Shirt",
-    "purpose": "for men"
-  },
-  {
-    "table_extraction_id": 396680934,
-    "hs_code": "6203490000",
-    "description": "MEN PAJAMAS TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Pajamas",
-    "purpose": "for men"
-  },
-  {
-    "table_extraction_id": 396680935,
-    "hs_code": "6203490000",
-    "description": "MEN JACKET TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Jacket",
-    "purpose": "for men"
-  },
-  {
-    "table_extraction_id": 396680936,
-    "hs_code": "6203490000",
-    "description": "MEN BOXER TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Boxer",
-    "purpose": "for men"
-  },
-  {
-    "table_extraction_id": 396680937,
-    "hs_code": "6203490000",
-    "description": "MEN ATHELETE TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Athletic wear",
-    "purpose": "for men"
-  },
-  {
     "table_extraction_id": 396680938,
     "hs_code": "4202290000",
     "description": "WOMEN BAG TOTAL",
@@ -1584,39 +1440,12 @@
     "purpose": "for women"
   },
   {
-    "table_extraction_id": 396680939,
-    "hs_code": "6203490000",
-    "description": "WOMEN BLOUSE TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Blouse",
-    "purpose": "for women"
-  },
-  {
-    "table_extraction_id": 396680940,
-    "hs_code": "6203490000",
-    "description": "WOMEN DRESS TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Dress",
-    "purpose": "for women"
-  },
-  {
     "table_extraction_id": 396680944,
     "hs_code": "6402990000",
     "description": "WOMEN SHOES TOTAL",
     "brand": "ALFA KARGO DIS TICARET LIMITED",
     "model": null,
     "general_product": "Shoes",
-    "purpose": "for women"
-  },
-  {
-    "table_extraction_id": 396680945,
-    "hs_code": "6203490000",
-    "description": "WOMEN SKIRT TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Skirt",
     "purpose": "for women"
   },
   {
@@ -1764,15 +1593,6 @@
     "purpose": "for drying"
   },
   {
-    "table_extraction_id": 396680972,
-    "hs_code": "4909000000",
-    "description": "VISIT CARD TOTAL",
-    "brand": "ALFA KARGO DIS TICARET LIMITED",
-    "model": null,
-    "general_product": "Visit card",
-    "purpose": "for business"
-  },
-  {
     "table_extraction_id": 396680973,
     "hs_code": "3921900000",
     "description": "WALL MOUNTED DECORATION TOTAL",
@@ -1843,24 +1663,6 @@
     "model": null,
     "general_product": "Razor",
     "purpose": "for eyebrow grooming"
-  },
-  {
-    "table_extraction_id": 419152533,
-    "hs_code": "8214200000",
-    "description": "EYELASH CURLER STAINLESS STEEL",
-    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
-    "model": "STAINLESS STEEL",
-    "general_product": "Eyelash Curler",
-    "purpose": "for curling eyelashes"
-  },
-  {
-    "table_extraction_id": 419152535,
-    "hs_code": "8214200000",
-    "description": "EYELASH TWEEZER STAINLESS STEEL",
-    "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
-    "model": "STAINLESS STEEL",
-    "general_product": "Tweezer",
-    "purpose": "for eyelash grooming"
   },
   {
     "table_extraction_id": 419152536,
@@ -1951,15 +1753,6 @@
     "model": "S-29",
     "general_product": "Socks",
     "purpose": "for women's feet"
-  },
-  {
-    "table_extraction_id": 421635900,
-    "hs_code": "9615110000",
-    "description": "SCARF CLIP",
-    "brand": "YIWU YILAN IMPORT&EXPORT CO.,LIMITED",
-    "model": "E-19",
-    "general_product": "Clip",
-    "purpose": "for scarfs"
   },
   {
     "table_extraction_id": 421635901,
@@ -2079,15 +1872,6 @@
     "purpose": "for women"
   },
   {
-    "table_extraction_id": 436195937,
-    "hs_code": "6211491000",
-    "description": "Vest",
-    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
-    "model": null,
-    "general_product": "Vest",
-    "purpose": "for men"
-  },
-  {
     "table_extraction_id": 436195939,
     "hs_code": "6204490000",
     "description": "Dress",
@@ -2178,15 +1962,6 @@
     "purpose": "for casual wear"
   },
   {
-    "table_extraction_id": 436195968,
-    "hs_code": "6211491000",
-    "description": "Bib",
-    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
-    "model": null,
-    "general_product": "Bib",
-    "purpose": "for babies"
-  },
-  {
     "table_extraction_id": 436195969,
     "hs_code": "6505009000",
     "description": "Hat set",
@@ -2194,15 +1969,6 @@
     "model": null,
     "general_product": "Hat set",
     "purpose": "for headwear"
-  },
-  {
-    "table_extraction_id": 436195970,
-    "hs_code": "6209909000",
-    "description": "Nappy",
-    "brand": "YIWU MATA IMPORT AND EXPORT CO.,LTD",
-    "model": null,
-    "general_product": "Nappy",
-    "purpose": "for babies"
   },
   {
     "table_extraction_id": 436195971,
@@ -2257,15 +2023,6 @@
     "model": "SKU8031",
     "general_product": "deep cleansing nose strips",
     "purpose": "for deep cleansing nose"
-  },
-  {
-    "table_extraction_id": 459355630,
-    "hs_code": "3304999000",
-    "description": "SHIFEI NATURAL EXFOLAITION FOOT MASK WITHIN 7 DAYS 1 pair/pouch (36G), 1 pouch/box",
-    "brand": "SHIFEI",
-    "model": "SF1115",
-    "general_product": "exfoliation foot mask",
-    "purpose": "for foot exfoliation"
   },
   {
     "table_extraction_id": 468392620,
@@ -2439,15 +2196,6 @@
     "purpose": "for alcoholic beverage consumption"
   },
   {
-    "table_extraction_id": 470990944,
-    "hs_code": "8477800000",
-    "description": "MFH-PE75 HIGH-SPEED ENERGY-SAVING TWO LAYER PIPE EXTRUSION LINE WITH SPARE PARTS",
-    "brand": "JWELL",
-    "model": "MFH-PE75",
-    "general_product": "Pipe extrusion line",
-    "purpose": "for manufacturing two-layer plastic pipes"
-  },
-  {
     "table_extraction_id": 470990945,
     "hs_code": "3901100000",
     "description": "TEST RUNNING MATERIAL",
@@ -2502,15 +2250,6 @@
     "purpose": "for circulating water"
   },
   {
-    "table_extraction_id": 471001285,
-    "hs_code": "8477900000",
-    "description": "Encoder + wheel",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": null,
-    "general_product": "Rotary encoder and wheel assembly",
-    "purpose": "for measuring speed/position"
-  },
-  {
     "table_extraction_id": 471001286,
     "hs_code": "4010390000",
     "description": "Belt on haul-off",
@@ -2527,78 +2266,6 @@
     "model": null,
     "general_product": "Industrial spray nozzles",
     "purpose": "for spraying water"
-  },
-  {
-    "table_extraction_id": 471001289,
-    "hs_code": "8477900000",
-    "description": "PTFE white conduit",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": null,
-    "general_product": "PTFE tubing/conduit",
-    "purpose": "for protective routing"
-  },
-  {
-    "table_extraction_id": 471001290,
-    "hs_code": "8424909000",
-    "description": "Mandrel connecting plate and screws",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": null,
-    "general_product": "Machine connecting parts",
-    "purpose": "for connecting mandrel components"
-  },
-  {
-    "table_extraction_id": 471001291,
-    "hs_code": "8424909000",
-    "description": "3KW, Vacuum loader (PE granules)",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": "3KW",
-    "general_product": "Vacuum loader for plastic pellets",
-    "purpose": "for loading plastic granules"
-  },
-  {
-    "table_extraction_id": 471001292,
-    "hs_code": "8424909000",
-    "description": "Material conveying pipe",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": "40mm",
-    "general_product": "Conveying pipe",
-    "purpose": "for transporting material"
-  },
-  {
-    "table_extraction_id": 471001293,
-    "hs_code": "8424909000",
-    "description": "Silicone sheet",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": null,
-    "general_product": "Silicone rubber sheet",
-    "purpose": "for sealing or gaskets"
-  },
-  {
-    "table_extraction_id": 471001294,
-    "hs_code": "8424909000",
-    "description": "Nylon rollers on coiler",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": null,
-    "general_product": "Nylon rollers",
-    "purpose": "for guiding coils"
-  },
-  {
-    "table_extraction_id": 471001295,
-    "hs_code": "8424909000",
-    "description": "Stainless steel pipe, inside vacuum tank",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": null,
-    "general_product": "Stainless steel pipe",
-    "purpose": "for vacuum tank internal plumbing"
-  },
-  {
-    "table_extraction_id": 471001296,
-    "hs_code": "8424909000",
-    "description": "Screen changer for big extruder",
-    "brand": "Changzhou Jwell Pipe Equipment Technology Co., LTD",
-    "model": "104mm",
-    "general_product": "Screen changer for extrusion machinery",
-    "purpose": "for filtering plastic melt"
   },
   {
     "table_extraction_id": 471001297,
@@ -2781,15 +2448,6 @@
     "purpose": "for signaling visitors"
   },
   {
-    "table_extraction_id": 471477922,
-    "hs_code": "9615110000",
-    "description": "BATHBomb Gift",
-    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
-    "model": null,
-    "general_product": "Bath bomb",
-    "purpose": "for bathing"
-  },
-  {
     "table_extraction_id": 471477923,
     "hs_code": "9405420000",
     "description": "Solar lamp",
@@ -2797,15 +2455,6 @@
     "model": null,
     "general_product": "Lamp",
     "purpose": "for illumination"
-  },
-  {
-    "table_extraction_id": 471477924,
-    "hs_code": "8517699000",
-    "description": "Bluetooth remote control",
-    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
-    "model": "Bluetooth",
-    "general_product": "Remote control",
-    "purpose": "for controlling devices"
   },
   {
     "table_extraction_id": 471477925,
@@ -2853,15 +2502,6 @@
     "purpose": "for calculation"
   },
   {
-    "table_extraction_id": 471477937,
-    "hs_code": "8412100000",
-    "description": "Sewing machine with usb",
-    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
-    "model": null,
-    "general_product": "Sewing machine",
-    "purpose": "for sewing"
-  },
-  {
     "table_extraction_id": 471477938,
     "hs_code": "8424201100",
     "description": "Nebulizer with usb",
@@ -2887,42 +2527,6 @@
     "model": null,
     "general_product": "Building material",
     "purpose": "for construction"
-  },
-  {
-    "table_extraction_id": 471477944,
-    "hs_code": "6106900000",
-    "description": "Scarves",
-    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
-    "model": null,
-    "general_product": "Apparel",
-    "purpose": "for wearing"
-  },
-  {
-    "table_extraction_id": 471477959,
-    "hs_code": "8433190000",
-    "description": "Sweeper with gasoline",
-    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
-    "model": null,
-    "general_product": "Cleaning equipment",
-    "purpose": "for cleaning"
-  },
-  {
-    "table_extraction_id": 471477960,
-    "hs_code": "3926909000",
-    "description": "140*140 PVC tablecloth",
-    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
-    "model": "140*140",
-    "general_product": "Tablecloth",
-    "purpose": "for covering table"
-  },
-  {
-    "table_extraction_id": 471477962,
-    "hs_code": "6302590000",
-    "description": "clear table cover",
-    "brand": "PASA INTERNATIONAL TRADE (YIWU) CO., LT",
-    "model": null,
-    "general_product": "Table cover",
-    "purpose": "for covering table"
   },
   {
     "table_extraction_id": 471477964,
@@ -3132,15 +2736,6 @@
     "purpose": "for brushing and styling hair"
   },
   {
-    "table_extraction_id": 479591742,
-    "hs_code": "9603291900",
-    "description": "EYELASH CURLER",
-    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
-    "model": "27020-5",
-    "general_product": "Cosmetic tool",
-    "purpose": "for curling eyelashes"
-  },
-  {
     "table_extraction_id": 479591713,
     "hs_code": "6307100000",
     "description": "SPOONGE",
@@ -3168,15 +2763,6 @@
     "purpose": "for saving coins"
   },
   {
-    "table_extraction_id": 479591768,
-    "hs_code": "3926909000",
-    "description": "HUMIDIFER",
-    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
-    "model": "7727-1-3",
-    "general_product": "Humidifier",
-    "purpose": "for increasing humidity"
-  },
-  {
     "table_extraction_id": 479591770,
     "hs_code": "3926909000",
     "description": "GIFT BOX",
@@ -3184,15 +2770,6 @@
     "model": "12781-1-5",
     "general_product": "Gift box",
     "purpose": "for packaging gifts"
-  },
-  {
-    "table_extraction_id": 479591771,
-    "hs_code": "3926909000",
-    "description": "ROLL PAPER",
-    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
-    "model": "12879-1-8",
-    "general_product": "Paper roll",
-    "purpose": "for general use"
   },
   {
     "table_extraction_id": 479591728,
@@ -3222,15 +2799,6 @@
     "purpose": "for viewing reflection"
   },
   {
-    "table_extraction_id": 479591772,
-    "hs_code": "4016999000",
-    "description": "RIBBON",
-    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
-    "model": "12879-10",
-    "general_product": "Ribbon",
-    "purpose": "for decoration or gift wrapping"
-  },
-  {
     "table_extraction_id": 479591774,
     "hs_code": "4802690000",
     "description": "ROLL PAPER",
@@ -3256,15 +2824,6 @@
     "model": "27020-1",
     "general_product": "Scissors",
     "purpose": "for cutting"
-  },
-  {
-    "table_extraction_id": 479591718,
-    "hs_code": "9603300000",
-    "description": "EYELASH CURLER",
-    "brand": "YIWU TAOXUAN IMPORT AND EXPORT LIMITED",
-    "model": "26053-7",
-    "general_product": "Cosmetic tool",
-    "purpose": "for curling eyelashes"
   },
   {
     "table_extraction_id": 475232343,
@@ -3399,15 +2958,6 @@
     "brand": "MITSIDES PUBLIC COMPANY LTD",
     "model": "25kg bags",
     "general_product": "Durum Wheat Flour",
-    "purpose": "for food production"
-  },
-  {
-    "table_extraction_id": 482883116,
-    "hs_code": "1101002000",
-    "description": "DURUM SEMOLINA in 25kg bags",
-    "brand": "MITSIDES PUBLIC COMPANY LTD",
-    "model": "25kg bags",
-    "general_product": "Durum Semolina",
     "purpose": "for food production"
   },
   {
@@ -3762,17 +3312,8 @@
     "purpose": "for protection while working"
   },
   {
-    "table_extraction_id": 406335982,
-    "hs_code": "4909000000",
-    "description": "Sand Art Painting Card",
-    "brand": "leanne lin",
-    "model": "Sand Art Painting Card",
-    "general_product": "Painting Card",
-    "purpose": "for sand art creation"
-  },
-  {
     "table_extraction_id": 406335985,
-    "hs_code": "3407009000",
+    "hs_code": "3407002000",
     "description": "Playdough Clay",
     "brand": "Sandy ZHANG",
     "model": "Playdough Clay",
@@ -3897,15 +3438,6 @@
     "purpose": "for playing"
   },
   {
-    "table_extraction_id": 406335968,
-    "hs_code": "9503000000",
-    "description": "Sun Hat",
-    "brand": "Mandy Zhu",
-    "model": "Sun Hat",
-    "general_product": "Hat",
-    "purpose": "for sun protection"
-  },
-  {
     "table_extraction_id": 406335974,
     "hs_code": "9503000000",
     "description": "balloons",
@@ -3925,7 +3457,7 @@
   },
   {
     "table_extraction_id": 406335984,
-    "hs_code": "9503000000",
+    "hs_code": "3926909000",
     "description": "Styrofoam balls",
     "brand": "Oliver zhang",
     "model": "Styrofoam balls",

@@ -35,13 +35,6 @@
     "lead_document_title": "26044503245526"
   },
   {
-    "table_extraction_id": 368804166,
-    "hs_code": "9031809000",
-    "invoice_row_num": 1,
-    "invoice_doc_id": 1220946981,
-    "lead_document_title": "26044510481973"
-  },
-  {
     "table_extraction_id": 368804168,
     "hs_code": "9027894000",
     "invoice_row_num": 3,
@@ -147,13 +140,6 @@
     "lead_document_title": "26044565221480"
   },
   {
-    "table_extraction_id": 395427164,
-    "hs_code": "8479500000",
-    "invoice_row_num": 1,
-    "invoice_doc_id": 1232043506,
-    "lead_document_title": "26044569977806"
-  },
-  {
     "table_extraction_id": 398889183,
     "hs_code": "8517629000",
     "invoice_row_num": 1,
@@ -190,7 +176,7 @@
   },
   {
     "table_extraction_id": 414447521,
-    "hs_code": "8537109000",
+    "hs_code": "8537107900",
     "invoice_row_num": 1,
     "invoice_doc_id": 1240814564,
     "lead_document_title": "26044610448948"
@@ -343,20 +329,6 @@
     "lead_document_title": "26044688476383"
   },
   {
-    "table_extraction_id": 447120847,
-    "hs_code": "8501319100",
-    "invoice_row_num": 1,
-    "invoice_doc_id": 1257386639,
-    "lead_document_title": "26044694115686"
-  },
-  {
-    "table_extraction_id": 454537568,
-    "hs_code": "8501319100",
-    "invoice_row_num": 1,
-    "invoice_doc_id": 1260551559,
-    "lead_document_title": "26044694115686"
-  },
-  {
     "table_extraction_id": 450773065,
     "hs_code": "8712000000",
     "invoice_row_num": 1,
@@ -469,23 +441,9 @@
     "lead_document_title": "26044763902154"
   },
   {
-    "table_extraction_id": 480110430,
-    "hs_code": "8409999000",
-    "invoice_row_num": 2,
-    "invoice_doc_id": 1272456867,
-    "lead_document_title": "26044763902154"
-  },
-  {
     "table_extraction_id": 480110431,
     "hs_code": "3926908900",
     "invoice_row_num": 3,
-    "invoice_doc_id": 1272456867,
-    "lead_document_title": "26044763902154"
-  },
-  {
-    "table_extraction_id": 480110432,
-    "hs_code": "8708919000",
-    "invoice_row_num": 4,
     "invoice_doc_id": 1272456867,
     "lead_document_title": "26044763902154"
   },
@@ -603,7 +561,7 @@
   },
   {
     "table_extraction_id": 488066093,
-    "hs_code": "9102990000",
+    "hs_code": "9029102000",
     "invoice_row_num": 1,
     "invoice_doc_id": 1276558692,
     "lead_document_title": "26044795218629"
@@ -749,13 +707,6 @@
     "lead_document_title": "26014511454888"
   },
   {
-    "table_extraction_id": 376858668,
-    "hs_code": "3824990000",
-    "invoice_row_num": 4,
-    "invoice_doc_id": 1224650798,
-    "lead_document_title": "26014511454888"
-  },
-  {
     "table_extraction_id": 391265638,
     "hs_code": "1704909000",
     "invoice_row_num": 1,
@@ -878,20 +829,6 @@
     "table_extraction_id": 376065053,
     "hs_code": "3304999000",
     "invoice_row_num": 23,
-    "invoice_doc_id": 1224255819,
-    "lead_document_title": "26014527051488"
-  },
-  {
-    "table_extraction_id": 376065054,
-    "hs_code": "3304200000",
-    "invoice_row_num": 24,
-    "invoice_doc_id": 1224255819,
-    "lead_document_title": "26014527051488"
-  },
-  {
-    "table_extraction_id": 376065056,
-    "hs_code": "3304200000",
-    "invoice_row_num": 26,
     "invoice_doc_id": 1224255819,
     "lead_document_title": "26014527051488"
   },
@@ -1155,23 +1092,9 @@
     "lead_document_title": "26014561302581"
   },
   {
-    "table_extraction_id": 396680928,
-    "hs_code": "6203490000",
-    "invoice_row_num": 1,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
     "table_extraction_id": 396680929,
     "hs_code": "6203490000",
     "invoice_row_num": 2,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
-    "table_extraction_id": 396680930,
-    "hs_code": "6203490000",
-    "invoice_row_num": 3,
     "invoice_doc_id": 1232529457,
     "lead_document_title": "26014569415005"
   },
@@ -1190,41 +1113,6 @@
     "lead_document_title": "26014569415005"
   },
   {
-    "table_extraction_id": 396680933,
-    "hs_code": "6203490000",
-    "invoice_row_num": 6,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
-    "table_extraction_id": 396680934,
-    "hs_code": "6203490000",
-    "invoice_row_num": 7,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
-    "table_extraction_id": 396680935,
-    "hs_code": "6203490000",
-    "invoice_row_num": 8,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
-    "table_extraction_id": 396680936,
-    "hs_code": "6203490000",
-    "invoice_row_num": 9,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
-    "table_extraction_id": 396680937,
-    "hs_code": "6203490000",
-    "invoice_row_num": 10,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
     "table_extraction_id": 396680938,
     "hs_code": "4202290000",
     "invoice_row_num": 11,
@@ -1232,30 +1120,9 @@
     "lead_document_title": "26014569415005"
   },
   {
-    "table_extraction_id": 396680939,
-    "hs_code": "6203490000",
-    "invoice_row_num": 12,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
-    "table_extraction_id": 396680940,
-    "hs_code": "6203490000",
-    "invoice_row_num": 13,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
     "table_extraction_id": 396680944,
     "hs_code": "6402990000",
     "invoice_row_num": 17,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
-    "table_extraction_id": 396680945,
-    "hs_code": "6203490000",
-    "invoice_row_num": 18,
     "invoice_doc_id": 1232529457,
     "lead_document_title": "26014569415005"
   },
@@ -1372,13 +1239,6 @@
     "lead_document_title": "26014569415005"
   },
   {
-    "table_extraction_id": 396680972,
-    "hs_code": "4909000000",
-    "invoice_row_num": 45,
-    "invoice_doc_id": 1232529457,
-    "lead_document_title": "26014569415005"
-  },
-  {
     "table_extraction_id": 396680973,
     "hs_code": "3921900000",
     "invoice_row_num": 46,
@@ -1431,20 +1291,6 @@
     "table_extraction_id": 419152532,
     "hs_code": "8212100000",
     "invoice_row_num": 33,
-    "invoice_doc_id": 1243107240,
-    "lead_document_title": "26014621989963"
-  },
-  {
-    "table_extraction_id": 419152533,
-    "hs_code": "8214200000",
-    "invoice_row_num": 34,
-    "invoice_doc_id": 1243107240,
-    "lead_document_title": "26014621989963"
-  },
-  {
-    "table_extraction_id": 419152535,
-    "hs_code": "8214200000",
-    "invoice_row_num": 36,
     "invoice_doc_id": 1243107240,
     "lead_document_title": "26014621989963"
   },
@@ -1515,13 +1361,6 @@
     "table_extraction_id": 421635898,
     "hs_code": "6115999000",
     "invoice_row_num": 9,
-    "invoice_doc_id": 1244455560,
-    "lead_document_title": "26014629035702"
-  },
-  {
-    "table_extraction_id": 421635900,
-    "hs_code": "9615110000",
-    "invoice_row_num": 11,
     "invoice_doc_id": 1244455560,
     "lead_document_title": "26014629035702"
   },
@@ -1617,13 +1456,6 @@
     "lead_document_title": "26014669391783"
   },
   {
-    "table_extraction_id": 436195937,
-    "hs_code": "6211491000",
-    "invoice_row_num": 10,
-    "invoice_doc_id": 1252341998,
-    "lead_document_title": "26014669391783"
-  },
-  {
     "table_extraction_id": 436195939,
     "hs_code": "6204490000",
     "invoice_row_num": 12,
@@ -1694,23 +1526,9 @@
     "lead_document_title": "26014669391783"
   },
   {
-    "table_extraction_id": 436195968,
-    "hs_code": "6211491000",
-    "invoice_row_num": 41,
-    "invoice_doc_id": 1252341998,
-    "lead_document_title": "26014669391783"
-  },
-  {
     "table_extraction_id": 436195969,
     "hs_code": "6505009000",
     "invoice_row_num": 42,
-    "invoice_doc_id": 1252341998,
-    "lead_document_title": "26014669391783"
-  },
-  {
-    "table_extraction_id": 436195970,
-    "hs_code": "6209909000",
-    "invoice_row_num": 43,
     "invoice_doc_id": 1252341998,
     "lead_document_title": "26014669391783"
   },
@@ -1753,13 +1571,6 @@
     "table_extraction_id": 459355629,
     "hs_code": "3304999000",
     "invoice_row_num": 25,
-    "invoice_doc_id": 1262856457,
-    "lead_document_title": "26014705316703"
-  },
-  {
-    "table_extraction_id": 459355630,
-    "hs_code": "3304999000",
-    "invoice_row_num": 26,
     "invoice_doc_id": 1262856457,
     "lead_document_title": "26014705316703"
   },
@@ -1897,13 +1708,6 @@
     "lead_document_title": "26014747557736"
   },
   {
-    "table_extraction_id": 470990944,
-    "hs_code": "8477800000",
-    "invoice_row_num": 1,
-    "invoice_doc_id": 1268154586,
-    "lead_document_title": "26014747994277"
-  },
-  {
     "table_extraction_id": 470990945,
     "hs_code": "3901100000",
     "invoice_row_num": 2,
@@ -1946,13 +1750,6 @@
     "lead_document_title": "26014747994277"
   },
   {
-    "table_extraction_id": 471001285,
-    "hs_code": "8477900000",
-    "invoice_row_num": 5,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
     "table_extraction_id": 471001286,
     "hs_code": "4010390000",
     "invoice_row_num": 6,
@@ -1963,62 +1760,6 @@
     "table_extraction_id": 471001288,
     "hs_code": "8424909000",
     "invoice_row_num": 8,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
-    "table_extraction_id": 471001289,
-    "hs_code": "8477900000",
-    "invoice_row_num": 9,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
-    "table_extraction_id": 471001290,
-    "hs_code": "8424909000",
-    "invoice_row_num": 10,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
-    "table_extraction_id": 471001291,
-    "hs_code": "8424909000",
-    "invoice_row_num": 11,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
-    "table_extraction_id": 471001292,
-    "hs_code": "8424909000",
-    "invoice_row_num": 12,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
-    "table_extraction_id": 471001293,
-    "hs_code": "8424909000",
-    "invoice_row_num": 13,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
-    "table_extraction_id": 471001294,
-    "hs_code": "8424909000",
-    "invoice_row_num": 14,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
-    "table_extraction_id": 471001295,
-    "hs_code": "8424909000",
-    "invoice_row_num": 15,
-    "invoice_doc_id": 1268164637,
-    "lead_document_title": "26014747994277"
-  },
-  {
-    "table_extraction_id": 471001296,
-    "hs_code": "8424909000",
-    "invoice_row_num": 16,
     "invoice_doc_id": 1268164637,
     "lead_document_title": "26014747994277"
   },
@@ -2163,23 +1904,9 @@
     "lead_document_title": "26014749031557"
   },
   {
-    "table_extraction_id": 471477922,
-    "hs_code": "9615110000",
-    "invoice_row_num": 33,
-    "invoice_doc_id": 1268438977,
-    "lead_document_title": "26014749031557"
-  },
-  {
     "table_extraction_id": 471477923,
     "hs_code": "9405420000",
     "invoice_row_num": 34,
-    "invoice_doc_id": 1268438977,
-    "lead_document_title": "26014749031557"
-  },
-  {
-    "table_extraction_id": 471477924,
-    "hs_code": "8517699000",
-    "invoice_row_num": 35,
     "invoice_doc_id": 1268438977,
     "lead_document_title": "26014749031557"
   },
@@ -2219,13 +1946,6 @@
     "lead_document_title": "26014749031557"
   },
   {
-    "table_extraction_id": 471477937,
-    "hs_code": "8412100000",
-    "invoice_row_num": 48,
-    "invoice_doc_id": 1268438977,
-    "lead_document_title": "26014749031557"
-  },
-  {
     "table_extraction_id": 471477938,
     "hs_code": "8424201100",
     "invoice_row_num": 49,
@@ -2243,34 +1963,6 @@
     "table_extraction_id": 471477940,
     "hs_code": "9403990000",
     "invoice_row_num": 51,
-    "invoice_doc_id": 1268438977,
-    "lead_document_title": "26014749031557"
-  },
-  {
-    "table_extraction_id": 471477944,
-    "hs_code": "6106900000",
-    "invoice_row_num": 55,
-    "invoice_doc_id": 1268438977,
-    "lead_document_title": "26014749031557"
-  },
-  {
-    "table_extraction_id": 471477959,
-    "hs_code": "8433190000",
-    "invoice_row_num": 70,
-    "invoice_doc_id": 1268438977,
-    "lead_document_title": "26014749031557"
-  },
-  {
-    "table_extraction_id": 471477960,
-    "hs_code": "3926909000",
-    "invoice_row_num": 71,
-    "invoice_doc_id": 1268438977,
-    "lead_document_title": "26014749031557"
-  },
-  {
-    "table_extraction_id": 471477962,
-    "hs_code": "6302590000",
-    "invoice_row_num": 73,
     "invoice_doc_id": 1268438977,
     "lead_document_title": "26014749031557"
   },
@@ -2436,13 +2128,6 @@
     "lead_document_title": "26014757091071"
   },
   {
-    "table_extraction_id": 479591742,
-    "hs_code": "9603291900",
-    "invoice_row_num": 44,
-    "invoice_doc_id": 1272079656,
-    "lead_document_title": "26014757091071"
-  },
-  {
     "table_extraction_id": 479591713,
     "hs_code": "6307100000",
     "invoice_row_num": 15,
@@ -2464,23 +2149,9 @@
     "lead_document_title": "26014757091071"
   },
   {
-    "table_extraction_id": 479591768,
-    "hs_code": "3926909000",
-    "invoice_row_num": 70,
-    "invoice_doc_id": 1272079656,
-    "lead_document_title": "26014757091071"
-  },
-  {
     "table_extraction_id": 479591770,
     "hs_code": "3926909000",
     "invoice_row_num": 72,
-    "invoice_doc_id": 1272079656,
-    "lead_document_title": "26014757091071"
-  },
-  {
-    "table_extraction_id": 479591771,
-    "hs_code": "3926909000",
-    "invoice_row_num": 73,
     "invoice_doc_id": 1272079656,
     "lead_document_title": "26014757091071"
   },
@@ -2506,13 +2177,6 @@
     "lead_document_title": "26014757091071"
   },
   {
-    "table_extraction_id": 479591772,
-    "hs_code": "4016999000",
-    "invoice_row_num": 74,
-    "invoice_doc_id": 1272079656,
-    "lead_document_title": "26014757091071"
-  },
-  {
     "table_extraction_id": 479591774,
     "hs_code": "4802690000",
     "invoice_row_num": 76,
@@ -2530,13 +2194,6 @@
     "table_extraction_id": 479591738,
     "hs_code": "8213000000",
     "invoice_row_num": 40,
-    "invoice_doc_id": 1272079656,
-    "lead_document_title": "26014757091071"
-  },
-  {
-    "table_extraction_id": 479591718,
-    "hs_code": "9603300000",
-    "invoice_row_num": 20,
     "invoice_doc_id": 1272079656,
     "lead_document_title": "26014757091071"
   },
@@ -2642,13 +2299,6 @@
     "table_extraction_id": 482883115,
     "hs_code": "1101002000",
     "invoice_row_num": 1,
-    "invoice_doc_id": 1273927579,
-    "lead_document_title": "26014777190390"
-  },
-  {
-    "table_extraction_id": 482883116,
-    "hs_code": "1101002000",
-    "invoice_row_num": 2,
     "invoice_doc_id": 1273927579,
     "lead_document_title": "26014777190390"
   },
@@ -2906,7 +2556,7 @@
   },
   {
     "table_extraction_id": 406335978,
-    "hs_code": "4419900000",
+    "hs_code": "4414900000",
     "invoice_row_num": 29,
     "invoice_doc_id": 1237164234,
     "lead_document_title": "26014558135580"
@@ -2926,15 +2576,8 @@
     "lead_document_title": "26014558135580"
   },
   {
-    "table_extraction_id": 406335982,
-    "hs_code": "4909000000",
-    "invoice_row_num": 33,
-    "invoice_doc_id": 1237164234,
-    "lead_document_title": "26014558135580"
-  },
-  {
     "table_extraction_id": 406335985,
-    "hs_code": "3407009000",
+    "hs_code": "3407002000",
     "invoice_row_num": 36,
     "invoice_doc_id": 1237164234,
     "lead_document_title": "26014558135580"
@@ -3031,13 +2674,6 @@
     "lead_document_title": "26014558135580"
   },
   {
-    "table_extraction_id": 406335968,
-    "hs_code": "9503000000",
-    "invoice_row_num": 19,
-    "invoice_doc_id": 1237164234,
-    "lead_document_title": "26014558135580"
-  },
-  {
     "table_extraction_id": 406335974,
     "hs_code": "9503000000",
     "invoice_row_num": 25,
@@ -3053,7 +2689,7 @@
   },
   {
     "table_extraction_id": 406335984,
-    "hs_code": "9503000000",
+    "hs_code": "3926909000",
     "invoice_row_num": 35,
     "invoice_doc_id": 1237164234,
     "lead_document_title": "26014558135580"

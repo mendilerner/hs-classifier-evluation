@@ -1,0 +1,151 @@
+[
+  {
+    "table_extraction_id": 368804166,
+    "lead_document_title": "26044510481973",
+    "expert_question": "9031809000 or 9027800000",
+    "test_product": {
+      "table_extraction_id": 368804166,
+      "hs_code": "9031809000",
+      "description": "EC sensor",
+      "brand": "ShanghaiLanchangAutomation Technology Co.,Ltd",
+      "model": null,
+      "general_product": "Sensor",
+      "purpose": "for measuring electrical conductivity"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 368804166,
+      "hs_code": "9031809000",
+      "invoice_row_num": 1,
+      "invoice_doc_id": 1220946981,
+      "lead_document_title": "26044510481973"
+    }
+  },
+  {
+    "table_extraction_id": 376065056,
+    "lead_document_title": "26014527051488",
+    "expert_question": "3304200000 or 3304999000",
+    "test_product": {
+      "table_extraction_id": 376065056,
+      "hs_code": "3304200000",
+      "description": "EYE MASK",
+      "brand": "ZHAOQING KEYU TRADING CO., LTD",
+      "model": null,
+      "general_product": "Eye Mask for skincare",
+      "purpose": "for eye treatment"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 376065056,
+      "hs_code": "3304200000",
+      "invoice_row_num": 26,
+      "invoice_doc_id": 1224255819,
+      "lead_document_title": "26014527051488"
+    }
+  },
+  {
+    "table_extraction_id": 419152535,
+    "lead_document_title": "26014621989963",
+    "expert_question": "8214200000 or 8203200000",
+    "test_product": {
+      "table_extraction_id": 419152535,
+      "hs_code": "8214200000",
+      "description": "EYELASH TWEEZER STAINLESS STEEL",
+      "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+      "model": "STAINLESS STEEL",
+      "general_product": "Tweezer",
+      "purpose": "for eyelash grooming"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 419152535,
+      "hs_code": "8214200000",
+      "invoice_row_num": 36,
+      "invoice_doc_id": 1243107240,
+      "lead_document_title": "26014621989963"
+    }
+  },
+  {
+    "table_extraction_id": 459355630,
+    "lead_document_title": "26014705316703",
+    "expert_question": "3304999000 or 3304300000",
+    "test_product": {
+      "table_extraction_id": 459355630,
+      "hs_code": "3304999000",
+      "description": "SHIFEI NATURAL EXFOLAITION FOOT MASK WITHIN 7 DAYS 1 pair/pouch (36G), 1 pouch/box",
+      "brand": "SHIFEI",
+      "model": "SF1115",
+      "general_product": "exfoliation foot mask",
+      "purpose": "for foot exfoliation"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 459355630,
+      "hs_code": "3304999000",
+      "invoice_row_num": 26,
+      "invoice_doc_id": 1262856457,
+      "lead_document_title": "26014705316703"
+    }
+  },
+  {
+    "table_extraction_id": 406335982,
+    "lead_document_title": "26014558135580",
+    "expert_question": "4909000000 or 4823900000",
+    "test_product": {
+      "table_extraction_id": 406335982,
+      "hs_code": "4909000000",
+      "description": "Sand Art Painting Card",
+      "brand": "leanne lin",
+      "model": "Sand Art Painting Card",
+      "general_product": "Painting Card",
+      "purpose": "for sand art creation"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 406335982,
+      "hs_code": "4909000000",
+      "invoice_row_num": 33,
+      "invoice_doc_id": 1237164234,
+      "lead_document_title": "26014558135580"
+    }
+  },
+  {
+    "table_extraction_id": 376065054,
+    "lead_document_title": "26014527051488",
+    "expert_question": "3304200000 or 3304999000",
+    "note": "same question as EYE MASK 376065056 (eye make-up vs other skin care), same declaration 26014527051488",
+    "test_product": {
+      "table_extraction_id": 376065054,
+      "hs_code": "3304200000",
+      "description": "EYE CREAM",
+      "brand": "ZHAOQING KEYU TRADING CO., LTD",
+      "model": "7304200000/1",
+      "general_product": "Eye Cream for skincare",
+      "purpose": "for moisturizing the eye area"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 376065054,
+      "hs_code": "3304200000",
+      "invoice_row_num": 24,
+      "invoice_doc_id": 1224255819,
+      "lead_document_title": "26014527051488"
+    }
+  },
+  {
+    "table_extraction_id": 419152533,
+    "lead_document_title": "26014621989963",
+    "expert_question": "8214200000 or 8205599900",
+    "note": "same question as EYELASH TWEEZER 419152535 (manicure instrument 8214.20 or not), same declaration 26014621989963",
+    "test_product": {
+      "table_extraction_id": 419152533,
+      "hs_code": "8214200000",
+      "description": "EYELASH CURLER STAINLESS STEEL",
+      "brand": "YIWU SHUNHANG TRADING CO., LIMITED",
+      "model": "STAINLESS STEEL",
+      "general_product": "Eyelash Curler",
+      "purpose": "for curling eyelashes"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 419152533,
+      "hs_code": "8214200000",
+      "invoice_row_num": 34,
+      "invoice_doc_id": 1243107240,
+      "lead_document_title": "26014621989963"
+    }
+  }
+]
