@@ -943,5 +943,47 @@
       "invoice_doc_id": 1252341998,
       "lead_document_title": "26014669391783"
     }
+  },
+  {
+    "table_extraction_id": 406335972,
+    "lead_document_title": "26014558135580",
+    "reason": "user decision 2026-09-24: delete (Stickers declared as 4811490000 gummed paper other than self-adhesive)",
+    "test_product": {
+      "table_extraction_id": 406335972,
+      "hs_code": "4811490000",
+      "description": "Stickers",
+      "brand": "leo liu",
+      "model": "Stickers",
+      "general_product": "Stickers",
+      "purpose": "for decoration"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 406335972,
+      "hs_code": "4811490000",
+      "invoice_row_num": 23,
+      "invoice_doc_id": 1237164234,
+      "lead_document_title": "26014558135580"
+    }
+  },
+  {
+    "table_extraction_id": 406335973,
+    "lead_document_title": "26014558135580",
+    "reason": "user decision 2026-09-24: delete ('cocoon of wool' declared as 5511300000 artificial staple fibre yarn)",
+    "test_product": {
+      "table_extraction_id": 406335973,
+      "hs_code": "5511300000",
+      "description": "cocoon of wool",
+      "brand": "sen zhang",
+      "model": "cocoon of wool",
+      "general_product": "Wool",
+      "purpose": "for textile production"
+    },
+    "te_hs_code": {
+      "table_extraction_id": 406335973,
+      "hs_code": "5511300000",
+      "invoice_row_num": 24,
+      "invoice_doc_id": 1237164234,
+      "lead_document_title": "26014558135580"
+    }
   }
 ]
