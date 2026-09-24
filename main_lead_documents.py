@@ -16,10 +16,19 @@ from mlflowfunctions import (
 )
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
+import builtins
+import collections
 import json
 import os
+import sys
+import threading
 import requests
 import hs_code_comparison
+
+try:
+    from tqdm import tqdm
+except ImportError:  # optional: without it the per-product lines still print
+    tqdm = None
 from hs_code_comparison import load_customs_book
 
 import main
@@ -68,8 +77,70 @@ def build_message(product):
     return ", ".join(parts)
 
 
+class Progress:
+    """One progress bar for all runs, pinned to the last line of the terminal.
+
+    While it is active, print() writes above the bar (through tqdm.write), so
+    log lines from this script and from main.py scroll without breaking it.
+    The bar is off when tqdm is missing or stdout is not a terminal (e.g.
+    redirected to a file); the per-product lines are printed either way.
+    """
+
+    def __init__(self, total):
+        self.lock = threading.Lock()
+        self.counts = collections.Counter()
+        self.bar = None
+        if tqdm is not None:
+            self.bar = tqdm(total=total, unit="product", dynamic_ncols=True, disable=None)
+            if self.bar.disable:
+                self.bar = None
+
+    def __enter__(self):
+        if self.bar:
+            self._print = builtins.print
+            builtins.print = self._write
+        return self
+
+    def __exit__(self, *exc):
+        if self.bar:
+            builtins.print = self._print
+            self.bar.close()
+
+    def _write(self, *args, sep=" ", end="\n", file=None, flush=False):
+        if file not in (None, sys.stdout):
+            return self._print(*args, sep=sep, end=end, file=file, flush=flush)
+        tqdm.write(sep.join(str(a) for a in args), end=end)
+
+    @staticmethod
+    def _outcome(row):
+        if not row.get("did_server_responded"):
+            return "server error"
+        if not row.get("success"):
+            return "no code"
+        return "correct" if row.get("are_given_digits_correct") else "wrong"
+
+    def product_done(self, future, run_index):
+        # Runs in the worker thread when a product finishes. A product whose
+        # scoring raised still advances the bar; collect_run re-raises it.
+        if future.exception() is not None:
+            outcome = "crashed"
+            print(f"run {run_index} | scoring crashed: {future.exception()!r}")
+        else:
+            row = future.result()
+            outcome = self._outcome(row)
+            print(f"run {run_index} | {row['table_extraction_id']} | {outcome:12} | "
+                  f"expected {row.get('actual_code')} agent {row.get('predicted_code') or '-'}")
+        with self.lock:
+            self.counts[outcome] += 1
+            if self.bar:
+                self.bar.set_postfix(
+                    {k: n for k, n in self.counts.items() if n},
+                    refresh=False,
+                )
+                self.bar.update(1)
+
+
 def query_agent_with_message(message):
-    print("sending request. message:", message)
     payload = {
         "agent_name": test_params["agent_name"],
         "input_data": {"message": message},
@@ -83,7 +154,6 @@ def query_agent_with_message(message):
     else:
         payload["username"] = username_for_agent
         response = requests.post(test_params["agent_url"], **kwargs)
-    print("message:", message, "response.status_code:", response.status_code)
     with open("product-run-debug.jsonl", "a", encoding="utf-8") as f:
         f.write(response.text + "\n")
     response.raise_for_status()
@@ -111,7 +181,7 @@ def identify_product(product):
     try:
         results = query_agent_with_message(message)
     except Exception as e:
-        print("Error querying agent for product:", product, "Error:", str(e))
+        print(f"Error querying agent for {product['table_extraction_id']}: {e}")
         return _failed_row(product, message, did_server_responded=False)
     return {
         "table_extraction_id": product["table_extraction_id"],
@@ -120,9 +190,12 @@ def identify_product(product):
     }
 
 
-def submit_run(test_products, run_index, executor):
+def submit_run(test_products, run_index, executor, progress):
     print(f"Run {run_index}/{NUM_RUNS}: submitting agent queries for all products...")
-    return [executor.submit(identify_product, product) for product in test_products]
+    futures = [executor.submit(identify_product, product) for product in test_products]
+    for f in futures:
+        f.add_done_callback(lambda f, r=run_index: progress.product_done(f, r))
+    return futures
 
 
 def collect_run(submitted, run_index):
@@ -180,9 +253,11 @@ def main_lead_documents():
 
     test_products = products_df.drop(columns=["message"]).to_dict(orient="records")
     per_run_metrics = []
-    with ThreadPoolExecutor(max_workers=test_params["threads_number"]) as executor:
+    with Progress(total=NUM_RUNS * len(test_products)) as progress, ThreadPoolExecutor(
+        max_workers=test_params["threads_number"]
+    ) as executor:
         submitted = [
-            submit_run(test_products, run_index, executor)
+            submit_run(test_products, run_index, executor, progress)
             for run_index in range(1, NUM_RUNS + 1)
         ]
         for run_index, run_submitted in zip(range(1, NUM_RUNS + 1), submitted):
