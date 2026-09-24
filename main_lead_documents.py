@@ -15,7 +15,7 @@ from mlflowfunctions import (
     mlflow_log_metric,
 )
 import pandas as pd
-from concurrent.futures import ThreadPoolExecutor, Future
+from concurrent.futures import ThreadPoolExecutor
 import json
 import os
 import requests
@@ -121,12 +121,6 @@ def identify_product(product):
 
 
 def submit_run(test_products, run_index, executor):
-    results_json = RESULTS_JSON.replace(".json", f"-run{run_index}.json")
-    if os.path.exists(results_json):
-        print(f"Loading existing results from {results_json}, skipping agent run...")
-        with open(results_json) as f:
-            return json.load(f)
-
     print(f"Run {run_index}/{NUM_RUNS}: submitting agent queries for all products...")
     return [executor.submit(identify_product, product) for product in test_products]
 
@@ -134,13 +128,10 @@ def submit_run(test_products, run_index, executor):
 def collect_run(submitted, run_index):
     results_json = RESULTS_JSON.replace(".json", f"-run{run_index}.json")
 
-    if submitted and isinstance(submitted[0], Future):
-        result_list = [f.result() for f in submitted]
-        with open(results_json, "w", encoding="utf-8") as f:
-            json.dump(result_list, f, indent=2, default=lambda x: None)
-        print(f"Agent results saved to {results_json}")
-    else:
-        result_list = submitted
+    result_list = [f.result() for f in submitted]
+    with open(results_json, "w", encoding="utf-8") as f:
+        json.dump(result_list, f, indent=2, default=lambda x: None)
+    print(f"Agent results saved to {results_json}")
 
     results_df = pd.DataFrame(result_list)
     results_df.to_csv(f"product-classification-results-run{run_index}.csv")
