@@ -6,7 +6,7 @@ Needs Linux (or WSL) with Python 3.10: the pyarrow wheel in `wheels/` is built f
 
 ## Steps
 
-1. Set up once. This creates `.venv`, installs the wheels in `wheels/` and the rest, and creates `.env`. It asks for the Azure DevOps feed token that `mlflowfunctions` installs from.
+1. Set up once. This creates `.venv`, installs the wheels in `wheels/` and the rest, and creates `.env`.
    ```
    ./setup.sh
    ```
