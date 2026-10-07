@@ -1,0 +1,7 @@
+pandas
+requests
+urllib3==1.26.9
+python-dotenv
+tqdm
+# installed from wheels/ first (see README): gunicorn, pyarrow, urllib3, mlflow
+# mlflowfunctions is on the internal Azure DevOps feed, not on PyPI (see README)
