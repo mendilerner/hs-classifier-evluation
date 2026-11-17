@@ -372,6 +372,7 @@ def prefilter_fields(meta, expected_code):
             "prefilter_status": None,
             "prefilter_candidates_count": None,
             "prefilter_removed_count": None,
+            "prefilter_not_checked_count": None,
             "prefilter_wrong_removals_count": None,
             "prefilter_wrong_candidates_count": None,
             "prefilter_wrong_candidates_removed_count": None,
@@ -384,6 +385,8 @@ def prefilter_fields(meta, expected_code):
         "prefilter_status": report.get("status"),
         "prefilter_candidates_count": len(candidates),
         "prefilter_removed_count": len(removed),
+        # left out of the LLM call by the size limit, kept without a check
+        "prefilter_not_checked_count": len(report.get("not_checked") or []),
         "prefilter_wrong_removals_count": sum(
             1 for c in removed if _covers_expected(c, expected_code)
         ),
@@ -413,6 +416,10 @@ def _build_prefilter_metrics(results_df):
         "43_prefilter_ran_rate": len(ran) / len(reached) if len(reached) else nan,
         "43b_prefilter_too_large_rate": (
             (reached["prefilter_status"] == "too_large").mean() if len(reached) else nan
+        ),
+        # products where the size limit left at least one candidate unchecked
+        "43c_prefilter_partly_checked_rate": (
+            (ran["prefilter_not_checked_count"] > 0).sum() / len(reached) if len(reached) else nan
         ),
         "44_prefilter_precision": (removed - wrong_removed) / removed if removed else nan,
         "44b_prefilter_products_with_wrong_removal_count": int(
@@ -550,6 +557,7 @@ def compute_metrics(results_df):
     for col in (
         "success", "length_of_predicted_code", "candidates_source", "classification_source",
         "prefilter_status", "prefilter_candidates_count", "prefilter_removed_count",
+        "prefilter_not_checked_count",
         "prefilter_wrong_removals_count", "prefilter_wrong_candidates_count",
         "prefilter_wrong_candidates_removed_count", "prefilter_prompt_tokens",
     ):
