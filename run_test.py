@@ -36,7 +36,7 @@ import urllib3
 from urllib3.exceptions import InsecureRequestWarning
 
 import hs_code_comparison
-from hs_code_comparison import compare_hs_codes, load_customs_book
+from hs_code_comparison import compare_hs_codes, load_customs_book, on_same_branch
 
 try:
     from tqdm import tqdm
@@ -345,6 +345,88 @@ def candidate_fields(results, expected_code):
         "correct_in_any_candidate": (correct_in_milvus is True) or (correct_in_llm is True),
         "llm_candidate_stage_ran": route not in MILVUS_DECIDED_ROUTES
         and route not in MILVUS_CANDIDATE_ROUTES,
+        **prefilter_fields(meta, expected_code),
+    }
+
+
+def _covers_expected(code, expected):
+    """A candidate is correct when it is on the expected code's branch: the code
+    itself, an ancestor, or a descendant. Book parent links first; digit prefixes
+    only for a code the book does not hold."""
+    same = on_same_branch(code, expected)
+    if same is not None:
+        return same
+    return _code_covers(remove_even_trailing_zeros(code), expected)
+
+
+def prefilter_fields(meta, expected_code):
+    """What the rules_prefilter node did on this product (metadata.rules_prefilter).
+
+    A removal is wrong when the removed code is on the expected code's branch -
+    the node must never remove the correct code or one of its ancestors. All None
+    when the run never reached the node (e.g. a Milvus leaf).
+    """
+    report = meta.get("rules_prefilter") or {}
+    if not report:
+        return {
+            "prefilter_status": None,
+            "prefilter_candidates_count": None,
+            "prefilter_removed_count": None,
+            "prefilter_wrong_removals_count": None,
+            "prefilter_wrong_candidates_count": None,
+            "prefilter_wrong_candidates_removed_count": None,
+            "prefilter_prompt_tokens": None,
+        }
+    candidates = report.get("candidates_in") or []
+    removed = [r.get("code") for r in (report.get("removed") or []) if r.get("code")]
+    wrong_candidates = [c for c in candidates if not _covers_expected(c, expected_code)]
+    return {
+        "prefilter_status": report.get("status"),
+        "prefilter_candidates_count": len(candidates),
+        "prefilter_removed_count": len(removed),
+        "prefilter_wrong_removals_count": sum(
+            1 for c in removed if _covers_expected(c, expected_code)
+        ),
+        "prefilter_wrong_candidates_count": len(wrong_candidates),
+        "prefilter_wrong_candidates_removed_count": sum(
+            1 for c in removed if c in wrong_candidates
+        ),
+        "prefilter_prompt_tokens": report.get("prompt_tokens"),
+    }
+
+
+def _build_prefilter_metrics(results_df):
+    """rules_prefilter over the products whose run reached it.
+
+    Precision is per removal: removals that were not on the expected branch / all
+    removals. It must stay 1.0 - 44b counts the products where it did not. Recall
+    is the share of wrong candidates the node removed, on the products where it ran.
+    """
+    reached = results_df[results_df["prefilter_status"].notna()]
+    ran = reached[reached["prefilter_status"] == "ok"]
+    nan = float("nan")
+    removed = ran["prefilter_removed_count"].sum()
+    wrong_removed = ran["prefilter_wrong_removals_count"].sum()
+    wrong_candidates = ran["prefilter_wrong_candidates_count"].sum()
+    tokens = reached["prefilter_prompt_tokens"].dropna().astype(float)
+    return {
+        "43_prefilter_ran_rate": len(ran) / len(reached) if len(reached) else nan,
+        "43b_prefilter_too_large_rate": (
+            (reached["prefilter_status"] == "too_large").mean() if len(reached) else nan
+        ),
+        "44_prefilter_precision": (removed - wrong_removed) / removed if removed else nan,
+        "44b_prefilter_products_with_wrong_removal_count": int(
+            (ran["prefilter_wrong_removals_count"] > 0).sum()
+        ),
+        "45_prefilter_recall": (
+            ran["prefilter_wrong_candidates_removed_count"].sum() / wrong_candidates
+            if wrong_candidates else nan
+        ),
+        "46_prefilter_average_removed_per_product": (
+            ran["prefilter_removed_count"].mean() if len(ran) else nan
+        ),
+        "47_prefilter_average_prompt_tokens": tokens.mean() if len(tokens) else nan,
+        "47b_prefilter_max_prompt_tokens": tokens.max() if len(tokens) else nan,
     }
 
 
@@ -465,7 +547,12 @@ def compute_metrics(results_df):
     # success = a final HS code was produced (NEEDS_CLARIFICATION rows that
     # carry a code count as success). Correctness / distribution metrics are
     # computed over this success subset; candidate recall over all rows.
-    for col in ("success", "length_of_predicted_code", "candidates_source", "classification_source"):
+    for col in (
+        "success", "length_of_predicted_code", "candidates_source", "classification_source",
+        "prefilter_status", "prefilter_candidates_count", "prefilter_removed_count",
+        "prefilter_wrong_removals_count", "prefilter_wrong_candidates_count",
+        "prefilter_wrong_candidates_removed_count", "prefilter_prompt_tokens",
+    ):
         if col not in results_df.columns:
             results_df[col] = None
     results_df["success"] = results_df["success"] == True
@@ -551,6 +638,8 @@ def compute_metrics(results_df):
             == True
         ).mean(),
         **_build_comparison_metrics(success_df),
+        # rules_prefilter over ALL products that reached it (success or not)
+        **_build_prefilter_metrics(results_df),
     })
     return metrics
 
