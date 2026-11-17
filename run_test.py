@@ -22,6 +22,11 @@ import os
 import sys
 import threading
 import time
+import base64
+import http.server
+import urllib.parse
+import webbrowser
+from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 
 import dotenv
@@ -31,7 +36,7 @@ import urllib3
 from urllib3.exceptions import InsecureRequestWarning
 
 import hs_code_comparison
-from hs_code_comparison import compare_hs_codes, load_customs_book
+from hs_code_comparison import compare_hs_codes, load_customs_book, on_same_branch
 
 try:
     from tqdm import tqdm
@@ -40,6 +45,9 @@ except ImportError:  # optional: without it the per-product lines still print
 
 dotenv.load_dotenv()
 urllib3.disable_warnings(InsecureRequestWarning)
+
+# Import CuraAuth after env is loaded
+from cura_auth import CuraAuth
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TEST_PRODUCTS_FILE = os.path.join(HERE, "test-data", "test_products.json")
@@ -70,40 +78,109 @@ test_params = {
     "server_notes": os.getenv("SERVER_NOTES", ""),
 }
 
-# ── Service token authentication (client_credentials grant) ────────────────
-if USE_TOKEN_AUTH:
-    _KEYCLOAK_BASE = {
-        "dev": "https://authentik.mdev.mehes.gov.il",
-        "prod": "https://authentik.prod.mehes.gov.il",
-    }.get(os.environ.get("CURA_AUTH_ENV", "dev"), "https://authentik.mdev.mehes.gov.il")
-    _REALM = os.environ.get("KEYCLOAK_REALM", "entic")
-    _TOKEN_ENDPOINT = f"{_KEYCLOAK_BASE}/realms/{_REALM}/protocol/openid-connect/token"
+# ── User Authentication (Authorization Code with PKCE via CuraAuth) ──────────
+REDIRECT_PORT = int(os.environ.get("CURA_CLI_REDIRECT_PORT", "8765"))
+REDIRECT_URI  = f"http://localhost:{REDIRECT_PORT}/callback"
+CACHE_FILE    = Path.home() / ".cura" / "token.json"
 
-    _svc_token = None
-    _svc_token_expires = 0.0
-    _svc_token_lock = threading.Lock()
+_user_token_lock = threading.Lock()
 
-    def get_service_token() -> str:
-        """Return a cached client_credentials access token, refreshing as needed."""
-        global _svc_token, _svc_token_expires
-        with _svc_token_lock:
-            if _svc_token and time.time() < _svc_token_expires - 30:
-                return _svc_token
-            r = requests.post(
-                _TOKEN_ENDPOINT,
-                data={
-                    "grant_type": "client_credentials",
-                    "client_id": os.environ["KEYCLOAK_CLIENT_ID"],
-                    "client_secret": os.environ["KEYCLOAK_CLIENT_SECRET"],
-                },
-                verify=False,
-                timeout=15,
-            )
-            r.raise_for_status()
-            data = r.json()
-            _svc_token = data["access_token"]
-            _svc_token_expires = time.time() + data.get("expires_in", 300)
-            return _svc_token
+
+def _decode_exp(token: str) -> int:
+    """Read the JWT `exp` (seconds since epoch) without verifying."""
+    try:
+        payload = token.split(".")[1]
+        payload += "=" * (-len(payload) % 4)
+        return int(json.loads(base64.urlsafe_b64decode(payload)).get("exp", 0))
+    except Exception:
+        return 0
+
+
+def _load_cache() -> dict:
+    try:
+        return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_cache(access_token: str, refresh_token: str) -> None:
+    CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    CACHE_FILE.write_text(
+        json.dumps({"access_token": access_token, "refresh_token": refresh_token}),
+        encoding="utf-8",
+    )
+
+
+def _clear_cache() -> None:
+    try:
+        CACHE_FILE.unlink()
+    except FileNotFoundError:
+        pass
+
+
+def _interactive_login(auth: CuraAuth):
+    """Bypass WSL network limitations by letting the user paste the redirect URL."""
+    # יצירת קישור ההתחברות המקורי עם ה-state וה-verifier הפנימיים של האובייקט
+    login = auth.get_login_url(REDIRECT_URI)
+    
+    print("\n" + "="*70)
+    print("🔐 MANUAL LOGIN REQUIRED (WSL Network Bypass)")
+    print("="*70)
+    print("1. Copy and paste this URL into your Windows browser and log in:\n")
+    print(login["url"])
+    print("\n2. After logging in, your browser will fail to load (Connection Refused).")
+    print("3. Copy the ENTIRE URL from your browser's address bar and paste it below.")
+    print("="*70 + "\n")
+    
+    # המתנה להדבקת ה-URL על ידי המשתמש
+    user_input = input("👉 Paste the redirect URL or Code: ").strip()
+    
+    # חילוץ ה-code מתוך ה-URL שהודבק
+    code = user_input
+    if "code=" in user_input:
+        parsed_url = urllib.parse.urlparse(user_input)
+        params = urllib.parse.parse_qs(parsed_url.query)
+        code = params.get("code", [None])[0]
+        
+    if not code:
+        raise RuntimeError("Could not find the authorization code in your input.")
+        
+    print("🔄 Exchanging code for tokens...")
+    
+    # קריאה לפונקציה המקורית של הספרייה שלכם בדיוק עם הפרמטרים שהיא תומכת בהם
+    return auth.exchange_code(
+        code=code,
+        redirect_uri=REDIRECT_URI,
+        code_verifier=login["code_verifier"]
+    )
+    
+def get_user_token(force_login: bool = False) -> str:
+    """Return a valid USER access token (cache → silent refresh → browser login). Thread-safe."""
+    global _user_token_lock
+    with _user_token_lock:
+        
+        auth = CuraAuth(verify_ssl=False)
+
+        if force_login:
+            _clear_cache()
+            ts = _interactive_login(auth)
+            _save_cache(ts.access_token, ts.refresh_token)
+            return ts.access_token
+
+        cache = _load_cache()
+        tok = cache.get("access_token")
+        if tok and _decode_exp(tok) - 30 > time.time():          # 1) cached token still valid
+            return tok
+        if cache.get("refresh_token"):                            # 2) try a silent refresh
+            try:
+                ts = auth.refresh(cache["refresh_token"])
+                _save_cache(ts.access_token, ts.refresh_token)
+                return ts.access_token
+            except Exception:
+                pass
+        ts = _interactive_login(auth)                            # 3) full browser login
+        _save_cache(ts.access_token, ts.refresh_token)
+        return ts.access_token
 
 
 # ── Request ─────────────────────────────────────────────────────────────────
@@ -143,11 +220,23 @@ def query_agent(message):
         "mode": "background",
     }
     kwargs = dict(verify=False, timeout=test_params["request_timeout_seconds"])
+    
     if USE_TOKEN_AUTH:
-        kwargs["headers"] = {"Authorization": f"Bearer {get_service_token()}"}
+        # Get token. Thread-safe cached checks are handled internally.
+        token = get_user_token()
+        kwargs["headers"] = {"Authorization": f"Bearer {token}"}
     else:
         payload["username"] = username_for_agent
+
     response = requests.post(test_params["agent_url"], json=payload, **kwargs)
+    
+    # Handle expired token gracefully (HTTP 401 Unauthorized)
+    if response.status_code == 401 and USE_TOKEN_AUTH:
+        print("⚠️ Token expired during batch. Forcing a refresh/re-login...")
+        token = get_user_token(force_login=True)
+        kwargs["headers"] = {"Authorization": f"Bearer {token}"}
+        response = requests.post(test_params["agent_url"], json=payload, **kwargs)
+
     with _debug_lock, open(os.path.join(RESULTS_DIR, "run-debug.jsonl"), "a", encoding="utf-8") as f:
         f.write(response.text + "\n")
     response.raise_for_status()
@@ -256,6 +345,95 @@ def candidate_fields(results, expected_code):
         "correct_in_any_candidate": (correct_in_milvus is True) or (correct_in_llm is True),
         "llm_candidate_stage_ran": route not in MILVUS_DECIDED_ROUTES
         and route not in MILVUS_CANDIDATE_ROUTES,
+        **prefilter_fields(meta, expected_code),
+    }
+
+
+def _covers_expected(code, expected):
+    """A candidate is correct when it is on the expected code's branch: the code
+    itself, an ancestor, or a descendant. Book parent links first; digit prefixes
+    only for a code the book does not hold."""
+    same = on_same_branch(code, expected)
+    if same is not None:
+        return same
+    return _code_covers(remove_even_trailing_zeros(code), expected)
+
+
+def prefilter_fields(meta, expected_code):
+    """What the rules_prefilter node did on this product (metadata.rules_prefilter).
+
+    A removal is wrong when the removed code is on the expected code's branch -
+    the node must never remove the correct code or one of its ancestors. All None
+    when the run never reached the node (e.g. a Milvus leaf).
+    """
+    report = meta.get("rules_prefilter") or {}
+    if not report:
+        return {
+            "prefilter_status": None,
+            "prefilter_candidates_count": None,
+            "prefilter_removed_count": None,
+            "prefilter_not_checked_count": None,
+            "prefilter_wrong_removals_count": None,
+            "prefilter_wrong_candidates_count": None,
+            "prefilter_wrong_candidates_removed_count": None,
+            "prefilter_prompt_tokens": None,
+        }
+    candidates = report.get("candidates_in") or []
+    removed = [r.get("code") for r in (report.get("removed") or []) if r.get("code")]
+    wrong_candidates = [c for c in candidates if not _covers_expected(c, expected_code)]
+    return {
+        "prefilter_status": report.get("status"),
+        "prefilter_candidates_count": len(candidates),
+        "prefilter_removed_count": len(removed),
+        # left out of the LLM call by the size limit, kept without a check
+        "prefilter_not_checked_count": len(report.get("not_checked") or []),
+        "prefilter_wrong_removals_count": sum(
+            1 for c in removed if _covers_expected(c, expected_code)
+        ),
+        "prefilter_wrong_candidates_count": len(wrong_candidates),
+        "prefilter_wrong_candidates_removed_count": sum(
+            1 for c in removed if c in wrong_candidates
+        ),
+        "prefilter_prompt_tokens": report.get("prompt_tokens"),
+    }
+
+
+def _build_prefilter_metrics(results_df):
+    """rules_prefilter over the products whose run reached it.
+
+    Precision is per removal: removals that were not on the expected branch / all
+    removals. It must stay 1.0 - 44b counts the products where it did not. Recall
+    is the share of wrong candidates the node removed, on the products where it ran.
+    """
+    reached = results_df[results_df["prefilter_status"].notna()]
+    ran = reached[reached["prefilter_status"] == "ok"]
+    nan = float("nan")
+    removed = ran["prefilter_removed_count"].sum()
+    wrong_removed = ran["prefilter_wrong_removals_count"].sum()
+    wrong_candidates = ran["prefilter_wrong_candidates_count"].sum()
+    tokens = reached["prefilter_prompt_tokens"].dropna().astype(float)
+    return {
+        "43_prefilter_ran_rate": len(ran) / len(reached) if len(reached) else nan,
+        "43b_prefilter_too_large_rate": (
+            (reached["prefilter_status"] == "too_large").mean() if len(reached) else nan
+        ),
+        # products where the size limit left at least one candidate unchecked
+        "43c_prefilter_partly_checked_rate": (
+            (ran["prefilter_not_checked_count"] > 0).sum() / len(reached) if len(reached) else nan
+        ),
+        "44_prefilter_precision": (removed - wrong_removed) / removed if removed else nan,
+        "44b_prefilter_products_with_wrong_removal_count": int(
+            (ran["prefilter_wrong_removals_count"] > 0).sum()
+        ),
+        "45_prefilter_recall": (
+            ran["prefilter_wrong_candidates_removed_count"].sum() / wrong_candidates
+            if wrong_candidates else nan
+        ),
+        "46_prefilter_average_removed_per_product": (
+            ran["prefilter_removed_count"].mean() if len(ran) else nan
+        ),
+        "47_prefilter_average_prompt_tokens": tokens.mean() if len(tokens) else nan,
+        "47b_prefilter_max_prompt_tokens": tokens.max() if len(tokens) else nan,
     }
 
 
@@ -376,7 +554,13 @@ def compute_metrics(results_df):
     # success = a final HS code was produced (NEEDS_CLARIFICATION rows that
     # carry a code count as success). Correctness / distribution metrics are
     # computed over this success subset; candidate recall over all rows.
-    for col in ("success", "length_of_predicted_code", "candidates_source", "classification_source"):
+    for col in (
+        "success", "length_of_predicted_code", "candidates_source", "classification_source",
+        "prefilter_status", "prefilter_candidates_count", "prefilter_removed_count",
+        "prefilter_not_checked_count",
+        "prefilter_wrong_removals_count", "prefilter_wrong_candidates_count",
+        "prefilter_wrong_candidates_removed_count", "prefilter_prompt_tokens",
+    ):
         if col not in results_df.columns:
             results_df[col] = None
     results_df["success"] = results_df["success"] == True
@@ -444,6 +628,12 @@ def compute_metrics(results_df):
             "total_output_tokens"
         ].astype(float).mean(),
         "39_correct_response_rate_overall": correct_rate(success_df),
+        # End-to-end accuracy over ALL products (failures count as wrong):
+        # success_rate × correct_given_success = correct / n_total. Grades the
+        # whole test set, not just the responses the agent managed to produce.
+        "42_overall_correct_classification_rate": (
+            (n_success / n_total) * correct_rate(success_df)
+        ),
         # candidate recall over the WHOLE dataset (failed / no-candidate rows
         # are misses)
         "38_correct_in_any_candidate_rate": (results_df["correct_in_any_candidate"] == True).mean(),
@@ -456,6 +646,8 @@ def compute_metrics(results_df):
             == True
         ).mean(),
         **_build_comparison_metrics(success_df),
+        # rules_prefilter over ALL products that reached it (success or not)
+        **_build_prefilter_metrics(results_df),
     })
     return metrics
 
@@ -545,6 +737,16 @@ def main():
         f"{test_params['threads_number']} threads, {test_params['request_timeout_seconds']}s "
         f"timeout per request, {NUM_RUNS} run(s)."
     )
+
+    # Trigger OAuth login early in a single thread before spinning up the batch executor pool
+    if USE_TOKEN_AUTH:
+        print("🔐 Initializing authentication context...")
+        try:
+            get_user_token()
+            print("🔑 Authentication context ready.")
+        except Exception as auth_err:
+            print(f"❌ Failed authentication context initialization: {auth_err}")
+            sys.exit(1)
 
     mlflow_init(
         experiment_name=experiment_name,

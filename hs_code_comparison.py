@@ -65,6 +65,28 @@ def _is_item_ancestor(ancestor_id, descendant_id, parent_index):
     return False
 
 
+def on_same_branch(code_a, code_b):
+    """True when the two codes are the same item, or one is an ancestor of the other.
+
+    Read off the book's parent links, not the digits: a zero at a level boundary
+    makes a digit prefix say the wrong thing (heading 2400 strips to chapter 24).
+    Returns None when either code is not in the book.
+    """
+    cached = load_customs_book()
+    fc_index, parent_index = cached['fc_index'], cached['parent_index']
+    item_a = fc_index.get(str(code_a or '').ljust(10, '0'))
+    item_b = fc_index.get(str(code_b or '').ljust(10, '0'))
+    if not item_a or not item_b:
+        return None
+    id_a = str(item_a.get('CustomsItemID', ''))
+    id_b = str(item_b.get('CustomsItemID', ''))
+    return (
+        id_a == id_b
+        or _is_item_ancestor(id_a, id_b, parent_index)
+        or _is_item_ancestor(id_b, id_a, parent_index)
+    )
+
+
 def _collect_leaf_descendants(item_ids, customs_book_index):
     """BFS traversal that collects all leaf items reachable from the given IDs."""
     leaves = []
