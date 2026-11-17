@@ -22,6 +22,11 @@ import os
 import sys
 import threading
 import time
+import base64
+import http.server
+import urllib.parse
+import webbrowser
+from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 
 import dotenv
@@ -40,6 +45,9 @@ except ImportError:  # optional: without it the per-product lines still print
 
 dotenv.load_dotenv()
 urllib3.disable_warnings(InsecureRequestWarning)
+
+# Import CuraAuth after env is loaded
+from cura_auth import CuraAuth
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TEST_PRODUCTS_FILE = os.path.join(HERE, "test-data", "test_products.json")
@@ -70,40 +78,109 @@ test_params = {
     "server_notes": os.getenv("SERVER_NOTES", ""),
 }
 
-# ── Service token authentication (client_credentials grant) ────────────────
-if USE_TOKEN_AUTH:
-    _KEYCLOAK_BASE = {
-        "dev": "https://authentik.mdev.mehes.gov.il",
-        "prod": "https://authentik.prod.mehes.gov.il",
-    }.get(os.environ.get("CURA_AUTH_ENV", "dev"), "https://authentik.mdev.mehes.gov.il")
-    _REALM = os.environ.get("KEYCLOAK_REALM", "entic")
-    _TOKEN_ENDPOINT = f"{_KEYCLOAK_BASE}/realms/{_REALM}/protocol/openid-connect/token"
+# ── User Authentication (Authorization Code with PKCE via CuraAuth) ──────────
+REDIRECT_PORT = int(os.environ.get("CURA_CLI_REDIRECT_PORT", "8765"))
+REDIRECT_URI  = f"http://localhost:{REDIRECT_PORT}/callback"
+CACHE_FILE    = Path.home() / ".cura" / "token.json"
 
-    _svc_token = None
-    _svc_token_expires = 0.0
-    _svc_token_lock = threading.Lock()
+_user_token_lock = threading.Lock()
 
-    def get_service_token() -> str:
-        """Return a cached client_credentials access token, refreshing as needed."""
-        global _svc_token, _svc_token_expires
-        with _svc_token_lock:
-            if _svc_token and time.time() < _svc_token_expires - 30:
-                return _svc_token
-            r = requests.post(
-                _TOKEN_ENDPOINT,
-                data={
-                    "grant_type": "client_credentials",
-                    "client_id": os.environ["KEYCLOAK_CLIENT_ID"],
-                    "client_secret": os.environ["KEYCLOAK_CLIENT_SECRET"],
-                },
-                verify=False,
-                timeout=15,
-            )
-            r.raise_for_status()
-            data = r.json()
-            _svc_token = data["access_token"]
-            _svc_token_expires = time.time() + data.get("expires_in", 300)
-            return _svc_token
+
+def _decode_exp(token: str) -> int:
+    """Read the JWT `exp` (seconds since epoch) without verifying."""
+    try:
+        payload = token.split(".")[1]
+        payload += "=" * (-len(payload) % 4)
+        return int(json.loads(base64.urlsafe_b64decode(payload)).get("exp", 0))
+    except Exception:
+        return 0
+
+
+def _load_cache() -> dict:
+    try:
+        return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_cache(access_token: str, refresh_token: str) -> None:
+    CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    CACHE_FILE.write_text(
+        json.dumps({"access_token": access_token, "refresh_token": refresh_token}),
+        encoding="utf-8",
+    )
+
+
+def _clear_cache() -> None:
+    try:
+        CACHE_FILE.unlink()
+    except FileNotFoundError:
+        pass
+
+
+def _interactive_login(auth: CuraAuth):
+    """Bypass WSL network limitations by letting the user paste the redirect URL."""
+    # יצירת קישור ההתחברות המקורי עם ה-state וה-verifier הפנימיים של האובייקט
+    login = auth.get_login_url(REDIRECT_URI)
+    
+    print("\n" + "="*70)
+    print("🔐 MANUAL LOGIN REQUIRED (WSL Network Bypass)")
+    print("="*70)
+    print("1. Copy and paste this URL into your Windows browser and log in:\n")
+    print(login["url"])
+    print("\n2. After logging in, your browser will fail to load (Connection Refused).")
+    print("3. Copy the ENTIRE URL from your browser's address bar and paste it below.")
+    print("="*70 + "\n")
+    
+    # המתנה להדבקת ה-URL על ידי המשתמש
+    user_input = input("👉 Paste the redirect URL or Code: ").strip()
+    
+    # חילוץ ה-code מתוך ה-URL שהודבק
+    code = user_input
+    if "code=" in user_input:
+        parsed_url = urllib.parse.urlparse(user_input)
+        params = urllib.parse.parse_qs(parsed_url.query)
+        code = params.get("code", [None])[0]
+        
+    if not code:
+        raise RuntimeError("Could not find the authorization code in your input.")
+        
+    print("🔄 Exchanging code for tokens...")
+    
+    # קריאה לפונקציה המקורית של הספרייה שלכם בדיוק עם הפרמטרים שהיא תומכת בהם
+    return auth.exchange_code(
+        code=code,
+        redirect_uri=REDIRECT_URI,
+        code_verifier=login["code_verifier"]
+    )
+    
+def get_user_token(force_login: bool = False) -> str:
+    """Return a valid USER access token (cache → silent refresh → browser login). Thread-safe."""
+    global _user_token_lock
+    with _user_token_lock:
+        
+        auth = CuraAuth(verify_ssl=False)
+
+        if force_login:
+            _clear_cache()
+            ts = _interactive_login(auth)
+            _save_cache(ts.access_token, ts.refresh_token)
+            return ts.access_token
+
+        cache = _load_cache()
+        tok = cache.get("access_token")
+        if tok and _decode_exp(tok) - 30 > time.time():          # 1) cached token still valid
+            return tok
+        if cache.get("refresh_token"):                            # 2) try a silent refresh
+            try:
+                ts = auth.refresh(cache["refresh_token"])
+                _save_cache(ts.access_token, ts.refresh_token)
+                return ts.access_token
+            except Exception:
+                pass
+        ts = _interactive_login(auth)                            # 3) full browser login
+        _save_cache(ts.access_token, ts.refresh_token)
+        return ts.access_token
 
 
 # ── Request ─────────────────────────────────────────────────────────────────
@@ -143,11 +220,23 @@ def query_agent(message):
         "mode": "background",
     }
     kwargs = dict(verify=False, timeout=test_params["request_timeout_seconds"])
+    
     if USE_TOKEN_AUTH:
-        kwargs["headers"] = {"Authorization": f"Bearer {get_service_token()}"}
+        # Get token. Thread-safe cached checks are handled internally.
+        token = get_user_token()
+        kwargs["headers"] = {"Authorization": f"Bearer {token}"}
     else:
         payload["username"] = username_for_agent
+
     response = requests.post(test_params["agent_url"], json=payload, **kwargs)
+    
+    # Handle expired token gracefully (HTTP 401 Unauthorized)
+    if response.status_code == 401 and USE_TOKEN_AUTH:
+        print("⚠️ Token expired during batch. Forcing a refresh/re-login...")
+        token = get_user_token(force_login=True)
+        kwargs["headers"] = {"Authorization": f"Bearer {token}"}
+        response = requests.post(test_params["agent_url"], json=payload, **kwargs)
+
     with _debug_lock, open(os.path.join(RESULTS_DIR, "run-debug.jsonl"), "a", encoding="utf-8") as f:
         f.write(response.text + "\n")
     response.raise_for_status()
@@ -545,6 +634,16 @@ def main():
         f"{test_params['threads_number']} threads, {test_params['request_timeout_seconds']}s "
         f"timeout per request, {NUM_RUNS} run(s)."
     )
+
+    # Trigger OAuth login early in a single thread before spinning up the batch executor pool
+    if USE_TOKEN_AUTH:
+        print("🔐 Initializing authentication context...")
+        try:
+            get_user_token()
+            print("🔑 Authentication context ready.")
+        except Exception as auth_err:
+            print(f"❌ Failed authentication context initialization: {auth_err}")
+            sys.exit(1)
 
     mlflow_init(
         experiment_name=experiment_name,
