@@ -533,6 +533,12 @@ def compute_metrics(results_df):
             "total_output_tokens"
         ].astype(float).mean(),
         "39_correct_response_rate_overall": correct_rate(success_df),
+        # End-to-end accuracy over ALL products (failures count as wrong):
+        # success_rate × correct_given_success = correct / n_total. Grades the
+        # whole test set, not just the responses the agent managed to produce.
+        "42_overall_correct_classification_rate": (
+            (n_success / n_total) * correct_rate(success_df)
+        ),
         # candidate recall over the WHOLE dataset (failed / no-candidate rows
         # are misses)
         "38_correct_in_any_candidate_rate": (results_df["correct_in_any_candidate"] == True).mean(),
